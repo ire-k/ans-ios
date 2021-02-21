@@ -1,0 +1,369 @@
+---
+
+## to do : logg 100000 6
+#
+- hosts: ODR--SW10-c3750G
+  gather_facts: false
+  connection: network_cli
+  tasks:
+
+    # ios_user
+  - name: set authentication
+    ios_config:
+      lines:
+        - username irekk privilege 15 secret 5 $1$NOHk$/465WGpRY3ceCWrPXEv.l.
+        - username pagi privilege 15 secret 5 $1$RuFl$JgDX4ygd075CT5TYDvoA50
+        - aaa new-model
+        - aaa authentication login default group radius local
+        - aaa authorization exec default group radius local 
+        - aaa authorization console
+
+
+  - name: set aaa group radius
+    ios_config:
+      parents: aaa group server radius grp-radius
+      lines:
+        - server 212.69.71.194 auth-port 1812 acct-port 1813
+        - ip radius source-interface {{mgt_int}}
+
+  - name: set radius srv new-config
+    when: (type is match("ME3600X")) or (type is match("ASR920")  )
+    ios_config:
+      parents: radius server radius-srv1
+      lines:
+        - address ipv4 212.69.71.194 auth-port 1812 acct-port 1814
+        - key 1pSbR2Dq
+
+  - name: radius srv on ME3400
+    when: type is match("ME3400")
+    ios_config:
+      lines:
+        - radius-server host 212.69.71.194 auth-port 1812 acct-port 1813 key 1pSbR2Dq
+
+  - name: radius grp on ME3400
+    when: type is match("ME3400")
+    ios_config:
+      parents: aaa group server radius grpradius
+      lines: server 212.69.71.194 auth-port 1812 acct-port 1813
+
+  - name: set radius old-config glob
+    when: (type is match("c4900")) or (type is match("3560G"))
+    ios_config:
+      lines:
+        - radius-server host 212.69.71.194 auth-port 1812 acct-port 1813 key 1pSbR2Dq
+        - ip radius source-interface {{mgt_int}}
+
+
+  - name: set aliases
+    ios_config:
+      lines:
+        - alias interface addvlan switchport trunk allowed vlan add
+        - alias interface remvlan switchport trunk allowed vlan remove
+        - alias interface vlanadd switchport trunk allowed vlan add
+        - alias interface vlanrem switchport trunk allowed vlan remove 
+ 
+  - name : set archive
+    ios_config:
+      parents: archive
+      lines:
+        - path tftp://212.69.68.123/$h-@-$t
+        - write-memory
+
+  - name: security
+    ios_config:
+      lines:
+        - no service config
+        - no service tcp-small-servers
+        - no service udp-small-servers
+        - no service pad
+        - no service finger
+        - no service dhcp
+        - no ip http server
+        - no ip http secure-server
+        - no service exec-callback
+          #- no mop enabled
+        - service tcp-keepalives-in
+        - service tcp-keepalives-out
+        - no ip domain lookup
+        
+  - name: security2
+    when: ( type is match("c4900") or type is match("3560G") or type is match("3750G") or type is match("2950") )
+    ios_config:
+      lines:
+        - vtp mode transparent
+
+  - name : security3
+    when: ( type is match("c4900") or type is match("3560G") )
+    ios_config:
+      lines:
+        - no service call-home
+
+  - name: security on con line
+    ios_config:
+      parents: line con 0
+      lines:
+        - exec-timeout 60
+        - logging synchronous
+
+  - name: security on vty lines
+    ios_config:
+      parents: line vty 0 4
+      lines:
+        - exec-timeout 60
+        - logging synchronous
+        ## destined for day-1 at customer site
+        #- access-class 1 in vrf-also
+
+
+  - name: set timestamps
+    ios_config:
+      lines:
+        - service timestamps debug datetime msec localtime show-timezone year
+        - service timestamps log datetime msec localtime show-timezone year
+
+
+
+
+  - name: set timezone
+    ios_config:
+      lines:
+        - clock timezone CET 1 0
+        - clock summer-time CEST recurring last Sun Mar 2:00 last Sun Oct 3:00
+
+
+  - name: set source intf
+    ios_config:
+      lines:
+        - ip tftp source-interface {{mgt_int}}
+
+
+  # ios_logging 
+  # https://docs.ansible.com/ansible/latest/modules/ios_logging_module.html#ios-logging-module
+  - name: set logging
+    ios_config:
+      lines:
+        - logging source-interface {{mgt_int}}
+        - logging host 212.69.68.123 session-id hostname
+        - logging trap informational
+          # cpu save
+        - no logging console
+        - no logging monitor 
+        - logging buffered 100000 informational
+
+  - name: set ntp1
+    ios_ntp:
+      source_int: "{{mgt_int}}"
+      server: 212.69.81.115
+      logging: false
+      state: present
+  #  register: ntpserv
+  #- debug: var=ntpserv
+
+  - name: set ntp2
+    ios_ntp:
+      server: 212.69.68.123
+      source_int: "{{mgt_int}}"
+      logging: false
+      state: present
+  #  register: ntpserv2
+  #- debug: var=ntpserv2
+
+  - name: set ntp srv prefer
+    ios_config:
+      lines:
+        - ntp server 212.69.81.115 prefer
+        - no ntp logging
+ 
+
+  - name: set acls
+    ios_config:
+      lines:
+        - access-list 10 permit 212.69.66.0 0.0.0.31
+        - access-list 1 permit 212.69.66.0 0.0.0.31
+        - access-list 1 permit 212.69.68.123
+
+
+          ## memory critical reserves both io and processor pools 
+  - name: set trap warings memory
+    ios_config:
+      lines:
+        - memory reserve critical 2048
+        - process cpu threshold type total rising 80 interval 10 falling 70 interval 10
+        - process cpu statistics limit entry-percentage 40 size 300
+
+    # allows check with command: show memory overflow
+  - name: memory leak detection
+    when: type is not match("ASR920")
+    ios_config:
+      lines:
+        - exception memory ignore overflow io
+        - exception memory ignore overflow processor
+        #Enhanced Crashinfo File Collection
+        #- exception crashinfo maximum files 1
+
+  #LINX-SW7-C4900(config)#memory free low-watermark io 13000
+  #%Error: IO memory and processor memory are the same
+  #Configure the low water mark for processor memory
+
+  - name: set memory limits on c4900
+    when: type is match("c4900")
+    ios_config:
+      lines:
+        - memory free low-watermark processor 90000
+
+  - name: set memory limits on ASR920
+    when: type is match("ASR920")
+    ios_config:
+      lines:
+        - memory free low-watermark processor 180000
+
+  - name: set memory limits on ME3600X
+    when: type is match("ME3600X")
+    ios_config:
+      lines:
+        - memory free low-watermark processor 159000
+        - memory free low-watermark io 13000
+
+  - name: set memory limits on 3560G
+    when: type is match("3560G")
+    ios_config:
+      lines:
+        - memory free low-watermark processor 15000
+        - memory free low-watermark io 1600
+
+  - name: set memory limits on ME3400
+    when: type is match("ME3400")
+    ios_config:
+      lines:
+        - memory free low-watermark processor 200
+        - memory free low-watermark io 1200
+
+  - name: set memory limits on WS-3750G
+    when: type is match("3750G")
+    ios_config:
+      lines:
+        - memory free low-watermark processor 200
+        - memory free low-watermark io 2457
+
+  - name: disable vstack
+    when: ( type is match("3560G")) or (type is match ("3750G") )
+    ios_config:
+      lines:
+        - no vstack basic
+    tags: vstack
+
+  - name: ssh tune
+    ios_config:
+      lines:
+        - ip ssh time-out 60
+        - ip ssh authentication-retries 5
+        - ip ssh source-interface {{mgt_int}}
+        - ip scp server enable
+
+
+  - name: save config
+    ios_config:
+      save_when: always
+
+
+      #### memory free low watermark 
+      # per platform
+      # some results below
+      #
+      #          ## reccomended: 20% of current memory
+# https://community.cisco.com/t5/switching/memory-free-low-watermark-and-processor-settings-for-2960x/td-p/3006999
+#https://www.cisco.com/en/US/docs/ios/12_3t/12_3t4/feature/guide/gt_memnt.html
+#https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/bsm/configuration/15-2mt/bsm-mem-thresh-note.html          
+# Cisco IOS Software, Catalyst 4500 L3 Switch Software (cat4500e-IPBASEK9-M), Version 12.2(54)SG1, RELEASE SOFTWARE (fc1)
+##plan_PIK11-SW2-c4900#sh proc memory             
+#Processor Pool Total:  465346528 Used:  206055968 Free:  259290560
+# 20% -> 90000 kB
+
+## plan_PIK11-SW1-cME3600X#sh proc memory
+#Processor Pool Total:  815909596 Used:  169799804 Free:  646109792
+#      I/O Pool Total:   67100672 Used:   28245104 Free:   38855568
+# processor 20% -> 159000 kB
+# i/o 20%       -> 13000 kB
+
+## lab_c3560G#sh proc mem
+#Processor  Pool Total:   76961468 Used:   19430096 Free:   57531372
+#I/O        Pool Total:    8388608 Used:    3590640 Free:    4797968
+#Driver te  Pool Total:    1048576 Used:         40 Free:    1048536
+# 20% proc -> 200 kB --- see below for ME3400 ! use Driver te
+# 20% i/o  -> 1600 kB
+#
+#
+#3560G(config)#memory free low-watermark io ?
+#  <1-4294967295>  low water mark of memory in KB
+
+#lab_cME3400#sh proc memory
+#Processor Pool Total:   69446432 Used:   24325716 Free:   45120716
+#      I/O Pool Total:   12582912 Used:    8537504 Free:    4045408
+#Driver te Pool Total:    1048576 Used:         40 Free:    1048536
+# 20% pool total = 14000kB
+# 20% io = 2400kB
+# ####
+# After memory reserved critical 4096 on ME3400:
+#Processor Pool Total:   69446432 Used:   26609124 Free:   42837308
+#      I/O Pool Total:   12582912 Used:   10900292 Free:    1682620
+#Critical  Pool Total:    1836280 Used:         40 Free:    1836240
+#Critical  Pool Total:    2358024 Used:         40 Free:    2357984
+#Driver te Pool Total:    1048576 Used:         40 Free:    1048536
+
+#After mem res cri 2048 on ME3400
+#lab_cmp-sw2-cME3400#sh proc mem
+#Processor Pool Total:   69446432 Used:   25847956 Free:   43598476
+#      I/O Pool Total:   12582912 Used:    9808728 Free:    2774184
+#Critical  Pool Total:     918140 Used:         40 Free:     918100
+#Critical  Pool Total:    1179012 Used:         40 Free:    1178972
+#Driver te Pool Total:    1048576 Used:         40 Free:    1048536
+
+
+#Feb 17 2021 11:56:46.183 CET: %SYS-4-FREEMEMLOW: Free Memory has dropped below low watermark
+#Pool: Processor  Free: 10728268  Threshold: 14336000
+#ztm-sw-stoklosy(config)#memory free low-watermark processor 200
+#Feb 17 2021 12:07:24.346 CET: %SYS-5-FREEMEMRECOVER: Free Memory has recovered above low watermark
+#
+#Pool: Processor  Free: 10719416  Threshold: 204800 
+# ## use 10% of I/O : 1200 kB ## reserve critical uses memory
+# ## low-watermark processor: use 20% of "Driver te" : 200 kB
+
+#ztm-sw-stoklosy(config)#memory reserve critical 4096
+#Feb 17 2021 12:11:00.741 CET: %SYS-4-FREEMEMLOW: Free Memory has dropped below low watermark
+#Pool: I/O  Free: 1645556  Threshold: 2457600
+
+
+#ztm-sw-stoklosy(config)#memory reserve critical 2048
+#Memory Pool:Processor already has critical memory reserved
+#New configuration will take effect only after the next reload upon saving
+#the current configuration
+#Memory Pool:I/O already has critical memory reserved
+#New configuration will take effect only after the next reload upon saving
+#the current configuration
+
+
+      ## 3750
+      #inventory
+      #NAME: "1", DESCR: "WS-C3750G-24PS"
+      #PID: WS-C3750G-24PS-S  , VID: V08  , SN: FOC1446Y14S
+      #
+      #Processor Pool Total:   71359432 Used:   31742852 Free:   39616580
+      #      I/O Pool Total:   12582912 Used:    8668732 Free:    3914180
+      #Driver te Pool Total:    1048576 Used:         40 Free:    1048536
+      #
+      #mem fre low wat proc -> ME3400 -> use Driver te Pool Total * 20% = 200kB
+      #20% of IO: 2457 kB 
+      #
+      #afert memory reserve crit 2048:
+      #Processor Pool Total:   71359432 Used:   32709040 Free:   38650392
+      #I/O Pool Total:   12582912 Used:    9816420 Free:    2766492
+      #Critical  Pool Total:     941316 Used:         40 Free:     941276
+      #Critical  Pool Total:    1147644 Used:         40 Free:    1147604
+      #Driver te Pool Total:    1048576 Used:         40 Free:    1048536
+
+
+
+#        Processor Pool Total:   71359432 Used:   31742852 Free:   39616580
+#              I/O Pool Total:   12582912 Used:    8668732 Free:    3914180
+#        Driver te Pool Total:    1048576 Used:         40 Free:    1048536
+#
