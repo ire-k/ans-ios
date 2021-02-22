@@ -1,0 +1,16 @@
+---
+- hosts: pagi-ssh-dev
+  gather_facts: false
+  connection: network_cli
+  # no of targets a time - more readable output
+  serial: 20
+  tasks:
+
+  - name: set authentication pagi
+    ios_config:
+      lines:
+        - username pagi privilege 15 secret W#cFG 
+
+  - name: save config
+    ios_config:
+      save_when: always

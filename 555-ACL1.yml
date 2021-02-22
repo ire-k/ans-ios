@@ -1,0 +1,71 @@
+---
+- hosts: pagi-ssh-dev
+  gather_facts: false
+  connection: network_cli
+  # limit no of targets a time 
+  serial: 10
+  tasks:
+
+  - name: security off vty lines
+    ios_config:
+      parents: line vty 0 4
+      lines:
+        - no access-class 1 in
+        - no access-class login in
+
+  # order of the entries and remarks tends to be unpredictable; adding numbers before permit doesn't help - probably gets optimized by CEF; no way to put remarks in order
+  - name: set ACL login standard
+    when: atm is undefined
+    cisco.ios.ios_config:
+      before: no ip access-list standard login
+      parents: ip access-list standard login
+      lines:
+        - remark **Helpdesk, nagiosAWS, loc mgmt-intf**
+        - permit 212.69.66.0 0.0.0.63
+        - permit host 212.69.68.123
+        - permit host 52.210.128.8
+        - permit 10.0.0.0 0.0.0.255
+      match: exact
+      replace: block
+
+  # those guys need slightly different acl
+  - name: set ACL login for ATMs
+    when: (atm is defined) and (atm|bool == True)
+    cisco.ios.ios_config:
+      before: no ip access-list standard login
+      parents: ip access-list standard login
+      lines:
+        - remark **Helpdesk, nagiosAWS, sniffer "pakieciarka"**
+        - permit 212.69.66.0 0.0.0.63
+        - permit host 212.69.68.123
+        - permit host {{atm_acl1_extra_entry}}
+      match: exact
+      replace: block
+
+
+
+  - name: verify ACL login
+    # ansible-galaxy collection install cisco.ios
+    cisco.ios.ios_command:
+      commands:
+        - show ip access-lists login
+      wait_for:
+        - result[0] contains 212.69.66.0
+        - result[0] contains 212.69.68.123
+
+
+
+  - name: security on vty lines
+    # only if previous task not failed
+    ios_config:
+      parents: line vty 0 4
+      lines:
+        - exec-timeout 60
+        - logging synchronous
+        - access-class login in vrf-also
+        - transport input ssh
+        ## 2950 can do only: access-class login in
+
+  - name: save config
+    ios_config:
+      save_when: always

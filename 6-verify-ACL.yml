@@ -1,0 +1,22 @@
+---
+## depr
+#- hosts: pagi-ssh-dev
+- hosts: test
+  gather_facts: false
+  connection: network_cli
+  # limit no of targets a time 
+  serial: 10
+  tasks:
+  - name: show access-list 1
+    ignore_errors: True
+    ios_command:
+      commands:
+        - show access-lists 1
+    register: out_ACL1
+    #failed_when: '"212.69.66.0" not in out_ACL1.stdout|flatten'
+    
+    ##or "212.69.68.123" not in out_ACL1|map(attribute="stdout")|flatten '
+
+  - debug: 
+    #msg: "{{out_ACL1.stdout|json_query('212.69.68.123')}}"
+      msg: "{{out_ACL1.stdout_lines[0][0]}}"

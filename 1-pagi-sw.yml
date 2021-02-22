@@ -1,11 +1,23 @@
 ---
-
-## to do : logg 100000 6
-#
 - hosts: ODR--SW10-c3750G
   gather_facts: false
   connection: network_cli
   tasks:
+
+  - name: get ios facts hw
+    ios_facts:
+      gather_subset: hardware
+    register: hw
+
+  - debug:
+      var: ansible_facts.ansible_net_model
+    when: hw.ansible_facts.ansible_net_model is regex("3750")
+
+
+  - meta: end_play
+
+      #  - name: pause
+      #    pause:
 
     # ios_user
   - name: set authentication

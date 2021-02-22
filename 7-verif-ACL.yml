@@ -1,0 +1,23 @@
+---
+- hosts: bankomaty
+  gather_facts: false
+  connection: network_cli
+  # limit no of targets a time 
+  serial: 10
+  tasks:
+  - name: show access-list 1
+    ignore_errors: True
+    ios_command:
+      commands:
+        - show access-lists 1
+    register: out_ACL1
+    #failed_when: '"212.69.66.0" not in out_ACL1.stdout|flatten'
+    
+    ##or "212.69.68.123" not in out_ACL1|map(attribute="stdout")|flatten '
+
+  - debug: 
+      msg: "{{out_ACL1.stdout_lines[0]|join()}}"
+
+# result:
+#    "msg": "Standard IP access list 1    130 permit 212.69.68.123    10 permit 212.69.81.13 (4 matches)    20 permit 192.168.10.130 (16 matches)    30 permit 212.69.68.92, wildcard bits 0.0.0.3    40 permit 212.69.68.120, wildcard bits 0.0.0.7 (4 matches)    50 permit 212.69.64.0, wildcard bits 0.0.0.255    60 permit 212.69.66.0, wildcard bits 0.0.0.31 (236 matches)    70 permit 212.69.65.0, wildcard bits 0.0.0.255    80 permit 212.69.76.128, wildcard bits 0.0.0.7    90 permit 212.69.72.208, wildcard bits 0.0.0.7    100 permit 212.69.72.224, wildcard bits 0.0.0.7    110 permit 212.69.74.208, wildcard bits 0.0.0.15    120 permit 10.254.1.0, wildcard bits 0.0.0.255 (4 matches)"
+

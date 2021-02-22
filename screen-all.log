@@ -1,0 +1,1067 @@
+
+
+
+
+irek@HP-4710s:~/ans/pagi
+->bash
+irek@HP-4710s:~/ans/pagi
+->ansible-playbook 55-ACL1.yml
+[WARNING]: Invalid characters were found in group names but not replaced, use -vvvv to see details
+
+PLAY [pagi-ssh-dev] ********************************************************************************
+
+TASK [security off vty lines parents=line vty 0 4, lines=['no access-class 1 in', 'no access-class login in']] ***
+Wednesday 30 September 2020  15:33:17 +0200 (0:00:00.058)       0:00:00.058 ***
+changed: [cmp-rt4]
+changed: [CMP-RT3-cASR1001]
+changed: [cmp-rt-goclaw]
+changed: [cmp-rt-lomianki-l2k]
+fatal: [cmp-rt-pias-jp2-l2k]: FAILED! => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python"}, "changed": false, "msg": "[Errno None] Unable to connect to port 22 on 10.111.11.240"}
+changed: [cmp-sw3-l2k]
+changed: [cmp-rt-pawia-l2k]
+changed: [cmp-sw4-l2k]
+changed: [cmp-sw9-c3560G-wisniowa]
+changed: [cmp-sw-bialoleka2]
+
+TASK [set ACL login standard before=no ip access-list standard login, parents=ip access-list standard login, lines=['remark **Helpdesk, nagiosAWS, loc mgmt-intf**', 'permit 212.69.66.0 0.0.0.63', 'permit host 212.69.68.123', 'permit host 52.210.128.8', 'permit 10.0.0.0 0.0.0.255'], match=exact, replace=block] ***
+Wednesday 30 September 2020  15:33:58 +0200 (0:00:40.420)       0:00:40.478 ***
+changed: [cmp-rt4]
+changed: [CMP-RT3-cASR1001]
+changed: [cmp-rt-goclaw]
+changed: [cmp-rt-lomianki-l2k]
+changed: [cmp-rt-pawia-l2k]
+changed: [cmp-sw3-l2k]
+changed: [cmp-sw4-l2k]
+changed: [cmp-sw9-c3560G-wisniowa]
+changed: [cmp-sw-bialoleka2]
+
+TASK [set ACL login for ATMs before=no ip access-list standard login, parents=ip access-list standard login, lines=['remark **Helpdesk, nagiosAWS, sniffer "pakieciarka"**', 'permit 212.69.66.0 0.0.0.63', 'permit host 212.69.68.123', 'permit host {{atm_acl1_extra_entry}}'], match=exact, replace=block] ***
+Wednesday 30 September 2020  15:34:19 +0200 (0:00:20.720)       0:01:01.199 ***
+skipping: [CMP-RT3-cASR1001]
+skipping: [cmp-rt4]
+skipping: [cmp-rt-goclaw]
+skipping: [cmp-rt-lomianki-l2k]
+skipping: [cmp-rt-pawia-l2k]
+skipping: [cmp-sw3-l2k]
+skipping: [cmp-sw4-l2k]
+skipping: [cmp-sw9-c3560G-wisniowa]
+skipping: [cmp-sw-bialoleka2]
+
+TASK [verify ACL login commands=['show ip access-lists login'], wait_for=['result[0] contains 212.69.66.0', 'result[0] contains 212.69.68.123']] ***
+Wednesday 30 September 2020  15:34:19 +0200 (0:00:00.411)       0:01:01.611 ***
+ok: [CMP-RT3-cASR1001]
+ok: [cmp-rt4]
+ok: [cmp-rt-goclaw]
+ok: [cmp-rt-lomianki-l2k]
+ok: [cmp-rt-pawia-l2k]
+ok: [cmp-sw3-l2k]
+ok: [cmp-sw4-l2k]
+ok: [cmp-sw9-c3560G-wisniowa]
+ok: [cmp-sw-bialoleka2]
+
+TASK [security on vty lines parents=line vty 0 4, lines=['exec-timeout 60', 'logging synchronous', 'access-class login in vrf-also', 'transport input ssh']] ***
+Wednesday 30 September 2020  15:34:27 +0200 (0:00:07.593)       0:01:09.204 ***
+changed: [cmp-rt4]
+changed: [CMP-RT3-cASR1001]
+changed: [cmp-rt-goclaw]
+changed: [cmp-rt-lomianki-l2k]
+changed: [cmp-rt-pawia-l2k]
+changed: [cmp-sw3-l2k]
+changed: [cmp-sw4-l2k]
+changed: [cmp-sw9-c3560G-wisniowa]
+changed: [cmp-sw-bialoleka2]
+
+TASK [save config save_when=always] ****************************************************************
+Wednesday 30 September 2020  15:34:42 +0200 (0:00:14.909)       0:01:24.114 ***
+changed: [cmp-rt4]
+changed: [CMP-RT3-cASR1001]
+changed: [cmp-rt-goclaw]
+changed: [cmp-rt-lomianki-l2k]
+changed: [cmp-rt-pawia-l2k]
+changed: [cmp-sw4-l2k]
+changed: [cmp-sw3-l2k]
+changed: [cmp-sw-bialoleka2]
+changed: [cmp-sw9-c3560G-wisniowa]
+
+PLAY [pagi-ssh-dev] ********************************************************************************
+
+TASK [security off vty lines parents=line vty 0 4, lines=['no access-class 1 in', 'no access-class login in']] ***
+Wednesday 30 September 2020  15:35:06 +0200 (0:00:24.781)       0:01:48.895 ***
+changed: [cmp-sw-bialoleka]
+changed: [cmp-sw-chmielna]
+changed: [cmp-sw-jozefoslaw]
+changed: [cmp-sw-lomianki]
+fatal: [cmp-sw-goclaw]: FAILED! => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python"}, "changed": false, "msg": "[Errno None] Unable to connect to port 22 on 10.111.11.70"}
+changed: [cmp-sw-marianska]
+changed: [cmp-sw-ochota]
+changed: [cmp-sw-pawia]
+changed: [cmp-sw-ursynow]
+fatal: [cmp-sw-pias-jp2]: FAILED! => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python"}, "changed": false, "msg": "[Errno None] Unable to connect to port 22 on 10.111.11.241"}
+
+TASK [set ACL login standard before=no ip access-list standard login, parents=ip access-list standard login, lines=['remark **Helpdesk, nagiosAWS, loc mgmt-intf**', 'permit 212.69.66.0 0.0.0.63', 'permit host 212.69.68.123', 'permit host 52.210.128.8', 'permit 10.0.0.0 0.0.0.255'], match=exact, replace=block] ***
+Wednesday 30 September 2020  15:35:49 +0200 (0:00:42.758)       0:02:31.654 ***
+changed: [cmp-sw-bialoleka]
+changed: [cmp-sw-chmielna]
+changed: [cmp-sw-jozefoslaw]
+changed: [cmp-sw-lomianki]
+changed: [cmp-sw-marianska]
+changed: [cmp-sw-pawia]
+changed: [cmp-sw-ochota]
+changed: [cmp-sw-ursynow]
+
+TASK [set ACL login for ATMs before=no ip access-list standard login, parents=ip access-list standard login, lines=['remark **Helpdesk, nagiosAWS, sniffer "pakieciarka"**', 'permit 212.69.66.0 0.0.0.63', 'permit host 212.69.68.123', 'permit host {{atm_acl1_extra_entry}}'], match=exact, replace=block] ***
+Wednesday 30 September 2020  15:36:14 +0200 (0:00:24.833)       0:02:56.488 ***
+skipping: [cmp-sw-bialoleka]
+skipping: [cmp-sw-chmielna]
+skipping: [cmp-sw-jozefoslaw]
+skipping: [cmp-sw-lomianki]
+skipping: [cmp-sw-marianska]
+skipping: [cmp-sw-ochota]
+skipping: [cmp-sw-pawia]
+skipping: [cmp-sw-ursynow]
+
+TASK [verify ACL login commands=['show ip access-lists login'], wait_for=['result[0] contains 212.69.66.0', 'result[0] contains 212.69.68.123']] ***
+Wednesday 30 September 2020  15:36:14 +0200 (0:00:00.377)       0:02:56.865 ***
+ok: [cmp-sw-bialoleka]
+ok: [cmp-sw-chmielna]
+ok: [cmp-sw-jozefoslaw]
+ok: [cmp-sw-lomianki]
+ok: [cmp-sw-marianska]
+ok: [cmp-sw-ochota]
+ok: [cmp-sw-pawia]
+ok: [cmp-sw-ursynow]
+
+TASK [security on vty lines parents=line vty 0 4, lines=['exec-timeout 60', 'logging synchronous', 'access-class login in vrf-also', 'transport input ssh']] ***
+Wednesday 30 September 2020  15:36:20 +0200 (0:00:06.054)       0:03:02.920 ***
+changed: [cmp-sw-bialoleka]
+changed: [cmp-sw-chmielna]
+changed: [cmp-sw-jozefoslaw]
+changed: [cmp-sw-lomianki]
+changed: [cmp-sw-marianska]
+changed: [cmp-sw-ochota]
+changed: [cmp-sw-pawia]
+changed: [cmp-sw-ursynow]
+
+TASK [save config save_when=always] ****************************************************************
+Wednesday 30 September 2020  15:36:36 +0200 (0:00:15.737)       0:03:18.657 ***
+changed: [cmp-sw-bialoleka]
+changed: [cmp-sw-chmielna]
+changed: [cmp-sw-jozefoslaw]
+changed: [cmp-sw-lomianki]
+changed: [cmp-sw-marianska]
+changed: [cmp-sw-ochota]
+changed: [cmp-sw-pawia]
+changed: [cmp-sw-ursynow]
+
+PLAY [pagi-ssh-dev] ********************************************************************************
+
+TASK [security off vty lines parents=line vty 0 4, lines=['no access-class 1 in', 'no access-class login in']] ***
+Wednesday 30 September 2020  15:36:52 +0200 (0:00:16.040)       0:03:34.697 ***
+changed: [cmp-sw-wilanow]
+changed: [cmp-sw-wola]
+fatal: [cmp-sw-wola2]: FAILED! => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python"}, "changed": false, "msg": "[Errno None] Unable to connect to port 22 on 10.111.11.75"}
+changed: [cmp-sw-zoliborz]
+changed: [FINA-RT1-cASR920-Loop0]
+changed: [fina-sw-chelmska]
+changed: [fina-sw-lodz]
+changed: [fina-sw-narbutta]
+changed: [fina-sw-pulawska]
+changed: [fina-sw-walbrzyska6]
+
+TASK [set ACL login standard before=no ip access-list standard login, parents=ip access-list standard login, lines=['remark **Helpdesk, nagiosAWS, loc mgmt-intf**', 'permit 212.69.66.0 0.0.0.63', 'permit host 212.69.68.123', 'permit host 52.210.128.8', 'permit 10.0.0.0 0.0.0.255'], match=exact, replace=block] ***
+Wednesday 30 September 2020  15:37:27 +0200 (0:00:35.299)       0:04:09.997 ***
+changed: [cmp-sw-wola]
+changed: [cmp-sw-wilanow]
+changed: [FINA-RT1-cASR920-Loop0]
+changed: [cmp-sw-zoliborz]
+changed: [fina-sw-chelmska]
+changed: [fina-sw-lodz]
+changed: [fina-sw-narbutta]
+changed: [fina-sw-pulawska]
+changed: [fina-sw-walbrzyska6]
+
+TASK [set ACL login for ATMs before=no ip access-list standard login, parents=ip access-list standard login, lines=['remark **Helpdesk, nagiosAWS, sniffer "pakieciarka"**', 'permit 212.69.66.0 0.0.0.63', 'permit host 212.69.68.123', 'permit host {{atm_acl1_extra_entry}}'], match=exact, replace=block] ***
+Wednesday 30 September 2020  15:37:47 +0200 (0:00:20.011)       0:04:30.008 ***
+skipping: [cmp-sw-wilanow]
+skipping: [cmp-sw-wola]
+skipping: [cmp-sw-zoliborz]
+skipping: [FINA-RT1-cASR920-Loop0]
+skipping: [fina-sw-chelmska]
+skipping: [fina-sw-lodz]
+skipping: [fina-sw-narbutta]
+skipping: [fina-sw-pulawska]
+skipping: [fina-sw-walbrzyska6]
+
+TASK [verify ACL login commands=['show ip access-lists login'], wait_for=['result[0] contains 212.69.66.0', 'result[0] contains 212.69.68.123']] ***
+Wednesday 30 September 2020  15:37:48 +0200 (0:00:00.436)       0:04:30.445 ***
+ok: [cmp-sw-wilanow]
+ok: [cmp-sw-wola]
+ok: [cmp-sw-zoliborz]
+ok: [FINA-RT1-cASR920-Loop0]
+ok: [fina-sw-chelmska]
+ok: [fina-sw-lodz]
+ok: [fina-sw-narbutta]
+ok: [fina-sw-pulawska]
+ok: [fina-sw-walbrzyska6]
+
+TASK [security on vty lines parents=line vty 0 4, lines=['exec-timeout 60', 'logging synchronous', 'access-class login in vrf-also', 'transport input ssh']] ***
+Wednesday 30 September 2020  15:37:55 +0200 (0:00:07.074)       0:04:37.520 ***
+changed: [cmp-sw-wola]
+changed: [cmp-sw-wilanow]
+changed: [FINA-RT1-cASR920-Loop0]
+changed: [cmp-sw-zoliborz]
+changed: [fina-sw-chelmska]
+changed: [fina-sw-lodz]
+changed: [fina-sw-narbutta]
+changed: [fina-sw-pulawska]
+changed: [fina-sw-walbrzyska6]
+
+TASK [save config save_when=always] ****************************************************************
+Wednesday 30 September 2020  15:38:12 +0200 (0:00:17.200)       0:04:54.720 ***
+changed: [cmp-sw-wola]
+changed: [cmp-sw-wilanow]
+changed: [cmp-sw-zoliborz]
+changed: [fina-sw-chelmska]
+changed: [fina-sw-lodz]
+changed: [fina-sw-narbutta]
+changed: [fina-sw-pulawska]
+changed: [fina-sw-walbrzyska6]
+changed: [FINA-RT1-cASR920-Loop0]
+
+PLAY [pagi-ssh-dev] ********************************************************************************
+
+TASK [security off vty lines parents=line vty 0 4, lines=['no access-class 1 in', 'no access-class login in']] ***
+Wednesday 30 September 2020  15:38:39 +0200 (0:00:26.743)       0:05:21.464 ***
+changed: [grodno-sw-waflowa]
+changed: [FOR--SW2-cMe3400]
+changed: [InstHema-RT1-FO]
+changed: [hexaware-sw]
+changed: [kaw--rtpe1]
+changed: [KAR--SW1-cMe3400]
+changed: [LAND-RT2-c1941-L0]
+changed: [KAW--SW1-cMe3400]
+changed: [LAND-SW1-c3400-12CS]
+changed: [LAND-SW5-c3560G]
+
+TASK [set ACL login standard before=no ip access-list standard login, parents=ip access-list standard login, lines=['remark **Helpdesk, nagiosAWS, loc mgmt-intf**', 'permit 212.69.66.0 0.0.0.63', 'permit host 212.69.68.123', 'permit host 52.210.128.8', 'permit 10.0.0.0 0.0.0.255'], match=exact, replace=block] ***
+Wednesday 30 September 2020  15:39:13 +0200 (0:00:34.368)       0:05:55.833 ***
+changed: [FOR--SW2-cMe3400]
+changed: [grodno-sw-waflowa]
+changed: [hexaware-sw]
+changed: [InstHema-RT1-FO]
+changed: [KAR--SW1-cMe3400]
+changed: [kaw--rtpe1]
+changed: [LAND-RT2-c1941-L0]
+changed: [KAW--SW1-cMe3400]
+changed: [LAND-SW1-c3400-12CS]
+changed: [LAND-SW5-c3560G]
+
+TASK [set ACL login for ATMs before=no ip access-list standard login, parents=ip access-list standard login, lines=['remark **Helpdesk, nagiosAWS, sniffer "pakieciarka"**', 'permit 212.69.66.0 0.0.0.63', 'permit host 212.69.68.123', 'permit host {{atm_acl1_extra_entry}}'], match=exact, replace=block] ***
+Wednesday 30 September 2020  15:39:39 +0200 (0:00:25.913)       0:06:21.747 ***
+skipping: [FOR--SW2-cMe3400]
+skipping: [grodno-sw-waflowa]
+skipping: [hexaware-sw]
+skipping: [InstHema-RT1-FO]
+skipping: [KAR--SW1-cMe3400]
+skipping: [kaw--rtpe1]
+skipping: [KAW--SW1-cMe3400]
+skipping: [LAND-RT2-c1941-L0]
+skipping: [LAND-SW1-c3400-12CS]
+skipping: [LAND-SW5-c3560G]
+
+TASK [verify ACL login commands=['show ip access-lists login'], wait_for=['result[0] contains 212.69.66.0', 'result[0] contains 212.69.68.123']] ***
+Wednesday 30 September 2020  15:39:40 +0200 (0:00:01.078)       0:06:22.825 ***
+ok: [FOR--SW2-cMe3400]
+ok: [grodno-sw-waflowa]
+ok: [hexaware-sw]
+ok: [InstHema-RT1-FO]
+ok: [KAR--SW1-cMe3400]
+ok: [kaw--rtpe1]
+ok: [KAW--SW1-cMe3400]
+ok: [LAND-RT2-c1941-L0]
+ok: [LAND-SW1-c3400-12CS]
+ok: [LAND-SW5-c3560G]
+
+TASK [security on vty lines parents=line vty 0 4, lines=['exec-timeout 60', 'logging synchronous', 'access-class login in vrf-also', 'transport input ssh']] ***
+Wednesday 30 September 2020  15:39:58 +0200 (0:00:17.822)       0:06:40.648 ***
+changed: [FOR--SW2-cMe3400]
+changed: [grodno-sw-waflowa]
+^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[Bchanged: [InstHema-RT1-FO]
+changed: [hexaware-sw]
+changed: [kaw--rtpe1]
+changed: [KAR--SW1-cMe3400]
+changed: [KAW--SW1-cMe3400]
+changed: [LAND-RT2-c1941-L0]
+changed: [LAND-SW1-c3400-12CS]
+changed: [LAND-SW5-c3560G]
+
+TASK [save config save_when=always] ****************************************************************
+Wednesday 30 September 2020  15:40:26 +0200 (0:00:28.228)       0:07:08.877 ***
+changed: [grodno-sw-waflowa]
+changed: [FOR--SW2-cMe3400]
+changed: [hexaware-sw]
+changed: [InstHema-RT1-FO]
+changed: [KAR--SW1-cMe3400]
+changed: [kaw--rtpe1]
+changed: [KAW--SW1-cMe3400]
+changed: [LAND-SW1-c3400-12CS]
+changed: [LAND-RT2-c1941-L0]
+changed: [LAND-SW5-c3560G]
+
+PLAY [pagi-ssh-dev] ********************************************************************************
+
+TASK [security off vty lines parents=line vty 0 4, lines=['no access-class 1 in', 'no access-class login in']] ***
+Wednesday 30 September 2020  15:41:05 +0200 (0:00:39.114)       0:07:47.991 ***
+changed: [LINX2-RT12-c1941-L0]
+changed: [LIM--RT2-c2811_hsec]
+changed: [LINX-RT11]
+changed: [LINX-RT10-cASR1002-2]
+changed: [LINX-RT13-cASR920-24SZIM-L0]
+changed: [LINX-RT14-cASR1001X]
+changed: [LINX-RT15-c7204_loop2k]
+changed: [LINX-RT16-c7204-MPWiK-mpls]
+changed: [LINX-RT17-cASR920-12SZ-D-L0]
+changed: [LINX-RT18-c1941]
+
+TASK [set ACL login standard before=no ip access-list standard login, parents=ip access-list standard login, lines=['remark **Helpdesk, nagiosAWS, loc mgmt-intf**', 'permit 212.69.66.0 0.0.0.63', 'permit host 212.69.68.123', 'permit host 52.210.128.8', 'permit 10.0.0.0 0.0.0.255'], match=exact, replace=block] ***
+Wednesday 30 September 2020  15:42:12 +0200 (0:01:06.452)       0:08:54.444 ***
+changed: [LINX2-RT12-c1941-L0]
+changed: [LIM--RT2-c2811_hsec]
+changed: [LINX-RT11]
+changed: [LINX-RT10-cASR1002-2]
+changed: [LINX-RT13-cASR920-24SZIM-L0]
+changed: [LINX-RT14-cASR1001X]
+changed: [LINX-RT15-c7204_loop2k]
+changed: [LINX-RT16-c7204-MPWiK-mpls]
+skipping: [LINX-RT18-c1941]
+changed: [LINX-RT17-cASR920-12SZ-D-L0]
+
+TASK [set ACL login for ATMs before=no ip access-list standard login, parents=ip access-list standard login, lines=['remark **Helpdesk, nagiosAWS, sniffer "pakieciarka"**', 'permit 212.69.66.0 0.0.0.63', 'permit host 212.69.68.123', 'permit host {{atm_acl1_extra_entry}}'], match=exact, replace=block] ***
+Wednesday 30 September 2020  15:43:03 +0200 (0:00:50.701)       0:09:45.146 ***
+skipping: [LINX2-RT12-c1941-L0]
+skipping: [LIM--RT2-c2811_hsec]
+skipping: [LINX-RT10-cASR1002-2]
+skipping: [LINX-RT11]
+skipping: [LINX-RT13-cASR920-24SZIM-L0]
+skipping: [LINX-RT14-cASR1001X]
+skipping: [LINX-RT15-c7204_loop2k]
+skipping: [LINX-RT16-c7204-MPWiK-mpls]
+skipping: [LINX-RT17-cASR920-12SZ-D-L0]
+changed: [LINX-RT18-c1941]
+
+TASK [verify ACL login commands=['show ip access-lists login'], wait_for=['result[0] contains 212.69.66.0', 'result[0] contains 212.69.68.123']] ***
+Wednesday 30 September 2020  15:43:11 +0200 (0:00:08.664)       0:09:53.810 ***
+ok: [LIM--RT2-c2811_hsec]
+ok: [LINX2-RT12-c1941-L0]
+ok: [LINX-RT10-cASR1002-2]
+ok: [LINX-RT11]
+ok: [LINX-RT13-cASR920-24SZIM-L0]
+ok: [LINX-RT14-cASR1001X]
+ok: [LINX-RT15-c7204_loop2k]
+ok: [LINX-RT16-c7204-MPWiK-mpls]
+ok: [LINX-RT17-cASR920-12SZ-D-L0]
+ok: [LINX-RT18-c1941]
+
+TASK [security on vty lines parents=line vty 0 4, lines=['exec-timeout 60', 'logging synchronous', 'access-class login in vrf-also', 'transport input ssh']] ***
+Wednesday 30 September 2020  15:43:38 +0200 (0:00:26.862)       0:10:20.672 ***
+changed: [LINX2-RT12-c1941-L0]
+changed: [LIM--RT2-c2811_hsec]
+changed: [LINX-RT11]
+changed: [LINX-RT10-cASR1002-2]
+changed: [LINX-RT13-cASR920-24SZIM-L0]
+changed: [LINX-RT14-cASR1001X]
+changed: [LINX-RT15-c7204_loop2k]
+changed: [LINX-RT16-c7204-MPWiK-mpls]
+changed: [LINX-RT17-cASR920-12SZ-D-L0]
+changed: [LINX-RT18-c1941]
+
+TASK [save config save_when=always] ****************************************************************
+Wednesday 30 September 2020  15:44:08 +0200 (0:00:29.893)       0:10:50.566 ***
+changed: [LINX2-RT12-c1941-L0]
+changed: [LIM--RT2-c2811_hsec]
+changed: [LINX-RT10-cASR1002-2]
+changed: [LINX-RT11]
+changed: [LINX-RT14-cASR1001X]
+changed: [LINX-RT15-c7204_loop2k]
+changed: [LINX-RT16-c7204-MPWiK-mpls]
+changed: [LINX-RT13-cASR920-24SZIM-L0]
+changed: [LINX-RT17-cASR920-12SZ-D-L0]
+changed: [LINX-RT18-c1941]
+
+PLAY [pagi-ssh-dev] ********************************************************************************
+
+TASK [security off vty lines parents=line vty 0 4, lines=['no access-class 1 in', 'no access-class login in']] ***
+Wednesday 30 September 2020  15:44:56 +0200 (0:00:48.268)       0:11:38.834 ***
+changed: [LINX-RT2-c2811_APN-Orange]
+changed: [LINX-RT1-cASR1002]
+changed: [LINX-RT3-c2811_APN_PLUS]
+changed: [LINX-RT6-c2811_leg_cisco]
+changed: [LINX-RT4-c2811_PKOBP]
+changed: [LINX-SW1-cMe3600X]
+changed: [LINX-SW2-cME3400]
+changed: [LINX-SW6-cMe3600X]
+changed: [LINX-SW7-c4900_loop2k]
+fatal: [LINX-RT7-c2811_gsm_cisco]: FAILED! => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python"}, "changed": false, "msg": "command timeout triggered, timeout value is 30 secs.\nSee the timeout setting options in the Network Debug and Troubleshooting Guide."}
+
+TASK [set ACL login standard before=no ip access-list standard login, parents=ip access-list standard login, lines=['remark **Helpdesk, nagiosAWS, loc mgmt-intf**', 'permit 212.69.66.0 0.0.0.63', 'permit host 212.69.68.123', 'permit host 52.210.128.8', 'permit 10.0.0.0 0.0.0.255'], match=exact, replace=block] ***
+Wednesday 30 September 2020  15:45:44 +0200 (0:00:47.605)       0:12:26.440 ***
+skipping: [LINX-RT2-c2811_APN-Orange]
+skipping: [LINX-RT3-c2811_APN_PLUS]
+skipping: [LINX-RT4-c2811_PKOBP]
+skipping: [LINX-RT6-c2811_leg_cisco]
+changed: [LINX-SW1-cMe3600X]
+changed: [LINX-RT1-cASR1002]
+changed: [LINX-SW2-cME3400]
+changed: [LINX-SW6-cMe3600X]
+changed: [LINX-SW7-c4900_loop2k]
+
+TASK [set ACL login for ATMs before=no ip access-list standard login, parents=ip access-list standard login, lines=['remark **Helpdesk, nagiosAWS, sniffer "pakieciarka"**', 'permit 212.69.66.0 0.0.0.63', 'permit host 212.69.68.123', 'permit host {{atm_acl1_extra_entry}}'], match=exact, replace=block] ***
+Wednesday 30 September 2020  15:45:53 +0200 (0:00:09.415)       0:12:35.855 ***
+skipping: [LINX-RT1-cASR1002]
+changed: [LINX-RT2-c2811_APN-Orange]
+changed: [LINX-RT3-c2811_APN_PLUS]
+changed: [LINX-RT6-c2811_leg_cisco]
+skipping: [LINX-SW1-cMe3600X]
+skipping: [LINX-SW2-cME3400]
+skipping: [LINX-SW6-cMe3600X]
+skipping: [LINX-SW7-c4900_loop2k]
+changed: [LINX-RT4-c2811_PKOBP]
+
+TASK [verify ACL login commands=['show ip access-lists login'], wait_for=['result[0] contains 212.69.66.0', 'result[0] contains 212.69.68.123']] ***
+Wednesday 30 September 2020  15:46:15 +0200 (0:00:21.677)       0:12:57.533 ***
+ok: [LINX-RT1-cASR1002]
+ok: [LINX-RT2-c2811_APN-Orange]
+ok: [LINX-RT3-c2811_APN_PLUS]
+ok: [LINX-RT4-c2811_PKOBP]
+ok: [LINX-RT6-c2811_leg_cisco]
+ok: [LINX-SW2-cME3400]
+ok: [LINX-SW1-cMe3600X]
+ok: [LINX-SW6-cMe3600X]
+ok: [LINX-SW7-c4900_loop2k]
+
+TASK [security on vty lines parents=line vty 0 4, lines=['exec-timeout 60', 'logging synchronous', 'access-class login in vrf-also', 'transport input ssh']] ***
+Wednesday 30 September 2020  15:46:22 +0200 (0:00:07.324)       0:13:04.858 ***
+changed: [LINX-RT2-c2811_APN-Orange]
+changed: [LINX-RT1-cASR1002]
+changed: [LINX-RT3-c2811_APN_PLUS]
+changed: [LINX-RT6-c2811_leg_cisco]
+changed: [LINX-SW1-cMe3600X]
+changed: [LINX-SW2-cME3400]
+changed: [LINX-SW6-cMe3600X]
+changed: [LINX-SW7-c4900_loop2k]
+changed: [LINX-RT4-c2811_PKOBP]
+
+TASK [save config save_when=always] ****************************************************************
+Wednesday 30 September 2020  15:46:41 +0200 (0:00:18.730)       0:13:23.588 ***
+changed: [LINX-RT2-c2811_APN-Orange]
+changed: [LINX-RT1-cASR1002]
+changed: [LINX-RT3-c2811_APN_PLUS]
+changed: [LINX-RT6-c2811_leg_cisco]
+changed: [LINX-SW1-cMe3600X]
+changed: [LINX-SW2-cME3400]
+fatal: [LINX-RT4-c2811_PKOBP]: FAILED! => {"changed": false, "msg": "command timeout triggered, timeout value is 30 secs.\nSee the timeout setting options in the Network Debug and Troubleshooting Guide."}
+changed: [LINX-SW7-c4900_loop2k]
+changed: [LINX-SW6-cMe3600X]
+
+PLAY [pagi-ssh-dev] ********************************************************************************
+
+TASK [security off vty lines parents=line vty 0 4, lines=['no access-class 1 in', 'no access-class login in']] ***
+Wednesday 30 September 2020  15:47:27 +0200 (0:00:46.047)       0:14:09.636 ***
+changed: [mago-rt]
+changed: [MAN-SW2-c2650G_Wolica]
+changed: [mgt-kaw]
+changed: [mgt-rem]
+changed: [mpwik-rtpe-czerniakowska]
+changed: [mpwik-rtpe-pruszkow]
+changed: [mpwik-rtpe-syta]
+changed: [mpwik-rtpe-wieliszew]
+changed: [mpwik-sw2-czerniakowska]
+changed: [mpwik-sw-czajki]
+
+TASK [set ACL login standard before=no ip access-list standard login, parents=ip access-list standard login, lines=['remark **Helpdesk, nagiosAWS, loc mgmt-intf**', 'permit 212.69.66.0 0.0.0.63', 'permit host 212.69.68.123', 'permit host 52.210.128.8', 'permit 10.0.0.0 0.0.0.255'], match=exact, replace=block] ***
+Wednesday 30 September 2020  15:48:05 +0200 (0:00:37.779)       0:14:47.416 ***
+changed: [mago-rt]
+changed: [MAN-SW2-c2650G_Wolica]
+changed: [mgt-kaw]
+changed: [mgt-rem]
+changed: [mpwik-rtpe-czerniakowska]
+changed: [mpwik-rtpe-pruszkow]
+changed: [mpwik-rtpe-syta]
+changed: [mpwik-rtpe-wieliszew]
+changed: [mpwik-sw2-czerniakowska]
+changed: [mpwik-sw-czajki]
+
+TASK [set ACL login for ATMs before=no ip access-list standard login, parents=ip access-list standard login, lines=['remark **Helpdesk, nagiosAWS, sniffer "pakieciarka"**', 'permit 212.69.66.0 0.0.0.63', 'permit host 212.69.68.123', 'permit host {{atm_acl1_extra_entry}}'], match=exact, replace=block] ***
+Wednesday 30 September 2020  15:48:53 +0200 (0:00:48.353)       0:15:35.769 ***
+skipping: [MAN-SW2-c2650G_Wolica]
+skipping: [mago-rt]
+skipping: [mgt-rem]
+skipping: [mgt-kaw]
+skipping: [mpwik-rtpe-czerniakowska]
+skipping: [mpwik-rtpe-pruszkow]
+skipping: [mpwik-rtpe-syta]
+skipping: [mpwik-rtpe-wieliszew]
+skipping: [mpwik-sw2-czerniakowska]
+skipping: [mpwik-sw-czajki]
+
+TASK [verify ACL login commands=['show ip access-lists login'], wait_for=['result[0] contains 212.69.66.0', 'result[0] contains 212.69.68.123']] ***
+Wednesday 30 September 2020  15:48:55 +0200 (0:00:02.039)       0:15:37.809 ***
+ok: [MAN-SW2-c2650G_Wolica]
+ok: [mago-rt]
+ok: [mgt-rem]
+ok: [mgt-kaw]
+ok: [mpwik-rtpe-czerniakowska]
+ok: [mpwik-rtpe-pruszkow]
+ok: [mpwik-rtpe-syta]
+ok: [mpwik-rtpe-wieliszew]
+ok: [mpwik-sw2-czerniakowska]
+ok: [mpwik-sw-czajki]
+
+TASK [security on vty lines parents=line vty 0 4, lines=['exec-timeout 60', 'logging synchronous', 'access-class login in vrf-also', 'transport input ssh']] ***
+Wednesday 30 September 2020  15:49:45 +0200 (0:00:49.636)       0:16:27.445 ***
+changed: [mago-rt]
+changed: [MAN-SW2-c2650G_Wolica]
+changed: [mgt-kaw]
+changed: [mgt-rem]
+changed: [mpwik-rtpe-czerniakowska]
+changed: [mpwik-rtpe-pruszkow]
+changed: [mpwik-rtpe-syta]
+changed: [mpwik-rtpe-wieliszew]
+changed: [mpwik-sw2-czerniakowska]
+changed: [mpwik-sw-czajki]
+
+TASK [save config save_when=always] ****************************************************************
+Wednesday 30 September 2020  15:50:48 +0200 (0:01:02.781)       0:17:30.227 ***
+changed: [mago-rt]
+changed: [MAN-SW2-c2650G_Wolica]
+changed: [mgt-kaw]
+changed: [mpwik-rtpe-czerniakowska]
+changed: [mgt-rem]
+changed: [mpwik-rtpe-pruszkow]
+changed: [mpwik-rtpe-syta]
+changed: [mpwik-sw2-czerniakowska]
+changed: [mpwik-rtpe-wieliszew]
+changed: [mpwik-sw-czajki]
+
+PLAY [pagi-ssh-dev] ********************************************************************************
+
+TASK [security off vty lines parents=line vty 0 4, lines=['no access-class 1 in', 'no access-class login in']] ***
+Wednesday 30 September 2020  15:52:01 +0200 (0:01:12.998)       0:18:43.226 ***
+changed: [mpwik-sw-falenica]
+changed: [mpwik-sw-debe]
+changed: [mpwik-sw-jachranka]
+changed: [mpwik-sw-pruszkow]
+changed: [mpwik-sw-radosc]
+changed: [mpwik-sw-stara-milosna]
+changed: [mpwik-sw-starynkiewicza]
+changed: [mpwik-sw-syta]
+changed: [mpwik-sw-wieliszew]
+changed: [MSZCZ-SW1]
+
+TASK [set ACL login standard before=no ip access-list standard login, parents=ip access-list standard login, lines=['remark **Helpdesk, nagiosAWS, loc mgmt-intf**', 'permit 212.69.66.0 0.0.0.63', 'permit host 212.69.68.123', 'permit host 52.210.128.8', 'permit 10.0.0.0 0.0.0.255'], match=exact, replace=block] ***
+Wednesday 30 September 2020  15:52:43 +0200 (0:00:42.586)       0:19:25.812 ***
+changed: [mpwik-sw-debe]
+changed: [mpwik-sw-falenica]
+changed: [mpwik-sw-jachranka]
+changed: [mpwik-sw-pruszkow]
+changed: [mpwik-sw-radosc]
+changed: [mpwik-sw-stara-milosna]
+changed: [mpwik-sw-starynkiewicza]
+changed: [mpwik-sw-syta]
+changed: [mpwik-sw-wieliszew]
+changed: [MSZCZ-SW1]
+
+TASK [set ACL login for ATMs before=no ip access-list standard login, parents=ip access-list standard login, lines=['remark **Helpdesk, nagiosAWS, sniffer "pakieciarka"**', 'permit 212.69.66.0 0.0.0.63', 'permit host 212.69.68.123', 'permit host {{atm_acl1_extra_entry}}'], match=exact, replace=block] ***
+Wednesday 30 September 2020  15:53:23 +0200 (0:00:39.605)       0:20:05.418 ***
+skipping: [mpwik-sw-falenica]
+skipping: [mpwik-sw-debe]
+skipping: [mpwik-sw-jachranka]
+skipping: [mpwik-sw-pruszkow]
+skipping: [mpwik-sw-radosc]
+skipping: [mpwik-sw-stara-milosna]
+skipping: [mpwik-sw-starynkiewicza]
+skipping: [mpwik-sw-syta]
+skipping: [mpwik-sw-wieliszew]
+skipping: [MSZCZ-SW1]
+
+TASK [verify ACL login commands=['show ip access-lists login'], wait_for=['result[0] contains 212.69.66.0', 'result[0] contains 212.69.68.123']] ***
+Wednesday 30 September 2020  15:53:24 +0200 (0:00:01.081)       0:20:06.499 ***
+ok: [mpwik-sw-falenica]
+ok: [mpwik-sw-debe]
+ok: [mpwik-sw-jachranka]
+ok: [mpwik-sw-pruszkow]
+ok: [mpwik-sw-radosc]
+ok: [mpwik-sw-stara-milosna]
+ok: [mpwik-sw-starynkiewicza]
+ok: [mpwik-sw-syta]
+ok: [mpwik-sw-wieliszew]
+ok: [MSZCZ-SW1]
+
+TASK [security on vty lines parents=line vty 0 4, lines=['exec-timeout 60', 'logging synchronous', 'access-class login in vrf-also', 'transport input ssh']] ***
+Wednesday 30 September 2020  15:53:40 +0200 (0:00:16.439)       0:20:22.939 ***
+changed: [mpwik-sw-debe]
+changed: [mpwik-sw-falenica]
+changed: [mpwik-sw-jachranka]
+changed: [mpwik-sw-pruszkow]
+changed: [mpwik-sw-radosc]
+changed: [mpwik-sw-stara-milosna]
+changed: [mpwik-sw-starynkiewicza]
+changed: [mpwik-sw-syta]
+changed: [mpwik-sw-wieliszew]
+changed: [MSZCZ-SW1]
+
+TASK [save config save_when=always] ****************************************************************
+Wednesday 30 September 2020  15:53:59 +0200 (0:00:19.036)       0:20:41.975 ***
+changed: [mpwik-sw-debe]
+changed: [mpwik-sw-falenica]
+changed: [mpwik-sw-pruszkow]
+changed: [mpwik-sw-jachranka]
+changed: [mpwik-sw-stara-milosna]
+changed: [mpwik-sw-radosc]
+changed: [mpwik-sw-starynkiewicza]
+changed: [mpwik-sw-syta]
+changed: [MSZCZ-SW1]
+changed: [mpwik-sw-wieliszew]
+
+PLAY [pagi-ssh-dev] ********************************************************************************
+
+TASK [security off vty lines parents=line vty 0 4, lines=['no access-class 1 in', 'no access-class login in']] ***
+Wednesday 30 September 2020  15:54:16 +0200 (0:00:16.177)       0:20:58.153 ***
+changed: [ODR--RT2-dla-nt.pagi.pl]
+changed: [ODR--RT1-c1921]
+changed: [ODR--RT3-cASR920_Lo]
+changed: [ODR--RT4]
+changed: [PIAS-SW1-cME3400]
+changed: [pias-sw1-pik]
+changed: [ODR--SW2-c2950_biuro]
+changed: [PIK11-RT2-cASR1001]
+changed: [PIK11-RT1-cASR920-L0]
+changed: [pik11-rt5-mgt]
+
+TASK [set ACL login standard before=no ip access-list standard login, parents=ip access-list standard login, lines=['remark **Helpdesk, nagiosAWS, loc mgmt-intf**', 'permit 212.69.66.0 0.0.0.63', 'permit host 212.69.68.123', 'permit host 52.210.128.8', 'permit 10.0.0.0 0.0.0.255'], match=exact, replace=block] ***
+Wednesday 30 September 2020  15:54:45 +0200 (0:00:29.456)       0:21:27.610 ***
+changed: [ODR--RT2-dla-nt.pagi.pl]
+changed: [ODR--RT1-c1921]
+skipping: [ODR--RT4]
+changed: [ODR--RT3-cASR920_Lo]
+changed: [ODR--SW2-c2950_biuro]
+changed: [PIAS-SW1-cME3400]
+changed: [PIK11-RT1-cASR920-L0]
+changed: [pias-sw1-pik]
+changed: [PIK11-RT2-cASR1001]
+changed: [pik11-rt5-mgt]
+
+TASK [set ACL login for ATMs before=no ip access-list standard login, parents=ip access-list standard login, lines=['remark **Helpdesk, nagiosAWS, sniffer "pakieciarka"**', 'permit 212.69.66.0 0.0.0.63', 'permit host 212.69.68.123', 'permit host {{atm_acl1_extra_entry}}'], match=exact, replace=block] ***
+Wednesday 30 September 2020  15:55:03 +0200 (0:00:18.199)       0:21:45.810 ***
+skipping: [ODR--RT1-c1921]
+skipping: [ODR--RT2-dla-nt.pagi.pl]
+skipping: [ODR--RT3-cASR920_Lo]
+skipping: [ODR--SW2-c2950_biuro]
+skipping: [PIAS-SW1-cME3400]
+skipping: [pias-sw1-pik]
+skipping: [PIK11-RT1-cASR920-L0]
+skipping: [PIK11-RT2-cASR1001]
+skipping: [pik11-rt5-mgt]
+changed: [ODR--RT4]
+
+TASK [verify ACL login commands=['show ip access-lists login'], wait_for=['result[0] contains 212.69.66.0', 'result[0] contains 212.69.68.123']] ***
+Wednesday 30 September 2020  15:55:08 +0200 (0:00:05.105)       0:21:50.916 ***
+ok: [ODR--RT1-c1921]
+ok: [ODR--RT2-dla-nt.pagi.pl]
+ok: [ODR--RT3-cASR920_Lo]
+ok: [ODR--RT4]
+ok: [ODR--SW2-c2950_biuro]
+ok: [PIAS-SW1-cME3400]
+ok: [pias-sw1-pik]
+ok: [PIK11-RT1-cASR920-L0]
+ok: [PIK11-RT2-cASR1001]
+ok: [pik11-rt5-mgt]
+
+TASK [security on vty lines parents=line vty 0 4, lines=['exec-timeout 60', 'logging synchronous', 'access-class login in vrf-also', 'transport input ssh']] ***
+Wednesday 30 September 2020  15:55:19 +0200 (0:00:10.973)       0:22:01.890 ***
+changed: [ODR--RT2-dla-nt.pagi.pl]
+changed: [ODR--RT1-c1921]
+changed: [ODR--RT4]
+changed: [ODR--RT3-cASR920_Lo]
+changed: [PIAS-SW1-cME3400]
+changed: [ODR--SW2-c2950_biuro]
+changed: [PIK11-RT1-cASR920-L0]
+changed: [pias-sw1-pik]
+changed: [PIK11-RT2-cASR1001]
+changed: [pik11-rt5-mgt]
+
+TASK [save config save_when=always] ****************************************************************
+Wednesday 30 September 2020  15:55:40 +0200 (0:00:20.471)       0:22:22.361 ***
+changed: [ODR--RT2-dla-nt.pagi.pl]
+changed: [ODR--RT1-c1921]
+changed: [ODR--RT4]
+changed: [ODR--RT3-cASR920_Lo]
+changed: [ODR--SW2-c2950_biuro]
+changed: [pias-sw1-pik]
+changed: [PIAS-SW1-cME3400]
+changed: [PIK11-RT2-cASR1001]
+changed: [pik11-rt5-mgt]
+changed: [PIK11-RT1-cASR920-L0]
+
+PLAY [pagi-ssh-dev] ********************************************************************************
+
+TASK [security off vty lines parents=line vty 0 4, lines=['no access-class 1 in', 'no access-class login in']] ***
+Wednesday 30 September 2020  15:56:32 +0200 (0:00:52.312)       0:23:14.673 ***
+changed: [pik11-rt3-c7200-PKOBP]
+changed: [pik11-rt4-c7200-apnOrange]
+changed: [pru2-rtpe1]
+changed: [PRU2-SW1-cMe3400]
+changed: [rt-km-soch-vlan1]
+changed: [PRU--SW1-cMe3400]
+changed: [sw-mazowia]
+changed: [rt-millymally]
+changed: [WOL--RT1-c2811-L0]
+changed: [WOL--SW1-cME3400]
+
+TASK [set ACL login standard before=no ip access-list standard login, parents=ip access-list standard login, lines=['remark **Helpdesk, nagiosAWS, loc mgmt-intf**', 'permit 212.69.66.0 0.0.0.63', 'permit host 212.69.68.123', 'permit host 52.210.128.8', 'permit 10.0.0.0 0.0.0.255'], match=exact, replace=block] ***
+Wednesday 30 September 2020  15:57:35 +0200 (0:01:02.747)       0:24:17.421 ***
+skipping: [pik11-rt3-c7200-PKOBP]
+skipping: [pik11-rt4-c7200-apnOrange]
+changed: [PRU2-SW1-cMe3400]
+changed: [pru2-rtpe1]
+changed: [rt-km-soch-vlan1]
+changed: [PRU--SW1-cMe3400]
+changed: [sw-mazowia]
+changed: [rt-millymally]
+changed: [WOL--RT1-c2811-L0]
+changed: [WOL--SW1-cME3400]
+
+TASK [set ACL login for ATMs before=no ip access-list standard login, parents=ip access-list standard login, lines=['remark **Helpdesk, nagiosAWS, sniffer "pakieciarka"**', 'permit 212.69.66.0 0.0.0.63', 'permit host 212.69.68.123', 'permit host {{atm_acl1_extra_entry}}'], match=exact, replace=block] ***
+Wednesday 30 September 2020  15:58:47 +0200 (0:01:12.547)       0:25:29.969 ***
+changed: [pik11-rt4-c7200-apnOrange]
+skipping: [pru2-rtpe1]
+skipping: [PRU2-SW1-cMe3400]
+skipping: [PRU--SW1-cMe3400]
+skipping: [rt-km-soch-vlan1]
+skipping: [rt-millymally]
+skipping: [sw-mazowia]
+changed: [pik11-rt3-c7200-PKOBP]
+skipping: [WOL--RT1-c2811-L0]
+skipping: [WOL--SW1-cME3400]
+
+TASK [verify ACL login commands=['show ip access-lists login'], wait_for=['result[0] contains 212.69.66.0', 'result[0] contains 212.69.68.123']] ***
+Wednesday 30 September 2020  15:59:02 +0200 (0:00:14.540)       0:25:44.510 ***
+ok: [pik11-rt4-c7200-apnOrange]
+ok: [pik11-rt3-c7200-PKOBP]
+ok: [pru2-rtpe1]
+ok: [PRU2-SW1-cMe3400]
+ok: [PRU--SW1-cMe3400]
+ok: [rt-km-soch-vlan1]
+ok: [rt-millymally]
+ok: [sw-mazowia]
+ok: [WOL--RT1-c2811-L0]
+ok: [WOL--SW1-cME3400]
+
+TASK [security on vty lines parents=line vty 0 4, lines=['exec-timeout 60', 'logging synchronous', 'access-class login in vrf-also', 'transport input ssh']] ***
+Wednesday 30 September 2020  16:00:02 +0200 (0:01:00.093)       0:26:44.603 ***
+changed: [pik11-rt3-c7200-PKOBP]
+changed: [pik11-rt4-c7200-apnOrange]
+changed: [pru2-rtpe1]
+changed: [PRU2-SW1-cMe3400]
+changed: [rt-km-soch-vlan1]
+changed: [PRU--SW1-cMe3400]
+changed: [sw-mazowia]
+changed: [rt-millymally]
+changed: [WOL--RT1-c2811-L0]
+changed: [WOL--SW1-cME3400]
+
+TASK [save config save_when=always] ****************************************************************
+Wednesday 30 September 2020  16:01:22 +0200 (0:01:19.961)       0:28:04.565 ***
+changed: [pik11-rt3-c7200-PKOBP]
+changed: [pik11-rt4-c7200-apnOrange]
+changed: [PRU2-SW1-cMe3400]
+changed: [pru2-rtpe1]
+changed: [PRU--SW1-cMe3400]
+changed: [rt-km-soch-vlan1]
+changed: [sw-mazowia]
+changed: [rt-millymally]
+changed: [WOL--RT1-c2811-L0]
+changed: [WOL--SW1-cME3400]
+
+PLAY [pagi-ssh-dev] ********************************************************************************
+
+TASK [security off vty lines parents=line vty 0 4, lines=['no access-class 1 in', 'no access-class login in']] ***
+Wednesday 30 September 2020  16:02:19 +0200 (0:00:56.936)       0:29:01.502 ***
+changed: [ZERA-SW2-c3400]
+changed: [ZERA-SW1-c3400-12CS]
+changed: [ztm-sw-anin]
+changed: [ztm-sw-dw-wschodni]
+changed: [ztm-sw-krakowska]
+changed: [ztm-sw-marymont]
+changed: [ztm-sw-polczynska]
+changed: [ztm-sw-stoklosy]
+changed: [ztm-sw-ursynow]
+changed: [ztm-sw-ursus]
+
+TASK [set ACL login standard before=no ip access-list standard login, parents=ip access-list standard login, lines=['remark **Helpdesk, nagiosAWS, loc mgmt-intf**', 'permit 212.69.66.0 0.0.0.63', 'permit host 212.69.68.123', 'permit host 52.210.128.8', 'permit 10.0.0.0 0.0.0.255'], match=exact, replace=block] ***
+Wednesday 30 September 2020  16:02:54 +0200 (0:00:34.601)       0:29:36.104 ***
+changed: [ZERA-SW1-c3400-12CS]
+changed: [ZERA-SW2-c3400]
+changed: [ztm-sw-anin]
+changed: [ztm-sw-dw-wschodni]
+changed: [ztm-sw-krakowska]
+changed: [ztm-sw-marymont]
+changed: [ztm-sw-polczynska]
+changed: [ztm-sw-stoklosy]
+changed: [ztm-sw-ursus]
+changed: [ztm-sw-ursynow]
+
+TASK [set ACL login for ATMs before=no ip access-list standard login, parents=ip access-list standard login, lines=['remark **Helpdesk, nagiosAWS, sniffer "pakieciarka"**', 'permit 212.69.66.0 0.0.0.63', 'permit host 212.69.68.123', 'permit host {{atm_acl1_extra_entry}}'], match=exact, replace=block] ***
+Wednesday 30 September 2020  16:03:17 +0200 (0:00:22.997)       0:29:59.101 ***
+skipping: [ZERA-SW1-c3400-12CS]
+skipping: [ZERA-SW2-c3400]
+skipping: [ztm-sw-anin]
+skipping: [ztm-sw-dw-wschodni]
+skipping: [ztm-sw-krakowska]
+skipping: [ztm-sw-marymont]
+skipping: [ztm-sw-polczynska]
+skipping: [ztm-sw-ursus]
+skipping: [ztm-sw-stoklosy]
+skipping: [ztm-sw-ursynow]
+
+TASK [verify ACL login commands=['show ip access-lists login'], wait_for=['result[0] contains 212.69.66.0', 'result[0] contains 212.69.68.123']] ***
+Wednesday 30 September 2020  16:03:17 +0200 (0:00:00.714)       0:29:59.816 ***
+ok: [ZERA-SW1-c3400-12CS]
+ok: [ZERA-SW2-c3400]
+ok: [ztm-sw-anin]
+ok: [ztm-sw-dw-wschodni]
+ok: [ztm-sw-krakowska]
+ok: [ztm-sw-marymont]
+ok: [ztm-sw-polczynska]
+ok: [ztm-sw-stoklosy]
+ok: [ztm-sw-ursus]
+ok: [ztm-sw-ursynow]
+
+TASK [security on vty lines parents=line vty 0 4, lines=['exec-timeout 60', 'logging synchronous', 'access-class login in vrf-also', 'transport input ssh']] ***
+Wednesday 30 September 2020  16:03:26 +0200 (0:00:09.101)       0:30:08.918 ***
+changed: [ZERA-SW1-c3400-12CS]
+changed: [ZERA-SW2-c3400]
+changed: [ztm-sw-anin]
+changed: [ztm-sw-dw-wschodni]
+changed: [ztm-sw-krakowska]
+changed: [ztm-sw-marymont]
+changed: [ztm-sw-polczynska]
+changed: [ztm-sw-stoklosy]
+changed: [ztm-sw-ursus]
+changed: [ztm-sw-ursynow]
+
+TASK [save config save_when=always] ****************************************************************
+Wednesday 30 September 2020  16:03:43 +0200 (0:00:16.959)       0:30:25.877 ***
+changed: [ZERA-SW1-c3400-12CS]
+changed: [ZERA-SW2-c3400]
+changed: [ztm-sw-dw-wschodni]
+changed: [ztm-sw-anin]
+changed: [ztm-sw-krakowska]
+changed: [ztm-sw-marymont]
+changed: [ztm-sw-polczynska]
+changed: [ztm-sw-stoklosy]
+changed: [ztm-sw-ursus]
+changed: [ztm-sw-ursynow]
+
+PLAY [pagi-ssh-dev] ********************************************************************************
+
+TASK [security off vty lines parents=line vty 0 4, lines=['no access-class 1 in', 'no access-class login in']] ***
+Wednesday 30 September 2020  16:03:58 +0200 (0:00:15.183)       0:30:41.060 ***
+changed: [ztm-sw-wawer]
+changed: [ztm-sw-wilanowska]
+changed: [ztm-wkm-sw1]
+changed: [ztm-wkm-sw2]
+changed: [ZTM-WKM-RT1_inet_L0]
+changed: [ztm-wkm-sw3]
+changed: [pik11-sw1-cme3600]
+changed: [pik11-sw2-c4900]
+
+TASK [set ACL login standard before=no ip access-list standard login, parents=ip access-list standard login, lines=['remark **Helpdesk, nagiosAWS, loc mgmt-intf**', 'permit 212.69.66.0 0.0.0.63', 'permit host 212.69.68.123', 'permit host 52.210.128.8', 'permit 10.0.0.0 0.0.0.255'], match=exact, replace=block] ***
+Wednesday 30 September 2020  16:04:35 +0200 (0:00:36.222)       0:31:17.282 ***
+changed: [ztm-sw-wawer]
+changed: [ztm-sw-wilanowska]
+changed: [ZTM-WKM-RT1_inet_L0]
+changed: [ztm-wkm-sw1]
+changed: [ztm-wkm-sw2]
+changed: [pik11-sw1-cme3600]
+changed: [ztm-wkm-sw3]
+changed: [pik11-sw2-c4900]
+
+TASK [set ACL login for ATMs before=no ip access-list standard login, parents=ip access-list standard login, lines=['remark **Helpdesk, nagiosAWS, sniffer "pakieciarka"**', 'permit 212.69.66.0 0.0.0.63', 'permit host 212.69.68.123', 'permit host {{atm_acl1_extra_entry}}'], match=exact, replace=block] ***
+Wednesday 30 September 2020  16:05:02 +0200 (0:00:27.293)       0:31:44.576 ***
+skipping: [ztm-sw-wilanowska]
+skipping: [ztm-sw-wawer]
+skipping: [ZTM-WKM-RT1_inet_L0]
+skipping: [ztm-wkm-sw1]
+skipping: [ztm-wkm-sw2]
+skipping: [ztm-wkm-sw3]
+skipping: [pik11-sw1-cme3600]
+skipping: [pik11-sw2-c4900]
+
+TASK [verify ACL login commands=['show ip access-lists login'], wait_for=['result[0] contains 212.69.66.0', 'result[0] contains 212.69.68.123']] ***
+Wednesday 30 September 2020  16:05:03 +0200 (0:00:00.877)       0:31:45.453 ***
+ok: [ztm-sw-wawer]
+ok: [ztm-sw-wilanowska]
+ok: [ZTM-WKM-RT1_inet_L0]
+ok: [ztm-wkm-sw1]
+ok: [ztm-wkm-sw2]
+ok: [ztm-wkm-sw3]
+ok: [pik11-sw1-cme3600]
+ok: [pik11-sw2-c4900]
+
+TASK [security on vty lines parents=line vty 0 4, lines=['exec-timeout 60', 'logging synchronous', 'access-class login in vrf-also', 'transport input ssh']] ***
+Wednesday 30 September 2020  16:05:18 +0200 (0:00:15.233)       0:32:00.687 ***
+changed: [ztm-sw-wilanowska]
+changed: [ztm-sw-wawer]
+changed: [ZTM-WKM-RT1_inet_L0]
+An exception occurred during task execution. To see the full traceback, use -vvv. The error was: ztm-wkm-sw1-c295(config-line)#
+fatal: [ztm-wkm-sw1]: FAILED! => {"changed": false, "module_stderr": "Traceback (most recent call last):\n  File \"<stdin>\", line 102, in <module>\n  File \"<stdin>\", line 94, in _ansiballz_main\n  File \"<stdin>\", line 40, in invoke_module\n  File \"/usr/lib/python2.7/runpy.py\", line 188, in run_module\n    fname, loader, pkg_name)\n  File \"/usr/lib/python2.7/runpy.py\", line 82, in _run_module_code\n    mod_name, mod_fname, mod_loader, pkg_name)\n  File \"/usr/lib/python2.7/runpy.py\", line 72, in _run_code\n    exec code in run_globals\n  File \"/tmp/ansible_ios_config_payload_YMxwyg/ansible_ios_config_payload.zip/ansible/modules/network/ios/ios_config.py\", line 569, in <module>\n  File \"/tmp/ansible_ios_config_payload_YMxwyg/ansible_ios_config_payload.zip/ansible/modules/network/ios/ios_config.py\", line 500, in main\n  File \"/tmp/ansible_ios_config_payload_YMxwyg/ansible_ios_config_payload.zip/ansible/modules/network/ios/ios_config.py\", line 364, in edit_config_or_macro\n  File \"/tmp/ansible_ios_config_payload_YMxwyg/ansible_ios_config_payload.zip/ansible/module_utils/connection.py\", line 185, in __rpc__\nansible.module_utils.connection.ConnectionError: access-class login in vrf-also\r\naccess-class login in vrf-also\r\n                      ^\r\n% Invalid input detected at '^' marker.\r\n\r\nztm-wkm-sw1-c295(config-line)#\n", "module_stdout": "", "msg": "MODULE FAILURE\nSee stdout/stderr for the exact error", "rc": 1}
+An exception occurred during task execution. To see the full traceback, use -vvv. The error was: ztm-wkm-sw2-c295(config-line)#
+fatal: [ztm-wkm-sw2]: FAILED! => {"changed": false, "module_stderr": "Traceback (most recent call last):\n  File \"<stdin>\", line 102, in <module>\n  File \"<stdin>\", line 94, in _ansiballz_main\n  File \"<stdin>\", line 40, in invoke_module\n  File \"/usr/lib/python2.7/runpy.py\", line 188, in run_module\n    fname, loader, pkg_name)\n  File \"/usr/lib/python2.7/runpy.py\", line 82, in _run_module_code\n    mod_name, mod_fname, mod_loader, pkg_name)\n  File \"/usr/lib/python2.7/runpy.py\", line 72, in _run_code\n    exec code in run_globals\n  File \"/tmp/ansible_ios_config_payload_9npMzS/ansible_ios_config_payload.zip/ansible/modules/network/ios/ios_config.py\", line 569, in <module>\n  File \"/tmp/ansible_ios_config_payload_9npMzS/ansible_ios_config_payload.zip/ansible/modules/network/ios/ios_config.py\", line 500, in main\n  File \"/tmp/ansible_ios_config_payload_9npMzS/ansible_ios_config_payload.zip/ansible/modules/network/ios/ios_config.py\", line 364, in edit_config_or_macro\n  File \"/tmp/ansible_ios_config_payload_9npMzS/ansible_ios_config_payload.zip/ansible/module_utils/connection.py\", line 185, in __rpc__\nansible.module_utils.connection.ConnectionError: access-class login in vrf-also\r\naccess-class login in vrf-also\r\n                      ^\r\n% Invalid input detected at '^' marker.\r\n\r\nztm-wkm-sw2-c295(config-line)#\n", "module_stdout": "", "msg": "MODULE FAILURE\nSee stdout/stderr for the exact error", "rc": 1}
+An exception occurred during task execution. To see the full traceback, use -vvv. The error was: ztm-wkm-sw3-c295(config-line)#
+fatal: [ztm-wkm-sw3]: FAILED! => {"changed": false, "module_stderr": "Traceback (most recent call last):\n  File \"<stdin>\", line 102, in <module>\n  File \"<stdin>\", line 94, in _ansiballz_main\n  File \"<stdin>\", line 40, in invoke_module\n  File \"/usr/lib/python2.7/runpy.py\", line 188, in run_module\n    fname, loader, pkg_name)\n  File \"/usr/lib/python2.7/runpy.py\", line 82, in _run_module_code\n    mod_name, mod_fname, mod_loader, pkg_name)\n  File \"/usr/lib/python2.7/runpy.py\", line 72, in _run_code\n    exec code in run_globals\n  File \"/tmp/ansible_ios_config_payload_rG7Miw/ansible_ios_config_payload.zip/ansible/modules/network/ios/ios_config.py\", line 569, in <module>\n  File \"/tmp/ansible_ios_config_payload_rG7Miw/ansible_ios_config_payload.zip/ansible/modules/network/ios/ios_config.py\", line 500, in main\n  File \"/tmp/ansible_ios_config_payload_rG7Miw/ansible_ios_config_payload.zip/ansible/modules/network/ios/ios_config.py\", line 364, in edit_config_or_macro\n  File \"/tmp/ansible_ios_config_payload_rG7Miw/ansible_ios_config_payload.zip/ansible/module_utils/connection.py\", line 185, in __rpc__\nansible.module_utils.connection.ConnectionError: access-class login in vrf-also\r\naccess-class login in vrf-also\r\n                      ^\r\n% Invalid input detected at '^' marker.\r\n\r\nztm-wkm-sw3-c295(config-line)#\n", "module_stdout": "", "msg": "MODULE FAILURE\nSee stdout/stderr for the exact error", "rc": 1}
+changed: [pik11-sw1-cme3600]
+changed: [pik11-sw2-c4900]
+
+TASK [save config save_when=always] ****************************************************************
+Wednesday 30 September 2020  16:05:40 +0200 (0:00:21.719)       0:32:22.406 ***
+changed: [ztm-sw-wawer]
+changed: [ztm-sw-wilanowska]
+changed: [ZTM-WKM-RT1_inet_L0]
+changed: [pik11-sw1-cme3600]
+changed: [pik11-sw2-c4900]
+
+PLAY RECAP *****************************************************************************************
+CMP-RT3-cASR1001           : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+FINA-RT1-cASR920-Loop0     : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+FOR--SW2-cMe3400           : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+InstHema-RT1-FO            : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+KAR--SW1-cMe3400           : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+KAW--SW1-cMe3400           : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+LAND-RT2-c1941-L0          : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+LAND-SW1-c3400-12CS        : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+LAND-SW5-c3560G            : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+LIM--RT2-c2811_hsec        : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+LINX-RT1-cASR1002          : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+LINX-RT10-cASR1002-2       : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+LINX-RT11                  : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+LINX-RT13-cASR920-24SZIM-L0 : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+LINX-RT14-cASR1001X        : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+LINX-RT15-c7204_loop2k     : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+LINX-RT16-c7204-MPWiK-mpls : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+LINX-RT17-cASR920-12SZ-D-L0 : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+LINX-RT18-c1941            : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+LINX-RT2-c2811_APN-Orange  : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+LINX-RT3-c2811_APN_PLUS    : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+LINX-RT4-c2811_PKOBP       : ok=4    changed=3    unreachable=0    failed=1    skipped=1    rescued=0    ignored=0
+LINX-RT6-c2811_leg_cisco   : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+LINX-RT7-c2811_gsm_cisco   : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0
+LINX-SW1-cMe3600X          : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+LINX-SW2-cME3400           : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+LINX-SW6-cMe3600X          : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+LINX-SW7-c4900_loop2k      : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+LINX2-RT12-c1941-L0        : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+MAN-SW2-c2650G_Wolica      : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+MSZCZ-SW1                  : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+ODR--RT1-c1921             : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+ODR--RT2-dla-nt.pagi.pl    : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+ODR--RT3-cASR920_Lo        : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+ODR--RT4                   : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+ODR--SW2-c2950_biuro       : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+PIAS-SW1-cME3400           : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+PIK11-RT1-cASR920-L0       : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+PIK11-RT2-cASR1001         : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+PRU--SW1-cMe3400           : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+PRU2-SW1-cMe3400           : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+WOL--RT1-c2811-L0          : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+WOL--SW1-cME3400           : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+ZERA-SW1-c3400-12CS        : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+ZERA-SW2-c3400             : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+ZTM-WKM-RT1_inet_L0        : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+cmp-rt-goclaw              : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+cmp-rt-lomianki-l2k        : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+cmp-rt-pawia-l2k           : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+cmp-rt-pias-jp2-l2k        : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0
+cmp-rt4                    : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+cmp-sw-bialoleka           : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+cmp-sw-bialoleka2          : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+cmp-sw-chmielna            : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+cmp-sw-goclaw              : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0
+cmp-sw-jozefoslaw          : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+cmp-sw-lomianki            : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+cmp-sw-marianska           : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+cmp-sw-ochota              : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+cmp-sw-pawia               : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+cmp-sw-pias-jp2            : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0
+cmp-sw-ursynow             : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+cmp-sw-wilanow             : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+cmp-sw-wola                : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+cmp-sw-wola2               : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0
+cmp-sw-zoliborz            : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+cmp-sw3-l2k                : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+cmp-sw4-l2k                : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+cmp-sw9-c3560G-wisniowa    : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+fina-sw-chelmska           : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+fina-sw-lodz               : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+fina-sw-narbutta           : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+fina-sw-pulawska           : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+fina-sw-walbrzyska6        : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+grodno-sw-waflowa          : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+hexaware-sw                : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+kaw--rtpe1                 : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+mago-rt                    : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+mgt-kaw                    : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+mgt-rem                    : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+mpwik-rtpe-czerniakowska   : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+mpwik-rtpe-pruszkow        : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+mpwik-rtpe-syta            : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+mpwik-rtpe-wieliszew       : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+mpwik-sw-czajki            : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+mpwik-sw-debe              : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+mpwik-sw-falenica          : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+mpwik-sw-jachranka         : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+mpwik-sw-pruszkow          : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+mpwik-sw-radosc            : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+mpwik-sw-stara-milosna     : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+mpwik-sw-starynkiewicza    : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+mpwik-sw-syta              : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+mpwik-sw-wieliszew         : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+mpwik-sw2-czerniakowska    : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+pias-sw1-pik               : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+pik11-rt3-c7200-PKOBP      : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+pik11-rt4-c7200-apnOrange  : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+pik11-rt5-mgt              : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+pik11-sw1-cme3600          : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+pik11-sw2-c4900            : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+pru2-rtpe1                 : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+rt-km-soch-vlan1           : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+rt-millymally              : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+sw-mazowia                 : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+ztm-sw-anin                : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+ztm-sw-dw-wschodni         : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+ztm-sw-krakowska           : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+ztm-sw-marymont            : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+ztm-sw-polczynska          : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+ztm-sw-stoklosy            : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+ztm-sw-ursus               : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+ztm-sw-ursynow             : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+ztm-sw-wawer               : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+ztm-sw-wilanowska          : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+ztm-wkm-sw1                : ok=3    changed=2    unreachable=0    failed=1    skipped=1    rescued=0    ignored=0
+ztm-wkm-sw2                : ok=3    changed=2    unreachable=0    failed=1    skipped=1    rescued=0    ignored=0
+ztm-wkm-sw3                : ok=3    changed=2    unreachable=0    failed=1    skipped=1    rescued=0    ignored=0
+
+Wednesday 30 September 2020  16:05:55 +0200 (0:00:15.137)       0:32:37.544 ***
+===============================================================================
+security off vty lines --------------------------------------------------------------------- 36.22s
+set ACL login standard --------------------------------------------------------------------- 27.29s
+security on vty lines ---------------------------------------------------------------------- 21.72s
+verify ACL login --------------------------------------------------------------------------- 15.23s
+save config -------------------------------------------------------------------------------- 15.15s
+set ACL login for ATMs ---------------------------------------------------------------------- 0.88s
+irek@HP-4710s:~/ans/pagi
+->timed out waiting for input: auto-logout
+irek@HP-4710s:~/ans/pagi
+->
+irek@HP-4710s:~/ans/pagi
+-

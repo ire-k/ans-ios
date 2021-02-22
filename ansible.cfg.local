@@ -1,0 +1,50 @@
+[defaults]
+inventory = inv.ini
+host_key_checking = False
+deprecation_warnings=False
+nocolor = True
+log_path = /home/irek/ans/pagi/pagi.log
+display_args_to_stdout = True
+
+## facts caching in memory: https://docs.ansible.com/ansible/latest/plugins/cache.html#cache-plugins
+[inventory]
+cache=True
+
+## I prefer no more than virtual cores of the processor
+forks = 2
+
+# add time information to tasks
+callback_whitelist = profile_tasks
+
+[ssh_connection]
+## keep ssh conn for all tasks
+pipelining = True
+
+## reuse existing ssh connection, ssh multiplexiing
+ssh_args = -o ControlMaster=auto -o ControlPersist=60s
+
+## some more:
+# https://howto.lintel.in/speed-up-ansible/
+
+
+
+# https://docs.ansible.com/ansible/latest/network/user_guide/network_debug_troubleshooting.html
+# https://raw.githubusercontent.com/ansible/ansible/devel/examples/ansible.cfg
+
+[persistent_connection]
+# Configures the persistent connection timeout value in seconds. This value is
+# how long the persistent connection will remain idle before it is destroyed.
+# If the connection doesn't receive a request before the timeout value
+# expires, the connection is shutdown. The default value is 30 seconds.
+connect_timeout = 90
+
+# The command timeout value defines the amount of time to wait for a command
+# or RPC call before timing out. The value for the command timeout must
+# be less than the value of the persistent connection idle timeout (connect_timeout)
+# The default value is 30 second.
+command_timeout = 80
+
+connect_retry_timeout = 30
+
+#log interaction with a device
+log_messages = True

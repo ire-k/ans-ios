@@ -1,0 +1,13 @@
+---
+- hosts: pagi
+  gather_facts: false
+  connection: network_cli
+  # limit no of targets a time 
+  serial: 10
+  tasks:
+  - debug: 
+      msg: acl1 has extra entries
+    when: ext_acl1 is defined
+
+
+

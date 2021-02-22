@@ -1,0 +1,41 @@
+# ansible-playbook -vvv sh_ver.yml
+---
+#- hosts: ztm-sw-wawer
+- hosts: pagi-ssh-dev
+  gather_facts: false
+  connection: network_cli
+  serial: 10
+  tasks:
+    - name: disp inventory_hostname
+      debug:
+        msg: "{{ inventory_hostname }}"
+    - name : get ios_facts
+      ios_facts:
+        #  gather_subset: min
+      register: iosf1
+    
+      #    - debug:
+      #        var: iosf1
+
+    - copy: content="{{ iosf1 | to_nice_json }}" dest="~/ans/pagi/inv-out/{{inventory_hostname}}_snmpfacts.json"
+
+    - name: Write facts to disk using a template
+      when: false
+      copy:
+        content: |
+          #jinja2: lstrip_blocks: True
+          IOS device info:
+            {% for host in groups['pagi-ssh-dev'] %}
+            Hostname: {{ hostvars[host].ansible_net_hostname }}
+            Version: {{ hostvars[host].ansible_net_version }}
+            Model: {{ hostvars[host].ansible_net_model }}
+            Serial: {{ hostvars[host].ansible_net_serialnum }}
+            #mem free: {{ hostvars[host].ansible_net_memfree_mb }}
+            mem total: {{ hostvars[host].ansible_net_memtotal_mb }}
+            image: {{ hostvars[host].ansible_net_image }}
+            filesystem: {{ hostvars[host].ansible_net_filesystems }}
+            :
+            {% endfor %}
+        dest: /home/irek/ans/pagi/pagi-inv.txt
+      run_once: yes
+
