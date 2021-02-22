@@ -1,5 +1,5 @@
 ---
-- hosts: ODR--SW10-c3750G
+- hosts: test_switches
   gather_facts: false
   connection: network_cli
   tasks:
@@ -7,15 +7,13 @@
   - name: get ios facts hw
     ios_facts:
       gather_subset: hardware
-    register: hw
 
   - debug:
-      var: ansible_facts.ansible_net_model
-    when: hw.ansible_facts.ansible_net_model is regex("3750")
+      var: ansible_net_model
+#    when: ansible_net_model is regex("3750")
 
 
-  - meta: end_play
-
+      #- meta: end_play
       #  - name: pause
       #    pause:
 
@@ -30,7 +28,6 @@
         - aaa authorization exec default group radius local 
         - aaa authorization console
 
-
   - name: set aaa group radius
     ios_config:
       parents: aaa group server radius grp-radius
@@ -39,32 +36,19 @@
         - ip radius source-interface {{mgt_int}}
 
   - name: set radius srv new-config
-    when: (type is match("ME3600X")) or (type is match("ASR920")  )
+    #when: (ansible_net_model is regex("ME3600X")) or (ansible_net_model is regex("ASR920")  )
+    when: ( ansible_net_model is regex("ME3600X") or ansible_net_model is regex("ASR") )
     ios_config:
       parents: radius server radius-srv1
       lines:
         - address ipv4 212.69.71.194 auth-port 1812 acct-port 1814
         - key 1pSbR2Dq
 
-  - name: radius srv on ME3400
-    when: type is match("ME3400")
-    ios_config:
-      lines:
-        - radius-server host 212.69.71.194 auth-port 1812 acct-port 1813 key 1pSbR2Dq
-
-  - name: radius grp on ME3400
-    when: type is match("ME3400")
-    ios_config:
-      parents: aaa group server radius grpradius
-      lines: server 212.69.71.194 auth-port 1812 acct-port 1813
-
   - name: set radius old-config glob
-    when: (type is match("c4900")) or (type is match("3560G"))
+    when: ( ansible_net_model is regex("4900") or ansible_net_model is regex("3560") or ansible_net_model is regex("ME3400"))
     ios_config:
       lines:
         - radius-server host 212.69.71.194 auth-port 1812 acct-port 1813 key 1pSbR2Dq
-        - ip radius source-interface {{mgt_int}}
-
 
   - name: set aliases
     ios_config:
@@ -99,13 +83,13 @@
         - no ip domain lookup
         
   - name: security2
-    when: ( type is match("c4900") or type is match("3560G") or type is match("3750G") or type is match("2950") )
+    when: ( ansible_net_model is regex("4900") or ansible_net_model is regex("3560") or ansible_net_model is regex("3750") or ansible_net_model is regex("2950") )
     ios_config:
       lines:
         - vtp mode transparent
 
   - name : security3
-    when: ( type is match("c4900") or type is match("3560G") )
+    when: ( ansible_net_model is regex("4900") or ansible_net_model is regex("3560") )
     ios_config:
       lines:
         - no service call-home
@@ -186,14 +170,18 @@
         - ntp server 212.69.81.115 prefer
         - no ntp logging
  
-
-  - name: set acls
-    ios_config:
+  # order of the entries and remarks tends to be unpredictable; adding numbers before permit doesn't help - probably gets optimized by CEF
+  - name: set ACL login standard
+    cisco.ios.ios_config:
+      before: no ip access-list standard login
+      parents: ip access-list standard login
       lines:
-        - access-list 10 permit 212.69.66.0 0.0.0.31
-        - access-list 1 permit 212.69.66.0 0.0.0.31
-        - access-list 1 permit 212.69.68.123
-
+        - remark **Helpdesk, nagiosAWS, loc mgmt-intf**
+        - permit 212.69.66.0 0.0.0.63
+        - permit host 212.69.68.123
+        - permit host 52.210.128.8
+      match: exact
+      replace: block
 
           ## memory critical reserves both io and processor pools 
   - name: set trap warings memory
@@ -205,7 +193,7 @@
 
     # allows check with command: show memory overflow
   - name: memory leak detection
-    when: type is not match("ASR920")
+    when: ansible_net_model is regex("ASR920")
     ios_config:
       lines:
         - exception memory ignore overflow io
@@ -213,52 +201,48 @@
         #Enhanced Crashinfo File Collection
         #- exception crashinfo maximum files 1
 
-  #LINX-SW7-C4900(config)#memory free low-watermark io 13000
-  #%Error: IO memory and processor memory are the same
-  #Configure the low water mark for processor memory
-
-  - name: set memory limits on c4900
-    when: type is match("c4900")
+  - name: set memory limits on 4900
+    when: ansible_net_model is regex("4900")
     ios_config:
       lines:
         - memory free low-watermark processor 90000
 
   - name: set memory limits on ASR920
-    when: type is match("ASR920")
+    when: ansible_net_model is regex("ASR920")
     ios_config:
       lines:
         - memory free low-watermark processor 180000
 
   - name: set memory limits on ME3600X
-    when: type is match("ME3600X")
+    when: ansible_net_model is regex("ME3600X")
     ios_config:
       lines:
         - memory free low-watermark processor 159000
         - memory free low-watermark io 13000
 
-  - name: set memory limits on 3560G
-    when: type is match("3560G")
+  - name: set memory limits on 3560
+    when: ansible_net_model is regex("3560")
     ios_config:
       lines:
         - memory free low-watermark processor 15000
         - memory free low-watermark io 1600
 
   - name: set memory limits on ME3400
-    when: type is match("ME3400")
+    when: ansible_net_model is regex("ME3400")
     ios_config:
       lines:
         - memory free low-watermark processor 200
         - memory free low-watermark io 1200
 
-  - name: set memory limits on WS-3750G
-    when: type is match("3750G")
+  - name: set memory limits on WS-3750
+    when: ansible_net_model is regex("3750")
     ios_config:
       lines:
         - memory free low-watermark processor 200
         - memory free low-watermark io 2457
 
   - name: disable vstack
-    when: ( type is match("3560G")) or (type is match ("3750G") )
+    when: ( ansible_net_model is regex("3560")) or (ansible_net_model is regex ("3750") )
     ios_config:
       lines:
         - no vstack basic
@@ -287,9 +271,13 @@
 #https://www.cisco.com/en/US/docs/ios/12_3t/12_3t4/feature/guide/gt_memnt.html
 #https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/bsm/configuration/15-2mt/bsm-mem-thresh-note.html          
 # Cisco IOS Software, Catalyst 4500 L3 Switch Software (cat4500e-IPBASEK9-M), Version 12.2(54)SG1, RELEASE SOFTWARE (fc1)
-##plan_PIK11-SW2-c4900#sh proc memory             
+##plan_PIK11-SW2-4900#sh proc memory             
 #Processor Pool Total:  465346528 Used:  206055968 Free:  259290560
 # 20% -> 90000 kB
+  #LINX-SW7-4900(config)#memory free low-watermark io 13000
+  #%Error: IO memory and processor memory are the same
+  #Configure the low water mark for processor memory
+
 
 ## plan_PIK11-SW1-cME3600X#sh proc memory
 #Processor Pool Total:  815909596 Used:  169799804 Free:  646109792
@@ -297,7 +285,8 @@
 # processor 20% -> 159000 kB
 # i/o 20%       -> 13000 kB
 
-## lab_c3560G#sh proc mem
+## lab_c3560G
+##sh proc mem
 #Processor  Pool Total:   76961468 Used:   19430096 Free:   57531372
 #I/O        Pool Total:    8388608 Used:    3590640 Free:    4797968
 #Driver te  Pool Total:    1048576 Used:         40 Free:    1048536
@@ -305,7 +294,7 @@
 # 20% i/o  -> 1600 kB
 #
 #
-#3560G(config)#memory free low-watermark io ?
+#3560(config)#memory free low-watermark io ?
 #  <1-4294967295>  low water mark of memory in KB
 
 #lab_cME3400#sh proc memory
@@ -354,10 +343,10 @@
 #the current configuration
 
 
-      ## 3750
+      ## 3750G
       #inventory
-      #NAME: "1", DESCR: "WS-C3750G-24PS"
-      #PID: WS-C3750G-24PS-S  , VID: V08  , SN: FOC1446Y14S
+      #NAME: "1", DESCR: "WS-C3750-24PS"
+      #PID: WS-C3750-24PS-S  , VID: V08  , SN: FOC1446Y14S
       #
       #Processor Pool Total:   71359432 Used:   31742852 Free:   39616580
       #      I/O Pool Total:   12582912 Used:    8668732 Free:    3914180
