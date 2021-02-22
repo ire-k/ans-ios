@@ -1,0 +1,425 @@
+{
+    "ansible_facts": {
+        "ansible_net_all_ipv4_addresses": [
+            "10.254.253.198"
+        ],
+        "ansible_net_all_ipv6_addresses": [],
+        "ansible_net_api": "cliconf",
+        "ansible_net_filesystems": [
+            "flash:"
+        ],
+        "ansible_net_filesystems_info": {
+            "flash:": {
+                "spacefree_kb": 16145.0,
+                "spacetotal_kb": 31752.0
+            }
+        },
+        "ansible_net_gather_network_resources": [],
+        "ansible_net_gather_subset": [
+            "hardware",
+            "default",
+            "interfaces"
+        ],
+        "ansible_net_hostname": "FINA-SW-Chelmska",
+        "ansible_net_image": "flash:/c3560-ipservicesk9-mz.122-58.SE2.bin",
+        "ansible_net_interfaces": {
+            "GigabitEthernet0/1": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0019.e758.3101",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9000,
+                "operstatus": "down",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/10": {
+                "bandwidth": 10000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0019.e758.310a",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9000,
+                "operstatus": "down",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/11": {
+                "bandwidth": 10000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0019.e758.310b",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9000,
+                "operstatus": "down",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/12": {
+                "bandwidth": 10000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0019.e758.310c",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9000,
+                "operstatus": "down",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/13": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0019.e758.310d",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9000,
+                "operstatus": "down",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/14": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0019.e758.310e",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9000,
+                "operstatus": "up",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/15": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0019.e758.310f",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9000,
+                "operstatus": "up",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/16": {
+                "bandwidth": 10000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0019.e758.3110",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9000,
+                "operstatus": "down",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/17": {
+                "bandwidth": 10000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0019.e758.3111",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9000,
+                "operstatus": "down",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/18": {
+                "bandwidth": 10000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0019.e758.3112",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9000,
+                "operstatus": "down",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/19": {
+                "bandwidth": 10000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0019.e758.3113",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9000,
+                "operstatus": "down",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/2": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0019.e758.3102",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9000,
+                "operstatus": "up",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/20": {
+                "bandwidth": 10000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0019.e758.3114",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9000,
+                "operstatus": "down",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/21": {
+                "bandwidth": 10000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0019.e758.3115",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9000,
+                "operstatus": "down",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/22": {
+                "bandwidth": 10000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0019.e758.3116",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9000,
+                "operstatus": "down",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/23": {
+                "bandwidth": 10000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0019.e758.3117",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9000,
+                "operstatus": "down",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/24": {
+                "bandwidth": 10000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0019.e758.3118",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9000,
+                "operstatus": "down",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/25": {
+                "bandwidth": 10000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0019.e758.3119",
+                "mediatype": "Not Present",
+                "mtu": 9000,
+                "operstatus": "down",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/26": {
+                "bandwidth": 10000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0019.e758.311a",
+                "mediatype": "Not Present",
+                "mtu": 9000,
+                "operstatus": "down",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/27": {
+                "bandwidth": 1000000,
+                "description": "**DL do WFDiF Nexus SF-SM31WD020D(49)-GP LC/PC<-> LC/PC 1j Tx1310 Rx1490 **",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0019.e758.311b",
+                "mediatype": "1000BaseLX SFP",
+                "mtu": 9000,
+                "operstatus": "up",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/28": {
+                "bandwidth": 1000000,
+                "description": "**uplink do LINX SF-SM31WD020D(49)-GP LC/PC<-> SC/APC 1j Tx1310 Rx1490 **",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0019.e758.311c",
+                "mediatype": "1000BaseLX SFP",
+                "mtu": 9000,
+                "operstatus": "up",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/3": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0019.e758.3103",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9000,
+                "operstatus": "up",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/4": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0019.e758.3104",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9000,
+                "operstatus": "down",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/5": {
+                "bandwidth": 10000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0019.e758.3105",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9000,
+                "operstatus": "down",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/6": {
+                "bandwidth": 10000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0019.e758.3106",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9000,
+                "operstatus": "down",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/7": {
+                "bandwidth": 10000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0019.e758.3107",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9000,
+                "operstatus": "down",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/8": {
+                "bandwidth": 10000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0019.e758.3108",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9000,
+                "operstatus": "down",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/9": {
+                "bandwidth": 10000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0019.e758.3109",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9000,
+                "operstatus": "down",
+                "type": "Gigabit Ethernet"
+            },
+            "Vlan1": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "0019.e758.3140",
+                "mediatype": null,
+                "mtu": 1998,
+                "operstatus": "administratively down",
+                "type": "EtherSVI"
+            },
+            "Vlan8": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.254.253.198",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0019.e758.3141",
+                "mediatype": null,
+                "mtu": 1998,
+                "operstatus": "up",
+                "type": "EtherSVI"
+            }
+        },
+        "ansible_net_iostype": "IOS",
+        "ansible_net_memfree_mb": 41011.6171875,
+        "ansible_net_memtotal_mb": 4817.6015625,
+        "ansible_net_model": "WS-C3560G-24TS",
+        "ansible_net_neighbors": {
+            "GigabitEthernet0/27": [
+                {
+                    "host": "SW-WFDiF.pagi(FOC1705R06C)",
+                    "port": "Ethernet1/48"
+                }
+            ]
+        },
+        "ansible_net_python_version": "2.7.17",
+        "ansible_net_serialnum": "FOC1042Y0ZR",
+        "ansible_net_stacked_models": [
+            "WS-C3560G-24TS-E"
+        ],
+        "ansible_net_stacked_serialnums": [
+            "FOC1042Y0ZR"
+        ],
+        "ansible_net_system": "ios",
+        "ansible_net_version": "12.2(58)SE2",
+        "ansible_network_resources": {},
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "deprecations": [
+        {
+            "msg": "Distribution Ubuntu 18.04 on host fina-sw-chelmska should use /usr/bin/python3, but is using /usr/bin/python for backward compatibility with prior Ansible releases. A future Ansible release will default to using the discovered platform python for this host. See https://docs.ansible.com/ansible/2.10/reference_appendices/interpreter_discovery.html for more information",
+            "version": "2.12"
+        }
+    ],
+    "failed": false
+}

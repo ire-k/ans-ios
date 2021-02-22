@@ -1,0 +1,482 @@
+{
+    "ansible_facts": {
+        "ansible_net_all_ipv4_addresses": [
+            "172.17.200.33",
+            "10.254.1.40",
+            "212.69.65.74",
+            "192.168.1.30"
+        ],
+        "ansible_net_all_ipv6_addresses": [],
+        "ansible_net_api": "cliconf",
+        "ansible_net_filesystems": [
+            "flash:"
+        ],
+        "ansible_net_filesystems_info": {
+            "flash:": {
+                "spacefree_kb": 17953.0,
+                "spacetotal_kb": 31752.0
+            }
+        },
+        "ansible_net_gather_network_resources": [],
+        "ansible_net_gather_subset": [
+            "hardware",
+            "default",
+            "interfaces"
+        ],
+        "ansible_net_hostname": "FOR--SW2-cME3400",
+        "ansible_net_image": "flash:me340x-metroaccessk9-mz.122-53.SE/me340x-metroaccessk9-mz.122-53.SE.bin",
+        "ansible_net_interfaces": {
+            "%": {
+                "ipv6": []
+            },
+            "FOR--SW2-cME3400#": {
+                "ipv6": []
+            },
+            "FastEthernet0/1": {
+                "bandwidth": 100000,
+                "description": "*** PROBLEM Z TRUNKIEM NA PORCIE ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "d057.4cae.2e03",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1998,
+                "operstatus": "administratively down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/10": {
+                "bandwidth": 10000,
+                "description": "** radiol. MPWiK Jagiellonska 79 ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "d057.4cae.2e0c",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1998,
+                "operstatus": "administratively down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/11": {
+                "bandwidth": 100000,
+                "description": "****** do Raliolinii MPWiK_StaraMilosna ******",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "d057.4cae.2e0d",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1998,
+                "operstatus": "up",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/12": {
+                "bandwidth": 100000,
+                "description": "*** RL IMG Monitoring ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "d057.4cae.2e0e",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1998,
+                "operstatus": "up",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/13": {
+                "bandwidth": 100000,
+                "description": "****zarz. radiol. Rudzka ****",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "d057.4cae.2e0f",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1998,
+                "operstatus": "up",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/14": {
+                "bandwidth": 100000,
+                "description": "****** radiol. Rudzka *******",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "d057.4cae.2e10",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1998,
+                "operstatus": "up",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/15": {
+                "bandwidth": 100000,
+                "description": "*** zarz. radiol. Skierniewicka ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "d057.4cae.2e11",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1998,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/16": {
+                "bandwidth": 100000,
+                "description": "*** Transmisja do Skierniewickiej ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "d057.4cae.2e12",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1998,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/17": {
+                "bandwidth": 100000,
+                "description": "****zarz. radiol. Zymetric ****",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "d057.4cae.2e13",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1998,
+                "operstatus": "up",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/18": {
+                "bandwidth": 100000,
+                "description": "**** trans. radiol. Zymetric ****",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "d057.4cae.2e14",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1998,
+                "operstatus": "up",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/19": {
+                "bandwidth": 100000,
+                "description": "***** router ZUS LAN ******",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "d057.4cae.2e15",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1998,
+                "operstatus": "up",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/2": {
+                "bandwidth": 100000,
+                "description": "*** SEKTOR 3 UBIQUITI *****",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "d057.4cae.2e04",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1998,
+                "operstatus": "up",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/20": {
+                "bandwidth": 100000,
+                "description": "***** router ZUS WAN ******",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "d057.4cae.2e16",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1998,
+                "operstatus": "up",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/21": {
+                "bandwidth": 100000,
+                "description": "****zarz. radiol. AGP Przesk. Kondr ****",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "d057.4cae.2e17",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1998,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/22": {
+                "bandwidth": 100000,
+                "description": "**** trans. radiol. AGP Przesk. Kondr ****",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "d057.4cae.2e18",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1998,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/23": {
+                "bandwidth": 100000,
+                "description": "*** ProdBet  ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "d057.4cae.2e19",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1998,
+                "operstatus": "up",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/24": {
+                "bandwidth": 100000,
+                "description": "*** Landtech Sokolow Airfiber 5GHz ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "d057.4cae.2e1a",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1998,
+                "operstatus": "up",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/3": {
+                "bandwidth": 100000,
+                "description": "sw-for",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "d057.4cae.2e05",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1998,
+                "operstatus": "up",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/4": {
+                "bandwidth": 100000,
+                "description": "**** zarz. radiol. ProdBet  ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "d057.4cae.2e06",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1998,
+                "operstatus": "up",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/5": {
+                "bandwidth": 100000,
+                "description": "***** Youn and Case *****",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "d057.4cae.2e07",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1998,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/6": {
+                "bandwidth": 100000,
+                "description": "*FORW2 WiMAX Alvarion 2 polka ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "d057.4cae.2e08",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1998,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/7": {
+                "bandwidth": 100000,
+                "description": "**** MGMT PoE Ubiquiti ****",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "d057.4cae.2e09",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1998,
+                "operstatus": "up",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/8": {
+                "bandwidth": 100000,
+                "description": "*** SEKTOR 2 UBIQUITI *****",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "d057.4cae.2e0a",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1998,
+                "operstatus": "up",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/9": {
+                "bandwidth": 100000,
+                "description": "****** radiol. GENOMED ******",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "d057.4cae.2e0b",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1998,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "GigabitEthernet0/1": {
+                "bandwidth": 1000000,
+                "description": "!!!Nie konfigurowac -> Po2;Tx1550nm 20km 1j LC/PC -> FC/PC***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "d057.4cae.2e01",
+                "mediatype": "1000BaseLX SFP",
+                "mtu": 9000,
+                "operstatus": "up",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/2": {
+                "bandwidth": 1000000,
+                "description": "*** SEKTOR 1 UBIQUITI *****",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "d057.4cae.2e02",
+                "mediatype": "10/100/1000BaseTX SFP",
+                "mtu": 9000,
+                "operstatus": "up",
+                "type": "Gigabit Ethernet"
+            },
+            "Port-channel1": {
+                "bandwidth": 10000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0000.0000.0000",
+                "mediatype": "unknown",
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "EtherChannel"
+            },
+            "Port-channel2": {
+                "bandwidth": 1000000,
+                "description": "description **EtherChann-> LIM ****",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "d057.4cae.2e01",
+                "mediatype": "unknown",
+                "mtu": 9000,
+                "operstatus": "up",
+                "type": "EtherChannel"
+            },
+            "Vlan1": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.65.74",
+                        "subnet": "28"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "d057.4cae.2e40",
+                "mediatype": null,
+                "mtu": 1998,
+                "operstatus": "administratively down",
+                "type": "EtherSVI"
+            },
+            "Vlan3909": {
+                "bandwidth": 1000000,
+                "description": "**MGT sw mpwik - wejscie tajne ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.17.200.33",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "d057.4cae.2e44",
+                "mediatype": null,
+                "mtu": 1998,
+                "operstatus": "up",
+                "type": "EtherSVI"
+            },
+            "Vlan5": {
+                "bandwidth": 1000000,
+                "description": "*** test ubiquity ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "192.168.1.30",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "d057.4cae.2e45",
+                "mediatype": null,
+                "mtu": 1998,
+                "operstatus": "up",
+                "type": "EtherSVI"
+            },
+            "Vlan9": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.254.1.40",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "d057.4cae.2e41",
+                "mediatype": null,
+                "mtu": 1998,
+                "operstatus": "up",
+                "type": "EtherSVI"
+            },
+            "show": {
+                "ipv6": []
+            }
+        },
+        "ansible_net_iostype": "IOS",
+        "ansible_net_memfree_mb": 48666.71875,
+        "ansible_net_memtotal_mb": 81414.546875,
+        "ansible_net_model": "ME-3400-24TS-D",
+        "ansible_net_neighbors": {
+            "FastEthernet0/3": [
+                {
+                    "host": "sw-for",
+                    "port": "FastEthernet0/18"
+                }
+            ],
+            "GigabitEthernet0/1": [
+                {
+                    "host": "LIM--SW1-cME3600X.pagi",
+                    "port": "GigabitEthernet0/15"
+                }
+            ]
+        },
+        "ansible_net_python_version": "2.7.17",
+        "ansible_net_serialnum": "FOC1427Z2CS",
+        "ansible_net_stacked_models": [
+            "ME-3400-24TS-D"
+        ],
+        "ansible_net_stacked_serialnums": [
+            "FOC1427Z2CS"
+        ],
+        "ansible_net_system": "ios",
+        "ansible_net_version": "12.2(53)SE",
+        "ansible_network_resources": {},
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "deprecations": [
+        {
+            "msg": "Distribution Ubuntu 18.04 on host FOR--SW2-cMe3400 should use /usr/bin/python3, but is using /usr/bin/python for backward compatibility with prior Ansible releases. A future Ansible release will default to using the discovered platform python for this host. See https://docs.ansible.com/ansible/2.10/reference_appendices/interpreter_discovery.html for more information",
+            "version": "2.12"
+        }
+    ],
+    "failed": false
+}

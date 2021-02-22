@@ -1,0 +1,39 @@
+{
+    "ansible_facts": {
+        "ansible_net_api": "cliconf",
+        "ansible_net_filesystems": [
+            "bootflash:"
+        ],
+        "ansible_net_filesystems_info": {
+            "bootflash:": {
+                "spacefree_kb": 5216500.0,
+                "spacetotal_kb": 7676308.0
+            }
+        },
+        "ansible_net_gather_network_resources": [],
+        "ansible_net_gather_subset": [
+            "hardware",
+            "default"
+        ],
+        "ansible_net_hostname": "LINX-RT1-cASR1002",
+        "ansible_net_image": "bootflash:asr1000rp1-advipservicesk9.03.16.08.S.155-3.S8-ext.bi",
+        "ansible_net_iostype": "IOS-XE",
+        "ansible_net_memfree_mb": 285792.34375,
+        "ansible_net_memtotal_mb": 1641686.24609375,
+        "ansible_net_model": "ASR1002",
+        "ansible_net_python_version": "2.7.17",
+        "ansible_net_serialnum": "FOX1349GTHT",
+        "ansible_net_system": "ios",
+        "ansible_net_version": "03.16.08.S",
+        "ansible_network_resources": {},
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "deprecations": [
+        {
+            "msg": "Distribution Ubuntu 18.04 on host LINX-RT1-cASR1002 should use /usr/bin/python3, but is using /usr/bin/python for backward compatibility with prior Ansible releases. A future Ansible release will default to using the discovered platform python for this host. See https://docs.ansible.com/ansible/2.10/reference_appendices/interpreter_discovery.html for more information",
+            "version": "2.12"
+        }
+    ],
+    "failed": false
+}

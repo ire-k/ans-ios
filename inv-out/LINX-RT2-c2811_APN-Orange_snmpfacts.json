@@ -1,0 +1,215 @@
+{
+    "ansible_facts": {
+        "ansible_net_all_ipv4_addresses": [
+            "10.254.1.196",
+            "212.69.81.17",
+            "212.69.81.254",
+            "192.168.10.144",
+            "192.168.111.33"
+        ],
+        "ansible_net_all_ipv6_addresses": [],
+        "ansible_net_api": "cliconf",
+        "ansible_net_filesystems": [
+            "flash:"
+        ],
+        "ansible_net_filesystems_info": {
+            "flash:": {
+                "spacefree_kb": 12488.8125,
+                "spacetotal_kb": 62719.99609375
+            }
+        },
+        "ansible_net_gather_network_resources": [],
+        "ansible_net_gather_subset": [
+            "hardware",
+            "default",
+            "interfaces"
+        ],
+        "ansible_net_hostname": "LINX-RT2-c2811_APN-Orange",
+        "ansible_net_image": "flash:c2800nm-advipservicesk9-mz.124-15.T17.bin",
+        "ansible_net_interfaces": {
+            "FastEthernet0/0": {
+                "bandwidth": 100000,
+                "description": "***uplink***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "6416.8d32.e328",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "MV96340 Ethernet"
+            },
+            "FastEthernet0/0.17": {
+                "bandwidth": 100000,
+                "description": "*** do pakieciarki **",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "192.168.10.144",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "6416.8d32.e328",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "MV96340 Ethernet"
+            },
+            "FastEthernet0/0.27": {
+                "bandwidth": 100000,
+                "description": "***Inet****",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.81.17",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "6416.8d32.e328",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "MV96340 Ethernet"
+            },
+            "FastEthernet0/0.28": {
+                "bandwidth": 100000,
+                "description": "***do LINX-RT6_leg_cisco***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "192.168.111.33",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "6416.8d32.e328",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "MV96340 Ethernet"
+            },
+            "FastEthernet0/0.9": {
+                "bandwidth": 100000,
+                "description": "***MGT***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.254.1.196",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "6416.8d32.e328",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "MV96340 Ethernet"
+            },
+            "FastEthernet0/1": {
+                "bandwidth": 100000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "6416.8d32.e329",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "MV96340 Ethernet"
+            },
+            "Loopback0": {
+                "bandwidth": 8000000,
+                "description": "*** APN Orange IPSEC terminator ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.81.254",
+                        "subnet": "32"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "up",
+                "type": null
+            },
+            "Loopback100": {
+                "bandwidth": 8000000,
+                "description": "***nagios trap test***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "administratively down",
+                "type": null
+            },
+            "NVI0": {
+                "bandwidth": 56,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "up",
+                "type": null
+            },
+            "Serial0/0/0": {
+                "bandwidth": 1544,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "down",
+                "type": null
+            },
+            "Tunnel1": {
+                "bandwidth": 9,
+                "description": "*** Tunel do APN Orange ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "up",
+                "type": null
+            }
+        },
+        "ansible_net_iostype": "IOS",
+        "ansible_net_memfree_mb": 355116.61328125,
+        "ansible_net_memtotal_mb": 404598.609375,
+        "ansible_net_model": "2811",
+        "ansible_net_neighbors": {
+            "FastEthernet0/0": [
+                {
+                    "host": "LINX-SW2-cME3400.pagi",
+                    "port": "FastEthernet0/19"
+                }
+            ]
+        },
+        "ansible_net_python_version": "2.7.17",
+        "ansible_net_serialnum": "FCZ1403723T",
+        "ansible_net_system": "ios",
+        "ansible_net_version": "12.4(15)T17",
+        "ansible_network_resources": {},
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "deprecations": [
+        {
+            "msg": "Distribution Ubuntu 18.04 on host LINX-RT2-c2811_APN-Orange should use /usr/bin/python3, but is using /usr/bin/python for backward compatibility with prior Ansible releases. A future Ansible release will default to using the discovered platform python for this host. See https://docs.ansible.com/ansible/2.10/reference_appendices/interpreter_discovery.html for more information",
+            "version": "2.12"
+        }
+    ],
+    "failed": false
+}

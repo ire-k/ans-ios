@@ -1,0 +1,470 @@
+{
+    "ansible_facts": {
+        "ansible_net_all_ipv4_addresses": [
+            "212.69.80.1",
+            "212.69.74.113",
+            "212.69.74.137",
+            "212.69.76.45",
+            "212.69.79.9",
+            "10.254.253.1",
+            "10.254.1.1",
+            "46.254.79.75",
+            "10.123.123.169",
+            "10.123.9.1",
+            "172.16.255.241",
+            "172.16.255.249",
+            "212.69.80.185",
+            "212.69.74.49",
+            "212.69.81.2",
+            "212.69.65.4",
+            "10.255.7.255",
+            "212.69.74.229",
+            "212.69.71.29",
+            "212.69.74.33",
+            "212.69.67.161",
+            "212.69.80.97",
+            "212.69.65.56"
+        ],
+        "ansible_net_all_ipv6_addresses": [],
+        "ansible_net_api": "cliconf",
+        "ansible_net_filesystems": [
+            "flash:"
+        ],
+        "ansible_net_filesystems_info": {
+            "flash:": {
+                "spacefree_kb": 12148.0,
+                "spacetotal_kb": 62388.0
+            }
+        },
+        "ansible_net_gather_network_resources": [],
+        "ansible_net_gather_subset": [
+            "hardware",
+            "default",
+            "interfaces"
+        ],
+        "ansible_net_hostname": "WOL--RT1-c2811",
+        "ansible_net_image": "flash:c2800nm-advipservicesk9-mz.124-15.T17.bin",
+        "ansible_net_interfaces": {
+            "FastEthernet0/0": {
+                "bandwidth": 100000,
+                "description": "**uplink do PIK11-RT1 via Netia***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.65.56",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "001a.2f16.5c5e",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "MV96340 Ethernet"
+            },
+            "FastEthernet0/0.2": {
+                "bandwidth": 100000,
+                "description": "**uplink do inet via BJM/Myszk ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "46.254.79.75",
+                        "subnet": "26"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "001a.2f16.5c5e",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "MV96340 Ethernet"
+            },
+            "FastEthernet0/1": {
+                "bandwidth": 100000,
+                "description": "***terminowanie uslug ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "0012.d9ee.1bd1",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "MV96340 Ethernet"
+            },
+            "FastEthernet0/1.5": {
+                "bandwidth": 100000,
+                "description": "**** MGMT Ubiquiti ****",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.123.123.169",
+                        "subnet": "29"
+                    },
+                    {
+                        "address": "10.123.9.1",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "0012.d9ee.1bd1",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "MV96340 Ethernet"
+            },
+            "FastEthernet0/1.8": {
+                "bandwidth": 100000,
+                "description": "***MGT urz kl. BS Wolomin***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.254.253.1",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "0012.d9ee.1bd1",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "MV96340 Ethernet"
+            },
+            "FastEthernet0/1.801": {
+                "bandwidth": 100000,
+                "description": "****** Paper&Tinta dla Landtech *****",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.74.229",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "0012.d9ee.1bd1",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "MV96340 Ethernet"
+            },
+            "FastEthernet0/1.803": {
+                "bandwidth": 100000,
+                "description": "*** Mega Aluminium *****",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.71.29",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0012.d9ee.1bd1",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "MV96340 Ethernet"
+            },
+            "FastEthernet0/1.804": {
+                "bandwidth": 100000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "0012.d9ee.1bd1",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "MV96340 Ethernet"
+            },
+            "FastEthernet0/1.805": {
+                "bandwidth": 100000,
+                "description": "**** Bank_Spoldz-Internet ****",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.74.33",
+                        "subnet": "28"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0012.d9ee.1bd1",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "MV96340 Ethernet"
+            },
+            "FastEthernet0/1.806": {
+                "bandwidth": 100000,
+                "description": "***** AMCo Wolomin ****",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.67.161",
+                        "subnet": "29"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0012.d9ee.1bd1",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "MV96340 Ethernet"
+            },
+            "FastEthernet0/1.807": {
+                "bandwidth": 100000,
+                "description": "**** KM Tluszcz *****",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.80.97",
+                        "subnet": "28"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0012.d9ee.1bd1",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "MV96340 Ethernet"
+            },
+            "FastEthernet0/1.808": {
+                "bandwidth": 100000,
+                "description": "*** InterTeam Wolomin ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.80.185",
+                        "subnet": "29"
+                    },
+                    {
+                        "address": "212.69.74.49",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0012.d9ee.1bd1",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "MV96340 Ethernet"
+            },
+            "FastEthernet0/1.809": {
+                "bandwidth": 100000,
+                "description": "*** Mekoprint/Molex via RL PAGI **",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.81.2",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "0012.d9ee.1bd1",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "MV96340 Ethernet"
+            },
+            "FastEthernet0/1.811": {
+                "bandwidth": 100000,
+                "description": "****** Albud 1 ********",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.74.113",
+                        "subnet": "29"
+                    },
+                    {
+                        "address": "212.69.74.137",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0012.d9ee.1bd1",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "MV96340 Ethernet"
+            },
+            "FastEthernet0/1.813": {
+                "bandwidth": 100000,
+                "description": "**** Landtech Wolomin ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.80.1",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0012.d9ee.1bd1",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "MV96340 Ethernet"
+            },
+            "FastEthernet0/1.814": {
+                "bandwidth": 100000,
+                "description": "***Koleje Mazow Tluszcz2 - myjnia ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.79.9",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0012.d9ee.1bd1",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "MV96340 Ethernet"
+            },
+            "FastEthernet0/1.816": {
+                "bandwidth": 100000,
+                "description": "*** Jan Krasowski ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.76.45",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0012.d9ee.1bd1",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "MV96340 Ethernet"
+            },
+            "FastEthernet0/1.9": {
+                "bandwidth": 100000,
+                "description": "***MGT BS Wolomin ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.254.1.1",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "0012.d9ee.1bd1",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "MV96340 Ethernet"
+            },
+            "Loopback0": {
+                "bandwidth": 8000000,
+                "description": "***ID routera MGT ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.65.4",
+                        "subnet": "32"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "up",
+                "type": null
+            },
+            "Loopback1": {
+                "bandwidth": 8000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.255.7.255",
+                        "subnet": "32"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "up",
+                "type": null
+            },
+            "NVI0": {
+                "bandwidth": 56,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "up",
+                "type": null
+            },
+            "Tunnel25": {
+                "bandwidth": 9,
+                "description": "**uplink do PAGI ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.255.241",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "up",
+                "type": null
+            },
+            "Tunnel26": {
+                "bandwidth": 9,
+                "description": "***MGT BS Wolomin ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.255.249",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "up",
+                "type": null
+            }
+        },
+        "ansible_net_iostype": "IOS",
+        "ansible_net_memfree_mb": 106211.71484375,
+        "ansible_net_memtotal_mb": 142452.3125,
+        "ansible_net_model": "2811",
+        "ansible_net_neighbors": {
+            "FastEthernet0/0": [
+                {
+                    "host": "WOL--SW1-cMe3400",
+                    "port": "FastEthernet0/9"
+                }
+            ],
+            "FastEthernet0/1": [
+                {
+                    "host": "WOL--SW1-cMe3400",
+                    "port": "FastEthernet0/10"
+                }
+            ]
+        },
+        "ansible_net_python_version": "2.7.17",
+        "ansible_net_serialnum": "FHK0902F028",
+        "ansible_net_system": "ios",
+        "ansible_net_version": "12.4(15)T17",
+        "ansible_network_resources": {},
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "deprecations": [
+        {
+            "msg": "Distribution Ubuntu 18.04 on host WOL--RT1-c2811-L0 should use /usr/bin/python3, but is using /usr/bin/python for backward compatibility with prior Ansible releases. A future Ansible release will default to using the discovered platform python for this host. See https://docs.ansible.com/ansible/2.10/reference_appendices/interpreter_discovery.html for more information",
+            "version": "2.12"
+        }
+    ],
+    "failed": false
+}

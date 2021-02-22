@@ -1,0 +1,373 @@
+{
+    "ansible_facts": {
+        "ansible_net_all_ipv4_addresses": [
+            "10.254.1.81",
+            "192.168.111.42",
+            "10.0.0.1",
+            "192.168.111.46",
+            "192.168.111.50",
+            "212.69.81.248",
+            "212.69.81.247",
+            "212.69.81.27",
+            "212.69.81.246",
+            "10.43.1.13",
+            "10.43.1.9",
+            "10.45.1.1",
+            "10.44.1.1",
+            "10.43.1.5",
+            "10.43.1.1"
+        ],
+        "ansible_net_all_ipv6_addresses": [],
+        "ansible_net_api": "cliconf",
+        "ansible_net_filesystems": [
+            "flash:"
+        ],
+        "ansible_net_filesystems_info": {
+            "flash:": {
+                "spacefree_kb": 39980.0,
+                "spacetotal_kb": 62384.0
+            }
+        },
+        "ansible_net_gather_network_resources": [],
+        "ansible_net_gather_subset": [
+            "hardware",
+            "default",
+            "interfaces"
+        ],
+        "ansible_net_hostname": "LIM--RT2-DMVPN",
+        "ansible_net_image": "flash:c2800nm-advsecurityk9-mz.124-25f.bin",
+        "ansible_net_interfaces": {
+            "%": {
+                "ipv6": []
+            },
+            "FastEthernet0/0": {
+                "bandwidth": 100000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "001c.58f4.4428",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "MV96340 Ethernet"
+            },
+            "FastEthernet0/0.1006": {
+                "bandwidth": 100000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "001c.58f4.4428",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "deleted",
+                "type": "MV96340 Ethernet"
+            },
+            "FastEthernet0/0.19": {
+                "bandwidth": 100000,
+                "description": "*** uplink IP ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.81.27",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "001c.58f4.4428",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "MV96340 Ethernet"
+            },
+            "FastEthernet0/0.4094": {
+                "bandwidth": 100000,
+                "description": "**tst mtu do kaw--sw1****",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.0.0.1",
+                        "subnet": "29"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "001c.58f4.4428",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "MV96340 Ethernet"
+            },
+            "FastEthernet0/0.42": {
+                "bandwidth": 100000,
+                "description": "*** DMVPN (LTE) do  LINX-RT1-cASR ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "192.168.111.46",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "001c.58f4.4428",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "MV96340 Ethernet"
+            },
+            "FastEthernet0/0.43": {
+                "bandwidth": 100000,
+                "description": "***DMVPN (tooway) do LINX-RT5_PKOBP ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "192.168.111.50",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "001c.58f4.4428",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "MV96340 Ethernet"
+            },
+            "FastEthernet0/0.44": {
+                "bandwidth": 100000,
+                "description": "***DMVPN (DMVPN wszystkie LTE po T-Mobile) do LINX-RT1-cASR ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "192.168.111.42",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "001c.58f4.4428",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "MV96340 Ethernet"
+            },
+            "FastEthernet0/0.9": {
+                "bandwidth": 100000,
+                "description": "***MGT***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.254.1.81",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "001c.58f4.4428",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "MV96340 Ethernet"
+            },
+            "FastEthernet0/1": {
+                "bandwidth": 100000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "001c.58f4.4429",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "MV96340 Ethernet"
+            },
+            "LIM--RT2-DMVPN#": {
+                "ipv6": []
+            },
+            "Loopback0": {
+                "bandwidth": 8000000,
+                "description": "**konc DMVPN dla BS ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.81.248",
+                        "subnet": "32"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "up",
+                "type": null
+            },
+            "Loopback1": {
+                "bandwidth": 8000000,
+                "description": "***konc DMVPN dla PKOBP ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.81.247",
+                        "subnet": "32"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "up",
+                "type": null
+            },
+            "Loopback100": {
+                "bandwidth": 8000000,
+                "description": "**do testowania snmp traps **",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "administratively down",
+                "type": null
+            },
+            "Loopback3": {
+                "bandwidth": 8000000,
+                "description": "** konc DMVPN dla tuneli T-Mobile LTE ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.81.246",
+                        "subnet": "32"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "up",
+                "type": null
+            },
+            "Tunnel0": {
+                "bandwidth": 100000,
+                "description": "**tunel do bankomatow BS  via tooway **",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.44.1.1",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "administratively down",
+                "type": null
+            },
+            "Tunnel1": {
+                "bandwidth": 1000,
+                "description": "**tunel do bankomatow PKOBP  via tooway **",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.45.1.1",
+                        "subnet": "16"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "up",
+                "type": null
+            },
+            "Tunnel2": {
+                "bandwidth": 100000,
+                "description": "**tunel do Grodno-Waflowa **",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.43.1.1",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "administratively down",
+                "type": null
+            },
+            "Tunnel3": {
+                "bandwidth": 100000,
+                "description": "**tunel do Starkey Laboratories **",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.43.1.5",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "administratively down",
+                "type": null
+            },
+            "Tunnel4": {
+                "bandwidth": 100000,
+                "description": "**tunel do AGP Metro **",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.43.1.9",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "administratively down",
+                "type": null
+            },
+            "Tunnel5": {
+                "bandwidth": 100000,
+                "description": "**tunel do Grodno Malopole**",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.43.1.13",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "administratively down",
+                "type": null
+            },
+            "show": {
+                "ipv6": []
+            }
+        },
+        "ansible_net_iostype": "IOS",
+        "ansible_net_memfree_mb": 185129.82421875,
+        "ansible_net_memtotal_mb": 201343.046875,
+        "ansible_net_model": "2811",
+        "ansible_net_neighbors": {},
+        "ansible_net_python_version": "2.7.17",
+        "ansible_net_serialnum": "FCZ113074AZ",
+        "ansible_net_system": "ios",
+        "ansible_net_version": "12.4(25f)",
+        "ansible_network_resources": {},
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "deprecations": [
+        {
+            "msg": "Distribution Ubuntu 18.04 on host LIM--RT2-c2811_hsec should use /usr/bin/python3, but is using /usr/bin/python for backward compatibility with prior Ansible releases. A future Ansible release will default to using the discovered platform python for this host. See https://docs.ansible.com/ansible/2.10/reference_appendices/interpreter_discovery.html for more information",
+            "version": "2.12"
+        }
+    ],
+    "failed": false
+}

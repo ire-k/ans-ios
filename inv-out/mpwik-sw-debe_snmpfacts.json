@@ -1,0 +1,448 @@
+{
+    "ansible_facts": {
+        "ansible_net_all_ipv4_addresses": [
+            "10.254.253.184",
+            "10.1.1.184"
+        ],
+        "ansible_net_all_ipv6_addresses": [],
+        "ansible_net_api": "cliconf",
+        "ansible_net_filesystems": [
+            "flash:"
+        ],
+        "ansible_net_filesystems_info": {
+            "flash:": {
+                "spacefree_kb": 15644.0,
+                "spacetotal_kb": 31752.0
+            }
+        },
+        "ansible_net_gather_network_resources": [],
+        "ansible_net_gather_subset": [
+            "hardware",
+            "default",
+            "interfaces"
+        ],
+        "ansible_net_hostname": "mpwik-sw-debe",
+        "ansible_net_image": "flash:me340x-metroaccessk9-mz.122-53.SE/me340x-metroaccessk9-mz.122-53.SE.bin",
+        "ansible_net_interfaces": {
+            "%": {
+                "ipv6": []
+            },
+            "FastEthernet0/1": {
+                "bandwidth": 30000,
+                "description": "*** uplink do PAGI ****",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0016.c8d6.5203",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1998,
+                "operstatus": "up",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/10": {
+                "bandwidth": 15000,
+                "description": "*** do urz. MPLS mpwik-u ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0016.c8d6.520c",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1998,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/11": {
+                "bandwidth": 15000,
+                "description": "*** do urz. MPLS mpwik-u ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0016.c8d6.520d",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1998,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/12": {
+                "bandwidth": 15000,
+                "description": "*** do urz. MPLS mpwik-u ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0016.c8d6.520e",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1998,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/13": {
+                "bandwidth": 15000,
+                "description": "*** do urz. MPLS mpwik-u ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0016.c8d6.520f",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1998,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/14": {
+                "bandwidth": 15000,
+                "description": "*** do urz. MPLS mpwik-u ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0016.c8d6.5210",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1998,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/15": {
+                "bandwidth": 15000,
+                "description": "*** do urz. MPLS mpwik-u ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0016.c8d6.5211",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1998,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/16": {
+                "bandwidth": 15000,
+                "description": "*** do urz. MPLS mpwik-u ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0016.c8d6.5212",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1998,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/17": {
+                "bandwidth": 15000,
+                "description": "*** do urz. MPLS mpwik-u ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0016.c8d6.5213",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1998,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/18": {
+                "bandwidth": 15000,
+                "description": "*** do urz. MPLS mpwik-u ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0016.c8d6.5214",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1998,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/19": {
+                "bandwidth": 15000,
+                "description": "*** do urz. MPLS mpwik-u ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0016.c8d6.5215",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1998,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/2": {
+                "bandwidth": 11000,
+                "description": "***do routera PAGI ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0016.c8d6.5204",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1998,
+                "operstatus": "up",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/20": {
+                "bandwidth": 15000,
+                "description": "*** do urz. MPLS mpwik-u ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0016.c8d6.5216",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1998,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/21": {
+                "bandwidth": 15000,
+                "description": "*** do urz. MPLS mpwik-u ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0016.c8d6.5217",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1998,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/22": {
+                "bandwidth": 15000,
+                "description": "*** do urz. MPLS mpwik-u ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0016.c8d6.5218",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1998,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/23": {
+                "bandwidth": 15000,
+                "description": "*** do urz. MPLS mpwik-u ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0016.c8d6.5219",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1998,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/24": {
+                "bandwidth": 15000,
+                "description": "*** do urz. MPLS mpwik-u ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0016.c8d6.521a",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1998,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/3": {
+                "bandwidth": 4000,
+                "description": "***do switcha trunking, urzadzenie mpwik-u **",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0016.c8d6.5205",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1998,
+                "operstatus": "up",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/4": {
+                "bandwidth": 10000,
+                "description": "***rezerwa ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0016.c8d6.5206",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1998,
+                "operstatus": "administratively down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/5": {
+                "bandwidth": 15000,
+                "description": "*** do urz. MPLS mpwik-u ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0016.c8d6.5207",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1998,
+                "operstatus": "up",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/6": {
+                "bandwidth": 15000,
+                "description": "*** do urz. MPLS mpwik-u ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0016.c8d6.5208",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1998,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/7": {
+                "bandwidth": 15000,
+                "description": "*** do urz. MPLS mpwik-u ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0016.c8d6.5209",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1998,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/8": {
+                "bandwidth": 15000,
+                "description": "*** do urz. MPLS mpwik-u ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0016.c8d6.520a",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1998,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/9": {
+                "bandwidth": 15000,
+                "description": "*** do urz. MPLS mpwik-u ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0016.c8d6.520b",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1998,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "GigabitEthernet0/1": {
+                "bandwidth": 10000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0016.c8d6.5201",
+                "mediatype": "Not Present",
+                "mtu": 9000,
+                "operstatus": "administratively down",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/2": {
+                "bandwidth": 10000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0016.c8d6.5202",
+                "mediatype": "Not Present",
+                "mtu": 9000,
+                "operstatus": "administratively down",
+                "type": "Gigabit Ethernet"
+            },
+            "Vlan1": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "0016.c8d6.5240",
+                "mediatype": null,
+                "mtu": 1998,
+                "operstatus": "administratively down",
+                "type": "EtherSVI"
+            },
+            "Vlan3912": {
+                "bandwidth": 1000000,
+                "description": "***Test MTU dla MPWiK **",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.1.1.184",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0016.c8d6.5242",
+                "mediatype": null,
+                "mtu": 1998,
+                "operstatus": "up",
+                "type": "EtherSVI"
+            },
+            "Vlan8": {
+                "bandwidth": 1000000,
+                "description": "***MGT*****",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.254.253.184",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0016.c8d6.5241",
+                "mediatype": null,
+                "mtu": 1998,
+                "operstatus": "up",
+                "type": "EtherSVI"
+            },
+            "mpwik-sw-debe#": {
+                "ipv6": []
+            },
+            "show": {
+                "ipv6": []
+            }
+        },
+        "ansible_net_iostype": "IOS",
+        "ansible_net_memfree_mb": 48666.71875,
+        "ansible_net_memtotal_mb": 81414.546875,
+        "ansible_net_model": "ME-3400-24TS-A",
+        "ansible_net_neighbors": {
+            "FastEthernet0/1": [
+                {
+                    "host": "mpwik-sw-jachranka",
+                    "port": "FastEthernet0/1"
+                },
+                {
+                    "host": "mpwik-sw-borecka.pagi",
+                    "port": "GigabitEthernet0/1"
+                },
+                {
+                    "host": "mpwik-sw-wieliszew.pagi",
+                    "port": "GigabitEthernet0/2"
+                }
+            ],
+            "FastEthernet0/2": [
+                {
+                    "host": "mpwik-rt-Debe77",
+                    "port": "FastEthernet0/0"
+                }
+            ],
+            "FastEthernet0/3": [
+                {
+                    "host": "sw-mpwik-debe",
+                    "port": "GigabitEthernet0/1"
+                }
+            ]
+        },
+        "ansible_net_python_version": "2.7.17",
+        "ansible_net_serialnum": "FOC1007X39A",
+        "ansible_net_stacked_models": [
+            "ME-3400-24TS-A"
+        ],
+        "ansible_net_stacked_serialnums": [
+            "FOC1007X39A"
+        ],
+        "ansible_net_system": "ios",
+        "ansible_net_version": "12.2(53)SE",
+        "ansible_network_resources": {},
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "deprecations": [
+        {
+            "msg": "Distribution Ubuntu 18.04 on host mpwik-sw-debe should use /usr/bin/python3, but is using /usr/bin/python for backward compatibility with prior Ansible releases. A future Ansible release will default to using the discovered platform python for this host. See https://docs.ansible.com/ansible/2.10/reference_appendices/interpreter_discovery.html for more information",
+            "version": "2.12"
+        }
+    ],
+    "failed": false
+}

@@ -1,0 +1,39 @@
+{
+    "ansible_facts": {
+        "ansible_net_api": "cliconf",
+        "ansible_net_filesystems": [
+            "bootflash:"
+        ],
+        "ansible_net_filesystems_info": {
+            "bootflash:": {
+                "spacefree_kb": 857108.0,
+                "spacetotal_kb": 1308020.0
+            }
+        },
+        "ansible_net_gather_network_resources": [],
+        "ansible_net_gather_subset": [
+            "hardware",
+            "default"
+        ],
+        "ansible_net_hostname": "FINA-RT1-cASR920-4SZ",
+        "ansible_net_image": "bootflash:/asr920-universalk9_npe.16.07.01.SPA.bin",
+        "ansible_net_iostype": "IOS-XE",
+        "ansible_net_memfree_mb": 642484.5390625,
+        "ansible_net_memtotal_mb": 902294.890625,
+        "ansible_net_model": "ASR-920-4SZ-A",
+        "ansible_net_python_version": "2.7.17",
+        "ansible_net_serialnum": "CAT2214U8Z6",
+        "ansible_net_system": "ios",
+        "ansible_net_version": "16.07.01",
+        "ansible_network_resources": {},
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "deprecations": [
+        {
+            "msg": "Distribution Ubuntu 18.04 on host FINA-RT1-cASR920-Loop0 should use /usr/bin/python3, but is using /usr/bin/python for backward compatibility with prior Ansible releases. A future Ansible release will default to using the discovered platform python for this host. See https://docs.ansible.com/ansible/2.10/reference_appendices/interpreter_discovery.html for more information",
+            "version": "2.12"
+        }
+    ],
+    "failed": false
+}

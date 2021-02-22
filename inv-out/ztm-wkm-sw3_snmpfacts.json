@@ -1,0 +1,414 @@
+{
+    "ansible_facts": {
+        "ansible_net_all_ipv4_addresses": [
+            "172.18.3.115"
+        ],
+        "ansible_net_all_ipv6_addresses": [],
+        "ansible_net_api": "cliconf",
+        "ansible_net_filesystems": [
+            "flash:"
+        ],
+        "ansible_net_filesystems_info": {
+            "flash:": {
+                "spacefree_kb": 986.0,
+                "spacetotal_kb": 7560.0
+            }
+        },
+        "ansible_net_gather_network_resources": [],
+        "ansible_net_gather_subset": [
+            "hardware",
+            "default",
+            "interfaces"
+        ],
+        "ansible_net_hostname": "ztm-wkm-sw3-c2950",
+        "ansible_net_image": "flash:c2950-i6k2l2q4-mz.121-22.EA10a.bin",
+        "ansible_net_interfaces": {
+            "%": {
+                "ipv6": []
+            },
+            "FastEthernet0/1": {
+                "bandwidth": 10000,
+                "description": "***LAN Mlociny ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0011.206c.28c1",
+                "mediatype": "100BaseTX",
+                "mtu": 1530,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/10": {
+                "bandwidth": 10000,
+                "description": "***LAN Mlociny ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0011.206c.28ca",
+                "mediatype": "100BaseTX",
+                "mtu": 1530,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/11": {
+                "bandwidth": 10000,
+                "description": "***LAN Mlociny ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0011.206c.28cb",
+                "mediatype": "100BaseTX",
+                "mtu": 1530,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/12": {
+                "bandwidth": 10000,
+                "description": "***LAN Mlociny ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0011.206c.28cc",
+                "mediatype": "100BaseTX",
+                "mtu": 1530,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/13": {
+                "bandwidth": 10000,
+                "description": "***LAN Mlociny ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0011.206c.28cd",
+                "mediatype": "100BaseTX",
+                "mtu": 1530,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/14": {
+                "bandwidth": 100000,
+                "description": "***LAN Mlociny ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0011.206c.28ce",
+                "mediatype": "100BaseTX",
+                "mtu": 1530,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/15": {
+                "bandwidth": 10000,
+                "description": "***LAN Mlociny ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0011.206c.28cf",
+                "mediatype": "100BaseTX",
+                "mtu": 1530,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/16": {
+                "bandwidth": 10000,
+                "description": "***LAN Mlociny ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0011.206c.28d0",
+                "mediatype": "100BaseTX",
+                "mtu": 1530,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/17": {
+                "bandwidth": 10000,
+                "description": "***LAN Mlociny ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0011.206c.28d1",
+                "mediatype": "100BaseTX",
+                "mtu": 1530,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/18": {
+                "bandwidth": 10000,
+                "description": "***LAN Mlociny ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0011.206c.28d2",
+                "mediatype": "100BaseTX",
+                "mtu": 1530,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/19": {
+                "bandwidth": 10000,
+                "description": "***LAN Mlociny ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0011.206c.28d3",
+                "mediatype": "100BaseTX",
+                "mtu": 1530,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/2": {
+                "bandwidth": 100000,
+                "description": "***LAN Mlociny ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0011.206c.28c2",
+                "mediatype": "100BaseTX",
+                "mtu": 1530,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/20": {
+                "bandwidth": 10000,
+                "description": "***LAN Mlociny ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0011.206c.28d4",
+                "mediatype": "100BaseTX",
+                "mtu": 1530,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/21": {
+                "bandwidth": 10000,
+                "description": "***LAN Mlociny ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0011.206c.28d5",
+                "mediatype": "100BaseTX",
+                "mtu": 1530,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/22": {
+                "bandwidth": 10000,
+                "description": "***LAN Mlociny ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0011.206c.28d6",
+                "mediatype": "100BaseTX",
+                "mtu": 1530,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/23": {
+                "bandwidth": 10000,
+                "description": "***LAN Mlociny ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0011.206c.28d7",
+                "mediatype": "100BaseTX",
+                "mtu": 1530,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/24": {
+                "bandwidth": 10000,
+                "description": "***LAN Mlociny ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0011.206c.28d8",
+                "mediatype": "100BaseTX",
+                "mtu": 1530,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/3": {
+                "bandwidth": 100000,
+                "description": "***LAN Mlociny ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0011.206c.28c3",
+                "mediatype": "100BaseTX",
+                "mtu": 1530,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/4": {
+                "bandwidth": 100000,
+                "description": "***LAN Mlociny ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0011.206c.28c4",
+                "mediatype": "100BaseTX",
+                "mtu": 1530,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/5": {
+                "bandwidth": 100000,
+                "description": "**LAN2 do switcha klienta ****",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0011.206c.28c5",
+                "mediatype": "100BaseTX",
+                "mtu": 1530,
+                "operstatus": "up",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/6": {
+                "bandwidth": 100000,
+                "description": "**do switcha apismart/ccpartners**",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0011.206c.28c6",
+                "mediatype": "100BaseTX",
+                "mtu": 1530,
+                "operstatus": "up",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/7": {
+                "bandwidth": 100000,
+                "description": "***LAN Mlociny ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0011.206c.28c7",
+                "mediatype": "100BaseTX",
+                "mtu": 1530,
+                "operstatus": "up",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/8": {
+                "bandwidth": 10000,
+                "description": "***LAN Mlociny ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0011.206c.28c8",
+                "mediatype": "100BaseTX",
+                "mtu": 1530,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/9": {
+                "bandwidth": 10000,
+                "description": "***LAN Mlociny ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0011.206c.28c9",
+                "mediatype": "100BaseTX",
+                "mtu": 1530,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "GigabitEthernet0/1": {
+                "bandwidth": 1000000,
+                "description": "**uplink do SW2_Gi0/2,plan zmiana do SW1_Gi02 ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0011.206c.28d9",
+                "mediatype": "LX",
+                "mtu": 1530,
+                "operstatus": "up",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/2": {
+                "bandwidth": 1000000,
+                "description": "**plan DL do SW2 ****",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0011.206c.28da",
+                "mediatype": "LX",
+                "mtu": 1530,
+                "operstatus": "up",
+                "type": "Gigabit Ethernet"
+            },
+            "Vlan1": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "0011.206c.28c0",
+                "mediatype": null,
+                "mtu": 1530,
+                "operstatus": "administratively down",
+                "type": "CPU Interface"
+            },
+            "Vlan101": {
+                "bandwidth": 1000000,
+                "description": "*** MGT, nie obsl vrf ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.18.3.115",
+                        "subnet": "28"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0011.206c.28c0",
+                "mediatype": null,
+                "mtu": 1530,
+                "operstatus": "up",
+                "type": "CPU Interface"
+            },
+            "show": {
+                "ipv6": []
+            },
+            "ztm-wkm-sw3-c2950#": {
+                "ipv6": []
+            }
+        },
+        "ansible_net_iostype": "IOS",
+        "ansible_net_model": "WS-C2950G-24-EI",
+        "ansible_net_neighbors": {
+            "FastEthernet0/5": [
+                {
+                    "host": "S00SW01",
+                    "port": "swp10"
+                }
+            ],
+            "GigabitEthernet0/1": [
+                {
+                    "host": "ztm-wkm-sw1-c2950.pagi",
+                    "port": "GigabitEthernet0/2"
+                }
+            ],
+            "GigabitEthernet0/2": [
+                {
+                    "host": "ztm-wkm-sw2-c2950.pagi",
+                    "port": "GigabitEthernet0/1"
+                }
+            ]
+        },
+        "ansible_net_python_version": "2.7.17",
+        "ansible_net_serialnum": "FOC0819X2BP",
+        "ansible_net_system": "ios",
+        "ansible_net_version": "12.1(22)EA10a",
+        "ansible_network_resources": {},
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "deprecations": [
+        {
+            "msg": "Distribution Ubuntu 18.04 on host ztm-wkm-sw3 should use /usr/bin/python3, but is using /usr/bin/python for backward compatibility with prior Ansible releases. A future Ansible release will default to using the discovered platform python for this host. See https://docs.ansible.com/ansible/2.10/reference_appendices/interpreter_discovery.html for more information",
+            "version": "2.12"
+        }
+    ],
+    "failed": false
+}

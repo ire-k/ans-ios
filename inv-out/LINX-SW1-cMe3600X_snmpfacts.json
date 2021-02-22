@@ -1,0 +1,921 @@
+{
+    "ansible_facts": {
+        "ansible_net_all_ipv4_addresses": [
+            "212.69.65.123",
+            "212.69.65.121",
+            "212.69.65.85",
+            "212.69.65.81",
+            "10.111.231.246",
+            "212.69.65.47",
+            "10.42.255.254",
+            "192.168.40.44",
+            "212.69.65.162",
+            "212.69.65.129",
+            "10.111.0.79",
+            "172.16.100.34",
+            "172.16.100.37",
+            "172.16.100.27",
+            "10.39.255.254",
+            "10.254.1.79"
+        ],
+        "ansible_net_all_ipv6_addresses": [],
+        "ansible_net_api": "cliconf",
+        "ansible_net_filesystems": [
+            "flash:"
+        ],
+        "ansible_net_filesystems_info": {
+            "flash:": {
+                "spacefree_kb": 1136.5,
+                "spacetotal_kb": 56574.0
+            }
+        },
+        "ansible_net_gather_network_resources": [],
+        "ansible_net_gather_subset": [
+            "hardware",
+            "default",
+            "interfaces"
+        ],
+        "ansible_net_hostname": "LINX-SW1-cME3600X",
+        "ansible_net_image": "flash:me360x-universalk9-mz.156-2.SP4/me360x-universalk9-mz.156-2.SP4.bin",
+        "ansible_net_interfaces": {
+            "GigabitEthernet0": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": "Auto",
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "d4d7.48bc.a89c",
+                "mediatype": "MII",
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "PQ3_TSEC"
+            },
+            "GigabitEthernet0/1": {
+                "bandwidth": 1000000,
+                "description": "**do LINX-RT1-cASR1002_Gi0/0/0 ****",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "d4d7.48bc.a881",
+                "mediatype": "T",
+                "mtu": 9800,
+                "operstatus": "up",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/10": {
+                "bandwidth": 1000000,
+                "description": "**do LINX-RT16_Gi0/1***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "d4d7.48bc.a88a",
+                "mediatype": "LX",
+                "mtu": 9800,
+                "operstatus": "up",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/11": {
+                "bandwidth": 1000000,
+                "description": "**Po3 do LINX-SW5. NIE KONFIGUROWAC !!!",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "d4d7.48bc.a88b",
+                "mediatype": "T",
+                "mtu": 9800,
+                "operstatus": "up",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/12": {
+                "bandwidth": 1000000,
+                "description": "**Po3 do LINX-SW5. NIE KONFIGUROWAC !!!",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "d4d7.48bc.a88c",
+                "mediatype": "T",
+                "mtu": 9800,
+                "operstatus": "up",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/13": {
+                "bandwidth": 1000000,
+                "description": "**Po4 -> LINX-SW6_Gi0/1***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "d4d7.48bc.a88d",
+                "mediatype": "T",
+                "mtu": 9800,
+                "operstatus": "up",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/14": {
+                "bandwidth": 1000000,
+                "description": "**Po4 -> LINX-SW6_Gi0/2***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "d4d7.48bc.a88e",
+                "mediatype": "T",
+                "mtu": 9800,
+                "operstatus": "up",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/15": {
+                "bandwidth": 1000000,
+                "description": "**do LINX-RT15-MGT2_Gi0/1**",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "d4d7.48bc.a88f",
+                "mediatype": "LX",
+                "mtu": 9800,
+                "operstatus": "up",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/16": {
+                "bandwidth": 1000000,
+                "description": "**Po11 do LINX-RT14***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "d4d7.48bc.a8d1",
+                "mediatype": "LX",
+                "mtu": 9200,
+                "operstatus": "up",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/17": {
+                "bandwidth": 1000000,
+                "description": "**do LINX2-SW1-NEXUS Eth1/49 **",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "d4d7.48bc.a891",
+                "mediatype": "BX10D",
+                "mtu": 9200,
+                "operstatus": "up",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/18": {
+                "bandwidth": 1000000,
+                "description": "**LINX2-SW2-c2960_Gi0/1***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "d4d7.48bc.a892",
+                "mediatype": "T",
+                "mtu": 9800,
+                "operstatus": "up",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/19": {
+                "bandwidth": 1000000,
+                "description": "***do LINX-SW2-ME3400-Eth0/1***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "d4d7.48bc.a893",
+                "mediatype": "T",
+                "mtu": 9800,
+                "operstatus": "up",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/2": {
+                "bandwidth": 1000000,
+                "description": "**LINX-RT1-cASR1002_Gi0/0/1 ****",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "d4d7.48bc.a882",
+                "mediatype": "T",
+                "mtu": 9800,
+                "operstatus": "up",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/20": {
+                "bandwidth": 1000000,
+                "description": "**Po11 do LINX-RT14***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "d4d7.48bc.a8d5",
+                "mediatype": "LX",
+                "mtu": 9200,
+                "operstatus": "up",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/21": {
+                "bandwidth": 1000000,
+                "description": "!!!Nie konfigurowac->PortChannel1 do LIM***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "d4d7.48bc.a895",
+                "mediatype": "BX10U",
+                "mtu": 9800,
+                "operstatus": "up",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/22": {
+                "bandwidth": 1000000,
+                "description": "!!!Nie konfigurowac->PortChannel1 do LIM***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "d4d7.48bc.a896",
+                "mediatype": "LX",
+                "mtu": 9800,
+                "operstatus": "up",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/23": {
+                "bandwidth": 1000000,
+                "description": "**Po5->LINX-SW7_Gi0/23 ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "d4d7.48bc.a897",
+                "mediatype": "T",
+                "mtu": 9198,
+                "operstatus": "up",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/24": {
+                "bandwidth": 1000000,
+                "description": "**Po5-> LINX-SW7_Gi0/24 ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "d4d7.48bc.a898",
+                "mediatype": "T",
+                "mtu": 9198,
+                "operstatus": "up",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/3": {
+                "bandwidth": 1000000,
+                "description": "*** do LINX-SW3-dcnS5750E_gi1/0/1 **",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "d4d7.48bc.a883",
+                "mediatype": "T",
+                "mtu": 9800,
+                "operstatus": "up",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/4": {
+                "bandwidth": 1000000,
+                "description": "**cmp chmielna Ultimode SFP-203/5G WDM 20km 1310nm/1550nm (niebieska) LC***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "d4d7.48bc.a884",
+                "mediatype": "BX10U",
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/5": {
+                "bandwidth": 1000000,
+                "description": "**LINX-RT10-cASR1002_Gi0/0/0****",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "d4d7.48bc.a885",
+                "mediatype": "T",
+                "mtu": 9800,
+                "operstatus": "up",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/6": {
+                "bandwidth": 1000000,
+                "description": "**LINX-RT10-cASR1002_Gi0/0/1***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "d4d7.48bc.a886",
+                "mediatype": "T",
+                "mtu": 9800,
+                "operstatus": "up",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/7": {
+                "bandwidth": 100000,
+                "description": "**LINX-RT11_MGT_fa0/0***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "d4d7.48bc.a887",
+                "mediatype": "T",
+                "mtu": 9800,
+                "operstatus": "up",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/8": {
+                "bandwidth": 100000,
+                "description": "**LINX-RT11_MGT_fa0/1***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "d4d7.48bc.a888",
+                "mediatype": "T",
+                "mtu": 9800,
+                "operstatus": "up",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/9": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "d4d7.48bc.a889",
+                "mediatype": "T",
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "Gigabit Ethernet"
+            },
+            "Loopback0": {
+                "bandwidth": 8000000,
+                "description": "**mpls ospf 1000**",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.65.129",
+                        "subnet": "32"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "up",
+                "type": null
+            },
+            "Loopback100": {
+                "bandwidth": 8000000,
+                "description": "***nagios trap test ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "administratively down",
+                "type": null
+            },
+            "Loopback2000": {
+                "bandwidth": 8000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.111.0.79",
+                        "subnet": "32"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "up",
+                "type": null
+            },
+            "Port-channel1": {
+                "bandwidth": 2000000,
+                "description": "**Po1->LIM,gi0/21-22, tu robic VLAN-y!!!",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "d4d7.48bc.a8a1",
+                "mediatype": "unknown media type",
+                "mtu": 9800,
+                "operstatus": "up",
+                "type": "EtherChannel"
+            },
+            "Port-channel11": {
+                "bandwidth": 2000000,
+                "description": "**Po Gi0/16,20 do LINX-RT14, mpls ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.65.162",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": null,
+                "macaddress": "d4d7.48bc.a8cc",
+                "mediatype": "unknown media type",
+                "mtu": 9200,
+                "operstatus": "up",
+                "type": "EtherChannel"
+            },
+            "Port-channel3": {
+                "bandwidth": 2000000,
+                "description": "**Po3->LINX-SW5_cME3600X(Netia),Gi0/11-12**",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "d4d7.48bc.a8a3",
+                "mediatype": "unknown media type",
+                "mtu": 9800,
+                "operstatus": "up",
+                "type": "EtherChannel"
+            },
+            "Port-channel4": {
+                "bandwidth": 2000000,
+                "description": "**Po4->LINX-SW6_cME3600X(Exatel),Gi0/13-14**",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "d4d7.48bc.a8a4",
+                "mediatype": "unknown media type",
+                "mtu": 9800,
+                "operstatus": "up",
+                "type": "EtherChannel"
+            },
+            "Port-channel5": {
+                "bandwidth": 2000000,
+                "description": "**Po5->LINX-SW7-c4900, gi0/23-24***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "d4d7.48bc.a8a5",
+                "mediatype": "unknown media type",
+                "mtu": 9198,
+                "operstatus": "up",
+                "type": "EtherChannel"
+            },
+            "TenGigabitEthernet0/1": {
+                "bandwidth": 10000000,
+                "description": "**do LINX-RT13-cASR920 Te0/0/25 **",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "d4d7.48bc.a899",
+                "mediatype": "SFP-LR",
+                "mtu": 9200,
+                "operstatus": "up",
+                "type": "Ten Gigabit Ethernet"
+            },
+            "TenGigabitEthernet0/2": {
+                "bandwidth": 10000000,
+                "description": "**do LINX-RT17_Te0/0/4***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "d4d7.48bc.a89a",
+                "mediatype": "SFP-LR",
+                "mtu": 9200,
+                "operstatus": "up",
+                "type": "Ten Gigabit Ethernet"
+            },
+            "Vlan1": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "d4d7.48bc.a8c0",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "EtherSVI"
+            },
+            "Vlan1040": {
+                "bandwidth": 1000000,
+                "description": "** Test Neantic ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "192.168.40.44",
+                        "subnet": "29"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "d4d7.48bc.a8c0",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "EtherSVI"
+            },
+            "Vlan1112": {
+                "bandwidth": 10000000,
+                "description": "**mpls do LINX-RT13 OSPF1000***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.65.123",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "d4d7.48bc.a8c0",
+                "mediatype": null,
+                "mtu": 9200,
+                "operstatus": "up",
+                "type": "EtherSVI"
+            },
+            "Vlan1113": {
+                "bandwidth": 10000000,
+                "description": "**mpls do LINX-RT17 ospf1000***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.65.121",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "d4d7.48bc.a8c0",
+                "mediatype": null,
+                "mtu": 9200,
+                "operstatus": "up",
+                "type": "EtherSVI"
+            },
+            "Vlan1114": {
+                "bandwidth": 1000000,
+                "description": "**mpls ptp do lim--sw1 ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.65.81",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "d4d7.48bc.a8c0",
+                "mediatype": null,
+                "mtu": 9800,
+                "operstatus": "up",
+                "type": "EtherSVI"
+            },
+            "Vlan1116": {
+                "bandwidth": 1000000,
+                "description": "**DL mpls do PRU2-RTPE1 LINX-Netia***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.65.85",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "d4d7.48bc.a8c0",
+                "mediatype": null,
+                "mtu": 1998,
+                "operstatus": "administratively down",
+                "type": "EtherSVI"
+            },
+            "Vlan3410": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "d4d7.48bc.a8c0",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "EtherSVI"
+            },
+            "Vlan3912": {
+                "bandwidth": 1000000,
+                "description": "**test L2 do mpwik-rtpe-czern***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.39.255.254",
+                        "subnet": "29"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "d4d7.48bc.a8c0",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "EtherSVI"
+            },
+            "Vlan4009": {
+                "bandwidth": 1000000,
+                "description": "**MGT v.2019 ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.111.231.246",
+                        "subnet": "29"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "d4d7.48bc.a8c0",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "EtherSVI"
+            },
+            "Vlan4091": {
+                "bandwidth": 1000000,
+                "description": "**mpls mpwik test only ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.42.255.254",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "d4d7.48bc.a8c0",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "EtherSVI"
+            },
+            "Vlan684": {
+                "bandwidth": 1000000,
+                "description": "**mpls do mpwik-rtpe-pruszkow via LINX-Sw5 Netia PRu PRU2 ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.100.37",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "d4d7.48bc.a8c0",
+                "mediatype": null,
+                "mtu": 1998,
+                "operstatus": "up",
+                "type": "EtherSVI"
+            },
+            "Vlan686": {
+                "bandwidth": 1000000,
+                "description": "**mpls do mpwik-rtpe-czerniakowska via linx-sw6-FO-pagi**",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.100.27",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "d4d7.48bc.a8c0",
+                "mediatype": null,
+                "mtu": 1998,
+                "operstatus": "administratively down",
+                "type": "EtherSVI"
+            },
+            "Vlan688": {
+                "bandwidth": 50000,
+                "description": "**do mpwik-rtpe-pruszkow via Netia PRU PRU2 **",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.100.34",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "d4d7.48bc.a8c0",
+                "mediatype": null,
+                "mtu": 1998,
+                "operstatus": "administratively down",
+                "type": "EtherSVI"
+            },
+            "Vlan691": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.65.47",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "d4d7.48bc.a8c0",
+                "mediatype": null,
+                "mtu": 1948,
+                "operstatus": "up",
+                "type": "EtherSVI"
+            },
+            "Vlan8": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "d4d7.48bc.a8c0",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "EtherSVI"
+            },
+            "Vlan9": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.254.1.79",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "d4d7.48bc.a8c0",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "EtherSVI"
+            },
+            "pseudowire100015": {
+                "bandwidth": null,
+                "description": null,
+                "duplex": null,
+                "lineprotocol": null,
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": null,
+                "type": null
+            },
+            "pseudowire100016": {
+                "bandwidth": null,
+                "description": null,
+                "duplex": null,
+                "lineprotocol": null,
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": null,
+                "type": null
+            }
+        },
+        "ansible_net_iostype": "IOS",
+        "ansible_net_memfree_mb": 458396.43359375,
+        "ansible_net_memtotal_mb": 796786.71484375,
+        "ansible_net_model": "ME-3600X-24FS-M",
+        "ansible_net_neighbors": {
+            "GigabitEthernet0/1": [
+                {
+                    "host": "LINX-RT1-cASR1002.pagi.pl",
+                    "port": "GigabitEthernet0/0/0"
+                }
+            ],
+            "GigabitEthernet0/10": [
+                {
+                    "host": "LINX-RT16-c7204_MPWiK-PE.pagi",
+                    "port": "GigabitEthernet0/1"
+                }
+            ],
+            "GigabitEthernet0/11": [
+                {
+                    "host": "LINX-SW5_cME3600X.pagi",
+                    "port": "GigabitEthernet0/1"
+                }
+            ],
+            "GigabitEthernet0/12": [
+                {
+                    "host": "LINX-SW5_cME3600X.pagi",
+                    "port": "GigabitEthernet0/2"
+                }
+            ],
+            "GigabitEthernet0/13": [
+                {
+                    "host": "LINX-SW6-cME3600X.pagi",
+                    "port": "GigabitEthernet0/1"
+                }
+            ],
+            "GigabitEthernet0/14": [
+                {
+                    "host": "LINX-SW6-cME3600X.pagi",
+                    "port": "GigabitEthernet0/2"
+                }
+            ],
+            "GigabitEthernet0/15": [
+                {
+                    "host": "LINX-RT15-c7206_MGT2.pagi",
+                    "port": "GigabitEthernet0/1"
+                }
+            ],
+            "GigabitEthernet0/16": [
+                {
+                    "host": "LINX-RT14-cASR1001X.pagi",
+                    "port": "GigabitEthernet0/0/5"
+                }
+            ],
+            "GigabitEthernet0/18": [
+                {
+                    "host": "LINX2-SW2-c2960",
+                    "port": "GigabitEthernet0/1"
+                }
+            ],
+            "GigabitEthernet0/19": [
+                {
+                    "host": "LINX-SW2-cME3400.pagi",
+                    "port": "GigabitEthernet0/1"
+                }
+            ],
+            "GigabitEthernet0/2": [
+                {
+                    "host": "LINX-RT1-cASR1002.pagi.pl",
+                    "port": "GigabitEthernet0/0/1"
+                }
+            ],
+            "GigabitEthernet0/20": [
+                {
+                    "host": "LINX-RT14-cASR1001X.pagi",
+                    "port": "GigabitEthernet0/0/4"
+                }
+            ],
+            "GigabitEthernet0/21": [
+                {
+                    "host": "LIM--SW1-cME3600X.pagi",
+                    "port": "GigabitEthernet0/17"
+                }
+            ],
+            "GigabitEthernet0/22": [
+                {
+                    "host": "LIM--SW1-cME3600X.pagi",
+                    "port": "GigabitEthernet0/18"
+                }
+            ],
+            "GigabitEthernet0/23": [
+                {
+                    "host": "LINX-SW7-C4900.pagi",
+                    "port": "GigabitEthernet3/19"
+                }
+            ],
+            "GigabitEthernet0/24": [
+                {
+                    "host": "LINX-SW7-C4900.pagi",
+                    "port": "GigabitEthernet3/20"
+                }
+            ],
+            "GigabitEthernet0/4": [
+                {
+                    "host": "cmp-sw-chmielna-c3560G.pagi",
+                    "port": "GigabitEthernet0/51"
+                }
+            ],
+            "GigabitEthernet0/5": [
+                {
+                    "host": "LINX-RT10-cASR1002_2.pagi",
+                    "port": "GigabitEthernet0/0/0"
+                }
+            ],
+            "GigabitEthernet0/6": [
+                {
+                    "host": "LINX-RT10-cASR1002_2.pagi",
+                    "port": "GigabitEthernet0/0/1"
+                }
+            ],
+            "GigabitEthernet0/7": [
+                {
+                    "host": "LINX-RT11-c1841_MGT.pagi",
+                    "port": "FastEthernet0/0"
+                }
+            ],
+            "GigabitEthernet0/8": [
+                {
+                    "host": "LINX-RT11-c1841_MGT.pagi",
+                    "port": "FastEthernet0/1"
+                }
+            ],
+            "TenGigabitEthernet0/1": [
+                {
+                    "host": "LINX-RT13_cASR920-24SZIM.pagi",
+                    "port": "TenGigabitEthernet0/0/25"
+                }
+            ],
+            "TenGigabitEthernet0/2": [
+                {
+                    "host": "LINX-RT17-cASR920-12SZ.pagi",
+                    "port": "TenGigabitEthernet0/0/4"
+                }
+            ]
+        },
+        "ansible_net_python_version": "2.7.17",
+        "ansible_net_serialnum": "FOC1545V3QR",
+        "ansible_net_stacked_models": [
+            "ME-3600X-24FS-M"
+        ],
+        "ansible_net_stacked_serialnums": [
+            "FOC1545V3QR"
+        ],
+        "ansible_net_system": "ios",
+        "ansible_net_version": "15.6(2)SP4",
+        "ansible_network_resources": {},
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "deprecations": [
+        {
+            "msg": "Distribution Ubuntu 18.04 on host LINX-SW1-cMe3600X should use /usr/bin/python3, but is using /usr/bin/python for backward compatibility with prior Ansible releases. A future Ansible release will default to using the discovered platform python for this host. See https://docs.ansible.com/ansible/2.10/reference_appendices/interpreter_discovery.html for more information",
+            "version": "2.12"
+        }
+    ],
+    "failed": false
+}

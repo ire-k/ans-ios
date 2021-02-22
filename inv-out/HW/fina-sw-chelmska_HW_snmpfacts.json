@@ -1,0 +1,45 @@
+{
+    "ansible_facts": {
+        "ansible_net_api": "cliconf",
+        "ansible_net_filesystems": [
+            "flash:"
+        ],
+        "ansible_net_filesystems_info": {
+            "flash:": {
+                "spacefree_kb": 16145.0,
+                "spacetotal_kb": 31752.0
+            }
+        },
+        "ansible_net_gather_network_resources": [],
+        "ansible_net_gather_subset": [
+            "hardware",
+            "default"
+        ],
+        "ansible_net_hostname": "FINA-SW-Chelmska",
+        "ansible_net_image": "flash:/c3560-ipservicesk9-mz.122-58.SE2.bin",
+        "ansible_net_iostype": "IOS",
+        "ansible_net_memfree_mb": 41021.51171875,
+        "ansible_net_memtotal_mb": 4817.6015625,
+        "ansible_net_model": "WS-C3560G-24TS",
+        "ansible_net_python_version": "2.7.17",
+        "ansible_net_serialnum": "FOC1042Y0ZR",
+        "ansible_net_stacked_models": [
+            "WS-C3560G-24TS-E"
+        ],
+        "ansible_net_stacked_serialnums": [
+            "FOC1042Y0ZR"
+        ],
+        "ansible_net_system": "ios",
+        "ansible_net_version": "12.2(58)SE2",
+        "ansible_network_resources": {},
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "deprecations": [
+        {
+            "msg": "Distribution Ubuntu 18.04 on host fina-sw-chelmska should use /usr/bin/python3, but is using /usr/bin/python for backward compatibility with prior Ansible releases. A future Ansible release will default to using the discovered platform python for this host. See https://docs.ansible.com/ansible/2.10/reference_appendices/interpreter_discovery.html for more information",
+            "version": "2.12"
+        }
+    ],
+    "failed": false
+}

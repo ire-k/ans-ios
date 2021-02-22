@@ -1,0 +1,39 @@
+{
+    "ansible_facts": {
+        "ansible_net_api": "cliconf",
+        "ansible_net_filesystems": [
+            "flash:"
+        ],
+        "ansible_net_filesystems_info": {
+            "flash:": {
+                "spacefree_kb": 12148.0,
+                "spacetotal_kb": 62388.0
+            }
+        },
+        "ansible_net_gather_network_resources": [],
+        "ansible_net_gather_subset": [
+            "hardware",
+            "default"
+        ],
+        "ansible_net_hostname": "WOL--RT1-c2811",
+        "ansible_net_image": "flash:c2800nm-advipservicesk9-mz.124-15.T17.bin",
+        "ansible_net_iostype": "IOS",
+        "ansible_net_memfree_mb": 106211.71484375,
+        "ansible_net_memtotal_mb": 142452.3125,
+        "ansible_net_model": "2811",
+        "ansible_net_python_version": "2.7.17",
+        "ansible_net_serialnum": "FHK0902F028",
+        "ansible_net_system": "ios",
+        "ansible_net_version": "12.4(15)T17",
+        "ansible_network_resources": {},
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "deprecations": [
+        {
+            "msg": "Distribution Ubuntu 18.04 on host WOL--RT1-c2811-L0 should use /usr/bin/python3, but is using /usr/bin/python for backward compatibility with prior Ansible releases. A future Ansible release will default to using the discovered platform python for this host. See https://docs.ansible.com/ansible/2.10/reference_appendices/interpreter_discovery.html for more information",
+            "version": "2.12"
+        }
+    ],
+    "failed": false
+}

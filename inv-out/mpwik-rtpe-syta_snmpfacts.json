@@ -1,0 +1,179 @@
+{
+    "ansible_facts": {
+        "ansible_net_all_ipv4_addresses": [
+            "212.69.66.31",
+            "172.16.0.30",
+            "172.16.100.4",
+            "172.16.100.6"
+        ],
+        "ansible_net_all_ipv6_addresses": [],
+        "ansible_net_api": "cliconf",
+        "ansible_net_filesystems": [
+            "flash0:"
+        ],
+        "ansible_net_filesystems_info": {
+            "flash0:": {
+                "spacefree_kb": 122496.0,
+                "spacetotal_kb": 255336.0
+            }
+        },
+        "ansible_net_gather_network_resources": [],
+        "ansible_net_gather_subset": [
+            "hardware",
+            "default",
+            "interfaces"
+        ],
+        "ansible_net_hostname": "mpwik-rtpe-syta",
+        "ansible_net_image": "flash:c1900-universalk9-mz.SPA.155-3.M4.bin",
+        "ansible_net_interfaces": {
+            "Embedded-Service-Engine0/0": {
+                "bandwidth": 10000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "0000.0000.0000",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "Embedded Service Engine"
+            },
+            "GigabitEthernet0/0": {
+                "bandwidth": 100000,
+                "description": "**do mpwik-sw-pru_fa0/23***",
+                "duplex": "Full",
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "30e4.db43.d8e0",
+                "mediatype": "RJ45",
+                "mtu": 1998,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/0.690": {
+                "bandwidth": 50000,
+                "description": "**mpls uplink via KAR->ATM->LIM***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.100.4",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "30e4.db43.d8e0",
+                "mediatype": null,
+                "mtu": 1998,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/0.691": {
+                "bandwidth": 35000,
+                "description": "**mpls uplink via KAW->Tmobile->LIM***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.100.6",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "30e4.db43.d8e0",
+                "mediatype": null,
+                "mtu": 1998,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1": {
+                "bandwidth": 100000,
+                "description": "**mpls pagi uslugi L2 ***",
+                "duplex": "Full",
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "30e4.db43.d8e1",
+                "mediatype": "RJ45",
+                "mtu": 1948,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1.300": {
+                "bandwidth": 100000,
+                "description": "**L2 technologia via mpls pagi do mpwik-rtpe-czerniakowska ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "30e4.db43.d8e1",
+                "mediatype": null,
+                "mtu": 1948,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "Loopback0": {
+                "bandwidth": 8000000,
+                "description": "**mpls router-id **",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.0.30",
+                        "subnet": "32"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "up",
+                "type": null
+            },
+            "Loopback2000": {
+                "bandwidth": 8000000,
+                "description": "**mgt test***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.66.31",
+                        "subnet": "32"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "administratively down",
+                "type": null
+            }
+        },
+        "ansible_net_iostype": "IOS",
+        "ansible_net_memfree_mb": 40342.05078125,
+        "ansible_net_memtotal_mb": 318790.9453125,
+        "ansible_net_model": "CISCO1941/K9",
+        "ansible_net_neighbors": {
+            "GigabitEthernet0/0": [
+                {
+                    "host": "mpwik-sw-syta.pagi",
+                    "port": "FastEthernet0/23"
+                }
+            ],
+            "GigabitEthernet0/1": [
+                {
+                    "host": "mpwik-sw-syta.pagi",
+                    "port": "FastEthernet0/24"
+                }
+            ]
+        },
+        "ansible_net_python_version": "2.7.17",
+        "ansible_net_serialnum": "FCZ152792NF",
+        "ansible_net_system": "ios",
+        "ansible_net_version": "15.5(3)M4",
+        "ansible_network_resources": {},
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "deprecations": [
+        {
+            "msg": "Distribution Ubuntu 18.04 on host mpwik-rtpe-syta should use /usr/bin/python3, but is using /usr/bin/python for backward compatibility with prior Ansible releases. A future Ansible release will default to using the discovered platform python for this host. See https://docs.ansible.com/ansible/2.10/reference_appendices/interpreter_discovery.html for more information",
+            "version": "2.12"
+        }
+    ],
+    "failed": false
+}

@@ -1,0 +1,411 @@
+{
+    "ansible_facts": {
+        "ansible_net_all_ipv4_addresses": [
+            "195.182.219.230",
+            "216.66.87.158",
+            "10.0.0.14",
+            "212.69.65.163",
+            "212.69.65.165",
+            "212.69.65.67",
+            "212.69.75.146",
+            "217.79.151.2",
+            "212.69.65.3",
+            "212.69.66.237",
+            "212.69.66.245",
+            "212.69.65.58",
+            "10.254.1.200",
+            "212.69.65.41"
+        ],
+        "ansible_net_all_ipv6_addresses": [],
+        "ansible_net_api": "cliconf",
+        "ansible_net_filesystems": [
+            "bootflash:"
+        ],
+        "ansible_net_filesystems_info": {
+            "bootflash:": {
+                "spacefree_kb": 4871904.0,
+                "spacetotal_kb": 6490852.0
+            }
+        },
+        "ansible_net_gather_network_resources": [],
+        "ansible_net_gather_subset": [
+            "hardware",
+            "default",
+            "interfaces"
+        ],
+        "ansible_net_hostname": "LINX-RT14-cASR1001X",
+        "ansible_net_image": "bootflash:asr1001x-universalk9.16.03.07.SPA.bin",
+        "ansible_net_interfaces": {
+            "GigabitEthernet0": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": "Auto",
+                "ipv4": [
+                    {
+                        "address": "10.0.0.14",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "700f.6ae6.7ba0",
+                "mediatype": "RJ45",
+                "mtu": 1500,
+                "operstatus": "down",
+                "type": "RP management port"
+            },
+            "GigabitEthernet0/0/0": {
+                "bandwidth": 1000000,
+                "description": "**rez***",
+                "duplex": "Full",
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "700f.6ae6.7b82",
+                "mediatype": "unknown media type",
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "BUILT-IN-2T+6X1GE"
+            },
+            "GigabitEthernet0/0/1": {
+                "bandwidth": 1000000,
+                "description": "**Po12 do LINX-RT13**",
+                "duplex": "Full",
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "700f.6ae6.7bcb",
+                "mediatype": "ZX",
+                "mtu": 9200,
+                "operstatus": "up",
+                "type": "BUILT-IN-2T+6X1GE"
+            },
+            "GigabitEthernet0/0/2": {
+                "bandwidth": 1000000,
+                "description": "**Po12 do LINX-RT13**",
+                "duplex": "Full",
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "700f.6ae6.7bcb",
+                "mediatype": "ZX",
+                "mtu": 9200,
+                "operstatus": "up",
+                "type": "BUILT-IN-2T+6X1GE"
+            },
+            "GigabitEthernet0/0/3": {
+                "bandwidth": 1000000,
+                "description": "**Po12 do LINX-RT13**",
+                "duplex": "Full",
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "700f.6ae6.7bcb",
+                "mediatype": "ZX",
+                "mtu": 9200,
+                "operstatus": "up",
+                "type": "BUILT-IN-2T+6X1GE"
+            },
+            "GigabitEthernet0/0/4": {
+                "bandwidth": 1000000,
+                "description": "**Po11 do LINX-SW1***",
+                "duplex": "Full",
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "700f.6ae6.7bca",
+                "mediatype": "ZX",
+                "mtu": 9200,
+                "operstatus": "up",
+                "type": "BUILT-IN-2T+6X1GE"
+            },
+            "GigabitEthernet0/0/5": {
+                "bandwidth": 1000000,
+                "description": "**Po11 do LINX-SW1***",
+                "duplex": "Full",
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "700f.6ae6.7bca",
+                "mediatype": "ZX",
+                "mtu": 9200,
+                "operstatus": "up",
+                "type": "BUILT-IN-2T+6X1GE"
+            },
+            "Loopback0": {
+                "bandwidth": 8000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.65.3",
+                        "subnet": "32"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "up",
+                "type": null
+            },
+            "Loopback100": {
+                "bandwidth": 8000000,
+                "description": "**test interface***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "administratively down",
+                "type": null
+            },
+            "Port-channel11": {
+                "bandwidth": 2000000,
+                "description": "**Po11 Gi0/0/4-5 do LINX-SW1**",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.65.163",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "700f.6ae6.7bca",
+                "mediatype": null,
+                "mtu": 9200,
+                "operstatus": "up",
+                "type": "GEChannel"
+            },
+            "Port-channel12": {
+                "bandwidth": 3000000,
+                "description": "**Po12 Gi0/0/1-3 do linx-rt13***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.65.165",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "700f.6ae6.7bcb",
+                "mediatype": null,
+                "mtu": 9200,
+                "operstatus": "up",
+                "type": "GEChannel"
+            },
+            "TenGigabitEthernet0/0/0": {
+                "bandwidth": 10000000,
+                "description": "**PLIX/Equinix**",
+                "duplex": "Full",
+                "ipv4": [
+                    {
+                        "address": "195.182.219.230",
+                        "subnet": "23"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "700f.6ae6.7b80",
+                "mediatype": "SFP-LR",
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "BUILT-IN-2T+6X1GE"
+            },
+            "TenGigabitEthernet0/0/1": {
+                "bandwidth": 10000000,
+                "description": "**HE, uplink global 10G***",
+                "duplex": "Full",
+                "ipv4": [
+                    {
+                        "address": "216.66.87.158",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "700f.6ae6.7b81",
+                "mediatype": "SFP-LR",
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "BUILT-IN-2T+6X1GE"
+            },
+            "TenGigabitEthernet0/1/0": {
+                "bandwidth": 10000000,
+                "description": "**do LINX-RT13_cASR920-24SZIM, Ten 0/0/24 **",
+                "duplex": "Full",
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "700f.6ae6.7b90",
+                "mediatype": "10GBase-LR",
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "SPA-1X10GE-L-V2"
+            },
+            "TenGigabitEthernet0/1/0.1124": {
+                "bandwidth": 10000000,
+                "description": "**PUB IP do sieci pagi OSPF1000 ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.65.58",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "700f.6ae6.7b90",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "SPA-1X10GE-L-V2"
+            },
+            "TenGigabitEthernet0/1/0.15": {
+                "bandwidth": 10000000,
+                "description": "**PAGI core ospf 1000 ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.65.67",
+                        "subnet": "28"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "700f.6ae6.7b90",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "SPA-1X10GE-L-V2"
+            },
+            "TenGigabitEthernet0/1/0.2150": {
+                "bandwidth": 10000000,
+                "description": "**FINA***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.75.146",
+                        "subnet": "28"
+                    },
+                    {
+                        "address": "217.79.151.2",
+                        "subnet": "28"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "700f.6ae6.7b90",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "SPA-1X10GE-L-V2"
+            },
+            "TenGigabitEthernet0/1/0.4032": {
+                "bandwidth": 10000000,
+                "description": "*** MPWiK Czerniak BGP ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.65.41",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "700f.6ae6.7b90",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "SPA-1X10GE-L-V2"
+            },
+            "TenGigabitEthernet0/1/0.9": {
+                "bandwidth": 10000000,
+                "description": "***MGT only ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.254.1.200",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "700f.6ae6.7b90",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "SPA-1X10GE-L-V2"
+            },
+            "TenGigabitEthernet0/1/0.98": {
+                "bandwidth": 10000000,
+                "description": "**Mazowia.eu ul.Jagg via ODR--RT3 BGP 500Mbps***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.66.237",
+                        "subnet": "30"
+                    },
+                    {
+                        "address": "212.69.66.245",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "700f.6ae6.7b90",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "SPA-1X10GE-L-V2"
+            }
+        },
+        "ansible_net_iostype": "IOS-XE",
+        "ansible_net_memfree_mb": 1787313.96875,
+        "ansible_net_memtotal_mb": 3728459.109375,
+        "ansible_net_model": "ASR1001-X",
+        "ansible_net_neighbors": {
+            "GigabitEthernet0/0/1": [
+                {
+                    "host": "LINX-RT13_cASR920-24SZIM.pagi",
+                    "port": "GigabitEthernet0/0/21"
+                }
+            ],
+            "GigabitEthernet0/0/2": [
+                {
+                    "host": "LINX-RT13_cASR920-24SZIM.pagi",
+                    "port": "GigabitEthernet0/0/22"
+                }
+            ],
+            "GigabitEthernet0/0/3": [
+                {
+                    "host": "LINX-RT13_cASR920-24SZIM.pagi",
+                    "port": "GigabitEthernet0/0/23"
+                }
+            ],
+            "GigabitEthernet0/0/4": [
+                {
+                    "host": "LINX-SW1-cME3600X.pagi",
+                    "port": "GigabitEthernet0/20"
+                }
+            ],
+            "GigabitEthernet0/0/5": [
+                {
+                    "host": "LINX-SW1-cME3600X.pagi",
+                    "port": "GigabitEthernet0/16"
+                }
+            ],
+            "TenGigabitEthernet0/0/1": [
+                {
+                    "host": "core1.waw1.he.net",
+                    "port": "ethernet1/1"
+                }
+            ],
+            "TenGigabitEthernet0/1/0": [
+                {
+                    "host": "LINX-RT13_cASR920-24SZIM.pagi",
+                    "port": "TenGigabitEthernet0/0/24"
+                }
+            ]
+        },
+        "ansible_net_python_version": "2.7.17",
+        "ansible_net_serialnum": "FXS2215Q35J",
+        "ansible_net_system": "ios",
+        "ansible_net_version": "16.03.07",
+        "ansible_network_resources": {},
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "deprecations": [
+        {
+            "msg": "Distribution Ubuntu 18.04 on host LINX-RT14-cASR1001X should use /usr/bin/python3, but is using /usr/bin/python for backward compatibility with prior Ansible releases. A future Ansible release will default to using the discovered platform python for this host. See https://docs.ansible.com/ansible/2.10/reference_appendices/interpreter_discovery.html for more information",
+            "version": "2.12"
+        }
+    ],
+    "failed": false
+}

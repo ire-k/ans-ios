@@ -1,0 +1,1342 @@
+{
+    "ansible_facts": {
+        "ansible_net_all_ipv4_addresses": [
+            "10.111.198.47",
+            "10.123.123.89",
+            "10.2.2.1",
+            "172.16.18.20",
+            "10.123.12.1",
+            "10.111.206.253",
+            "10.123.123.73",
+            "10.254.123.1",
+            "172.16.255.244",
+            "10.111.204.253",
+            "10.123.123.241",
+            "10.111.200.243",
+            "10.254.8.1",
+            "10.254.44.1",
+            "10.254.1.253",
+            "10.254.111.1",
+            "10.254.253.253",
+            "10.111.231.242",
+            "10.123.254.5",
+            "10.123.254.13",
+            "10.123.254.1",
+            "10.123.123.249",
+            "10.123.2.1",
+            "10.123.6.1",
+            "10.123.7.1",
+            "10.123.123.145",
+            "10.123.11.1",
+            "10.123.1.1",
+            "10.123.123.49",
+            "10.111.202.65",
+            "172.16.18.13",
+            "172.16.255.248",
+            "10.123.123.89",
+            "10.123.235.1",
+            "169.254.1.2",
+            "10.123.123.105",
+            "10.254.255.6",
+            "10.123.123.25",
+            "172.16.255.254",
+            "10.123.123.97",
+            "10.123.254.9",
+            "10.111.207.253",
+            "212.69.71.193",
+            "10.123.123.153",
+            "212.69.81.21",
+            "172.18.3.129",
+            "192.168.4.254",
+            "10.111.15.2",
+            "172.16.255.251",
+            "212.69.71.89",
+            "10.123.8.1",
+            "10.123.223.1",
+            "10.111.0.253",
+            "172.16.30.9",
+            "172.18.0.3",
+            "10.10.10.1",
+            "10.100.100.1",
+            "10.253.0.1",
+            "10.123.234.1",
+            "10.123.123.1",
+            "10.111.183.252",
+            "10.123.123.81",
+            "10.2.1.1",
+            "10.123.123.161",
+            "10.3.0.1",
+            "10.123.123.57",
+            "10.123.123.10",
+            "10.123.123.10",
+            "10.123.123.33",
+            "10.123.123.41"
+        ],
+        "ansible_net_all_ipv6_addresses": [],
+        "ansible_net_api": "cliconf",
+        "ansible_net_filesystems": [
+            "flash:"
+        ],
+        "ansible_net_filesystems_info": {
+            "flash:": {
+                "spacefree_kb": 26612.0,
+                "spacetotal_kb": 62484.0
+            }
+        },
+        "ansible_net_gather_network_resources": [],
+        "ansible_net_gather_subset": [
+            "hardware",
+            "default",
+            "interfaces"
+        ],
+        "ansible_net_hostname": "LINX-RT11-c1841_MGT",
+        "ansible_net_image": "flash:c1841-advipservicesk9-mz.124-15.T9.bin",
+        "ansible_net_interfaces": {
+            "FastEthernet0/0": {
+                "bandwidth": 100000,
+                "description": "***MGT WAN ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "0026.0b71.c94a",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "Gt96k FE"
+            },
+            "FastEthernet0/0.10": {
+                "bandwidth": 100000,
+                "description": "*** MGT Radiolinie ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.253.0.1",
+                        "subnet": "28"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0026.0b71.c94a",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "Gt96k FE"
+            },
+            "FastEthernet0/0.1425": {
+                "bandwidth": 100000,
+                "description": "*** Landtech Sokolow P2P Airfiber ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.123.123.241",
+                        "subnet": "29"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0026.0b71.c94a",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "Gt96k FE"
+            },
+            "FastEthernet0/0.153": {
+                "bandwidth": 100000,
+                "description": "***AGP Kondratowicza Zapl.***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.123.123.153",
+                        "subnet": "29"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0026.0b71.c94a",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "Gt96k FE"
+            },
+            "FastEthernet0/0.171": {
+                "bandwidth": 100000,
+                "description": "***AGP-Metro-ul.Ks.Janusza***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.123.123.33",
+                        "subnet": "29"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0026.0b71.c94a",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "Gt96k FE"
+            },
+            "FastEthernet0/0.172": {
+                "bandwidth": 100000,
+                "description": "***AGP-Metro-ul.Plocka zaplecze***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "0026.0b71.c94a",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "Gt96k FE"
+            },
+            "FastEthernet0/0.173": {
+                "bandwidth": 100000,
+                "description": "***AGP-Metro-Park_Moczydlo***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.123.123.41",
+                        "subnet": "29"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0026.0b71.c94a",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "Gt96k FE"
+            },
+            "FastEthernet0/0.174": {
+                "bandwidth": 100000,
+                "description": "***AGP-Metro-ul.Syreny***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.123.123.57",
+                        "subnet": "29"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0026.0b71.c94a",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "Gt96k FE"
+            },
+            "FastEthernet0/0.175": {
+                "bandwidth": 100000,
+                "description": "***AGP-Metro-ul.Plocka pkt.inf.***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "0026.0b71.c94a",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "Gt96k FE"
+            },
+            "FastEthernet0/0.176": {
+                "bandwidth": 100000,
+                "description": "***AGP Wola Park (C05)***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.123.123.10",
+                        "subnet": "29"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "0026.0b71.c94a",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "Gt96k FE"
+            },
+            "FastEthernet0/0.30": {
+                "bandwidth": 100000,
+                "description": "***macierz dyskowa backup ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "192.168.4.254",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "0026.0b71.c94a",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "Gt96k FE"
+            },
+            "FastEthernet0/0.33": {
+                "bandwidth": 100000,
+                "description": "**do srv cacti (virtualka) ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.111.15.2",
+                        "subnet": "29"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "0026.0b71.c94a",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "Gt96k FE"
+            },
+            "FastEthernet0/0.3400": {
+                "bandwidth": 10000,
+                "description": "**CMP MGT via radio ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.111.207.253",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0026.0b71.c94a",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "Gt96k FE"
+            },
+            "FastEthernet0/0.3404": {
+                "bandwidth": 100000,
+                "description": "**Test Starkey ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.123.254.9",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0026.0b71.c94a",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "Gt96k FE"
+            },
+            "FastEthernet0/0.3406": {
+                "bandwidth": 100000,
+                "description": "**MGT dla sw-interteam-grodzisk (SIAE 1Gbps z Budokrusz)***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.123.123.97",
+                        "subnet": "29"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0026.0b71.c94a",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "Gt96k FE"
+            },
+            "FastEthernet0/0.3411": {
+                "bandwidth": 100000,
+                "description": "**CMP PAGIFO MGT ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.111.206.253",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0026.0b71.c94a",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "Gt96k FE"
+            },
+            "FastEthernet0/0.35": {
+                "bandwidth": 100000,
+                "description": "*** Server Radius ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.71.193",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0026.0b71.c94a",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "Gt96k FE"
+            },
+            "FastEthernet0/0.36": {
+                "bandwidth": 100000,
+                "description": "**Inet***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.81.21",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0026.0b71.c94a",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "Gt96k FE"
+            },
+            "FastEthernet0/0.38": {
+                "bandwidth": 100000,
+                "description": "*** MGMT priv. do serwerow ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.100.100.1",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "0026.0b71.c94a",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "Gt96k FE"
+            },
+            "FastEthernet0/0.39": {
+                "bandwidth": 100000,
+                "description": "*** MGMT urzadzen PAGI->odr--rt1 ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.10.10.1",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "0026.0b71.c94a",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "Gt96k FE"
+            },
+            "FastEthernet0/0.5": {
+                "bandwidth": 100000,
+                "description": "*** MGMT UBIQUITI ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.123.123.249",
+                        "subnet": "29"
+                    },
+                    {
+                        "address": "10.123.2.1",
+                        "subnet": "24"
+                    },
+                    {
+                        "address": "10.123.6.1",
+                        "subnet": "24"
+                    },
+                    {
+                        "address": "10.123.7.1",
+                        "subnet": "24"
+                    },
+                    {
+                        "address": "10.123.123.145",
+                        "subnet": "29"
+                    },
+                    {
+                        "address": "10.123.11.1",
+                        "subnet": "24"
+                    },
+                    {
+                        "address": "10.123.1.1",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0026.0b71.c94a",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "Gt96k FE"
+            },
+            "FastEthernet0/0.516": {
+                "bandwidth": 100000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "0026.0b71.c94a",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "deleted",
+                "type": "Gt96k FE"
+            },
+            "FastEthernet0/0.531": {
+                "bandwidth": 100000,
+                "description": "**** AGP Metro ul.Handlowa ****",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.123.123.1",
+                        "subnet": "29"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0026.0b71.c94a",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "Gt96k FE"
+            },
+            "FastEthernet0/0.532": {
+                "bandwidth": 100000,
+                "description": "***AGP Ossowskiego***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "0026.0b71.c94a",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "Gt96k FE"
+            },
+            "FastEthernet0/0.534": {
+                "bandwidth": 100000,
+                "description": "**** AGP Metro Punkt Inf ****",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "0026.0b71.c94a",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "Gt96k FE"
+            },
+            "FastEthernet0/0.580": {
+                "bandwidth": 100000,
+                "description": "*** Budimex ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.123.123.89",
+                        "subnet": "29"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "0026.0b71.c94a",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "Gt96k FE"
+            },
+            "FastEthernet0/0.6": {
+                "bandwidth": 100000,
+                "description": "*** MGMT MIKROTIK ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.123.254.5",
+                        "subnet": "30"
+                    },
+                    {
+                        "address": "10.123.254.13",
+                        "subnet": "30"
+                    },
+                    {
+                        "address": "10.123.254.1",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0026.0b71.c94a",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "Gt96k FE"
+            },
+            "FastEthernet0/0.742": {
+                "bandwidth": 100000,
+                "description": "*** KM Mszczonowska ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.123.123.81",
+                        "subnet": "29"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0026.0b71.c94a",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "Gt96k FE"
+            },
+            "FastEthernet0/0.744": {
+                "bandwidth": 100000,
+                "description": "***AGP Wola Park (C05)***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.123.123.10",
+                        "subnet": "29"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0026.0b71.c94a",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "Gt96k FE"
+            },
+            "FastEthernet0/0.795": {
+                "bandwidth": 100000,
+                "description": "*** CMP Wisniowa - MGMT***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.123.123.49",
+                        "subnet": "29"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0026.0b71.c94a",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "Gt96k FE"
+            },
+            "FastEthernet0/0.796": {
+                "bandwidth": 100000,
+                "description": "*** Hexaware ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.254.123.1",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0026.0b71.c94a",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "Gt96k FE"
+            },
+            "FastEthernet0/0.8": {
+                "bandwidth": 100000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.254.111.1",
+                        "subnet": "24"
+                    },
+                    {
+                        "address": "10.254.253.253",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0026.0b71.c94a",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "Gt96k FE"
+            },
+            "FastEthernet0/0.812": {
+                "bandwidth": 100000,
+                "description": "***MGT KolejeMaz Mszczonowska -> eTop****",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.71.89",
+                        "subnet": "29"
+                    },
+                    {
+                        "address": "10.123.8.1",
+                        "subnet": "24"
+                    },
+                    {
+                        "address": "10.123.223.1",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0026.0b71.c94a",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "Gt96k FE"
+            },
+            "FastEthernet0/0.9": {
+                "bandwidth": 100000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.254.8.1",
+                        "subnet": "24"
+                    },
+                    {
+                        "address": "10.254.44.1",
+                        "subnet": "24"
+                    },
+                    {
+                        "address": "10.254.1.253",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0026.0b71.c94a",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "Gt96k FE"
+            },
+            "FastEthernet0/0.902950609": {
+                "bandwidth": 100000,
+                "description": "**** Hurtownia Alka - MGT ****",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.123.235.1",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0026.0b71.c94a",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "Gt96k FE"
+            },
+            "FastEthernet0/0.902950694": {
+                "bandwidth": 100000,
+                "description": "** Hotel Brant Majdan - MGT ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.123.123.105",
+                        "subnet": "29"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0026.0b71.c94a",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "Gt96k FE"
+            },
+            "FastEthernet0/0.908121201": {
+                "bandwidth": 100000,
+                "description": "***AGP via etop via skynet qinq ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.123.123.161",
+                        "subnet": "29"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0026.0b71.c94a",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "Gt96k FE"
+            },
+            "FastEthernet0/0.915070359": {
+                "bandwidth": 100000,
+                "description": "*** POS Laboratories ****",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.123.123.73",
+                        "subnet": "29"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "0026.0b71.c94a",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "Gt96k FE"
+            },
+            "FastEthernet0/0.915070902": {
+                "bandwidth": 100000,
+                "description": "*** Telestrada - MGMT ****",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "0026.0b71.c94a",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "Gt96k FE"
+            },
+            "FastEthernet0/0.915070916": {
+                "bandwidth": 100000,
+                "description": "*** SQS Mszczonow ****",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.123.234.1",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "0026.0b71.c94a",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "Gt96k FE"
+            },
+            "FastEthernet0/0.915070950": {
+                "bandwidth": 100000,
+                "description": "****** Helukabel ******",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.123.123.25",
+                        "subnet": "29"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "0026.0b71.c94a",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "Gt96k FE"
+            },
+            "FastEthernet0/0.918284001": {
+                "bandwidth": 100000,
+                "description": "**cmp-sw-praga_mgt ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.111.202.65",
+                        "subnet": "29"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "0026.0b71.c94a",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "Gt96k FE"
+            },
+            "FastEthernet0/0.922910008": {
+                "bandwidth": 100000,
+                "description": "**MAN Wolica MGT ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.254.255.6",
+                        "subnet": "29"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0026.0b71.c94a",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "Gt96k FE"
+            },
+            "FastEthernet0/0.922930005": {
+                "bandwidth": 100000,
+                "description": "*** MGMT Ubiquiti SB Malopole ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.123.12.1",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0026.0b71.c94a",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "Gt96k FE"
+            },
+            "FastEthernet0/0.929770580": {
+                "bandwidth": 100000,
+                "description": "**** Budimex, via mpwik Borecka ****",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.123.123.89",
+                        "subnet": "29"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0026.0b71.c94a",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "Gt96k FE"
+            },
+            "FastEthernet0/0.935070298": {
+                "bandwidth": 100000,
+                "description": "**ZTM Stokl MGT via Exatel, land --> pik11-rt1 ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.18.3.129",
+                        "subnet": "29"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "0026.0b71.c94a",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "Gt96k FE"
+            },
+            "FastEthernet0/0.939414000": {
+                "bandwidth": 100000,
+                "description": "**mgt mali klienci via jmdi (cooling)**",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.111.183.252",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0026.0b71.c94a",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "Gt96k FE"
+            },
+            "FastEthernet0/0.940010101": {
+                "bandwidth": 100000,
+                "description": "***ZTM P+R MGT ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.18.0.3",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0026.0b71.c94a",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "Gt96k FE"
+            },
+            "FastEthernet0/0.940019101": {
+                "bandwidth": 100000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "0026.0b71.c94a",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "Gt96k FE"
+            },
+            "FastEthernet0/0.940554000": {
+                "bandwidth": 100000,
+                "description": "**MGT cmp-sw-xxx via JMDI **",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.111.204.253",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0026.0b71.c94a",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "Gt96k FE"
+            },
+            "FastEthernet0/1": {
+                "bandwidth": 100000,
+                "description": "***MGT LAN - Odrowaza ****",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "0026.0b71.c94b",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "Gt96k FE"
+            },
+            "FastEthernet0/1.36": {
+                "bandwidth": 100000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "0026.0b71.c94b",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "Gt96k FE"
+            },
+            "FastEthernet0/1.4009": {
+                "bandwidth": 100000,
+                "description": "**mgt do LINX-SW1 **",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.111.231.242",
+                        "subnet": "29"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0026.0b71.c94b",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "Gt96k FE"
+            },
+            "FastEthernet0/1.804184051": {
+                "bandwidth": 100000,
+                "description": "**do Helpdesk via ATM OSPF12***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.255.251",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "0026.0b71.c94b",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "Gt96k FE"
+            },
+            "FastEthernet0/1.815094051": {
+                "bandwidth": 100000,
+                "description": "**do Helpdesk via Netia OSPF12 **",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.255.254",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "0026.0b71.c94b",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "Gt96k FE"
+            },
+            "FastEthernet0/1.9": {
+                "bandwidth": 100000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "0026.0b71.c94b",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "Gt96k FE"
+            },
+            "FastEthernet0/1.902950694": {
+                "bandwidth": 100000,
+                "description": "** Hotel Brant Majdan ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "0026.0b71.c94b",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "Gt96k FE"
+            },
+            "FastEthernet0/1.922930005": {
+                "bandwidth": 100000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "0026.0b71.c94b",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "deleted",
+                "type": "Gt96k FE"
+            },
+            "Loopback0": {
+                "bandwidth": 8000000,
+                "description": "*** vpn client **8",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.3.0.1",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "up",
+                "type": null
+            },
+            "Loopback1": {
+                "bandwidth": 8000000,
+                "description": "**vpn client int2***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.2.1.1",
+                        "subnet": "32"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "up",
+                "type": null
+            },
+            "Loopback100": {
+                "bandwidth": 8000000,
+                "description": "**test int dla nagiosa ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "169.254.1.2",
+                        "subnet": "32"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "up",
+                "type": null
+            },
+            "Loopback2": {
+                "bandwidth": 8000000,
+                "description": "**test int vpn-itkreator ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.2.2.1",
+                        "subnet": "32"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "up",
+                "type": null
+            },
+            "Loopback2000": {
+                "bandwidth": 8000000,
+                "description": "***MGT v.2019****",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.111.0.253",
+                        "subnet": "32"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "up",
+                "type": null
+            },
+            "NVI0": {
+                "bandwidth": 56,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "up",
+                "type": null
+            },
+            "Serial0/0/0": {
+                "bandwidth": 1544,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": null
+            },
+            "Tunnel100": {
+                "bandwidth": 9,
+                "description": "***MGT dla switcha MAN-Wolica***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.30.9",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "up",
+                "type": null
+            },
+            "Tunnel20656": {
+                "bandwidth": 9,
+                "description": "**MGT do cmp-rt-lomianki via Radio IBS ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "up",
+                "type": null
+            },
+            "Tunnel23": {
+                "bandwidth": 9,
+                "description": "**MGT dla CMP Wilanow switch ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.18.13",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "administratively down",
+                "type": null
+            },
+            "Tunnel26": {
+                "bandwidth": 9,
+                "description": "***MGT BS Wolomin ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.255.248",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "up",
+                "type": null
+            },
+            "Tunnel28": {
+                "bandwidth": 9,
+                "description": "***MGT Borecka Budimex ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.255.244",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "administratively down",
+                "type": null
+            },
+            "Tunnel344": {
+                "bandwidth": 9,
+                "description": "**mgt linx-rt11 <-> cmp-rt-pawia***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.111.198.47",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "up",
+                "type": null
+            },
+            "Tunnel41": {
+                "bandwidth": 9,
+                "description": "**MGT1 do cmp-rt-praga via virtuaop inet **",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.18.20",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "up",
+                "type": null
+            },
+            "Tunnel46": {
+                "bandwidth": 9,
+                "description": "**mgt cmp-rt-piasJP2 - linx-rt11**",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.111.200.243",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "up",
+                "type": null
+            }
+        },
+        "ansible_net_iostype": "IOS",
+        "ansible_net_memfree_mb": 246814.59765625,
+        "ansible_net_memtotal_mb": 62826.171875,
+        "ansible_net_model": "1841",
+        "ansible_net_neighbors": {
+            "FastEthernet0/0": [
+                {
+                    "host": "LINX-SW1-cME3600X.pagi",
+                    "port": "GigabitEthernet0/7"
+                }
+            ],
+            "FastEthernet0/1": [
+                {
+                    "host": "LINX-SW1-cME3600X.pagi",
+                    "port": "GigabitEthernet0/8"
+                }
+            ]
+        },
+        "ansible_net_python_version": "2.7.17",
+        "ansible_net_serialnum": "FCZ1329C21B",
+        "ansible_net_system": "ios",
+        "ansible_net_version": "12.4(15)T9",
+        "ansible_network_resources": {},
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "deprecations": [
+        {
+            "msg": "Distribution Ubuntu 18.04 on host LINX-RT11 should use /usr/bin/python3, but is using /usr/bin/python for backward compatibility with prior Ansible releases. A future Ansible release will default to using the discovered platform python for this host. See https://docs.ansible.com/ansible/2.10/reference_appendices/interpreter_discovery.html for more information",
+            "version": "2.12"
+        }
+    ],
+    "failed": false
+}

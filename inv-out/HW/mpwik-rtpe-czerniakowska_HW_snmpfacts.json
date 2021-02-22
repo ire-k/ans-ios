@@ -1,0 +1,39 @@
+{
+    "ansible_facts": {
+        "ansible_net_api": "cliconf",
+        "ansible_net_filesystems": [
+            "flash0:"
+        ],
+        "ansible_net_filesystems_info": {
+            "flash0:": {
+                "spacefree_kb": 118824.0,
+                "spacetotal_kb": 250476.0
+            }
+        },
+        "ansible_net_gather_network_resources": [],
+        "ansible_net_gather_subset": [
+            "hardware",
+            "default"
+        ],
+        "ansible_net_hostname": "mpwik-rtpe-czern-c1941",
+        "ansible_net_image": "flash:c1900-universalk9-mz.SPA.155-3.M4.bin",
+        "ansible_net_iostype": "IOS",
+        "ansible_net_memfree_mb": 39859.35546875,
+        "ansible_net_memtotal_mb": 318815.5703125,
+        "ansible_net_model": "CISCO1941/K9",
+        "ansible_net_python_version": "2.7.17",
+        "ansible_net_serialnum": "FCZ173593B0",
+        "ansible_net_system": "ios",
+        "ansible_net_version": "15.5(3)M4",
+        "ansible_network_resources": {},
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "deprecations": [
+        {
+            "msg": "Distribution Ubuntu 18.04 on host mpwik-rtpe-czerniakowska should use /usr/bin/python3, but is using /usr/bin/python for backward compatibility with prior Ansible releases. A future Ansible release will default to using the discovered platform python for this host. See https://docs.ansible.com/ansible/2.10/reference_appendices/interpreter_discovery.html for more information",
+            "version": "2.12"
+        }
+    ],
+    "failed": false
+}

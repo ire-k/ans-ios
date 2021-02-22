@@ -1,0 +1,39 @@
+{
+    "ansible_facts": {
+        "ansible_net_api": "cliconf",
+        "ansible_net_filesystems": [
+            "flash:"
+        ],
+        "ansible_net_filesystems_info": {
+            "flash:": {
+                "spacefree_kb": 12488.8125,
+                "spacetotal_kb": 62719.99609375
+            }
+        },
+        "ansible_net_gather_network_resources": [],
+        "ansible_net_gather_subset": [
+            "hardware",
+            "default"
+        ],
+        "ansible_net_hostname": "LINX-RT7-c2811-gsm_cisco",
+        "ansible_net_image": "flash:c2800nm-advipservicesk9-mz.124-15.T17.bin",
+        "ansible_net_iostype": "IOS",
+        "ansible_net_memfree_mb": 371674.73828125,
+        "ansible_net_memtotal_mb": 404587.875,
+        "ansible_net_model": "2811",
+        "ansible_net_python_version": "2.7.17",
+        "ansible_net_serialnum": "FHK1213F0F2",
+        "ansible_net_system": "ios",
+        "ansible_net_version": "12.4(15)T17",
+        "ansible_network_resources": {},
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "deprecations": [
+        {
+            "msg": "Distribution Ubuntu 18.04 on host LINX-RT7-c2811_gsm_cisco should use /usr/bin/python3, but is using /usr/bin/python for backward compatibility with prior Ansible releases. A future Ansible release will default to using the discovered platform python for this host. See https://docs.ansible.com/ansible/2.10/reference_appendices/interpreter_discovery.html for more information",
+            "version": "2.12"
+        }
+    ],
+    "failed": false
+}

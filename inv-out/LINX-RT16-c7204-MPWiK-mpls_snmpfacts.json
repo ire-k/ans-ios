@@ -1,0 +1,401 @@
+{
+    "ansible_facts": {
+        "ansible_net_all_ipv4_addresses": [
+            "212.69.65.46",
+            "10.254.1.116",
+            "10.254.253.116",
+            "212.69.65.50",
+            "172.16.0.255",
+            "172.16.100.38"
+        ],
+        "ansible_net_all_ipv6_addresses": [],
+        "ansible_net_api": "cliconf",
+        "ansible_net_filesystems": [
+            "disk2:"
+        ],
+        "ansible_net_filesystems_info": {
+            "disk2:": {
+                "spacefree_kb": 74952.0,
+                "spacetotal_kb": 125152.0
+            }
+        },
+        "ansible_net_gather_network_resources": [],
+        "ansible_net_gather_subset": [
+            "hardware",
+            "default",
+            "interfaces"
+        ],
+        "ansible_net_hostname": "LINX-RT16-c7204_MPWiK-PE",
+        "ansible_net_image": "disk2:c7200-adventerprisek9-mz.151-4.M.bin",
+        "ansible_net_interfaces": {
+            "GigabitEthernet0/1": {
+                "bandwidth": 1000000,
+                "description": "**do LINX-SW1_Gi0/10 ***",
+                "duplex": "Full",
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "0023.3489.c41b",
+                "mediatype": "LX",
+                "mtu": 1948,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/1.1040": {
+                "bandwidth": 1000000,
+                "description": "**neantic mszczonow - etop***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "0023.3489.c41b",
+                "mediatype": null,
+                "mtu": 1948,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/1.1119": {
+                "bandwidth": 1000000,
+                "description": "**Landtech PRU via PRU2-RTPE1 **",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "0023.3489.c41b",
+                "mediatype": null,
+                "mtu": 1948,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/1.1535": {
+                "bandwidth": 1000000,
+                "description": "**Landtech PRU via PRU2-RTPE1 **",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "0023.3489.c41b",
+                "mediatype": null,
+                "mtu": 1948,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/1.1641": {
+                "bandwidth": 1000000,
+                "description": "**Landtech PRU via PRU2-RTPE1 **",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "0023.3489.c41b",
+                "mediatype": null,
+                "mtu": 1948,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/1.1931": {
+                "bandwidth": 1000000,
+                "description": "**landtech pru STRABAG***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "0023.3489.c41b",
+                "mediatype": null,
+                "mtu": 1948,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/1.1946": {
+                "bandwidth": 1000000,
+                "description": "**Landtech PRU via PRU2-RTPE1 **",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "0023.3489.c41b",
+                "mediatype": null,
+                "mtu": 1948,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/1.1961": {
+                "bandwidth": 1000000,
+                "description": "**landtech pru lek***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "0023.3489.c41b",
+                "mediatype": null,
+                "mtu": 1948,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/1.3341": {
+                "bandwidth": 1000000,
+                "description": "**L2/mpls-pagi trunking-transm do mpwik-rtpe-wieliszew_gi0/1.3901**",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "0023.3489.c41b",
+                "mediatype": null,
+                "mtu": 1948,
+                "operstatus": "administratively down",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/1.3349": {
+                "bandwidth": 1000000,
+                "description": "**L2/mpls-pagi trunking-mgt do mpwik-rtpe-wieliszew_gi0/1.3909**",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "0023.3489.c41b",
+                "mediatype": null,
+                "mtu": 1948,
+                "operstatus": "administratively down",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/1.3421": {
+                "bandwidth": 1000000,
+                "description": "**L2/mpls-pagi trunking-transm do mpwik-rtpe-pru_Gi0/1.3901***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "0023.3489.c41b",
+                "mediatype": null,
+                "mtu": 1948,
+                "operstatus": "administratively down",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/1.3429": {
+                "bandwidth": 1000000,
+                "description": "**L2/mpls-pagi trunking-mgt do mpwik-rtpe-pru_Gi0/1.3909***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "0023.3489.c41b",
+                "mediatype": null,
+                "mtu": 1948,
+                "operstatus": "administratively down",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/1.3901": {
+                "bandwidth": 1000000,
+                "description": "**L2 trunking mgt do mpwik-rtpe-czerniakowska ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "0023.3489.c41b",
+                "mediatype": null,
+                "mtu": 1948,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/1.3909": {
+                "bandwidth": 1000000,
+                "description": "**L2/mpls-pagi trunking-transm do mpwik-rtpe-czerniakowska***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "0023.3489.c41b",
+                "mediatype": null,
+                "mtu": 1948,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/1.3912": {
+                "bandwidth": 1000000,
+                "description": "**L2/mpls-pagi s.technolog. do mpwik-rtpe-czerniakowska **",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "0023.3489.c41b",
+                "mediatype": null,
+                "mtu": 1948,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/1.4091": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "0023.3489.c41b",
+                "mediatype": null,
+                "mtu": 1948,
+                "operstatus": "deleted",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/1.421": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "0023.3489.c41b",
+                "mediatype": null,
+                "mtu": 1948,
+                "operstatus": "deleted",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/1.691": {
+                "bandwidth": 1000000,
+                "description": "**inet mpls UL  do LINX-SW1_vlan691**",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.65.46",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0023.3489.c41b",
+                "mediatype": null,
+                "mtu": 1948,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/1.692": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "0023.3489.c41b",
+                "mediatype": null,
+                "mtu": 1948,
+                "operstatus": "deleted",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/2": {
+                "bandwidth": 1000000,
+                "description": "**do LINX-RT13_Gi0/0/10 mpls UL***",
+                "duplex": "Full",
+                "ipv4": [
+                    {
+                        "address": "212.69.65.50",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0023.3489.c41a",
+                "mediatype": "LX",
+                "mtu": 9200,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/2.8": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.254.253.116",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "0023.3489.c41a",
+                "mediatype": null,
+                "mtu": 9200,
+                "operstatus": "administratively down",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/3": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": "Full",
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "0023.3489.c419",
+                "mediatype": "LX",
+                "mtu": 1998,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/3.692": {
+                "bandwidth": 1000000,
+                "description": "**uplink do linx-sw5 mpls ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.100.38",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0023.3489.c419",
+                "mediatype": null,
+                "mtu": 1998,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/3.9": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.254.1.116",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "0023.3489.c419",
+                "mediatype": null,
+                "mtu": 1998,
+                "operstatus": "administratively down",
+                "type": "BCM1250 Internal MAC"
+            },
+            "Loopback0": {
+                "bandwidth": 8000000,
+                "description": "**mpls router-id ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.0.255",
+                        "subnet": "32"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "up",
+                "type": null
+            }
+        },
+        "ansible_net_iostype": "IOS",
+        "ansible_net_memfree_mb": 310452.50390625,
+        "ansible_net_memtotal_mb": 354341.73046875,
+        "ansible_net_model": "7204VXR",
+        "ansible_net_neighbors": {
+            "GigabitEthernet0/1": [
+                {
+                    "host": "LINX-SW1-cME3600X.pagi",
+                    "port": "GigabitEthernet0/10"
+                }
+            ],
+            "GigabitEthernet0/2": [
+                {
+                    "host": "LINX-RT13_cASR920-24SZIM.pagi",
+                    "port": "GigabitEthernet0/0/10"
+                }
+            ],
+            "GigabitEthernet0/3": [
+                {
+                    "host": "LINX-SW5_cME3600X.pagi",
+                    "port": "GigabitEthernet0/10"
+                }
+            ]
+        },
+        "ansible_net_python_version": "2.7.17",
+        "ansible_net_serialnum": "36576283",
+        "ansible_net_system": "ios",
+        "ansible_net_version": "15.1(4)M",
+        "ansible_network_resources": {},
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "deprecations": [
+        {
+            "msg": "Distribution Ubuntu 18.04 on host LINX-RT16-c7204-MPWiK-mpls should use /usr/bin/python3, but is using /usr/bin/python for backward compatibility with prior Ansible releases. A future Ansible release will default to using the discovered platform python for this host. See https://docs.ansible.com/ansible/2.10/reference_appendices/interpreter_discovery.html for more information",
+            "version": "2.12"
+        }
+    ],
+    "failed": false
+}

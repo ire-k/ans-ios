@@ -1,0 +1,1257 @@
+{
+    "ansible_facts": {
+        "ansible_net_all_ipv4_addresses": [
+            "212.69.75.13",
+            "212.69.75.137",
+            "212.69.67.45",
+            "212.69.75.97",
+            "212.69.79.137",
+            "10.123.5.1",
+            "10.123.4.1",
+            "212.69.71.101",
+            "212.69.72.65",
+            "212.69.75.73",
+            "212.69.75.49",
+            "172.16.100.1",
+            "212.69.75.5",
+            "212.69.67.37",
+            "212.69.79.153",
+            "212.69.75.189",
+            "212.69.79.193",
+            "212.69.74.141",
+            "10.123.234.1",
+            "212.69.70.49",
+            "212.69.79.93",
+            "212.69.79.65",
+            "212.69.67.41",
+            "212.69.68.49",
+            "10.123.123.25",
+            "212.69.67.125",
+            "212.69.65.137",
+            "212.69.75.229",
+            "212.69.75.201",
+            "212.69.70.5",
+            "212.69.79.241",
+            "212.69.75.101",
+            "212.69.79.5",
+            "212.69.79.1",
+            "212.69.79.133",
+            "212.69.68.53",
+            "212.69.79.217",
+            "212.69.67.21",
+            "212.69.68.29",
+            "212.69.75.81",
+            "212.69.75.185",
+            "212.69.79.213",
+            "212.69.72.129",
+            "212.69.80.193",
+            "212.69.68.81",
+            "212.69.68.233",
+            "212.69.73.109",
+            "212.69.65.48",
+            "212.69.65.84",
+            "212.69.73.133",
+            "212.69.73.173",
+            "212.69.75.21",
+            "212.69.75.33",
+            "10.111.176.97",
+            "10.253.0.5",
+            "212.69.71.125",
+            "10.123.123.73",
+            "212.69.71.117",
+            "212.69.79.57",
+            "10.123.123.113",
+            "212.69.79.21",
+            "212.69.79.157",
+            "212.69.67.33",
+            "212.69.76.205",
+            "212.69.79.241"
+        ],
+        "ansible_net_all_ipv6_addresses": [],
+        "ansible_net_api": "cliconf",
+        "ansible_net_filesystems": [
+            "flash0:"
+        ],
+        "ansible_net_filesystems_info": {
+            "flash0:": {
+                "spacefree_kb": 118440.0,
+                "spacetotal_kb": 255336.0
+            }
+        },
+        "ansible_net_gather_network_resources": [],
+        "ansible_net_gather_subset": [
+            "hardware",
+            "default",
+            "interfaces"
+        ],
+        "ansible_net_hostname": "PRU2-RTPE1-c1941",
+        "ansible_net_image": "flash:c1900-universalk9-mz.SPA.156-3.M.bin",
+        "ansible_net_interfaces": {
+            "Embedded-Service-Engine0/0": {
+                "bandwidth": 10000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "0000.0000.0000",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "Embedded Service Engine"
+            },
+            "GigabitEthernet0/0": {
+                "bandwidth": 100000,
+                "description": "**do PRU2-SW1-c3400_fa0/21**",
+                "duplex": "Full",
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "30e4.db57.9720",
+                "mediatype": "RJ45",
+                "mtu": 1998,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/0.10": {
+                "bandwidth": 100000,
+                "description": "**old RL Ericc mgt**",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.253.0.5",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "30e4.db57.9720",
+                "mediatype": null,
+                "mtu": 1998,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/0.1116": {
+                "bandwidth": 100000,
+                "description": "**uplink mpls do LINX-SW1 via Netia ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.65.84",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "30e4.db57.9720",
+                "mediatype": null,
+                "mtu": 1998,
+                "operstatus": "administratively down",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/0.1117": {
+                "bandwidth": 100000,
+                "description": "**uplink mpls do PIK11-RT1 via Netia **8",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.65.48",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "30e4.db57.9720",
+                "mediatype": null,
+                "mtu": 1998,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/0.359": {
+                "bandwidth": 100000,
+                "description": "*** POS Laboratories MGT ****",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.123.123.73",
+                        "subnet": "29"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "30e4.db57.9720",
+                "mediatype": null,
+                "mtu": 1998,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/0.4000": {
+                "bandwidth": 100000,
+                "description": "**mgt dla pru2***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.111.176.97",
+                        "subnet": "28"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "30e4.db57.9720",
+                "mediatype": null,
+                "mtu": 1998,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/0.5": {
+                "bandwidth": 100000,
+                "description": "**mgt dla ubnt pru, mszcz**",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.123.5.1",
+                        "subnet": "24"
+                    },
+                    {
+                        "address": "10.123.4.1",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "30e4.db57.9720",
+                "mediatype": null,
+                "mtu": 1998,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/0.689": {
+                "bandwidth": 50000,
+                "description": "**mpwik mpls DL via PRU do mpwik-rtpe1 Gi0/0.689 (anty unicast lock in Netia)**",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.100.1",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "30e4.db57.9720",
+                "mediatype": null,
+                "mtu": 1998,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/0.916": {
+                "bandwidth": 100000,
+                "description": "*** SQS Mszczonow MGT ****",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.123.234.1",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "30e4.db57.9720",
+                "mediatype": null,
+                "mtu": 1998,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/0.950": {
+                "bandwidth": 100000,
+                "description": "** Helukabel MGT***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.123.123.25",
+                        "subnet": "29"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "30e4.db57.9720",
+                "mediatype": null,
+                "mtu": 1998,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1": {
+                "bandwidth": 100000,
+                "description": "**do PRU2-SW1-c3400_fa0/22**",
+                "duplex": "Full",
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "30e4.db57.9721",
+                "mediatype": "RJ45",
+                "mtu": 1948,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1.1040": {
+                "bandwidth": 100000,
+                "description": "**neantic mszczonow -> etop**",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "30e4.db57.9721",
+                "mediatype": null,
+                "mtu": 1948,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1.1119": {
+                "bandwidth": 100000,
+                "description": "**Landtech via LINX-RT16,LINX-SW1-LIM--SW1**",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "30e4.db57.9721",
+                "mediatype": null,
+                "mtu": 1948,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1.1300": {
+                "bandwidth": 100000,
+                "description": "*** PSSC Damian Dylak ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.71.117",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "30e4.db57.9721",
+                "mediatype": null,
+                "mtu": 1948,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1.1301": {
+                "bandwidth": 100000,
+                "description": "*** nLine Jan Sliwinski Pru2 Traktowa6 ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.79.93",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "30e4.db57.9721",
+                "mediatype": null,
+                "mtu": 1948,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1.1302": {
+                "bandwidth": 100000,
+                "description": "*** MMK Solution Pru2 Traktowa6 ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.68.49",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "30e4.db57.9721",
+                "mediatype": null,
+                "mtu": 1948,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1.1303": {
+                "bandwidth": 100000,
+                "description": "*** Maciej Dobrowolski ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.67.41",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "30e4.db57.9721",
+                "mediatype": null,
+                "mtu": 1948,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1.1304": {
+                "bandwidth": 100000,
+                "description": "*** Pigmalion Pru2 Traktowa6 ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.68.29",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "30e4.db57.9721",
+                "mediatype": null,
+                "mtu": 1948,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1.1305": {
+                "bandwidth": 100000,
+                "description": "*** Colian Logistic ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.74.141",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "30e4.db57.9721",
+                "mediatype": null,
+                "mtu": 1948,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1.1306": {
+                "bandwidth": 100000,
+                "description": "*** ROLV GROUP  ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.70.49",
+                        "subnet": "28"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "30e4.db57.9721",
+                "mediatype": null,
+                "mtu": 1948,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1.1307": {
+                "bandwidth": 100000,
+                "description": "*** Folpolter II Sp. z o. o.  ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.79.153",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "30e4.db57.9721",
+                "mediatype": null,
+                "mtu": 1948,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1.1308": {
+                "bandwidth": 100000,
+                "description": "*** Wascon Sp z o.o. ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.67.125",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "30e4.db57.9721",
+                "mediatype": null,
+                "mtu": 1948,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1.1324": {
+                "bandwidth": 100000,
+                "description": "*** Terramar Pru2 Traktowa6 ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.75.101",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "30e4.db57.9721",
+                "mediatype": null,
+                "mtu": 1948,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1.1351": {
+                "bandwidth": 100000,
+                "description": "*** Alta/TUP Pru2 Traktowa6 ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.79.193",
+                        "subnet": "28"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "30e4.db57.9721",
+                "mediatype": null,
+                "mtu": 1948,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1.1535": {
+                "bandwidth": 100000,
+                "description": "**Landtech via LINX-RT16,LINX-SW1-LIM--SW1**",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "30e4.db57.9721",
+                "mediatype": null,
+                "mtu": 1948,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1.1641": {
+                "bandwidth": 100000,
+                "description": "**Landtech via LINX-RT16,LINX-SW1-LIM--SW1**",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "30e4.db57.9721",
+                "mediatype": null,
+                "mtu": 1948,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1.1931": {
+                "bandwidth": 100000,
+                "description": "**LT STRABAG via LINX-RT16,LINX-SW1-LIM--SW1**",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "30e4.db57.9721",
+                "mediatype": null,
+                "mtu": 1948,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1.1946": {
+                "bandwidth": 100000,
+                "description": "**Landtech via LINX-RT16,LINX-SW1-LIM--SW1**",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "30e4.db57.9721",
+                "mediatype": null,
+                "mtu": 1948,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1.1961": {
+                "bandwidth": 100000,
+                "description": "**Landtech via LINX-RT16,LINX-SW1-LIM--SW1**",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "30e4.db57.9721",
+                "mediatype": null,
+                "mtu": 1948,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1.302": {
+                "bandwidth": 100000,
+                "description": "Wimax-InterTeam_Szeligowska",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.68.233",
+                        "subnet": "29"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "30e4.db57.9721",
+                "mediatype": null,
+                "mtu": 1948,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1.303": {
+                "bandwidth": 100000,
+                "description": "*** InterTeam_Reguly ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.80.193",
+                        "subnet": "29"
+                    },
+                    {
+                        "address": "212.69.68.81",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "30e4.db57.9721",
+                "mediatype": null,
+                "mtu": 1948,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1.307": {
+                "bandwidth": 100000,
+                "description": "****** Skynet klient FORMIKA Parzniew *******",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.75.185",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "30e4.db57.9721",
+                "mediatype": null,
+                "mtu": 1948,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1.308": {
+                "bandwidth": 100000,
+                "description": "*** Drewno Centrum ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.75.33",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "30e4.db57.9721",
+                "mediatype": null,
+                "mtu": 1948,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1.309": {
+                "bandwidth": 100000,
+                "description": "Rolmech->BS_Pru",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.75.21",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "30e4.db57.9721",
+                "mediatype": null,
+                "mtu": 1948,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1.311": {
+                "bandwidth": 100000,
+                "description": "***** DIERA Sp z o.o. *****",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.75.73",
+                        "subnet": "29"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "30e4.db57.9721",
+                "mediatype": null,
+                "mtu": 1948,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1.314": {
+                "bandwidth": 100000,
+                "description": "****** Rabugino ******",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.75.49",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "30e4.db57.9721",
+                "mediatype": null,
+                "mtu": 1948,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1.317": {
+                "bandwidth": 100000,
+                "description": "**** Hyundai Pecice *****",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.75.5",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "30e4.db57.9721",
+                "mediatype": null,
+                "mtu": 1948,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1.318": {
+                "bandwidth": 100000,
+                "description": "*** RIM/Kowalczyk ******",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.75.13",
+                        "subnet": "30"
+                    },
+                    {
+                        "address": "212.69.75.137",
+                        "subnet": "29"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "30e4.db57.9721",
+                "mediatype": null,
+                "mtu": 1948,
+                "operstatus": "administratively down",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1.319": {
+                "bandwidth": 100000,
+                "description": "****** MES-ROTA *******",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.67.45",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "30e4.db57.9721",
+                "mediatype": null,
+                "mtu": 1948,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1.320": {
+                "bandwidth": 100000,
+                "description": "******* MTC Polska  *******",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.75.81",
+                        "subnet": "29"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "30e4.db57.9721",
+                "mediatype": null,
+                "mtu": 1948,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1.330": {
+                "bandwidth": 100000,
+                "description": "**** Budokrusz Klodno ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.67.33",
+                        "subnet": "30"
+                    },
+                    {
+                        "address": "212.69.76.205",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "30e4.db57.9721",
+                "mediatype": null,
+                "mtu": 1948,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1.331": {
+                "bandwidth": 100000,
+                "description": "***** Budokrusz Grodz. Traugutta 44A ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.73.173",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "30e4.db57.9721",
+                "mediatype": null,
+                "mtu": 1948,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1.336": {
+                "bandwidth": 100000,
+                "description": "***** Zoofaktor *******",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.72.65",
+                        "subnet": "26"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "30e4.db57.9721",
+                "mediatype": null,
+                "mtu": 1948,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1.339": {
+                "bandwidth": 100000,
+                "description": "*** Pawel Kasprowicz ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.71.101",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "30e4.db57.9721",
+                "mediatype": null,
+                "mtu": 1948,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1.341": {
+                "bandwidth": 100000,
+                "description": "***** Dedra-Exim *****",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.73.133",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "30e4.db57.9721",
+                "mediatype": null,
+                "mtu": 1948,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1.348": {
+                "bandwidth": 100000,
+                "description": "***** MZO Pruszkow *****",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.72.129",
+                        "subnet": "29"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "30e4.db57.9721",
+                "mediatype": null,
+                "mtu": 1948,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1.350": {
+                "bandwidth": 100000,
+                "description": "*** Rusak Business Services ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.75.189",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "30e4.db57.9721",
+                "mediatype": null,
+                "mtu": 1948,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1.359": {
+                "bandwidth": 100000,
+                "description": "****** POS Laboratories (d. Marin's) ******",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.67.37",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "30e4.db57.9721",
+                "mediatype": null,
+                "mtu": 1948,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1.362": {
+                "bandwidth": 100000,
+                "description": "***** AGP Metro WolaPark ****",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.71.125",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "30e4.db57.9721",
+                "mediatype": null,
+                "mtu": 1948,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1.363": {
+                "bandwidth": 100000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "30e4.db57.9721",
+                "mediatype": null,
+                "mtu": 1948,
+                "operstatus": "deleted",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1.364": {
+                "bandwidth": 100000,
+                "description": "*** InterTeam_Chlebnia bkp via RL ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.79.241",
+                        "subnet": "28"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "30e4.db57.9721",
+                "mediatype": null,
+                "mtu": 1948,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1.366": {
+                "bandwidth": 100000,
+                "description": "*** Lukasz Dutkalski ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.73.109",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "30e4.db57.9721",
+                "mediatype": null,
+                "mtu": 1948,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1.394": {
+                "bandwidth": 100000,
+                "description": "*ABG -  Access Business Group **",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.75.229",
+                        "subnet": "30"
+                    },
+                    {
+                        "address": "212.69.75.201",
+                        "subnet": "29"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "30e4.db57.9721",
+                "mediatype": null,
+                "mtu": 1948,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1.395": {
+                "bandwidth": 100000,
+                "description": "******* Andrzej Zacharski ********",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.70.5",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "30e4.db57.9721",
+                "mediatype": null,
+                "mtu": 1948,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1.900": {
+                "bandwidth": 100000,
+                "description": "*** Budokrusz Mszczonow **",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.79.1",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "30e4.db57.9721",
+                "mediatype": null,
+                "mtu": 1948,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1.901": {
+                "bandwidth": 100000,
+                "description": "***** Kamino ******",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.79.5",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "30e4.db57.9721",
+                "mediatype": null,
+                "mtu": 1948,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1.904": {
+                "bandwidth": 100000,
+                "description": "***** Scatman *****",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.79.241",
+                        "subnet": "28"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "30e4.db57.9721",
+                "mediatype": null,
+                "mtu": 1948,
+                "operstatus": "administratively down",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1.908": {
+                "bandwidth": 100000,
+                "description": "*** Mariola Szustakiewicz ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.79.133",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "30e4.db57.9721",
+                "mediatype": null,
+                "mtu": 1948,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1.912": {
+                "bandwidth": 100000,
+                "description": "***** Borowiec ****",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.79.157",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "30e4.db57.9721",
+                "mediatype": null,
+                "mtu": 1948,
+                "operstatus": "administratively down",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1.916": {
+                "bandwidth": 100000,
+                "description": "*** SQS Mszczonow ****",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.79.57",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "30e4.db57.9721",
+                "mediatype": null,
+                "mtu": 1948,
+                "operstatus": "administratively down",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1.917": {
+                "bandwidth": 100000,
+                "description": "*** Neantic Mszczonow ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.123.123.113",
+                        "subnet": "29"
+                    },
+                    {
+                        "address": "212.69.79.21",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "30e4.db57.9721",
+                "mediatype": null,
+                "mtu": 1948,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1.921": {
+                "bandwidth": 100000,
+                "description": "**** Wisniewski ****",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.79.65",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "30e4.db57.9721",
+                "mediatype": null,
+                "mtu": 1948,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1.924": {
+                "bandwidth": 100000,
+                "description": "**** Landtech Mszczonow ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.79.137",
+                        "subnet": "29"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "30e4.db57.9721",
+                "mediatype": null,
+                "mtu": 1948,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1.925": {
+                "bandwidth": 100000,
+                "description": "****** Sevroll-System ******",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.75.97",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "30e4.db57.9721",
+                "mediatype": null,
+                "mtu": 1948,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1.930": {
+                "bandwidth": 100000,
+                "description": "****** Rusak Mszczonow ******",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.79.213",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "30e4.db57.9721",
+                "mediatype": null,
+                "mtu": 1948,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1.950": {
+                "bandwidth": 100000,
+                "description": "****** Helukabel ******",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.68.53",
+                        "subnet": "30"
+                    },
+                    {
+                        "address": "212.69.79.217",
+                        "subnet": "30"
+                    },
+                    {
+                        "address": "212.69.67.21",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "30e4.db57.9721",
+                "mediatype": null,
+                "mtu": 1948,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "Loopback0": {
+                "bandwidth": 8000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.65.137",
+                        "subnet": "32"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "up",
+                "type": null
+            }
+        },
+        "ansible_net_iostype": "IOS",
+        "ansible_net_memfree_mb": 35087.83984375,
+        "ansible_net_memtotal_mb": 316268.5625,
+        "ansible_net_model": "CISCO1941/K9",
+        "ansible_net_neighbors": {
+            "GigabitEthernet0/0": [
+                {
+                    "host": "PRU2-SW1-cMe3400_Trakt6.pagi",
+                    "port": "FastEthernet0/21"
+                }
+            ],
+            "GigabitEthernet0/1": [
+                {
+                    "host": "PRU2-SW1-cMe3400_Trakt6.pagi",
+                    "port": "FastEthernet0/22"
+                }
+            ]
+        },
+        "ansible_net_python_version": "2.7.17",
+        "ansible_net_serialnum": "FCZ152792MY",
+        "ansible_net_system": "ios",
+        "ansible_net_version": "15.6(3)M",
+        "ansible_network_resources": {},
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "deprecations": [
+        {
+            "msg": "Distribution Ubuntu 18.04 on host mgt-kaw should use /usr/bin/python3, but is using /usr/bin/python for backward compatibility with prior Ansible releases. A future Ansible release will default to using the discovered platform python for this host. See https://docs.ansible.com/ansible/2.10/reference_appendices/interpreter_discovery.html for more information",
+            "version": "2.12"
+        }
+    ],
+    "failed": false
+}

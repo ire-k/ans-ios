@@ -1,0 +1,140 @@
+{
+    "ansible_facts": {
+        "ansible_net_all_ipv4_addresses": [
+            "212.69.77.21",
+            "212.69.77.25",
+            "212.69.77.17",
+            "212.69.77.2",
+            "172.16.31.62",
+            "212.69.66.242"
+        ],
+        "ansible_net_all_ipv6_addresses": [],
+        "ansible_net_api": "cliconf",
+        "ansible_net_filesystems": [
+            "disk0:"
+        ],
+        "ansible_net_filesystems_info": {
+            "disk0:": {
+                "spacefree_kb": 331.0,
+                "spacetotal_kb": 46707.0
+            }
+        },
+        "ansible_net_gather_network_resources": [],
+        "ansible_net_gather_subset": [
+            "hardware",
+            "default",
+            "interfaces"
+        ],
+        "ansible_net_hostname": "rt-mago",
+        "ansible_net_image": "disk0:c7200-adventerprisek9-mz.124-6.t.bin",
+        "ansible_net_interfaces": {
+            "FastEthernet0/0": {
+                "bandwidth": 100000,
+                "description": "**UL do sw-mago_fa0/2 --> PRU --> PRU2 ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "000d.6661.2408",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "i82543 (Livengood)"
+            },
+            "FastEthernet0/0.396": {
+                "bandwidth": 100000,
+                "description": "**UL do PRU-SW1_fa0/19 --> PRU2 --> PIK11-RT2***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.66.242",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "000d.6661.2408",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "i82543 (Livengood)"
+            },
+            "FastEthernet0/1": {
+                "bandwidth": 100000,
+                "description": "****** MAGO LAN *******",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.77.21",
+                        "subnet": "30"
+                    },
+                    {
+                        "address": "212.69.77.25",
+                        "subnet": "30"
+                    },
+                    {
+                        "address": "212.69.77.17",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "000d.6661.2406",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "i82543 (Livengood)"
+            },
+            "FastEthernet2/0": {
+                "bandwidth": 100000,
+                "description": "****** WLAN TECH *****",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.31.62",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "000d.6661.2438",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "DEC21140A"
+            },
+            "Loopback0": {
+                "bandwidth": 8000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.77.2",
+                        "subnet": "32"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "up",
+                "type": null
+            }
+        },
+        "ansible_net_iostype": "IOS",
+        "ansible_net_memfree_mb": 318887.1328125,
+        "ansible_net_memtotal_mb": 396837.61328125,
+        "ansible_net_model": "7204VXR",
+        "ansible_net_neighbors": {},
+        "ansible_net_python_version": "2.7.17",
+        "ansible_net_serialnum": "30467116",
+        "ansible_net_system": "ios",
+        "ansible_net_version": "12.4(6)T",
+        "ansible_network_resources": {},
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "deprecations": [
+        {
+            "msg": "Distribution Ubuntu 18.04 on host mago-rt should use /usr/bin/python3, but is using /usr/bin/python for backward compatibility with prior Ansible releases. A future Ansible release will default to using the discovered platform python for this host. See https://docs.ansible.com/ansible/2.10/reference_appendices/interpreter_discovery.html for more information",
+            "version": "2.12"
+        }
+    ],
+    "failed": false
+}

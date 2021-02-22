@@ -1,0 +1,1698 @@
+{
+    "ansible_facts": {
+        "ansible_net_all_ipv4_addresses": [
+            "10.254.1.206",
+            "212.69.65.51",
+            "172.31.2.46",
+            "212.69.65.117",
+            "212.69.65.119",
+            "212.69.65.122",
+            "172.16.100.41",
+            "172.16.100.17",
+            "212.69.65.164",
+            "212.69.65.53",
+            "212.69.65.127",
+            "10.111.0.206",
+            "172.16.255.230",
+            "212.69.65.111",
+            "212.69.65.59",
+            "212.69.65.99",
+            "212.69.65.102",
+            "212.69.65.96",
+            "10.0.0.13",
+            "10.111.231.245",
+            "10.111.255.252",
+            "10.111.231.238",
+            "10.111.231.253",
+            "10.254.251.123",
+            "10.111.230.1"
+        ],
+        "ansible_net_all_ipv6_addresses": [],
+        "ansible_net_api": "cliconf",
+        "ansible_net_filesystems": [
+            "bootflash:"
+        ],
+        "ansible_net_filesystems_info": {
+            "bootflash:": {
+                "spacefree_kb": 887896.0,
+                "spacetotal_kb": 1308020.0
+            }
+        },
+        "ansible_net_gather_network_resources": [],
+        "ansible_net_gather_subset": [
+            "hardware",
+            "default",
+            "interfaces"
+        ],
+        "ansible_net_hostname": "LINX-RT13_cASR920-24SZIM",
+        "ansible_net_image": "bootflash:/asr920-universalk9_npe.03.18.04.SP.156-2.SP4-ext.bin",
+        "ansible_net_interfaces": {
+            "BDI1009": {
+                "bandwidth": 10000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "b08b.cf8c.f63f",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "BDI"
+            },
+            "BDI1101": {
+                "bandwidth": 1000000,
+                "description": "**mpls do PIK11-RT1 via Transm. Netia 1G - rezygnacja **",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.65.96",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "b08b.cf8c.f63f",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "BDI"
+            },
+            "BDI1102": {
+                "bandwidth": 10000000,
+                "description": "**do FINA-RT1_Te0/0/2 via KD.BKT **",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.65.99",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "b08b.cf8c.f63f",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "BDI"
+            },
+            "BDI1103": {
+                "bandwidth": 10000000,
+                "description": "**mpls do PIK11-RT1 via K1.PAGI ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.65.102",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "b08b.cf8c.f63f",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "BDI"
+            },
+            "BDI1109": {
+                "bandwidth": 10000000,
+                "description": "**do LINX-RT17 OSPF1000***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.65.111",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "b08b.cf8c.f63f",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "BDI"
+            },
+            "BDI1110": {
+                "bandwidth": 1000000,
+                "description": "**do LINX-RT10 OSPF1000***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.65.119",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "b08b.cf8c.f63f",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "BDI"
+            },
+            "BDI1111": {
+                "bandwidth": 1000000,
+                "description": "**do LINX-RT1 OSPF1000*",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.65.117",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "b08b.cf8c.f63f",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "BDI"
+            },
+            "BDI1112": {
+                "bandwidth": 10000000,
+                "description": "**mpls do LINX-SW1 ospf1000***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.65.122",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "b08b.cf8c.f63f",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "BDI"
+            },
+            "BDI1123": {
+                "bandwidth": 10000000,
+                "description": "**mpls DL do LIM--SW1 via LINX-SW7 ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.65.53",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "b08b.cf8c.f63f",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "BDI"
+            },
+            "BDI1124": {
+                "bandwidth": 1000000,
+                "description": "**PUB IP OSPF 1000 do LINX-RT14***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.65.59",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "b08b.cf8c.f63f",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "BDI"
+            },
+            "BDI1330": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.254.251.123",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "b08b.cf8c.f63f",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "BDI"
+            },
+            "BDI3990": {
+                "bandwidth": 1000000,
+                "description": "**vrf mpwik1 mpls vpn do LINX-RT1,RT10 ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.31.2.46",
+                        "subnet": "29"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "b08b.cf8c.f63f",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "BDI"
+            },
+            "BDI4009": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.111.231.245",
+                        "subnet": "29"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "b08b.cf8c.f63f",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "BDI"
+            },
+            "BDI4010": {
+                "bandwidth": 1000000,
+                "description": "**MGT v.2019 ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.111.231.253",
+                        "subnet": "29"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "b08b.cf8c.f63f",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "BDI"
+            },
+            "BDI4011": {
+                "bandwidth": 1000000,
+                "description": "**vrf mgt ospf 2000 v.2019**",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.111.231.238",
+                        "subnet": "29"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "b08b.cf8c.f63f",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "BDI"
+            },
+            "BDI4012": {
+                "bandwidth": 1000000,
+                "description": "**MGT do PIK11-RT1 **",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.111.255.252",
+                        "subnet": "29"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "b08b.cf8c.f63f",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "BDI"
+            },
+            "BDI4050": {
+                "bandwidth": 1000000,
+                "description": "**MGT dla LINX-RT18 ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.111.230.1",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "b08b.cf8c.f63f",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "BDI"
+            },
+            "BDI61": {
+                "bandwidth": 1000000,
+                "description": "**raks do pagi biuro***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.255.230",
+                        "subnet": "29"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "b08b.cf8c.f63f",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "BDI"
+            },
+            "BDI62": {
+                "bandwidth": 1000000,
+                "description": "**SRV ILO Itkreator+helpdesk**",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "b08b.cf8c.f63f",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "BDI"
+            },
+            "BDI687": {
+                "bandwidth": 200000,
+                "description": "**DL do mpwik-rtpe-czern_gi0/0.687**",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.100.41",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "b08b.cf8c.f63f",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "BDI"
+            },
+            "BDI692": {
+                "bandwidth": 1000000,
+                "description": "**mpls ptp do mpwik-rtpe-wieliszew via JMDI**",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.100.17",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "b08b.cf8c.f63f",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "BDI"
+            },
+            "BDI8": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "b08b.cf8c.f63f",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "BDI"
+            },
+            "BDI9": {
+                "bandwidth": 1000000,
+                "description": "***MGT***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.254.1.206",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "b08b.cf8c.f63f",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "BDI"
+            },
+            "GigabitEthernet0": {
+                "bandwidth": 10000,
+                "description": null,
+                "duplex": "Half",
+                "ipv4": [
+                    {
+                        "address": "10.0.0.13",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "b08b.cf8c.f638",
+                "mediatype": "RJ45",
+                "mtu": 1500,
+                "operstatus": "down",
+                "type": "RP management port"
+            },
+            "GigabitEthernet0/0/0": {
+                "bandwidth": 1000000,
+                "description": "**do PIK11 SFP-206/3G L1417/Ultimode/dipol Tx1550/1310 SC/PC->adapter->LC/PC->Netia**",
+                "duplex": "Full",
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "b08b.cf8c.f600",
+                "mediatype": "BX10D",
+                "mtu": 9216,
+                "operstatus": "administratively down",
+                "type": "24xGE-4x10GE-FIXED"
+            },
+            "GigabitEthernet0/0/1": {
+                "bandwidth": 1000000,
+                "description": "** do FINA-SW-Walbrzyska6_8 **",
+                "duplex": "Full",
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "b08b.cf8c.f601",
+                "mediatype": "ZX",
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "24xGE-4x10GE-FIXED"
+            },
+            "GigabitEthernet0/0/10": {
+                "bandwidth": 1000000,
+                "description": "**do LINX-RT16_MPWiK_Gi0/2 mpls DL**",
+                "duplex": "Full",
+                "ipv4": [
+                    {
+                        "address": "212.69.65.51",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "b08b.cf8c.f60a",
+                "mediatype": "LX",
+                "mtu": 9200,
+                "operstatus": "up",
+                "type": "24xGE-4x10GE-FIXED"
+            },
+            "GigabitEthernet0/0/11": {
+                "bandwidth": 1000000,
+                "description": "**rez mpwik czerniakowska (do mpwik-sw-czern_gi0/22) 1j tx1310nm rx1310nm LC/PC-SC/PC**",
+                "duplex": "Full",
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "b08b.cf8c.f60b",
+                "mediatype": "BX10U",
+                "mtu": 9200,
+                "operstatus": "up",
+                "type": "24xGE-4x10GE-FIXED"
+            },
+            "GigabitEthernet0/0/12": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": "Full",
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "b08b.cf8c.f60c",
+                "mediatype": "unknown media type",
+                "mtu": 1500,
+                "operstatus": "down",
+                "type": "24xGE-4x10GE-FIXED"
+            },
+            "GigabitEthernet0/0/13": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": "Full",
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "b08b.cf8c.f60d",
+                "mediatype": "unknown media type",
+                "mtu": 1500,
+                "operstatus": "down",
+                "type": "24xGE-4x10GE-FIXED"
+            },
+            "GigabitEthernet0/0/14": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": "Full",
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "b08b.cf8c.f60e",
+                "mediatype": "unknown media type",
+                "mtu": 1500,
+                "operstatus": "down",
+                "type": "24xGE-4x10GE-FIXED"
+            },
+            "GigabitEthernet0/0/15": {
+                "bandwidth": 1000000,
+                "description": "**do LINX-RT15_c7204_MGT 2j 1310 LC/PC->SC/PC***",
+                "duplex": "Full",
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "b08b.cf8c.f60f",
+                "mediatype": "LX",
+                "mtu": 9216,
+                "operstatus": "up",
+                "type": "24xGE-4x10GE-FIXED"
+            },
+            "GigabitEthernet0/0/16": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": "Full",
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "b08b.cf8c.f610",
+                "mediatype": "unknown media type",
+                "mtu": 1500,
+                "operstatus": "down",
+                "type": "24xGE-4x10GE-FIXED"
+            },
+            "GigabitEthernet0/0/17": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": "Full",
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "b08b.cf8c.f611",
+                "mediatype": "unknown media type",
+                "mtu": 1500,
+                "operstatus": "down",
+                "type": "24xGE-4x10GE-FIXED"
+            },
+            "GigabitEthernet0/0/18": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": "Full",
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "b08b.cf8c.f612",
+                "mediatype": "unknown media type",
+                "mtu": 1500,
+                "operstatus": "down",
+                "type": "24xGE-4x10GE-FIXED"
+            },
+            "GigabitEthernet0/0/19": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": "Full",
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "b08b.cf8c.f613",
+                "mediatype": "unknown media type",
+                "mtu": 1500,
+                "operstatus": "down",
+                "type": "24xGE-4x10GE-FIXED"
+            },
+            "GigabitEthernet0/0/2": {
+                "bandwidth": 1000000,
+                "description": "** do FINA-SW-Narbutta **",
+                "duplex": "Full",
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "b08b.cf8c.f602",
+                "mediatype": "ZX",
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "24xGE-4x10GE-FIXED"
+            },
+            "GigabitEthernet0/0/20": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": "Full",
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "b08b.cf8c.f614",
+                "mediatype": "unknown media type",
+                "mtu": 1500,
+                "operstatus": "down",
+                "type": "24xGE-4x10GE-FIXED"
+            },
+            "GigabitEthernet0/0/21": {
+                "bandwidth": 1000000,
+                "description": "**Po12 do LINX-RT14***",
+                "duplex": "Full",
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "b08b.cf8c.f64b",
+                "mediatype": "ZX",
+                "mtu": 9200,
+                "operstatus": "up",
+                "type": "24xGE-4x10GE-FIXED"
+            },
+            "GigabitEthernet0/0/22": {
+                "bandwidth": 1000000,
+                "description": "**Po12 do LINX-RT14***",
+                "duplex": "Full",
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "b08b.cf8c.f64b",
+                "mediatype": "ZX",
+                "mtu": 9200,
+                "operstatus": "up",
+                "type": "24xGE-4x10GE-FIXED"
+            },
+            "GigabitEthernet0/0/23": {
+                "bandwidth": 1000000,
+                "description": "**Po12 do LINX-RT14***",
+                "duplex": "Full",
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "b08b.cf8c.f64b",
+                "mediatype": "ZX",
+                "mtu": 9200,
+                "operstatus": "up",
+                "type": "24xGE-4x10GE-FIXED"
+            },
+            "GigabitEthernet0/0/3": {
+                "bandwidth": 1000000,
+                "description": "** do FINA-SW-Pulawska **",
+                "duplex": "Full",
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "b08b.cf8c.f603",
+                "mediatype": "ZX",
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "24xGE-4x10GE-FIXED"
+            },
+            "GigabitEthernet0/0/4": {
+                "bandwidth": 1000000,
+                "description": "** do FINA-SW-Chelmska21bud28",
+                "duplex": "Full",
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "b08b.cf8c.f604",
+                "mediatype": "ZX",
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "24xGE-4x10GE-FIXED"
+            },
+            "GigabitEthernet0/0/5": {
+                "bandwidth": 1000000,
+                "description": "**do LINX-SW2_Gi0/1 (bakomaty) SFP-2j***",
+                "duplex": "Full",
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "b08b.cf8c.f605",
+                "mediatype": "ZX",
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "24xGE-4x10GE-FIXED"
+            },
+            "GigabitEthernet0/0/6": {
+                "bandwidth": 1000000,
+                "description": "**do PIK11-RT1-c920 Gi0/0/1 Photonics SFP 1.25G T1310/R1490 20km **",
+                "duplex": "Full",
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "b08b.cf8c.f606",
+                "mediatype": "ZX",
+                "mtu": 9216,
+                "operstatus": "administratively down",
+                "type": "24xGE-4x10GE-FIXED"
+            },
+            "GigabitEthernet0/0/7": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": "Full",
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "b08b.cf8c.f607",
+                "mediatype": "unknown media type",
+                "mtu": 1500,
+                "operstatus": "down",
+                "type": "24xGE-4x10GE-FIXED"
+            },
+            "GigabitEthernet0/0/8": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": "Full",
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "b08b.cf8c.f608",
+                "mediatype": "unknown media type",
+                "mtu": 1500,
+                "operstatus": "down",
+                "type": "24xGE-4x10GE-FIXED"
+            },
+            "GigabitEthernet0/0/9": {
+                "bandwidth": 1000000,
+                "description": "**do LINX-RT18-PE1_Gi0/1 ! nie zmieniac MTU !! ***",
+                "duplex": "Full",
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "b08b.cf8c.f609",
+                "mediatype": "T",
+                "mtu": 1998,
+                "operstatus": "up",
+                "type": "24xGE-4x10GE-FIXED"
+            },
+            "Loopback0": {
+                "bandwidth": 8000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.65.127",
+                        "subnet": "32"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "up",
+                "type": null
+            },
+            "Loopback2000": {
+                "bandwidth": 8000000,
+                "description": "**MGT v.2019 ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.111.0.206",
+                        "subnet": "32"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "up",
+                "type": null
+            },
+            "Port-channel11": {
+                "bandwidth": 1000000,
+                "description": "**core ip transit linx-rt14 pik11-rt2 (ibgp)**",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "b08b.cf8c.f64a",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "down",
+                "type": "GEChannel"
+            },
+            "Port-channel12": {
+                "bandwidth": 3000000,
+                "description": "**Po12 do LINX-RT14 Gi0/0/21 - 23***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.65.164",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "b08b.cf8c.f64b",
+                "mediatype": null,
+                "mtu": 9200,
+                "operstatus": "up",
+                "type": "GEChannel"
+            },
+            "TenGigabitEthernet0/0/24": {
+                "bandwidth": 10000000,
+                "description": "**do LINX-RT14-cASR1001X Ten 0/1/0 ***",
+                "duplex": "Full",
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "b08b.cf8c.f618",
+                "mediatype": "SFP-LR",
+                "mtu": 9200,
+                "operstatus": "up",
+                "type": "24xGE-4x10GE-FIXED"
+            },
+            "TenGigabitEthernet0/0/25": {
+                "bandwidth": 10000000,
+                "description": "**do LINX-SW1-cME3600X_te0/1 L1428/dipol 2j SM Tx1310 LC/PC <-> LC/PC****",
+                "duplex": "Full",
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "b08b.cf8c.f619",
+                "mediatype": "SFP-LR",
+                "mtu": 9200,
+                "operstatus": "up",
+                "type": "24xGE-4x10GE-FIXED"
+            },
+            "TenGigabitEthernet0/0/26": {
+                "bandwidth": 10000000,
+                "description": "***do FINA WALBRZYSKA 3/5-RT1 SP-SM33WD020D-GP/GBC 10G 1j Tx1330 LC/PC<-| via Citistrada/omnitec LINX **",
+                "duplex": "Full",
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "b08b.cf8c.f61a",
+                "mediatype": "SFP-LR",
+                "mtu": 9216,
+                "operstatus": "up",
+                "type": "24xGE-4x10GE-FIXED"
+            },
+            "TenGigabitEthernet0/0/27": {
+                "bandwidth": 10000000,
+                "description": "**do PIK11-RT1_te0/0/27 GBC SFP+ SP-SM27WD020D-GP 1j LC/PC->SC/PC**",
+                "duplex": "Full",
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "b08b.cf8c.f61b",
+                "mediatype": "SFP-LR",
+                "mtu": 9216,
+                "operstatus": "up",
+                "type": "24xGE-4x10GE-FIXED"
+            },
+            "TenGigabitEthernet0/1/0": {
+                "bandwidth": 10000000,
+                "description": "**do LINX-RT17_Te0/0/0 2j LC ***",
+                "duplex": "Full",
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "b08b.cf8c.f61c",
+                "mediatype": "10GBase-LR",
+                "mtu": 9216,
+                "operstatus": "up",
+                "type": "A900-IMA2Z"
+            },
+            "TenGigabitEthernet0/1/1": {
+                "bandwidth": 10000000,
+                "description": "**do LINX-SW7_Te1/3 2j ***",
+                "duplex": "Full",
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "b08b.cf8c.f61d",
+                "mediatype": "10GBase-LR",
+                "mtu": 9200,
+                "operstatus": "up",
+                "type": "A900-IMA2Z"
+            },
+            "Virtual-PPP4001": {
+                "bandwidth": 10000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "down",
+                "type": null
+            },
+            "pseudowire100001": {
+                "bandwidth": null,
+                "description": null,
+                "duplex": null,
+                "lineprotocol": null,
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": null,
+                "type": null
+            },
+            "pseudowire100002": {
+                "bandwidth": null,
+                "description": null,
+                "duplex": null,
+                "lineprotocol": null,
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": null,
+                "type": null
+            },
+            "pseudowire100003": {
+                "bandwidth": null,
+                "description": null,
+                "duplex": null,
+                "lineprotocol": null,
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": null,
+                "type": null
+            },
+            "pseudowire100004": {
+                "bandwidth": null,
+                "description": null,
+                "duplex": null,
+                "lineprotocol": null,
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": null,
+                "type": null
+            },
+            "pseudowire100007": {
+                "bandwidth": null,
+                "description": null,
+                "duplex": null,
+                "lineprotocol": null,
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": null,
+                "type": null
+            },
+            "pseudowire100008": {
+                "bandwidth": null,
+                "description": null,
+                "duplex": null,
+                "lineprotocol": null,
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": null,
+                "type": null
+            },
+            "pseudowire100009": {
+                "bandwidth": null,
+                "description": null,
+                "duplex": null,
+                "lineprotocol": null,
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": null,
+                "type": null
+            },
+            "pseudowire100010": {
+                "bandwidth": null,
+                "description": null,
+                "duplex": null,
+                "lineprotocol": null,
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": null,
+                "type": null
+            },
+            "pseudowire100011": {
+                "bandwidth": null,
+                "description": null,
+                "duplex": null,
+                "lineprotocol": null,
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": null,
+                "type": null
+            },
+            "pseudowire100012": {
+                "bandwidth": null,
+                "description": null,
+                "duplex": null,
+                "lineprotocol": null,
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": null,
+                "type": null
+            },
+            "pseudowire100013": {
+                "bandwidth": null,
+                "description": null,
+                "duplex": null,
+                "lineprotocol": null,
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": null,
+                "type": null
+            },
+            "pseudowire100014": {
+                "bandwidth": null,
+                "description": null,
+                "duplex": null,
+                "lineprotocol": null,
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": null,
+                "type": null
+            },
+            "pseudowire100015": {
+                "bandwidth": null,
+                "description": null,
+                "duplex": null,
+                "lineprotocol": null,
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": null,
+                "type": null
+            },
+            "pseudowire100016": {
+                "bandwidth": null,
+                "description": null,
+                "duplex": null,
+                "lineprotocol": null,
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": null,
+                "type": null
+            },
+            "pseudowire100017": {
+                "bandwidth": null,
+                "description": null,
+                "duplex": null,
+                "lineprotocol": null,
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": null,
+                "type": null
+            },
+            "pseudowire100019": {
+                "bandwidth": null,
+                "description": null,
+                "duplex": null,
+                "lineprotocol": null,
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": null,
+                "type": null
+            },
+            "pseudowire100020": {
+                "bandwidth": null,
+                "description": null,
+                "duplex": null,
+                "lineprotocol": null,
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": null,
+                "type": null
+            },
+            "pseudowire100023": {
+                "bandwidth": null,
+                "description": null,
+                "duplex": null,
+                "lineprotocol": null,
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": null,
+                "type": null
+            },
+            "pseudowire100024": {
+                "bandwidth": null,
+                "description": null,
+                "duplex": null,
+                "lineprotocol": null,
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": null,
+                "type": null
+            },
+            "pseudowire100025": {
+                "bandwidth": null,
+                "description": null,
+                "duplex": null,
+                "lineprotocol": null,
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": null,
+                "type": null
+            },
+            "pseudowire100026": {
+                "bandwidth": null,
+                "description": null,
+                "duplex": null,
+                "lineprotocol": null,
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": null,
+                "type": null
+            },
+            "pseudowire100027": {
+                "bandwidth": null,
+                "description": null,
+                "duplex": null,
+                "lineprotocol": null,
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": null,
+                "type": null
+            },
+            "pseudowire100028": {
+                "bandwidth": null,
+                "description": null,
+                "duplex": null,
+                "lineprotocol": null,
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": null,
+                "type": null
+            },
+            "pseudowire100029": {
+                "bandwidth": null,
+                "description": null,
+                "duplex": null,
+                "lineprotocol": null,
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": null,
+                "type": null
+            },
+            "pseudowire100030": {
+                "bandwidth": null,
+                "description": null,
+                "duplex": null,
+                "lineprotocol": null,
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": null,
+                "type": null
+            },
+            "pseudowire100032": {
+                "bandwidth": null,
+                "description": null,
+                "duplex": null,
+                "lineprotocol": null,
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": null,
+                "type": null
+            },
+            "pseudowire100033": {
+                "bandwidth": null,
+                "description": null,
+                "duplex": null,
+                "lineprotocol": null,
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": null,
+                "type": null
+            },
+            "pseudowire100034": {
+                "bandwidth": null,
+                "description": null,
+                "duplex": null,
+                "lineprotocol": null,
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": null,
+                "type": null
+            },
+            "pseudowire100035": {
+                "bandwidth": null,
+                "description": null,
+                "duplex": null,
+                "lineprotocol": null,
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": null,
+                "type": null
+            },
+            "pseudowire100036": {
+                "bandwidth": null,
+                "description": null,
+                "duplex": null,
+                "lineprotocol": null,
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": null,
+                "type": null
+            },
+            "pseudowire100037": {
+                "bandwidth": null,
+                "description": null,
+                "duplex": null,
+                "lineprotocol": null,
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": null,
+                "type": null
+            },
+            "pseudowire100038": {
+                "bandwidth": null,
+                "description": null,
+                "duplex": null,
+                "lineprotocol": null,
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": null,
+                "type": null
+            },
+            "pseudowire100039": {
+                "bandwidth": null,
+                "description": null,
+                "duplex": null,
+                "lineprotocol": null,
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": null,
+                "type": null
+            },
+            "pseudowire100040": {
+                "bandwidth": null,
+                "description": null,
+                "duplex": null,
+                "lineprotocol": null,
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": null,
+                "type": null
+            },
+            "pseudowire100041": {
+                "bandwidth": null,
+                "description": null,
+                "duplex": null,
+                "lineprotocol": null,
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": null,
+                "type": null
+            },
+            "pseudowire100043": {
+                "bandwidth": null,
+                "description": null,
+                "duplex": null,
+                "lineprotocol": null,
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": null,
+                "type": null
+            },
+            "pseudowire100048": {
+                "bandwidth": null,
+                "description": null,
+                "duplex": null,
+                "lineprotocol": null,
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": null,
+                "type": null
+            },
+            "pseudowire100049": {
+                "bandwidth": null,
+                "description": null,
+                "duplex": null,
+                "lineprotocol": null,
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": null,
+                "type": null
+            },
+            "pseudowire100050": {
+                "bandwidth": null,
+                "description": null,
+                "duplex": null,
+                "lineprotocol": null,
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": null,
+                "type": null
+            },
+            "pseudowire100051": {
+                "bandwidth": null,
+                "description": null,
+                "duplex": null,
+                "lineprotocol": null,
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": null,
+                "type": null
+            },
+            "pseudowire100054": {
+                "bandwidth": null,
+                "description": null,
+                "duplex": null,
+                "lineprotocol": null,
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": null,
+                "type": null
+            },
+            "pseudowire100055": {
+                "bandwidth": null,
+                "description": null,
+                "duplex": null,
+                "lineprotocol": null,
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": null,
+                "type": null
+            },
+            "pseudowire100056": {
+                "bandwidth": null,
+                "description": null,
+                "duplex": null,
+                "lineprotocol": null,
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": null,
+                "type": null
+            },
+            "pseudowire100057": {
+                "bandwidth": null,
+                "description": null,
+                "duplex": null,
+                "lineprotocol": null,
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": null,
+                "type": null
+            },
+            "pseudowire100058": {
+                "bandwidth": null,
+                "description": null,
+                "duplex": null,
+                "lineprotocol": null,
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": null,
+                "type": null
+            },
+            "pseudowire100063": {
+                "bandwidth": null,
+                "description": null,
+                "duplex": null,
+                "lineprotocol": null,
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": null,
+                "type": null
+            },
+            "pseudowire100064": {
+                "bandwidth": null,
+                "description": null,
+                "duplex": null,
+                "lineprotocol": null,
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": null,
+                "type": null
+            },
+            "pseudowire100065": {
+                "bandwidth": null,
+                "description": null,
+                "duplex": null,
+                "lineprotocol": null,
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": null,
+                "type": null
+            },
+            "pseudowire100067": {
+                "bandwidth": null,
+                "description": null,
+                "duplex": null,
+                "lineprotocol": null,
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": null,
+                "type": null
+            },
+            "pseudowire100068": {
+                "bandwidth": null,
+                "description": null,
+                "duplex": null,
+                "lineprotocol": null,
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": null,
+                "type": null
+            },
+            "pseudowire100069": {
+                "bandwidth": null,
+                "description": null,
+                "duplex": null,
+                "lineprotocol": null,
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": null,
+                "type": null
+            },
+            "pseudowire100070": {
+                "bandwidth": null,
+                "description": null,
+                "duplex": null,
+                "lineprotocol": null,
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": null,
+                "type": null
+            },
+            "pseudowire100071": {
+                "bandwidth": null,
+                "description": null,
+                "duplex": null,
+                "lineprotocol": null,
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": null,
+                "type": null
+            },
+            "pseudowire100072": {
+                "bandwidth": null,
+                "description": null,
+                "duplex": null,
+                "lineprotocol": null,
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": null,
+                "type": null
+            },
+            "pseudowire100076": {
+                "bandwidth": null,
+                "description": null,
+                "duplex": null,
+                "lineprotocol": null,
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": null,
+                "type": null
+            },
+            "pseudowire100078": {
+                "bandwidth": null,
+                "description": null,
+                "duplex": null,
+                "lineprotocol": null,
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": null,
+                "type": null
+            },
+            "pseudowire100079": {
+                "bandwidth": null,
+                "description": null,
+                "duplex": null,
+                "lineprotocol": null,
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": null,
+                "type": null
+            },
+            "pseudowire100080": {
+                "bandwidth": null,
+                "description": null,
+                "duplex": null,
+                "lineprotocol": null,
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": null,
+                "type": null
+            },
+            "pseudowire100081": {
+                "bandwidth": null,
+                "description": null,
+                "duplex": null,
+                "lineprotocol": null,
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": null,
+                "type": null
+            },
+            "pseudowire100082": {
+                "bandwidth": null,
+                "description": null,
+                "duplex": null,
+                "lineprotocol": null,
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": null,
+                "type": null
+            },
+            "pseudowire100083": {
+                "bandwidth": null,
+                "description": null,
+                "duplex": null,
+                "lineprotocol": null,
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": null,
+                "type": null
+            },
+            "pseudowire100086": {
+                "bandwidth": null,
+                "description": null,
+                "duplex": null,
+                "lineprotocol": null,
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": null,
+                "type": null
+            },
+            "pseudowire100087": {
+                "bandwidth": null,
+                "description": null,
+                "duplex": null,
+                "lineprotocol": null,
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": null,
+                "type": null
+            },
+            "pseudowire100088": {
+                "bandwidth": null,
+                "description": null,
+                "duplex": null,
+                "lineprotocol": null,
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": null,
+                "type": null
+            },
+            "pseudowire100089": {
+                "bandwidth": null,
+                "description": null,
+                "duplex": null,
+                "lineprotocol": null,
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": null,
+                "type": null
+            }
+        },
+        "ansible_net_iostype": "IOS-XE",
+        "ansible_net_memfree_mb": 651185.61328125,
+        "ansible_net_memtotal_mb": 900147.28125,
+        "ansible_net_model": "ASR-920-24SZ-IM",
+        "ansible_net_neighbors": {
+            "GigabitEthernet0/0/10": [
+                {
+                    "host": "LINX-RT16-c7204_MPWiK-PE.pagi",
+                    "port": "GigabitEthernet0/2"
+                }
+            ],
+            "GigabitEthernet0/0/15": [
+                {
+                    "host": "LINX-RT15-c7206_MGT2.pagi",
+                    "port": "GigabitEthernet0/3"
+                }
+            ],
+            "GigabitEthernet0/0/21": [
+                {
+                    "host": "LINX-RT14-cASR1001X.pagi",
+                    "port": "GigabitEthernet0/0/1"
+                }
+            ],
+            "GigabitEthernet0/0/22": [
+                {
+                    "host": "LINX-RT14-cASR1001X.pagi",
+                    "port": "GigabitEthernet0/0/2"
+                }
+            ],
+            "GigabitEthernet0/0/23": [
+                {
+                    "host": "LINX-RT14-cASR1001X.pagi",
+                    "port": "GigabitEthernet0/0/3"
+                }
+            ],
+            "GigabitEthernet0/0/5": [
+                {
+                    "host": "LINX-SW2-cME3400.pagi",
+                    "port": "GigabitEthernet0/2"
+                }
+            ],
+            "GigabitEthernet0/0/9": [
+                {
+                    "host": "LINX-RT18-1941_SGB.pagi",
+                    "port": "GigabitEthernet0/1"
+                }
+            ],
+            "TenGigabitEthernet0/0/24": [
+                {
+                    "host": "LINX-RT14-cASR1001X.pagi",
+                    "port": "TenGigabitEthernet0/1/0"
+                }
+            ],
+            "TenGigabitEthernet0/0/25": [
+                {
+                    "host": "LINX-SW1-cME3600X.pagi",
+                    "port": "TenGigabitEthernet0/1"
+                }
+            ],
+            "TenGigabitEthernet0/0/26": [
+                {
+                    "host": "FINA-RT1-cASR920-4SZ.pagi",
+                    "port": "TenGigabitEthernet0/0/2"
+                }
+            ],
+            "TenGigabitEthernet0/0/27": [
+                {
+                    "host": "PIK11-RT1-cASR920-24SZIM.pagi",
+                    "port": "TenGigabitEthernet0/0/27"
+                }
+            ],
+            "TenGigabitEthernet0/1/0": [
+                {
+                    "host": "LINX-RT17-cASR920-12SZ.pagi",
+                    "port": "TenGigabitEthernet0/0/0"
+                }
+            ],
+            "TenGigabitEthernet0/1/1": [
+                {
+                    "host": "LINX-SW7-C4900.pagi",
+                    "port": "TenGigabitEthernet1/3"
+                }
+            ]
+        },
+        "ansible_net_python_version": "2.7.17",
+        "ansible_net_serialnum": "CAT2225V2WW",
+        "ansible_net_system": "ios",
+        "ansible_net_version": "03.18.04.SP.156-2.SP4-ext",
+        "ansible_network_resources": {},
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "deprecations": [
+        {
+            "msg": "Distribution Ubuntu 18.04 on host LINX-RT13-cASR920-24SZIM-L0 should use /usr/bin/python3, but is using /usr/bin/python for backward compatibility with prior Ansible releases. A future Ansible release will default to using the discovered platform python for this host. See https://docs.ansible.com/ansible/2.10/reference_appendices/interpreter_discovery.html for more information",
+            "version": "2.12"
+        }
+    ],
+    "failed": false
+}

@@ -1,0 +1,683 @@
+{
+    "ansible_facts": {
+        "ansible_net_all_ipv4_addresses": [
+            "172.16.18.14",
+            "172.16.10.45",
+            "172.16.11.10",
+            "212.69.74.102",
+            "212.69.80.81",
+            "172.16.255.66",
+            "172.16.18.8",
+            "172.16.18.10",
+            "172.16.10.81",
+            "172.16.10.129",
+            "172.16.10.66",
+            "10.111.202.6",
+            "172.16.18.48",
+            "172.16.18.81",
+            "172.16.10.49",
+            "212.69.80.113",
+            "212.69.71.204",
+            "192.168.10.6",
+            "10.111.202.9",
+            "172.16.10.10",
+            "10.111.11.6",
+            "172.16.18.6",
+            "10.111.204.6",
+            "212.69.72.161",
+            "172.16.18.254",
+            "172.16.10.41",
+            "172.16.10.37",
+            "10.0.0.1",
+            "10.111.200.233",
+            "172.16.18.18"
+        ],
+        "ansible_net_all_ipv6_addresses": [],
+        "ansible_net_api": "cliconf",
+        "ansible_net_filesystems": [
+            "bootflash:"
+        ],
+        "ansible_net_filesystems_info": {
+            "bootflash:": {
+                "spacefree_kb": 6547212.0,
+                "spacetotal_kb": 7635828.0
+            }
+        },
+        "ansible_net_gather_network_resources": [],
+        "ansible_net_gather_subset": [
+            "hardware",
+            "default",
+            "interfaces"
+        ],
+        "ansible_net_hostname": "cmp-rt3-cASR1002",
+        "ansible_net_image": "bootflash:asr1000rp1-advipservicesk9.03.16.09.S.155-3.S9-ext.bi",
+        "ansible_net_interfaces": {
+            "GigabitEthernet0": {
+                "bandwidth": 10000,
+                "description": null,
+                "duplex": "Half",
+                "ipv4": [
+                    {
+                        "address": "10.0.0.1",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "d48c.b584.d440",
+                "mediatype": "RJ45",
+                "mtu": 1500,
+                "operstatus": "down",
+                "type": "RP management port"
+            },
+            "GigabitEthernet0/0/0": {
+                "bandwidth": 1000000,
+                "description": "*** uplink do JMDI glowny ***",
+                "duplex": "Full",
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "d48c.b584.d400",
+                "mediatype": "BX10D",
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/0.4000": {
+                "bandwidth": 1000000,
+                "description": "**MGT do linx-rt15,11 ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.111.204.6",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "d48c.b584.d400",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/0.4005": {
+                "bandwidth": 1000000,
+                "description": "***Transm-do-PAGI-core FO-glowny***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.10.10",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "d48c.b584.d400",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/0.4006": {
+                "bandwidth": 100000,
+                "description": "*** Inet via FO, lacze glowne ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.74.102",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "d48c.b584.d400",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/0.4011": {
+                "bandwidth": 1000000,
+                "description": "*** WAN-FO-Oddzialy ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.11.10",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "d48c.b584.d400",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/1": {
+                "bandwidth": 1000000,
+                "description": "*** LAN Pias siedz glowna - rozne uslugi***",
+                "duplex": "Full",
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "d48c.b584.d401",
+                "mediatype": "ZX",
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/1.10": {
+                "bandwidth": 1000000,
+                "description": "**plan FP1; d. openvpn**",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.72.161",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "d48c.b584.d401",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/1.20": {
+                "bandwidth": 1000000,
+                "description": "**do  UTM CMP ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.80.81",
+                        "subnet": "29"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "d48c.b584.d401",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/1.3": {
+                "bandwidth": 1000000,
+                "description": "*** LAN Pulawska Pias ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "192.168.10.6",
+                        "subnet": "22"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "d48c.b584.d401",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/1.30": {
+                "bandwidth": 500000,
+                "description": "*** dla OSPF 3/inet, pol wewn do RT2***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.10.37",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "d48c.b584.d401",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/1.31": {
+                "bandwidth": 500000,
+                "description": "*** dla OSFP2/transm, pol wewn do RT2 ****",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.10.41",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "d48c.b584.d401",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/1.4": {
+                "bandwidth": 1000000,
+                "description": "***serwery CMP na PUB IP ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.80.113",
+                        "subnet": "29"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "d48c.b584.d401",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/1.4000": {
+                "bandwidth": 1000000,
+                "description": "**mgt lan side ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.111.202.6",
+                        "subnet": "29"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "d48c.b584.d401",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/2": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": "Full",
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "d48c.b584.d402",
+                "mediatype": "ZX",
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/2.30": {
+                "bandwidth": 1000000,
+                "description": "**dla OSPF 3/inet RT3-RT4 **",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.10.45",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "d48c.b584.d402",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/2.31": {
+                "bandwidth": 1000000,
+                "description": "**dla OSPF 2/Transm RT3-RT4 **",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.10.49",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "d48c.b584.d402",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/2.4000": {
+                "bandwidth": 1000000,
+                "description": "**mgt RT-RT ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.111.202.9",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "d48c.b584.d402",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/3": {
+                "bandwidth": 1000000,
+                "description": "**do cmp-sw7-nx3k-Pul49_eth1/51***",
+                "duplex": "Full",
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "d48c.b584.d403",
+                "mediatype": "ZX",
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/3.30": {
+                "bandwidth": 600000,
+                "description": "**Inet RT3-RT4 via SW7***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.10.129",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "d48c.b584.d403",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/3.31": {
+                "bandwidth": 600000,
+                "description": "**Transm RT3-RT4 via SW7***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.10.81",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "d48c.b584.d403",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/3.33": {
+                "bandwidth": 600000,
+                "description": "**Transm CMP do wisniowa**",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.10.66",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "d48c.b584.d403",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/3.43": {
+                "bandwidth": 1000000,
+                "description": "**mgt wisniowa**",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.111.200.233",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "d48c.b584.d403",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "4XGE-BUILT-IN"
+            },
+            "Loopback0": {
+                "bandwidth": 8000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.71.204",
+                        "subnet": "32"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "up",
+                "type": null
+            },
+            "Loopback2002": {
+                "bandwidth": 8000000,
+                "description": "**MGT ****",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.111.11.6",
+                        "subnet": "32"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "up",
+                "type": null
+            },
+            "Loopback5": {
+                "bandwidth": 8000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "up",
+                "type": null
+            },
+            "Tunnel20451": {
+                "bandwidth": 50000,
+                "description": "**cmp-rt-pawia -- cmp-rt3**",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.18.6",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 9976,
+                "operstatus": "up",
+                "type": null
+            },
+            "Tunnel20651": {
+                "bandwidth": 50000,
+                "description": "**do cmp-rt-lomianki via ISB FO/pppoe ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.18.48",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 9976,
+                "operstatus": "up",
+                "type": null
+            },
+            "Tunnel20701": {
+                "bandwidth": 50000,
+                "description": "**z cmp-rt-goclaw do cmp-rt3  via VirtuaOp inet **",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.18.18",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 9976,
+                "operstatus": "up",
+                "type": null
+            },
+            "Tunnel20801": {
+                "bandwidth": 20000,
+                "description": "**do cmp-rt-plock**",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.18.81",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 9976,
+                "operstatus": "up",
+                "type": null
+            },
+            "Tunnel21": {
+                "bandwidth": 100,
+                "description": "**CMP Wilanow Al.Rzeczpospolitej 1***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.18.8",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 10000,
+                "operstatus": "administratively down",
+                "type": null
+            },
+            "Tunnel22": {
+                "bandwidth": 100,
+                "description": "*** CMP Wola bk via UPC ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.18.10",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 9976,
+                "operstatus": "up",
+                "type": null
+            },
+            "Tunnel22401": {
+                "bandwidth": 50000,
+                "description": "**z cmp-rt-jp2 do cmp-rt3 via Orange; pias jpII 9 call center **",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.18.14",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 9976,
+                "operstatus": "up",
+                "type": null
+            },
+            "Tunnel38": {
+                "bandwidth": 100,
+                "description": "**test ipsec do lab pagi ******",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.18.254",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 9976,
+                "operstatus": "up",
+                "type": null
+            },
+            "Tunnel666": {
+                "bandwidth": 100,
+                "description": "**lab ipsec ikev2 ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.255.66",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 9976,
+                "operstatus": "up",
+                "type": null
+            }
+        },
+        "ansible_net_iostype": "IOS-XE",
+        "ansible_net_memfree_mb": 1307732.09765625,
+        "ansible_net_memtotal_mb": 1641740.90234375,
+        "ansible_net_model": "ASR1002",
+        "ansible_net_neighbors": {
+            "GigabitEthernet0/0/0": [
+                {
+                    "host": "cmp-sw-bialoleka.pagi",
+                    "port": "GigabitEthernet0/47"
+                },
+                {
+                    "host": "cmp-sw-marianska-c3560G.pagi",
+                    "port": "GigabitEthernet0/47"
+                },
+                {
+                    "host": "cmp-sw-wilanow.pagi",
+                    "port": "GigabitEthernet0/52"
+                },
+                {
+                    "host": "cmp-sw-zoliborz.pagi",
+                    "port": "GigabitEthernet0/48"
+                }
+            ],
+            "GigabitEthernet0/0/1": [
+                {
+                    "host": "cmp-sw3-pias_c3560G.pagi",
+                    "port": "GigabitEthernet0/52"
+                }
+            ],
+            "GigabitEthernet0/0/2": [
+                {
+                    "host": "cmp-rt4-c7204.pagi",
+                    "port": "GigabitEthernet0/2"
+                }
+            ],
+            "GigabitEthernet0/0/3": [
+                {
+                    "host": "cmp-sw7-nx3k_Pul49.pagi(FOC1711R1HG)",
+                    "port": "Ethernet1/51"
+                }
+            ]
+        },
+        "ansible_net_python_version": "2.7.17",
+        "ansible_net_serialnum": "FOX1621GW2N",
+        "ansible_net_system": "ios",
+        "ansible_net_version": "03.16.09.S",
+        "ansible_network_resources": {},
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "deprecations": [
+        {
+            "msg": "Distribution Ubuntu 18.04 on host CMP-RT3-cASR1001 should use /usr/bin/python3, but is using /usr/bin/python for backward compatibility with prior Ansible releases. A future Ansible release will default to using the discovered platform python for this host. See https://docs.ansible.com/ansible/2.10/reference_appendices/interpreter_discovery.html for more information",
+            "version": "2.12"
+        }
+    ],
+    "failed": false
+}

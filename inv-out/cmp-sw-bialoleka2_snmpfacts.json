@@ -1,0 +1,419 @@
+{
+    "ansible_facts": {
+        "ansible_net_all_ipv4_addresses": [
+            "10.111.204.16",
+            "10.111.11.16"
+        ],
+        "ansible_net_all_ipv6_addresses": [],
+        "ansible_net_api": "cliconf",
+        "ansible_net_filesystems": [
+            "flash:"
+        ],
+        "ansible_net_filesystems_info": {
+            "flash:": {
+                "spacefree_kb": 19400.0,
+                "spacetotal_kb": 31752.0
+            }
+        },
+        "ansible_net_gather_network_resources": [],
+        "ansible_net_gather_subset": [
+            "hardware",
+            "default",
+            "interfaces"
+        ],
+        "ansible_net_hostname": "cmp-sw-bialoleka2",
+        "ansible_net_image": "flash:/me340x-metroipaccessk9-mz.122-55.SE3/me340x-metroipaccessk9-mz.122-55.SE3.bin",
+        "ansible_net_interfaces": {
+            "FastEthernet0/1": {
+                "bandwidth": 10000,
+                "description": "***LAN***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0026.ca4d.e603",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1500,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/10": {
+                "bandwidth": 10000,
+                "description": "***LAN***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0026.ca4d.e60c",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/11": {
+                "bandwidth": 100000,
+                "description": "***LAN***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0026.ca4d.e60d",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/12": {
+                "bandwidth": 100000,
+                "description": "***LAN***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0026.ca4d.e60e",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/13": {
+                "bandwidth": 100000,
+                "description": "***LAN***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0026.ca4d.e60f",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/14": {
+                "bandwidth": 100000,
+                "description": "***LAN***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0026.ca4d.e610",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/15": {
+                "bandwidth": 100000,
+                "description": "***LAN***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0026.ca4d.e611",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/16": {
+                "bandwidth": 10000,
+                "description": "***LAN***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0026.ca4d.e612",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1500,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/17": {
+                "bandwidth": 10000,
+                "description": "***LAN***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0026.ca4d.e613",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1500,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/18": {
+                "bandwidth": 100000,
+                "description": "***LAN***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0026.ca4d.e614",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/19": {
+                "bandwidth": 100000,
+                "description": "***LAN***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0026.ca4d.e615",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1500,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/2": {
+                "bandwidth": 100000,
+                "description": "***LAN***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0026.ca4d.e604",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/20": {
+                "bandwidth": 10000,
+                "description": "***LAN***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0026.ca4d.e616",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1500,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/21": {
+                "bandwidth": 100000,
+                "description": "***LAN***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0026.ca4d.e617",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/22": {
+                "bandwidth": 10000,
+                "description": "***LAN***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0026.ca4d.e618",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1500,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/23": {
+                "bandwidth": 100000,
+                "description": "***LAN***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0026.ca4d.e619",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/24": {
+                "bandwidth": 10000,
+                "description": "**uplink do cmp-sw-bialoleka1***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0026.ca4d.e61a",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1500,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/3": {
+                "bandwidth": 100000,
+                "description": "***LAN***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0026.ca4d.e605",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/4": {
+                "bandwidth": 100000,
+                "description": "***LAN***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0026.ca4d.e606",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1500,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/5": {
+                "bandwidth": 100000,
+                "description": "***LAN***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0026.ca4d.e607",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/6": {
+                "bandwidth": 100000,
+                "description": "***LAN***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0026.ca4d.e608",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1500,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/7": {
+                "bandwidth": 100000,
+                "description": "***LAN***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0026.ca4d.e609",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/8": {
+                "bandwidth": 10000,
+                "description": "***LAN***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0026.ca4d.e60a",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1500,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/9": {
+                "bandwidth": 100000,
+                "description": "***LAN***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0026.ca4d.e60b",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "Fast Ethernet"
+            },
+            "GigabitEthernet0/1": {
+                "bandwidth": 1000000,
+                "description": "**uplink 1Gbit do cmp-sw-bialoleka1***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0026.ca4d.e601",
+                "mediatype": "10/100/1000BaseTX SFP",
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/2": {
+                "bandwidth": 10000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0026.ca4d.e602",
+                "mediatype": "Not Present",
+                "mtu": 1500,
+                "operstatus": "down",
+                "type": "Gigabit Ethernet"
+            },
+            "Loopback2002": {
+                "bandwidth": 8000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.111.11.16",
+                        "subnet": "32"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "up",
+                "type": null
+            },
+            "Vlan1": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "0026.ca4d.e640",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "EtherSVI"
+            },
+            "Vlan4000": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.111.204.16",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0026.ca4d.e641",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "EtherSVI"
+            }
+        },
+        "ansible_net_iostype": "IOS",
+        "ansible_net_memfree_mb": 35070.953125,
+        "ansible_net_memtotal_mb": 67818.78125,
+        "ansible_net_model": "ME-3400-24TS-A",
+        "ansible_net_neighbors": {
+            "GigabitEthernet0/1": [
+                {
+                    "host": "cmp-sw-bialoleka.pagi",
+                    "port": "GigabitEthernet0/46"
+                }
+            ]
+        },
+        "ansible_net_python_version": "2.7.17",
+        "ansible_net_serialnum": "FOC1333V3L5",
+        "ansible_net_stacked_models": [
+            "ME-3400-24TS-A"
+        ],
+        "ansible_net_stacked_serialnums": [
+            "FOC1333V3L5"
+        ],
+        "ansible_net_system": "ios",
+        "ansible_net_version": "12.2(55)SE3",
+        "ansible_network_resources": {},
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "deprecations": [
+        {
+            "msg": "Distribution Ubuntu 18.04 on host cmp-sw-bialoleka2 should use /usr/bin/python3, but is using /usr/bin/python for backward compatibility with prior Ansible releases. A future Ansible release will default to using the discovered platform python for this host. See https://docs.ansible.com/ansible/2.10/reference_appendices/interpreter_discovery.html for more information",
+            "version": "2.12"
+        }
+    ],
+    "failed": false
+}

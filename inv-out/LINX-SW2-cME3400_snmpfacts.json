@@ -1,0 +1,470 @@
+{
+    "ansible_facts": {
+        "ansible_net_all_ipv4_addresses": [
+            "10.254.1.195"
+        ],
+        "ansible_net_all_ipv6_addresses": [],
+        "ansible_net_api": "cliconf",
+        "ansible_net_filesystems": [
+            "flash:"
+        ],
+        "ansible_net_filesystems_info": {
+            "flash:": {
+                "spacefree_kb": 17982.0,
+                "spacetotal_kb": 31752.0
+            }
+        },
+        "ansible_net_gather_network_resources": [],
+        "ansible_net_gather_subset": [
+            "hardware",
+            "default",
+            "interfaces"
+        ],
+        "ansible_net_hostname": "LINX-SW2-cME3400",
+        "ansible_net_image": "flash:me340x-metroaccessk9-mz.122-53.SE/me340x-metroaccessk9-mz.122-53.SE.bin",
+        "ansible_net_interfaces": {
+            "%": {
+                "ipv6": []
+            },
+            "FastEthernet0/1": {
+                "bandwidth": 10000,
+                "description": "sil2",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "b414.89a0.c083",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1500,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/10": {
+                "bandwidth": 100000,
+                "description": "**pakieciarka LAN **",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "b414.89a0.c08c",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/11": {
+                "bandwidth": 100000,
+                "description": "***pakieciarka inet ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "b414.89a0.c08d",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/12": {
+                "bandwidth": 100000,
+                "description": "**podsluch pakieciarka**",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "b414.89a0.c08e",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/13": {
+                "bandwidth": 100000,
+                "description": "*LINX-RT7_fa0/0***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "b414.89a0.c08f",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/14": {
+                "bandwidth": 100000,
+                "description": "*LINX-RT7_fa0/1***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "b414.89a0.c090",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/15": {
+                "bandwidth": 100000,
+                "description": "*LINX-RT6_fa0/0_leg_cisco***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "b414.89a0.c091",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/16": {
+                "bandwidth": 100000,
+                "description": "*LINX-RT6_fa0/1***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "b414.89a0.c092",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/17": {
+                "bandwidth": 100000,
+                "description": "*LINX-RT5_fa0/0***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "b414.89a0.c093",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1500,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/18": {
+                "bandwidth": 100000,
+                "description": "*LINX-RT5_fa0/1**",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "b414.89a0.c094",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1500,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/19": {
+                "bandwidth": 100000,
+                "description": "LINX-RT2_fa0/0hsec",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "b414.89a0.c095",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/2": {
+                "bandwidth": 100000,
+                "description": "**LINX-RT9-WN-BGP**",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "b414.89a0.c084",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1500,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/20": {
+                "bandwidth": 100000,
+                "description": "LINX-RT2_fa0/1hsec",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "b414.89a0.c096",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/21": {
+                "bandwidth": 100000,
+                "description": "*LINX-RT3_fa0/0***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "b414.89a0.c097",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1500,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/22": {
+                "bandwidth": 100000,
+                "description": "*LINX-RT3_fa0/1***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "b414.89a0.c098",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/23": {
+                "bandwidth": 100000,
+                "description": "*LINX-RT4_fa0/0***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "b414.89a0.c099",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1500,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/24": {
+                "bandwidth": 100000,
+                "description": "*LINX-RT4_fa0/1***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "b414.89a0.c09a",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1500,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/3": {
+                "bandwidth": 10000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "b414.89a0.c085",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/4": {
+                "bandwidth": 10000,
+                "description": "***LINX-RT12-MGT2_fa0/0***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "b414.89a0.c086",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1500,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/5": {
+                "bandwidth": 10000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "b414.89a0.c087",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/6": {
+                "bandwidth": 10000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "b414.89a0.c088",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/7": {
+                "bandwidth": 100000,
+                "description": "**do LINX-RT18_Gi0/0***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "b414.89a0.c089",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/8": {
+                "bandwidth": 10000,
+                "description": "*LINX-RT8-Gi0/1***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "b414.89a0.c08a",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/9": {
+                "bandwidth": 100000,
+                "description": "**podsluch BS virtualka ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "b414.89a0.c08b",
+                "mediatype": "10/100BaseTX",
+                "mtu": 1500,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "GigabitEthernet0/1": {
+                "bandwidth": 1000000,
+                "description": "***uplink LINX-SW1-cME3600_Gi0/19***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "b414.89a0.c081",
+                "mediatype": "10/100/1000BaseTX SFP",
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/2": {
+                "bandwidth": 1000000,
+                "description": "**do LINX-RT13_Gi0/0/5 SFP2j***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "b414.89a0.c082",
+                "mediatype": "1000BaseLX SFP",
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "Gigabit Ethernet"
+            },
+            "LINX-SW2-cME3400#": {
+                "ipv6": []
+            },
+            "Loopback100": {
+                "bandwidth": 8000000,
+                "description": "***nagios trap test***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "administratively down",
+                "type": null
+            },
+            "Vlan1": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "b414.89a0.c0c0",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "EtherSVI"
+            },
+            "Vlan9": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.254.1.195",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "b414.89a0.c0c1",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "EtherSVI"
+            },
+            "show": {
+                "ipv6": []
+            }
+        },
+        "ansible_net_iostype": "IOS",
+        "ansible_net_memfree_mb": 48666.71875,
+        "ansible_net_memtotal_mb": 81414.546875,
+        "ansible_net_model": "ME-3400-24TS-D",
+        "ansible_net_neighbors": {
+            "FastEthernet0/13": [
+                {
+                    "host": "LINX-RT7-c2811-gsm_cisco.pagi",
+                    "port": "FastEthernet0/0"
+                }
+            ],
+            "FastEthernet0/14": [
+                {
+                    "host": "LINX-RT7-c2811-gsm_cisco.pagi",
+                    "port": "FastEthernet0/1"
+                }
+            ],
+            "FastEthernet0/15": [
+                {
+                    "host": "LINX-RT6-c2811-legcisco.pagi",
+                    "port": "FastEthernet0/0"
+                }
+            ],
+            "FastEthernet0/16": [
+                {
+                    "host": "LINX-RT6-c2811-legcisco.pagi",
+                    "port": "FastEthernet0/1"
+                }
+            ],
+            "FastEthernet0/19": [
+                {
+                    "host": "LINX-RT2-c2811_APN-Orange.pagi",
+                    "port": "FastEthernet0/0"
+                }
+            ],
+            "FastEthernet0/22": [
+                {
+                    "host": "LINX-RT3-c2811_APN_PLUS.pagi",
+                    "port": "FastEthernet0/0"
+                }
+            ],
+            "FastEthernet0/7": [
+                {
+                    "host": "LINX-RT18-1941_SGB.pagi",
+                    "port": "GigabitEthernet0/0"
+                }
+            ],
+            "GigabitEthernet0/1": [
+                {
+                    "host": "LINX-SW1-cME3600X.pagi",
+                    "port": "GigabitEthernet0/19"
+                }
+            ],
+            "GigabitEthernet0/2": [
+                {
+                    "host": "LINX-RT13_cASR920-24SZIM.pagi",
+                    "port": "GigabitEthernet0/0/5"
+                }
+            ]
+        },
+        "ansible_net_python_version": "2.7.17",
+        "ansible_net_serialnum": "FOC1441V115",
+        "ansible_net_stacked_models": [
+            "ME-3400-24TS-D"
+        ],
+        "ansible_net_stacked_serialnums": [
+            "FOC1441V115"
+        ],
+        "ansible_net_system": "ios",
+        "ansible_net_version": "12.2(53)SE",
+        "ansible_network_resources": {},
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "deprecations": [
+        {
+            "msg": "Distribution Ubuntu 18.04 on host LINX-SW2-cME3400 should use /usr/bin/python3, but is using /usr/bin/python for backward compatibility with prior Ansible releases. A future Ansible release will default to using the discovered platform python for this host. See https://docs.ansible.com/ansible/2.10/reference_appendices/interpreter_discovery.html for more information",
+            "version": "2.12"
+        }
+    ],
+    "failed": false
+}
