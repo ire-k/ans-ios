@@ -7,23 +7,31 @@
 #   - radius_int
 ## cmp-sw-wola2: ip radius source-interface ! aaa group server radius grp-radius
 #
-- hosts: cmp-rt3
+- hosts: ASR
   gather_facts: false
   connection: network_cli
   tasks:
 
   - name: get ios facts hw
     ios_facts:
-      gather_subset: hardware
+      gather_subset: 
+        - hardware
+          #- min
 
   - debug:
-      var: ansible_net_model
-#    when: ansible_net_model is regex("3750")
+      msg: 
+        - "{{ansible_net_model}}"
+        - "{{inventory_hostname}}"
+
+  - debug:
+      msg: "dhcp host"
+    when:  (inventory_hostname is regex("(?i)cmp") or inventory_hostname is regex("(?i)linx-rt10") )
+
 
 
       #- meta: end_play
-      #  - name: pause
-      #    pause:
+  - name: pause
+    pause:
 
     # ios_user
   - name: set authentication
@@ -82,7 +90,8 @@
         - path tftp://212.69.68.123/$h-@-$t
         - write-memory
 
-  - name: security
+          # ! not on cmp-rt3 and linx-rt10
+  - name: security hardeinig
     ios_config:
       lines:
         - no service config
@@ -90,7 +99,7 @@
         - no service udp-small-servers
         - no service pad
         - no service finger
-        - no service dhcp
+          #- no service dhcp
         - no ip http server
         - no ip http secure-server
         - no service exec-callback
@@ -111,6 +120,14 @@
     ios_config:
       lines:
         - no service call-home
+
+  - name : security harderning 4
+    ignore_errors: True
+    when: ( ansible_hostname is not regex("cmp")  )
+    ios_config:
+      lines:
+        - no service call-home
+
 
   - name: security on con line
     ios_config:
@@ -267,7 +284,7 @@
         - memory free low-watermark processor 90000
 
   - name: set memory warning on ASR920
-    when: ansible_net_model is regex("ASR920")
+    when: ansible_net_model is regex("ASR-920")
     ios_config:
       lines:
         - memory free low-watermark processor 180000
