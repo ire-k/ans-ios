@@ -232,17 +232,23 @@
       match: exact
       replace: block
 
-          ## memory critical reserves both io and processor pools 
+          # memory critical influences both io and processor pools 
+          #  reserves memory for critical notifications (200kB) and console access (2kB)
+          #  applied after reload
+          #  logging buffer was set at 100kB
+          #  default: 100 kilobytes of memory is reserved for the logging process
+          # cpu load generally should not exceed 75%
   - name: set trap warings memory
     ios_config:
       lines:
-        - memory reserve critical 2048
+        - memory reserve critical 200
+        - memory reserve console 2
         - process cpu threshold type total rising 80 interval 10 falling 70 interval 10
         - process cpu statistics limit entry-percentage 40 size 300
 
     # allows check with command: show memory overflow
   - name: memory leak detection
-    when: ansible_net_model is regex("ASR920")
+    when: ansible_net_model is regex("ASR")
     ios_config:
       lines:
         - exception memory ignore overflow io
@@ -250,40 +256,57 @@
         #Enhanced Crashinfo File Collection
         #- exception crashinfo maximum files 1
 
-  - name: set memory limits on 4900
+  - name: set memory warning on 4900
     when: ansible_net_model is regex("4900")
     ios_config:
       lines:
         - memory free low-watermark processor 90000
 
-  - name: set memory limits on ASR920
+  - name: set memory warning on ASR920
     when: ansible_net_model is regex("ASR920")
     ios_config:
       lines:
         - memory free low-watermark processor 180000
 
-  - name: set memory limits on ME3600X
+          # ASR1002 RP1 ESP10 4GB phy RAM
+  - name: set memory warning on ASR 1002
+    when: ansible_net_model is regex("ASR\ 1002")
+    ios_config:
+      lines:
+        - memory free low-watermark processor 328348
+
+          # ASR1001-X / ASR1001 embedded RP, 8GB phy RAM
+  - name: set memory warning on ASR 1002
+    when: ansible_net_model is regex("ASR1001")
+    ios_config:
+      lines:
+        - memory free low-watermark processor 745691
+
+
+
+
+  - name: set memory warning on ME3600X
     when: ansible_net_model is regex("ME3600X")
     ios_config:
       lines:
         - memory free low-watermark processor 159000
         - memory free low-watermark io 13000
 
-  - name: set memory limits on 3560
+  - name: set memory warning on 3560
     when: ansible_net_model is regex("3560")
     ios_config:
       lines:
         - memory free low-watermark processor 15000
         - memory free low-watermark io 1600
 
-  - name: set memory limits on ME3400
+  - name: set memory warning on ME3400
     when: ansible_net_model is regex("ME3400")
     ios_config:
       lines:
         - memory free low-watermark processor 200
         - memory free low-watermark io 1200
 
-  - name: set memory limits on WS-3750
+  - name: set memory warning on WS-3750
     when: ansible_net_model is regex("3750")
     ios_config:
       lines:
@@ -320,114 +343,3 @@
       save_when: always
 
 
-      #### memory free low watermark 
-      # per platform
-      # some results below
-      #
-      #          ## reccomended: 20% of current memory
-# https://community.cisco.com/t5/switching/memory-free-low-watermark-and-processor-settings-for-2960x/td-p/3006999
-#https://www.cisco.com/en/US/docs/ios/12_3t/12_3t4/feature/guide/gt_memnt.html
-#https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/bsm/configuration/15-2mt/bsm-mem-thresh-note.html          
-# Cisco IOS Software, Catalyst 4500 L3 Switch Software (cat4500e-IPBASEK9-M), Version 12.2(54)SG1, RELEASE SOFTWARE (fc1)
-##plan_PIK11-SW2-4900#sh proc memory             
-#Processor Pool Total:  465346528 Used:  206055968 Free:  259290560
-# 20% -> 90000 kB
-  #LINX-SW7-4900(config)#memory free low-watermark io 13000
-  #%Error: IO memory and processor memory are the same
-  #Configure the low water mark for processor memory
-
-
-## plan_PIK11-SW1-cME3600X#sh proc memory
-#Processor Pool Total:  815909596 Used:  169799804 Free:  646109792
-#      I/O Pool Total:   67100672 Used:   28245104 Free:   38855568
-# processor 20% -> 159000 kB
-# i/o 20%       -> 13000 kB
-
-## lab_c3560G
-##sh proc mem
-#Processor  Pool Total:   76961468 Used:   19430096 Free:   57531372
-#I/O        Pool Total:    8388608 Used:    3590640 Free:    4797968
-#Driver te  Pool Total:    1048576 Used:         40 Free:    1048536
-# 20% proc -> 200 kB --- see below for ME3400 ! use Driver te
-# 20% i/o  -> 1600 kB
-#
-#
-#3560(config)#memory free low-watermark io ?
-#  <1-4294967295>  low water mark of memory in KB
-
-      # 3560-24PS WS-C3560-24PS-S
-#Head    Total(b)     Used(b)     Free(b)   Lowest(b)  Largest(b)
-#Processor    17BD718    96741608    24769352    71972256    69495080    68100200
-#      I/O    7400000    12574720     9031656     3543064     3503528     3535816
-
-#lab_cME3400#sh proc memory
-#Processor Pool Total:   69446432 Used:   24325716 Free:   45120716
-#      I/O Pool Total:   12582912 Used:    8537504 Free:    4045408
-#Driver te Pool Total:    1048576 Used:         40 Free:    1048536
-# 20% pool total = 14000kB
-# 20% io = 2400kB
-# ####
-# After memory reserved critical 4096 on ME3400:
-#Processor Pool Total:   69446432 Used:   26609124 Free:   42837308
-#      I/O Pool Total:   12582912 Used:   10900292 Free:    1682620
-#Critical  Pool Total:    1836280 Used:         40 Free:    1836240
-#Critical  Pool Total:    2358024 Used:         40 Free:    2357984
-#Driver te Pool Total:    1048576 Used:         40 Free:    1048536
-
-#After mem res cri 2048 on ME3400
-#lab_cmp-sw2-cME3400#sh proc mem
-#Processor Pool Total:   69446432 Used:   25847956 Free:   43598476
-#      I/O Pool Total:   12582912 Used:    9808728 Free:    2774184
-#Critical  Pool Total:     918140 Used:         40 Free:     918100
-#Critical  Pool Total:    1179012 Used:         40 Free:    1178972
-#Driver te Pool Total:    1048576 Used:         40 Free:    1048536
-
-
-#Feb 17 2021 11:56:46.183 CET: %SYS-4-FREEMEMLOW: Free Memory has dropped below low watermark
-#Pool: Processor  Free: 10728268  Threshold: 14336000
-#ztm-sw-stoklosy(config)#memory free low-watermark processor 200
-#Feb 17 2021 12:07:24.346 CET: %SYS-5-FREEMEMRECOVER: Free Memory has recovered above low watermark
-#
-#Pool: Processor  Free: 10719416  Threshold: 204800 
-# ## use 10% of I/O : 1200 kB ## reserve critical uses memory
-# ## low-watermark processor: use 20% of "Driver te" : 200 kB
-
-#ztm-sw-stoklosy(config)#memory reserve critical 4096
-#Feb 17 2021 12:11:00.741 CET: %SYS-4-FREEMEMLOW: Free Memory has dropped below low watermark
-#Pool: I/O  Free: 1645556  Threshold: 2457600
-
-
-#ztm-sw-stoklosy(config)#memory reserve critical 2048
-#Memory Pool:Processor already has critical memory reserved
-#New configuration will take effect only after the next reload upon saving
-#the current configuration
-#Memory Pool:I/O already has critical memory reserved
-#New configuration will take effect only after the next reload upon saving
-#the current configuration
-
-
-      ## 3750G
-      #inventory
-      #NAME: "1", DESCR: "WS-C3750-24PS"
-      #PID: WS-C3750-24PS-S  , VID: V08  , SN: FOC1446Y14S
-      #
-      #Processor Pool Total:   71359432 Used:   31742852 Free:   39616580
-      #      I/O Pool Total:   12582912 Used:    8668732 Free:    3914180
-      #Driver te Pool Total:    1048576 Used:         40 Free:    1048536
-      #
-      #mem fre low wat proc -> ME3400 -> use Driver te Pool Total * 20% = 200kB
-      #20% of IO: 2457 kB 
-      #
-      #afert memory reserve crit 2048:
-      #Processor Pool Total:   71359432 Used:   32709040 Free:   38650392
-      #I/O Pool Total:   12582912 Used:    9816420 Free:    2766492
-      #Critical  Pool Total:     941316 Used:         40 Free:     941276
-      #Critical  Pool Total:    1147644 Used:         40 Free:    1147604
-      #Driver te Pool Total:    1048576 Used:         40 Free:    1048536
-
-
-
-#        Processor Pool Total:   71359432 Used:   31742852 Free:   39616580
-#              I/O Pool Total:   12582912 Used:    8668732 Free:    3914180
-#        Driver te Pool Total:    1048576 Used:         40 Free:    1048536
-#
