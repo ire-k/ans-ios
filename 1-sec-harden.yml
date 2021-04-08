@@ -1,5 +1,13 @@
 ---
-- hosts: test_switches
+# to do:
+# host_vars:
+#   - mgt_int, 
+#   - ntp_int, 
+#   - mgt vrf 
+#   - radius_int
+## cmp-sw-wola2: ip radius source-interface ! aaa group server radius grp-radius
+#
+- hosts: lab-sw1
   gather_facts: false
   connection: network_cli
   tasks:
@@ -33,7 +41,16 @@
       parents: aaa group server radius grp-radius
       lines:
         - server 212.69.71.194 auth-port 1812 acct-port 1813
+
+  - name: set aaa group radius src int
+    when: "mgt_int is defined"
+    ios_config:
+      parents: aaa group server radius grp-radius
+      lines:
         - ip radius source-interface {{mgt_int}}
+
+
+
 
   - name: set radius srv new-config
     #when: (ansible_net_model is regex("ME3600X")) or (ansible_net_model is regex("ASR920")  )
@@ -89,6 +106,7 @@
         - vtp mode transparent
 
   - name : security3
+    ignore_errors: True
     when: ( ansible_net_model is regex("4900") or ansible_net_model is regex("3560") )
     ios_config:
       lines:
@@ -111,12 +129,22 @@
         #- access-class 1 in vrf-also
 
 
-  - name: set timestamps
+  - name: set timestamps1
+    ignore_errors: True
     ios_config:
       lines:
         - service timestamps debug datetime msec localtime show-timezone year
         - service timestamps log datetime msec localtime show-timezone year
+    register: timestamps1
 
+
+  - name: set timestamps when prev failed
+    when: timestamps1 is failed
+    ignore_errors: True
+    ios_config:
+      lines:
+        - service timestamps debug datetime msec localtime show-timezone
+        - service timestamps log datetime msec localtime show-timezone
 
 
 
@@ -127,42 +155,63 @@
         - clock summer-time CEST recurring last Sun Mar 2:00 last Sun Oct 3:00
 
 
-  - name: set source intf
-    ios_config:
-      lines:
-        - ip tftp source-interface {{mgt_int}}
-
 
   # ios_logging 
   # https://docs.ansible.com/ansible/latest/modules/ios_logging_module.html#ios-logging-module
-  - name: set logging
+  - name: set logging1
+    ignore_errors: True
     ios_config:
       lines:
-        - logging source-interface {{mgt_int}}
         - logging host 212.69.68.123 session-id hostname
         - logging trap informational
           # cpu save
         - no logging console
         - no logging monitor 
         - logging buffered 100000 informational
+    register: logging1
 
-  - name: set ntp1
+  - name: set logging2
+    when: logging1 is failed
+    ios_config:
+      lines:
+        - logging host 212.69.68.123 
+        - logging trap informational
+          # cpu save
+        - no logging console
+        - no logging monitor 
+        - logging buffered 100000 informational
+
+
+  - name: set ntp1 with src int
+    when: "ntp_int is defined"
     ios_ntp:
-      source_int: "{{mgt_int}}"
+      source_int: "{{ntp_int}}"
       server: 212.69.81.115
       logging: false
       state: present
-  #  register: ntpserv
-  #- debug: var=ntpserv
 
-  - name: set ntp2
+  - name: set ntp2 with src int
+    when: "ntp_int is defined"
     ios_ntp:
       server: 212.69.68.123
-      source_int: "{{mgt_int}}"
+      source_int: "{{ntp_int}}"
       logging: false
       state: present
-  #  register: ntpserv2
-  #- debug: var=ntpserv2
+
+  - name: set ntp1
+    when: "ntp_int is not defined"
+    ios_ntp:
+      server: 212.69.81.115
+      logging: false
+      state: present
+
+  - name: set ntp2
+    when: "ntp_int is not defined"
+    ios_ntp:
+      server: 212.69.68.123
+      logging: false
+      state: present
+
 
   - name: set ntp srv prefer
     ios_config:
@@ -242,6 +291,7 @@
         - memory free low-watermark io 2457
 
   - name: disable vstack
+    ignore_errors: True
     when: ( ansible_net_model is regex("3560")) or (ansible_net_model is regex ("3750") )
     ios_config:
       lines:
@@ -253,8 +303,16 @@
       lines:
         - ip ssh time-out 60
         - ip ssh authentication-retries 5
-        - ip ssh source-interface {{mgt_int}}
         - ip scp server enable
+
+          # mgt_int defined and mgt_vrf undefined
+  - name: mgt src int
+    when: "(mgt_int is defined ) and (mgt_vrf is not defined)"
+    ios_config:
+      lines:
+        #- ip ssh source-interface {{mgt_int}}
+        - logging source-interface {{mgt_int}}
+
 
 
   - name: save config
@@ -296,6 +354,11 @@
 #
 #3560(config)#memory free low-watermark io ?
 #  <1-4294967295>  low water mark of memory in KB
+
+      # 3560-24PS WS-C3560-24PS-S
+#Head    Total(b)     Used(b)     Free(b)   Lowest(b)  Largest(b)
+#Processor    17BD718    96741608    24769352    71972256    69495080    68100200
+#      I/O    7400000    12574720     9031656     3543064     3503528     3535816
 
 #lab_cME3400#sh proc memory
 #Processor Pool Total:   69446432 Used:   24325716 Free:   45120716

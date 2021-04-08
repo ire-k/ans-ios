@@ -1,0 +1,4 @@
+mgt_int: Loopback2002
+ntp_int: Loopback2
+radius_int: Loopback2
+mgt_vrf: mgt
