@@ -255,3 +255,5 @@ https://www.cisco.com/c/en/us/support/docs/routers/asr-1000-series-aggregation-s
 
 ## memory reserve section:
 https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/fundamentals/command/cf_command_ref/L_through_mode.html
+
+https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/bsm/configuration/15-2mt/bsm-mem-thresh-note.html

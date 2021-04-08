@@ -7,7 +7,7 @@
 #   - radius_int
 ## cmp-sw-wola2: ip radius source-interface ! aaa group server radius grp-radius
 #
-- hosts: lab-sw1
+- hosts: cmp-rt3
   gather_facts: false
   connection: network_cli
   tasks:
@@ -107,7 +107,7 @@
 
   - name : security3
     ignore_errors: True
-    when: ( ansible_net_model is regex("4900") or ansible_net_model is regex("3560") )
+    when: ( ansible_net_model is regex("4900") or ansible_net_model is regex("3560") or ansible_net_model is regex("ASR") )
     ios_config:
       lines:
         - no service call-home
@@ -158,29 +158,27 @@
 
   # ios_logging 
   # https://docs.ansible.com/ansible/latest/modules/ios_logging_module.html#ios-logging-module
-  - name: set logging1
+  - name: set logging
+    ios_config:
+      lines:
+        - logging trap informational
+        - logging buffered 100000 informational
+          # cpu save
+        - no logging console
+        - no logging monitor 
+
+  - name: set syslog newer ios
     ignore_errors: True
     ios_config:
       lines:
         - logging host 212.69.68.123 session-id hostname
-        - logging trap informational
-          # cpu save
-        - no logging console
-        - no logging monitor 
-        - logging buffered 100000 informational
     register: logging1
 
-  - name: set logging2
+  - name: set syslog old ios
     when: logging1 is failed
     ios_config:
       lines:
         - logging host 212.69.68.123 
-        - logging trap informational
-          # cpu save
-        - no logging console
-        - no logging monitor 
-        - logging buffered 100000 informational
-
 
   - name: set ntp1 with src int
     when: "ntp_int is defined"
@@ -238,13 +236,19 @@
           #  logging buffer was set at 100kB
           #  default: 100 kilobytes of memory is reserved for the logging process
           # cpu load generally should not exceed 75%
-  - name: set trap warings memory
+  - name: set warings memory
     ios_config:
       lines:
         - memory reserve critical 200
-        - memory reserve console 2
         - process cpu threshold type total rising 80 interval 10 falling 70 interval 10
         - process cpu statistics limit entry-percentage 40 size 300
+
+  - name: set warings memory
+    when: ansible_net_model is not regex("ASR")
+    ios_config:
+      lines:
+        - memory reserve console 2
+
 
     # allows check with command: show memory overflow
   - name: memory leak detection
@@ -270,20 +274,17 @@
 
           # ASR1002 RP1 ESP10 4GB phy RAM
   - name: set memory warning on ASR 1002
-    when: ansible_net_model is regex("ASR\ 1002")
+    when: ansible_net_model is regex("ASR1002")
     ios_config:
       lines:
         - memory free low-watermark processor 328348
 
           # ASR1001-X / ASR1001 embedded RP, 8GB phy RAM
-  - name: set memory warning on ASR 1002
+  - name: set memory warning on ASR1001/ASR1001-X
     when: ansible_net_model is regex("ASR1001")
     ios_config:
       lines:
         - memory free low-watermark processor 745691
-
-
-
 
   - name: set memory warning on ME3600X
     when: ansible_net_model is regex("ME3600X")
