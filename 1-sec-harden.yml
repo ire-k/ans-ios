@@ -7,7 +7,7 @@
 #   - radius_int
 ## cmp-sw-wola2: ip radius source-interface ! aaa group server radius grp-radius
 #
-- hosts: ASR
+- hosts: cmp-rt-pias-jp2-l2k
   gather_facts: false
   connection: network_cli
   tasks:
@@ -27,11 +27,13 @@
       msg: "dhcp host"
     when:  (inventory_hostname is regex("(?i)cmp") or inventory_hostname is regex("(?i)linx-rt10") )
 
-
+  - debug:
+      var: hostvars[inventory_hostname]
 
       #- meta: end_play
   - name: pause
     pause:
+
 
     # ios_user
   - name: set authentication
@@ -62,12 +64,13 @@
 
   - name: set radius srv new-config
     #when: (ansible_net_model is regex("ME3600X")) or (ansible_net_model is regex("ASR920")  )
-    when: ( ansible_net_model is regex("ME3600X") or ansible_net_model is regex("ASR") )
+    when: ( ansible_net_model is regex("ME3600X") or ansible_net_model is regex("ASR") or ansible_net_model is regex("1941") or ansible_net_model is regex("3945")  )
     ios_config:
       parents: radius server radius-srv1
       lines:
         - address ipv4 212.69.71.194 auth-port 1812 acct-port 1814
         - key 1pSbR2Dq
+    tags: radius-new
 
   - name: set radius old-config glob
     when: ( ansible_net_model is regex("4900") or ansible_net_model is regex("3560") or ansible_net_model is regex("ME3400"))
@@ -121,12 +124,13 @@
       lines:
         - no service call-home
 
+    # ansible_net_hostname would work also
   - name : security harderning 4
     ignore_errors: True
-    when: ( ansible_hostname is not regex("cmp")  )
+    when: (inventory_hostname is not regex("(?i)cmp") or inventory_hostname is not regex("(?i)linx-rt10") or (dhcp_required is defined) and (dhcp_required|bool == True) )  
     ios_config:
       lines:
-        - no service call-home
+        - no service dhcp
 
 
   - name: security on con line
