@@ -106,7 +106,7 @@
         - no ip http server
         - no ip http secure-server
         - no service exec-callback
-          #- no mop enabled
+          #- no mop enabled !- per interface
         - service tcp-keepalives-in
         - service tcp-keepalives-out
         - no ip domain lookup
