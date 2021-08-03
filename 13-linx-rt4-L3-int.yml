@@ -1,0 +1,18 @@
+---
+# gater L3 int from linx-rt4, ~ 540 tunnels
+- hosts: LINX-RT4-c2811_PKOBP
+  gather_facts: false
+  connection: network_cli
+  tasks:
+
+  - name: get ios facts hw
+    ios_facts:
+      #gather_subset: min
+      gather_network_resources: l3_interfaces
+
+  - debug:
+      msg: 
+        - "{{ansible_net_model}}"
+        - "{{inventory_hostname}}"
+        - "{{ansible_net_interfaces}}"
+

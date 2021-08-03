@@ -1,0 +1,287 @@
+{
+    "ansible_facts": {
+        "ansible_net_all_ipv4_addresses": [
+            "172.16.100.2",
+            "10.111.12.177",
+            "172.31.2.241",
+            "172.50.110.1",
+            "172.31.0.41",
+            "172.16.100.0",
+            "172.16.100.33",
+            "172.16.0.42",
+            "172.16.100.49",
+            "172.31.1.41"
+        ],
+        "ansible_net_all_ipv6_addresses": [],
+        "ansible_net_api": "cliconf",
+        "ansible_net_filesystems": [
+            "flash0:"
+        ],
+        "ansible_net_filesystems_info": {
+            "flash0:": {
+                "spacefree_kb": 127936.0,
+                "spacetotal_kb": 250476.0
+            }
+        },
+        "ansible_net_gather_network_resources": [],
+        "ansible_net_gather_subset": [
+            "hardware",
+            "default",
+            "interfaces"
+        ],
+        "ansible_net_hostname": "mpwik-rtpe-pruszkow",
+        "ansible_net_image": "flash:c1900-universalk9-mz.SPA.155-3.M4.bin",
+        "ansible_net_interfaces": {
+            "Embedded-Service-Engine0/0": {
+                "bandwidth": 10000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "0000.0000.0000",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "Embedded Service Engine"
+            },
+            "GigabitEthernet0/0": {
+                "bandwidth": 100000,
+                "description": "**do mpwik-sw-pru_fa0/23***",
+                "duplex": "Full",
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "a493.4c33.7120",
+                "mediatype": "RJ45",
+                "mtu": 1998,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/0.12": {
+                "bandwidth": 100000,
+                "description": "**MGT2 do mpwik-sw-pruszkow(3400)***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.111.12.177",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "a493.4c33.7120",
+                "mediatype": null,
+                "mtu": 1998,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/0.390": {
+                "bandwidth": 100000,
+                "description": "**do mpwik router sieci \"biznes\"***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.50.110.1",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "a493.4c33.7120",
+                "mediatype": null,
+                "mtu": 1998,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/0.391": {
+                "bandwidth": 100000,
+                "description": "*** do mpwik-rt-pru_fa0/1.391**",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.31.2.241",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "a493.4c33.7120",
+                "mediatype": null,
+                "mtu": 1998,
+                "operstatus": "administratively down",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/0.392": {
+                "bandwidth": 100000,
+                "description": "***do mpwik-rt-pru fa0/0***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.31.0.41",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "a493.4c33.7120",
+                "mediatype": null,
+                "mtu": 1998,
+                "operstatus": "administratively down",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/0.393": {
+                "bandwidth": 100000,
+                "description": "**mpwik s.biznes do mpwik-rt-pru_fa1/0***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.31.1.41",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "a493.4c33.7120",
+                "mediatype": null,
+                "mtu": 1998,
+                "operstatus": "administratively down",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/0.687": {
+                "bandwidth": 20000,
+                "description": "**mpls uplink via Emitel***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.100.2",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "a493.4c33.7120",
+                "mediatype": null,
+                "mtu": 1998,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/0.688": {
+                "bandwidth": 50000,
+                "description": "**mpls uplink via Pru->Pru2->Netia->LINX-SW5->LINX-SW1(wtrakcie migracji do pik11)**",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.100.33",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "a493.4c33.7120",
+                "mediatype": null,
+                "mtu": 1998,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/0.689": {
+                "bandwidth": 50000,
+                "description": "**mpls uplink via PRU do PRU2-RTPE1 -> Netia (anty unicast lock in Netia)**",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.100.0",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "a493.4c33.7120",
+                "mediatype": null,
+                "mtu": 1998,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/0.690": {
+                "bandwidth": 10000,
+                "description": "**UL via PRU2,Netia do PIK11-RT1**",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.100.49",
+                        "subnet": "29"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "a493.4c33.7120",
+                "mediatype": null,
+                "mtu": 1998,
+                "operstatus": "administratively down",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1": {
+                "bandwidth": 100000,
+                "description": "**tranms L2 via subint. Overhead(mpls L2 vc)=30B (zmierzony). MTU uzglednia 1978 via Emitel ***",
+                "duplex": "Full",
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "a493.4c33.7121",
+                "mediatype": "RJ45",
+                "mtu": 1948,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1.420": {
+                "bandwidth": 100000,
+                "description": "**L2 technologia via mpls pagi do mpwik-rtpe-czerniakowska ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "a493.4c33.7121",
+                "mediatype": null,
+                "mtu": 1948,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "Loopback0": {
+                "bandwidth": 8000000,
+                "description": "**mpls router-id**",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.0.42",
+                        "subnet": "32"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "up",
+                "type": null
+            }
+        },
+        "ansible_net_iostype": "IOS",
+        "ansible_net_memfree_mb": 39962.69921875,
+        "ansible_net_memtotal_mb": 318841.3203125,
+        "ansible_net_model": "CISCO1941/K9",
+        "ansible_net_neighbors": {
+            "GigabitEthernet0/0": [
+                {
+                    "host": "mpwik-sw-pruszkow.pagi",
+                    "port": "FastEthernet0/23"
+                }
+            ],
+            "GigabitEthernet0/1": [
+                {
+                    "host": "mpwik-sw-pruszkow.pagi",
+                    "port": "FastEthernet0/24"
+                }
+            ]
+        },
+        "ansible_net_python_version": "2.7.17",
+        "ansible_net_serialnum": "FGL162122AG",
+        "ansible_net_system": "ios",
+        "ansible_net_version": "15.5(3)M4",
+        "ansible_network_resources": {},
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "deprecations": [
+        {
+            "msg": "Distribution Ubuntu 18.04 on host mpwik-rtpe-pruszkow should use /usr/bin/python3, but is using /usr/bin/python for backward compatibility with prior Ansible releases. A future Ansible release will default to using the discovered platform python for this host. See https://docs.ansible.com/ansible/2.10/reference_appendices/interpreter_discovery.html for more information",
+            "version": "2.12"
+        }
+    ],
+    "failed": false
+}

@@ -1,0 +1,408 @@
+{
+    "ansible_facts": {
+        "ansible_net_all_ipv4_addresses": [
+            "172.18.3.113"
+        ],
+        "ansible_net_all_ipv6_addresses": [],
+        "ansible_net_api": "cliconf",
+        "ansible_net_filesystems": [
+            "flash:"
+        ],
+        "ansible_net_filesystems_info": {
+            "flash:": {
+                "spacefree_kb": 3915.0,
+                "spacetotal_kb": 7560.0
+            }
+        },
+        "ansible_net_gather_network_resources": [],
+        "ansible_net_gather_subset": [
+            "hardware",
+            "default",
+            "interfaces"
+        ],
+        "ansible_net_hostname": "ztm-wkm-sw1-c2950",
+        "ansible_net_image": "flash:/c2950-i6k2l2q4-mz.121-22.EA10a.bin",
+        "ansible_net_interfaces": {
+            "%": {
+                "ipv6": []
+            },
+            "FastEthernet0/1": {
+                "bandwidth": 10000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0014.f264.0601",
+                "mediatype": "100BaseTX",
+                "mtu": 1530,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/10": {
+                "bandwidth": 10000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0014.f264.060a",
+                "mediatype": "100BaseTX",
+                "mtu": 1530,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/11": {
+                "bandwidth": 10000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0014.f264.060b",
+                "mediatype": "100BaseTX",
+                "mtu": 1530,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/12": {
+                "bandwidth": 10000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0014.f264.060c",
+                "mediatype": "100BaseTX",
+                "mtu": 1530,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/13": {
+                "bandwidth": 10000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0014.f264.060d",
+                "mediatype": "100BaseTX",
+                "mtu": 1530,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/14": {
+                "bandwidth": 10000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0014.f264.060e",
+                "mediatype": "100BaseTX",
+                "mtu": 1530,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/15": {
+                "bandwidth": 10000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0014.f264.060f",
+                "mediatype": "100BaseTX",
+                "mtu": 1530,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/16": {
+                "bandwidth": 10000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0014.f264.0610",
+                "mediatype": "100BaseTX",
+                "mtu": 1530,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/17": {
+                "bandwidth": 10000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0014.f264.0611",
+                "mediatype": "100BaseTX",
+                "mtu": 1530,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/18": {
+                "bandwidth": 10000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0014.f264.0612",
+                "mediatype": "100BaseTX",
+                "mtu": 1530,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/19": {
+                "bandwidth": 10000,
+                "description": "*** Wewn. vlan 0 ZTM ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0014.f264.0613",
+                "mediatype": "100BaseTX",
+                "mtu": 1530,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/2": {
+                "bandwidth": 100000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0014.f264.0602",
+                "mediatype": "100BaseTX",
+                "mtu": 1530,
+                "operstatus": "up",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/20": {
+                "bandwidth": 100000,
+                "description": "*** Wewn. vlan 0 ZTM ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0014.f264.0614",
+                "mediatype": "100BaseTX",
+                "mtu": 1530,
+                "operstatus": "up",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/21": {
+                "bandwidth": 10000,
+                "description": "*** Wewn. vlan 1 ZTM ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0014.f264.0615",
+                "mediatype": "100BaseTX",
+                "mtu": 1530,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/22": {
+                "bandwidth": 100000,
+                "description": "*** Wewn. vlan 1 ZTM ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0014.f264.0616",
+                "mediatype": "100BaseTX",
+                "mtu": 1530,
+                "operstatus": "up",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/23": {
+                "bandwidth": 10000,
+                "description": "*** Wewn. vlan 2 ZTM ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0014.f264.0617",
+                "mediatype": "100BaseTX",
+                "mtu": 1530,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/24": {
+                "bandwidth": 100000,
+                "description": "*** Wewn. vlan 2 ZTM ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0014.f264.0618",
+                "mediatype": "100BaseTX",
+                "mtu": 1530,
+                "operstatus": "up",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/3": {
+                "bandwidth": 100000,
+                "description": "**10.1.133.0/24 do switcha ztm \"szlabany\" **",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0014.f264.0603",
+                "mediatype": "100BaseTX",
+                "mtu": 1530,
+                "operstatus": "up",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/4": {
+                "bandwidth": 100000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0014.f264.0604",
+                "mediatype": "100BaseTX",
+                "mtu": 1530,
+                "operstatus": "up",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/5": {
+                "bandwidth": 10000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0014.f264.0605",
+                "mediatype": "100BaseTX",
+                "mtu": 1530,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/6": {
+                "bandwidth": 100000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0014.f264.0606",
+                "mediatype": "100BaseTX",
+                "mtu": 1530,
+                "operstatus": "up",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/7": {
+                "bandwidth": 10000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0014.f264.0607",
+                "mediatype": "100BaseTX",
+                "mtu": 1530,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/8": {
+                "bandwidth": 100000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0014.f264.0608",
+                "mediatype": "100BaseTX",
+                "mtu": 1530,
+                "operstatus": "up",
+                "type": "Fast Ethernet"
+            },
+            "FastEthernet0/9": {
+                "bandwidth": 10000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0014.f264.0609",
+                "mediatype": "100BaseTX",
+                "mtu": 1530,
+                "operstatus": "down",
+                "type": "Fast Ethernet"
+            },
+            "GigabitEthernet0/1": {
+                "bandwidth": 1000000,
+                "description": "***uplink do ZTM-RT1_Gi0/2 ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0014.f264.0619",
+                "mediatype": "LX",
+                "mtu": 1530,
+                "operstatus": "up",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/2": {
+                "bandwidth": 1000000,
+                "description": "***DL do SW2_Gi0/1, plan zmiana: do SW3_Gi0/1 ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0014.f264.061a",
+                "mediatype": "LX",
+                "mtu": 1530,
+                "operstatus": "up",
+                "type": "Gigabit Ethernet"
+            },
+            "Vlan1": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "0014.f264.0600",
+                "mediatype": null,
+                "mtu": 1530,
+                "operstatus": "administratively down",
+                "type": "CPU Interface"
+            },
+            "Vlan101": {
+                "bandwidth": 1000000,
+                "description": "*** MGT, nie obsl vrf ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.18.3.113",
+                        "subnet": "28"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0014.f264.0600",
+                "mediatype": null,
+                "mtu": 1530,
+                "operstatus": "up",
+                "type": "CPU Interface"
+            },
+            "show": {
+                "ipv6": []
+            },
+            "ztm-wkm-sw1-c2950#": {
+                "ipv6": []
+            }
+        },
+        "ansible_net_iostype": "IOS",
+        "ansible_net_model": "WS-C2950G-24-EI",
+        "ansible_net_neighbors": {
+            "GigabitEthernet0/1": [
+                {
+                    "host": "ztm-rt1-c7204.pagi",
+                    "port": "GigabitEthernet0/3"
+                }
+            ],
+            "GigabitEthernet0/2": [
+                {
+                    "host": "ztm-wkm-sw3-c2950.pagi",
+                    "port": "GigabitEthernet0/1"
+                }
+            ]
+        },
+        "ansible_net_python_version": "2.7.17",
+        "ansible_net_serialnum": "FCZ0930Y1KY",
+        "ansible_net_system": "ios",
+        "ansible_net_version": "12.1(22)EA10a",
+        "ansible_network_resources": {},
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "deprecations": [
+        {
+            "msg": "Distribution Ubuntu 18.04 on host ztm-wkm-sw1 should use /usr/bin/python3, but is using /usr/bin/python for backward compatibility with prior Ansible releases. A future Ansible release will default to using the discovered platform python for this host. See https://docs.ansible.com/ansible/2.10/reference_appendices/interpreter_discovery.html for more information",
+            "version": "2.12"
+        }
+    ],
+    "failed": false
+}

@@ -1,0 +1,45 @@
+{
+    "ansible_facts": {
+        "ansible_net_api": "cliconf",
+        "ansible_net_filesystems": [
+            "flash:"
+        ],
+        "ansible_net_filesystems_info": {
+            "flash:": {
+                "spacefree_kb": 4443.0,
+                "spacetotal_kb": 31752.0
+            }
+        },
+        "ansible_net_gather_network_resources": [],
+        "ansible_net_gather_subset": [
+            "hardware",
+            "default"
+        ],
+        "ansible_net_hostname": "cmp-sw-marianska-c3560G",
+        "ansible_net_image": "flash:/c3560-ipservicesk9-mz.150-2.SE7/c3560-ipservicesk9-mz.150-2.SE7.bin",
+        "ansible_net_iostype": "IOS",
+        "ansible_net_memfree_mb": 30187.09375,
+        "ansible_net_memtotal_mb": 63119.39453125,
+        "ansible_net_model": "WS-C3560G-48TS",
+        "ansible_net_python_version": "2.7.17",
+        "ansible_net_serialnum": "FOC0927U2F1",
+        "ansible_net_stacked_models": [
+            "WS-C3560G-48TS-E"
+        ],
+        "ansible_net_stacked_serialnums": [
+            "FOC0927U2F1"
+        ],
+        "ansible_net_system": "ios",
+        "ansible_net_version": "15.0(2)SE7",
+        "ansible_network_resources": {},
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "deprecations": [
+        {
+            "msg": "Distribution Ubuntu 18.04 on host cmp-sw-marianska should use /usr/bin/python3, but is using /usr/bin/python for backward compatibility with prior Ansible releases. A future Ansible release will default to using the discovered platform python for this host. See https://docs.ansible.com/ansible/2.10/reference_appendices/interpreter_discovery.html for more information",
+            "version": "2.12"
+        }
+    ],
+    "failed": false
+}

@@ -1,0 +1,731 @@
+{
+    "ansible_facts": {
+        "ansible_net_all_ipv4_addresses": [
+            "10.254.1.86"
+        ],
+        "ansible_net_all_ipv6_addresses": [],
+        "ansible_net_api": "cliconf",
+        "ansible_net_filesystems": [
+            "flash:"
+        ],
+        "ansible_net_filesystems_info": {
+            "flash:": {
+                "spacefree_kb": 10389.0,
+                "spacetotal_kb": 31752.0
+            }
+        },
+        "ansible_net_gather_network_resources": [],
+        "ansible_net_gather_subset": [
+            "hardware",
+            "default",
+            "interfaces"
+        ],
+        "ansible_net_hostname": "LAND-SW5-c3560G",
+        "ansible_net_image": "flash:c3560-ipservicesk9-mz.150-2.SE9/c3560-ipservicesk9-mz.150-2.SE9.bin",
+        "ansible_net_interfaces": {
+            "GigabitEthernet0/1": {
+                "bandwidth": 100000,
+                "description": "****Szkola Tanca Isadora ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "6416.8dbd.5701",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9000,
+                "operstatus": "down",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/10": {
+                "bandwidth": 100000,
+                "description": "**Poreda-Junimex Development Wabrzyska 11 lok.89 ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "6416.8dbd.570a",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9000,
+                "operstatus": "up",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/11": {
+                "bandwidth": 10000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "6416.8dbd.570b",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9000,
+                "operstatus": "administratively down",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/12": {
+                "bandwidth": 10000,
+                "description": "** Variant Mazowia **",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "6416.8dbd.570c",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9000,
+                "operstatus": "administratively down",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/13": {
+                "bandwidth": 10000,
+                "description": "*** Variant MAzowia ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "6416.8dbd.570d",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9000,
+                "operstatus": "administratively down",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/14": {
+                "bandwidth": 10000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "6416.8dbd.570e",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9000,
+                "operstatus": "administratively down",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/15": {
+                "bandwidth": 10000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "6416.8dbd.570f",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9000,
+                "operstatus": "administratively down",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/16": {
+                "bandwidth": 10000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "6416.8dbd.5710",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9000,
+                "operstatus": "administratively down",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/17": {
+                "bandwidth": 10000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "6416.8dbd.5711",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9000,
+                "operstatus": "administratively down",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/18": {
+                "bandwidth": 100000,
+                "description": "******  Varriant Mazowia ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "6416.8dbd.5712",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9000,
+                "operstatus": "down",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/19": {
+                "bandwidth": 10000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "6416.8dbd.5713",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9000,
+                "operstatus": "administratively down",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/2": {
+                "bandwidth": 100000,
+                "description": "**** Jazz Bistro/Lemon ****",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "6416.8dbd.5702",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9000,
+                "operstatus": "up",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/20": {
+                "bandwidth": 10000,
+                "description": "**** cyfrowy.pl lok.193 ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "6416.8dbd.5714",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9000,
+                "operstatus": "down",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/21": {
+                "bandwidth": 10000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "6416.8dbd.5715",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9000,
+                "operstatus": "administratively down",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/22": {
+                "bandwidth": 10000,
+                "description": "**** Mobility plus ******",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "6416.8dbd.5716",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9000,
+                "operstatus": "administratively down",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/23": {
+                "bandwidth": 10000,
+                "description": "**NSTI LAND parking ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "6416.8dbd.5717",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9000,
+                "operstatus": "down",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/24": {
+                "bandwidth": 10000,
+                "description": "****** G-Cube vel FUNTECH *******",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "6416.8dbd.5718",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9000,
+                "operstatus": "administratively down",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/25": {
+                "bandwidth": 10000,
+                "description": "**** VOIGT lok. 86 ****",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "6416.8dbd.5719",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9000,
+                "operstatus": "down",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/26": {
+                "bandwidth": 100000,
+                "description": "*** Centrum Stomatologii **",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "6416.8dbd.571a",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9000,
+                "operstatus": "down",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/27": {
+                "bandwidth": 10000,
+                "description": "***Aleksandra Travel, Wabrzyska 11 lok.38***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "6416.8dbd.571b",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9000,
+                "operstatus": "down",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/28": {
+                "bandwidth": 10000,
+                "description": "**** Piotr - Piotr Zalewski *****",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "6416.8dbd.571c",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9000,
+                "operstatus": "administratively down",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/29": {
+                "bandwidth": 100000,
+                "description": "**CM-delikatesy ul. Wabrzyska 11 lok. 06/B **",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "6416.8dbd.571d",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9000,
+                "operstatus": "up",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/3": {
+                "bandwidth": 10000,
+                "description": "**** Variant/Mazowia ****",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "6416.8dbd.5703",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9000,
+                "operstatus": "administratively down",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/30": {
+                "bandwidth": 100000,
+                "description": "**Karbownik, lok. 168 ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "6416.8dbd.571e",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9000,
+                "operstatus": "up",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/31": {
+                "bandwidth": 10000,
+                "description": "***** PiP Patryk Piecko ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "6416.8dbd.571f",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9000,
+                "operstatus": "administratively down",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/32": {
+                "bandwidth": 10000,
+                "description": "*** Wydawnictwo Gospodarcze ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "6416.8dbd.5720",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9000,
+                "operstatus": "administratively down",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/33": {
+                "bandwidth": 10000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "6416.8dbd.5721",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9000,
+                "operstatus": "administratively down",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/34": {
+                "bandwidth": 10000,
+                "description": "****** Euroflora *******",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "6416.8dbd.5722",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9000,
+                "operstatus": "administratively down",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/35": {
+                "bandwidth": 10000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "6416.8dbd.5723",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9000,
+                "operstatus": "administratively down",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/36": {
+                "bandwidth": 10000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "6416.8dbd.5724",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9000,
+                "operstatus": "administratively down",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/37": {
+                "bandwidth": 10000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "6416.8dbd.5725",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9000,
+                "operstatus": "administratively down",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/38": {
+                "bandwidth": 10000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "6416.8dbd.5726",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9000,
+                "operstatus": "administratively down",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/39": {
+                "bandwidth": 10000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "6416.8dbd.5727",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9000,
+                "operstatus": "administratively down",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/4": {
+                "bandwidth": 10000,
+                "description": "******* Game Zone *******",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "6416.8dbd.5704",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9000,
+                "operstatus": "administratively down",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/40": {
+                "bandwidth": 10000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "6416.8dbd.5728",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9000,
+                "operstatus": "administratively down",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/41": {
+                "bandwidth": 10000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "6416.8dbd.5729",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9000,
+                "operstatus": "administratively down",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/42": {
+                "bandwidth": 10000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "6416.8dbd.572a",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9000,
+                "operstatus": "administratively down",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/43": {
+                "bandwidth": 10000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "6416.8dbd.572b",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9000,
+                "operstatus": "administratively down",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/44": {
+                "bandwidth": 10000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "6416.8dbd.572c",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9000,
+                "operstatus": "administratively down",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/45": {
+                "bandwidth": 10000,
+                "description": "**reserved ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "6416.8dbd.572d",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9000,
+                "operstatus": "administratively down",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/46": {
+                "bandwidth": 10000,
+                "description": "**reserved ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "6416.8dbd.572e",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9000,
+                "operstatus": "administratively down",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/47": {
+                "bandwidth": 1000000,
+                "description": "**do LAND-RT2_Gi0/1***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "6416.8dbd.572f",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9000,
+                "operstatus": "up",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/48": {
+                "bandwidth": 1000000,
+                "description": "**do LAND-SW1_Gi0/2***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "6416.8dbd.5730",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9000,
+                "operstatus": "up",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/49": {
+                "bandwidth": 10000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "6416.8dbd.5731",
+                "mediatype": "Not Present",
+                "mtu": 9000,
+                "operstatus": "down",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/5": {
+                "bandwidth": 10000,
+                "description": "*** Dorota Winiarz ****",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "6416.8dbd.5705",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9000,
+                "operstatus": "administratively down",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/50": {
+                "bandwidth": 10000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "6416.8dbd.5732",
+                "mediatype": "Not Present",
+                "mtu": 9000,
+                "operstatus": "down",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/51": {
+                "bandwidth": 1000000,
+                "description": "**do Astaldi**",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "6416.8dbd.5733",
+                "mediatype": "1000BaseBX10-D SFP",
+                "mtu": 9000,
+                "operstatus": "up",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/52": {
+                "bandwidth": 1000000,
+                "description": "**do MSZ Taneczna **",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "6416.8dbd.5734",
+                "mediatype": "1000BaseBX10-D SFP",
+                "mtu": 9000,
+                "operstatus": "up",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/6": {
+                "bandwidth": 10000,
+                "description": "**Tori Moru**",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "6416.8dbd.5706",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9000,
+                "operstatus": "down",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/7": {
+                "bandwidth": 1000000,
+                "description": "*** Muminek lok. 15/16 ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "6416.8dbd.5707",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9000,
+                "operstatus": "up",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/8": {
+                "bandwidth": 10000,
+                "description": "***Dobrzyksiegowi.pl***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "6416.8dbd.5708",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9000,
+                "operstatus": "administratively down",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/9": {
+                "bandwidth": 1000000,
+                "description": "***** MONTECOLOR ********",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "6416.8dbd.5709",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9000,
+                "operstatus": "up",
+                "type": "Gigabit Ethernet"
+            },
+            "Vlan1": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "6416.8dbd.5740",
+                "mediatype": null,
+                "mtu": 1998,
+                "operstatus": "administratively down",
+                "type": "EtherSVI"
+            },
+            "Vlan8": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "6416.8dbd.5741",
+                "mediatype": null,
+                "mtu": 1998,
+                "operstatus": "up",
+                "type": "EtherSVI"
+            },
+            "Vlan9": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.254.1.86",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "6416.8dbd.5742",
+                "mediatype": null,
+                "mtu": 1998,
+                "operstatus": "up",
+                "type": "EtherSVI"
+            }
+        },
+        "ansible_net_iostype": "IOS",
+        "ansible_net_memfree_mb": 29440.4140625,
+        "ansible_net_memtotal_mb": 63114.70703125,
+        "ansible_net_model": "WS-C3560G-48TS",
+        "ansible_net_neighbors": {
+            "GigabitEthernet0/47": [
+                {
+                    "host": "LAND-RT2-c1941.pagi",
+                    "port": "GigabitEthernet0/1"
+                }
+            ],
+            "GigabitEthernet0/48": [
+                {
+                    "host": "LAND-SW1-cMe3400-12CS-A.pagi",
+                    "port": "GigabitEthernet0/2"
+                }
+            ]
+        },
+        "ansible_net_python_version": "2.7.17",
+        "ansible_net_serialnum": "FOC1347Z6PJ",
+        "ansible_net_stacked_models": [
+            "WS-C3560G-48TS-E"
+        ],
+        "ansible_net_stacked_serialnums": [
+            "FOC1347Z6PJ"
+        ],
+        "ansible_net_system": "ios",
+        "ansible_net_version": "15.0(2)SE9",
+        "ansible_network_resources": {},
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "deprecations": [
+        {
+            "msg": "Distribution Ubuntu 18.04 on host LAND-SW5-c3560G should use /usr/bin/python3, but is using /usr/bin/python for backward compatibility with prior Ansible releases. A future Ansible release will default to using the discovered platform python for this host. See https://docs.ansible.com/ansible/2.10/reference_appendices/interpreter_discovery.html for more information",
+            "version": "2.12"
+        }
+    ],
+    "failed": false
+}

@@ -1,0 +1,60 @@
+---
+## change ip dhcp helper addr on SVI's 
+# intednded for ME3400 Cisco switches
+# # they don't support commad: sh run | sec interface for gathering facts
+#
+- hosts: cmp_routers_me3400
+  gather_facts: false
+  connection: network_cli
+  tasks:
+
+  - name: get ios facts
+    ios_facts:
+      gather_subset: min
+      #gather_network_resources: l3_interfaces
+
+      #- debug: var=ansible_net_model
+
+  - meta: end_play
+    when: ( ansible_net_model is not regex("(?i)ME-3400"))
+
+  - name: get SVI on interesting sub 192.168.0.0/16
+    ios_command:
+      commands:
+        - show ip int br | i 192.168
+    register: ipint
+    #         output example:
+#    #         "stdout_lines": [
+#            [
+#                "Vlan100                192.168.20.1    YES NVRAM  up                    up      ",
+#                "Vlan110                192.168.19.1    YES NVRAM  up                    down    ",
+#                "Vlan111                192.168.19.65   YES NVRAM  up                    down    ",
+#                "Vlan112                192.168.19.129  YES NVRAM  up                    down    ",
+#                "Loopback2              192.168.255.20  YES NVRAM  up                    up"
+#            ]
+#        ]
+#
+#
+    #  - debug: var=ipint.stdout_lines
+
+#  - name: enu ip int
+#    debug: 
+#      msg:  "{{item.split(' ')[0]}}"
+#    loop: "{{ipint.stdout_lines.0 }}"
+#    when: item is not regex("(?i)Loopback")
+#
+
+
+  - name: change helper address
+    ios_config:
+      lines:
+        - no ip helper-address
+        - ip helper-address 192.168.10.248
+      parents: "interface {{item.split(' ')[0]}}"
+    loop: "{{ipint.stdout_lines.0 }}"
+    when: item is not regex("(?i)Loopback")
+
+  - name: save config
+    ios_config:
+      save_when: changed
+

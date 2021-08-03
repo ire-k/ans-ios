@@ -1,0 +1,45 @@
+{
+    "ansible_facts": {
+        "ansible_net_api": "cliconf",
+        "ansible_net_filesystems": [
+            "flash:"
+        ],
+        "ansible_net_filesystems_info": {
+            "flash:": {
+                "spacefree_kb": 17982.0,
+                "spacetotal_kb": 31752.0
+            }
+        },
+        "ansible_net_gather_network_resources": [],
+        "ansible_net_gather_subset": [
+            "hardware",
+            "default"
+        ],
+        "ansible_net_hostname": "LINX-SW2-cME3400",
+        "ansible_net_image": "flash:me340x-metroaccessk9-mz.122-53.SE/me340x-metroaccessk9-mz.122-53.SE.bin",
+        "ansible_net_iostype": "IOS",
+        "ansible_net_memfree_mb": 48666.71875,
+        "ansible_net_memtotal_mb": 81414.546875,
+        "ansible_net_model": "ME-3400-24TS-D",
+        "ansible_net_python_version": "2.7.17",
+        "ansible_net_serialnum": "FOC1441V115",
+        "ansible_net_stacked_models": [
+            "ME-3400-24TS-D"
+        ],
+        "ansible_net_stacked_serialnums": [
+            "FOC1441V115"
+        ],
+        "ansible_net_system": "ios",
+        "ansible_net_version": "12.2(53)SE",
+        "ansible_network_resources": {},
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "deprecations": [
+        {
+            "msg": "Distribution Ubuntu 18.04 on host LINX-SW2-cME3400 should use /usr/bin/python3, but is using /usr/bin/python for backward compatibility with prior Ansible releases. A future Ansible release will default to using the discovered platform python for this host. See https://docs.ansible.com/ansible/2.10/reference_appendices/interpreter_discovery.html for more information",
+            "version": "2.12"
+        }
+    ],
+    "failed": false
+}

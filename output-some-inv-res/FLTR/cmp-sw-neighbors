@@ -1,0 +1,1032 @@
+"cmp-sw3-pias_c3560G"
+{
+  "GigabitEthernet0/44": [
+    {
+      "host": "bc16f568d8dd",
+      "port": "gi1"
+    }
+  ],
+  "GigabitEthernet0/50": [
+    {
+      "host": "cmp-sw4-pias_c3560G.pagi",
+      "port": "GigabitEthernet0/50"
+    }
+  ],
+  "GigabitEthernet0/51": [
+    {
+      "host": "cmp-sw4-pias_c3560G.pagi",
+      "port": "GigabitEthernet0/51"
+    }
+  ],
+  "GigabitEthernet0/52": [
+    {
+      "host": "cmp-rt3-cASR1002.pagi",
+      "port": "GigabitEthernet0/0/1"
+    }
+  ]
+}
+"cmp-sw4-pias_c3560G"
+{
+  "GigabitEthernet0/44": [
+    {
+      "host": "bc16f568d8dd",
+      "port": "gi25"
+    }
+  ],
+  "GigabitEthernet0/50": [
+    {
+      "host": "cmp-sw3-pias_c3560G.pagi",
+      "port": "GigabitEthernet0/50"
+    }
+  ],
+  "GigabitEthernet0/51": [
+    {
+      "host": "cmp-sw3-pias_c3560G.pagi",
+      "port": "GigabitEthernet0/51"
+    }
+  ],
+  "GigabitEthernet0/52": [
+    {
+      "host": "cmp-rt4-c7204.pagi",
+      "port": "GigabitEthernet0/3"
+    }
+  ]
+}
+"cmp-sw9-wisniowa"
+{
+  "GigabitEthernet0/11": [
+    {
+      "host": "T21P-E2805EC0BBA1DB",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/14": [
+    {
+      "host": "T21P-E2805EC0BBA1BE",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/19": [
+    {
+      "host": "T21P-E2805EC0BB542D",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/28": [
+    {
+      "host": "T21P-E2805EC0BBA192",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/29": [
+    {
+      "host": "T21P-E2805EC0BBA19D",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/32": [
+    {
+      "host": "T21P-E2805EC0BBA1DC",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/34": [
+    {
+      "host": "T21P-E2805EC0E77512",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/35": [
+    {
+      "host": "T21P-E2805EC0BB5301",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/51": [
+    {
+      "host": "cmp-sw8-nx3k-wisniowa.pagi(FOC1733R35Z)",
+      "port": "Ethernet1/51"
+    }
+  ],
+  "GigabitEthernet0/7": [
+    {
+      "host": "T21P-E2805EC0BBA197",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/8": [
+    {
+      "host": "T21P-E2805EC0D0DBBD",
+      "port": "WAN PORT"
+    }
+  ]
+}
+"cmp-sw-bialoleka2"
+{
+  "GigabitEthernet0/1": [
+    {
+      "host": "cmp-sw-bialoleka.pagi",
+      "port": "GigabitEthernet0/46"
+    }
+  ]
+}
+"cmp-sw-bialoleka"
+{
+  "GigabitEthernet0/11": [
+    {
+      "host": "T21P-E2805EC0BB562B",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/12": [
+    {
+      "host": "T21P-E2805EC0BB55BD",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/15": [
+    {
+      "host": "T21P-E2805EC0BB56A3",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/2": [
+    {
+      "host": "T21P-E2805EC0BB560B",
+      "port": "WAN PORT"
+    },
+    {
+      "host": "T21P-E2805EC0BB5666",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/3": [
+    {
+      "host": "T21P-E2805EC0BB5660",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/36": [
+    {
+      "host": "T21P-E2805EC0E76972",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/38": [
+    {
+      "host": "T21P-E2805EC0BC01B5",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/4": [
+    {
+      "host": "T21P-E2805EC0BB5619",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/40": [
+    {
+      "host": "T21P-E2805EC0BB45AF",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/46": [
+    {
+      "host": "cmp-sw-bialoleka2.pagi",
+      "port": "GigabitEthernet0/1"
+    }
+  ],
+  "GigabitEthernet0/47": [
+    {
+      "host": "cmp-sw-marianska-c3560G.pagi",
+      "port": "GigabitEthernet0/47"
+    },
+    {
+      "host": "cmp-sw-wilanow.pagi",
+      "port": "GigabitEthernet0/52"
+    },
+    {
+      "host": "cmp-rt3-cASR1002.pagi",
+      "port": "GigabitEthernet0/0/0"
+    },
+    {
+      "host": "cmp-sw-zoliborz.pagi",
+      "port": "GigabitEthernet0/48"
+    }
+  ],
+  "GigabitEthernet0/6": [
+    {
+      "host": "T21P-E2805EC0BB5667",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/9": [
+    {
+      "host": "T21P-E2805EC0BBA016",
+      "port": "WAN PORT"
+    }
+  ]
+}
+"cmp-sw-chmielna-c3560G"
+{
+  "GigabitEthernet0/14": [
+    {
+      "host": "T21P-E2805EC0BB516D",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/18": [
+    {
+      "host": "T21P-E2805EC0BB52DF",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/25": [
+    {
+      "host": "T21P-E2805EC0BB52EF",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/26": [
+    {
+      "host": "T21P-E2805EC0BB5351",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/34": [
+    {
+      "host": "cmp-sw-chmielna-c3560G.pagi",
+      "port": "GigabitEthernet0/38"
+    }
+  ],
+  "GigabitEthernet0/37": [
+    {
+      "host": "T21P-E2805EC0BB52DD",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/38": [
+    {
+      "host": "cmp-sw-chmielna-c3560G.pagi",
+      "port": "GigabitEthernet0/34"
+    }
+  ],
+  "GigabitEthernet0/40": [
+    {
+      "host": "T21P-E2805EC0BB9F2B",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/41": [
+    {
+      "host": "T21P-E2805EC0BBA1F4",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/45": [
+    {
+      "host": "T21P-E2805EC0BB553F",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/51": [
+    {
+      "host": "LINX-SW1-cME3600X.pagi",
+      "port": "GigabitEthernet0/4"
+    }
+  ],
+  "GigabitEthernet0/52": [
+    {
+      "host": "cmp-sw-bialoleka.pagi",
+      "port": "GigabitEthernet0/47"
+    },
+    {
+      "host": "cmp-sw-marianska-c3560G.pagi",
+      "port": "GigabitEthernet0/47"
+    },
+    {
+      "host": "cmp-sw-wilanow.pagi",
+      "port": "GigabitEthernet0/52"
+    },
+    {
+      "host": "cmp-rt3-cASR1002.pagi",
+      "port": "GigabitEthernet0/0/0"
+    },
+    {
+      "host": "cmp-sw-zoliborz.pagi",
+      "port": "GigabitEthernet0/48"
+    },
+    {
+      "host": "LINX-SW7-C4900.pagi",
+      "port": "TenGigabitEthernet1/5"
+    }
+  ]
+}
+"cmp-sw-goclaw_c3650G"
+{
+  "GigabitEthernet0/1": [
+    {
+      "host": "T21P-E2805EC0BB4509",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/10": [
+    {
+      "host": "T21P-E2805EC0BC01CB",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/12": [
+    {
+      "host": "T21P-E2805EC0BBFF00",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/14": [
+    {
+      "host": "T21P-E2805EC0BC0194",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/16": [
+    {
+      "host": "T21P-E2805EC0BC01B8",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/18": [
+    {
+      "host": "T21P-E2805EC0BC01A8",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/2": [
+    {
+      "host": "T21P-E2805EC0BB45DE",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/22": [
+    {
+      "host": "T21P-E2805EC0BBFEF7",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/25": [
+    {
+      "host": "T21P-E2805EC0BC01C9",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/4": [
+    {
+      "host": "T21P-E2805EC0BB45E0",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/45": [
+    {
+      "host": "cmp-rt-goclaw.pagi",
+      "port": "GigabitEthernet0/1"
+    }
+  ],
+  "GigabitEthernet0/46": [
+    {
+      "host": "CMP Goclaw",
+      "port": "bridgeLocal"
+    }
+  ],
+  "GigabitEthernet0/6": [
+    {
+      "host": "T21P-E2805EC0BB45B7",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/8": [
+    {
+      "host": "T21P-E2805EC0BBFEFB",
+      "port": "WAN PORT"
+    }
+  ]
+}
+"cmp-sw-jozefoslaw"
+{
+  "FastEthernet0/24": [
+    {
+      "host": "CMP Jozefoslaw",
+      "port": "bridge/ether1"
+    }
+  ]
+}
+"cmp-sw-lomianki"
+{
+  "GigabitEthernet0/12": [
+    {
+      "host": "T21P-E2805EC0BBA091",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/15": [
+    {
+      "host": "T21P-E2805EC0D0DAE5",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/17": [
+    {
+      "host": "SwitchD29B0C",
+      "port": "gi1"
+    }
+  ],
+  "GigabitEthernet0/18": [
+    {
+      "host": "T21P-E2805EC0BBA0F4",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/31": [
+    {
+      "host": "T21P-E2805EC0D0DAC4",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/33": [
+    {
+      "host": "T21P-E2805EC0D0DCDD",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/47": [
+    {
+      "host": "uksw-biznes.ibs.net.pl",
+      "port": "vlan405"
+    },
+    {
+      "host": "Warszawska 55 ",
+      "port": "bridge1"
+    },
+    {
+      "host": "Dolna 29E",
+      "port": "bridge1"
+    },
+    {
+      "host": "IBS-L2a",
+      "port": "bridge1"
+    }
+  ],
+  "GigabitEthernet0/48": [
+    {
+      "host": "cmp-rt-lomianki.pagi",
+      "port": "GigabitEthernet0/1"
+    }
+  ],
+  "GigabitEthernet0/5": [
+    {
+      "host": "T21P-E2805EC0D0DD0A",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/7": [
+    {
+      "host": "T21P-E2805EC0D0DD10",
+      "port": "WAN PORT"
+    }
+  ]
+}
+"cmp-sw-marianska-c3560G"
+{
+  "GigabitEthernet0/1": [
+    {
+      "host": "T21P-E2805EC0BCB7FE",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/10": [
+    {
+      "host": "T21P-E2805EC0BB5448",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/11": [
+    {
+      "host": "T21P-E2805EC0BCB758",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/12": [
+    {
+      "host": "T21P-E2805EC0BCB631",
+      "port": "WAN PORT"
+    },
+    {
+      "host": "T21P-E2805EC0BCB759",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/13": [
+    {
+      "host": "T21P-E2805EC0BCB62C",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/14": [
+    {
+      "host": "T21P-E2805EC0E77310",
+      "port": "WAN PORT"
+    },
+    {
+      "host": "T21P-E2805EC0899E25",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/16": [
+    {
+      "host": "T21P-E2805EC0BCB730",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/18": [
+    {
+      "host": "T21P-E2805EC0899E7E",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/2": [
+    {
+      "host": "T21P-E2805EC0BCB7B4",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/22": [
+    {
+      "host": "T21P-E2805EC0BCB62B",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/28": [
+    {
+      "host": "T21P-E2805EC0BCB622",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/3": [
+    {
+      "host": "T21P-E2805EC0BCB9A2",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/33": [
+    {
+      "host": "T21P-E2805EC0BCB801",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/4": [
+    {
+      "host": "T21P-E2805EC0BCB627",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/47": [
+    {
+      "host": "cmp-sw-bialoleka.pagi",
+      "port": "GigabitEthernet0/47"
+    },
+    {
+      "host": "cmp-sw-wilanow.pagi",
+      "port": "GigabitEthernet0/52"
+    },
+    {
+      "host": "cmp-rt3-cASR1002.pagi",
+      "port": "GigabitEthernet0/0/0"
+    },
+    {
+      "host": "cmp-sw-zoliborz.pagi",
+      "port": "GigabitEthernet0/48"
+    }
+  ],
+  "GigabitEthernet0/48": [
+    {
+      "host": "RouterMarianska",
+      "port": "bridge2"
+    },
+    {
+      "host": "RouterMarianska",
+      "port": "bridge1"
+    },
+    {
+      "host": "RouterMarianska",
+      "port": "ether2"
+    },
+    {
+      "host": "PE18-MGW",
+      "port": "Pagi_CMP-Marianska_3400/eoip-"
+    },
+    {
+      "host": "PE18-MGW",
+      "port": "Pagi_CMP-Marianska_3401/eoip-"
+    }
+  ],
+  "GigabitEthernet0/6": [
+    {
+      "host": "T21P-E2805EC0BCB625",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/8": [
+    {
+      "host": "T21P-E2805EC0BCB7B8",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/9": [
+    {
+      "host": "T21P-E2805EC0899E7D",
+      "port": "WAN PORT"
+    }
+  ]
+}
+"cmp-sw-ochota_c3400"
+{
+  "FastEthernet0/11": [
+    {
+      "host": "T21P-E2805EC0BB9F8C",
+      "port": "WAN PORT"
+    }
+  ],
+  "FastEthernet0/12": [
+    {
+      "host": "T21P-E2805EC0BBA272",
+      "port": "WAN PORT"
+    }
+  ],
+  "FastEthernet0/13": [
+    {
+      "host": "T21P-E2805EC0BC05B4",
+      "port": "WAN PORT"
+    }
+  ],
+  "FastEthernet0/14": [
+    {
+      "host": "T21P-E2805EC0BBA070",
+      "port": "WAN PORT"
+    }
+  ],
+  "FastEthernet0/15": [
+    {
+      "host": "T21P-E2805EC0BBFF08",
+      "port": "WAN PORT"
+    }
+  ],
+  "FastEthernet0/16": [
+    {
+      "host": "T21P-E2805EC0BBFEFC",
+      "port": "WAN PORT"
+    }
+  ],
+  "FastEthernet0/2": [
+    {
+      "host": "T21P-E2805EC0BBA1A7",
+      "port": "WAN PORT"
+    }
+  ],
+  "FastEthernet0/23": [
+    {
+      "host": "CMP Ochota",
+      "port": "bridge/ether1"
+    }
+  ],
+  "FastEthernet0/3": [
+    {
+      "host": "T21P-E2805EC0BBA0CE",
+      "port": "WAN PORT"
+    }
+  ],
+  "FastEthernet0/5": [
+    {
+      "host": "T21P-E2805EC0BB9FE2",
+      "port": "WAN PORT"
+    }
+  ],
+  "FastEthernet0/7": [
+    {
+      "host": "T21P-E2805EC0BBA26A",
+      "port": "WAN PORT"
+    }
+  ]
+}
+"cmp-sw-pawia"
+{
+  "FastEthernet0/12": [
+    {
+      "host": "T21P-E2805EC0BB5401",
+      "port": "WAN PORT"
+    }
+  ],
+  "FastEthernet0/24": [
+    {
+      "host": "cmp-rt-pawia-c1941",
+      "port": "GigabitEthernet0/1"
+    }
+  ],
+  "FastEthernet0/3": [
+    {
+      "host": "T21P-E2805EC0BB5663",
+      "port": "WAN PORT"
+    }
+  ],
+  "FastEthernet0/4": [
+    {
+      "host": "T21P-E2805EC0BB5632",
+      "port": "WAN PORT"
+    }
+  ],
+  "FastEthernet0/5": [
+    {
+      "host": "T21P-E2805EC0BB45D9",
+      "port": "WAN PORT"
+    }
+  ],
+  "FastEthernet0/6": [
+    {
+      "host": "T21P-E2805EC0BB45D8",
+      "port": "WAN PORT"
+    }
+  ],
+  "FastEthernet0/7": [
+    {
+      "host": "T21P-E2805EC0BB5228",
+      "port": "WAN PORT"
+    }
+  ],
+  "FastEthernet0/8": [
+    {
+      "host": "T21P-E2805EC0BB45A4",
+      "port": "WAN PORT"
+    }
+  ]
+}
+"cmp-sw-piasJP2"
+{
+  "FastEthernet0/2": [
+    {
+      "host": "00873187a33e",
+      "port": "gi37"
+    }
+  ],
+  "FastEthernet0/24": [
+    {
+      "host": "cmp-rt-piasJP2-c1941.pagi.pl",
+      "port": "GigabitEthernet0/1"
+    }
+  ]
+}
+"cmp-sw-ursynow"
+{
+  "FastEthernet0/17": [
+    {
+      "host": "CMP Ursynow",
+      "port": "bridge/ether1"
+    }
+  ]
+}
+"cmp-sw-wilanow"
+{
+  "GigabitEthernet0/1": [
+    {
+      "host": "T21P-E2805EC0BCB513",
+      "port": "WAN PORT"
+    },
+    {
+      "host": "T21P-E2805EC0BCB514",
+      "port": "WAN PORT"
+    },
+    {
+      "host": "T21P-E2805EC0BCB517",
+      "port": "WAN PORT"
+    },
+    {
+      "host": "T21P-E2805EC0BCB519",
+      "port": "WAN PORT"
+    },
+    {
+      "host": "T21P-E2805EC0E7645C",
+      "port": "WAN PORT"
+    },
+    {
+      "host": "T21P-E2805EC0BCB98C",
+      "port": "WAN PORT"
+    },
+    {
+      "host": "T21P-E2805EC0BCBA68",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/15": [
+    {
+      "host": "T21P-E2805EC0BCB516",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/20": [
+    {
+      "host": "T21P-E2805EC0BCBA1E",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/24": [
+    {
+      "host": "T21P-E2805EC0BCB904",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/26": [
+    {
+      "host": "T21P-E2805EC0BCB515",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/28": [
+    {
+      "host": "T21P-E2805EC0BCB9A9",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/35": [
+    {
+      "host": "T21P-E2805EC0E7687B",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/47": [
+    {
+      "host": "CMP Wilanow",
+      "port": "bridge/ether1"
+    }
+  ],
+  "GigabitEthernet0/52": [
+    {
+      "host": "cmp-sw-bialoleka.pagi",
+      "port": "GigabitEthernet0/47"
+    },
+    {
+      "host": "cmp-sw-marianska-c3560G.pagi",
+      "port": "GigabitEthernet0/47"
+    },
+    {
+      "host": "cmp-rt3-cASR1002.pagi",
+      "port": "GigabitEthernet0/0/0"
+    },
+    {
+      "host": "cmp-sw-zoliborz.pagi",
+      "port": "GigabitEthernet0/48"
+    }
+  ]
+}
+"cmp-sw-wola2"
+{
+  "GigabitEthernet0/14": [
+    {
+      "host": "T21P-E2805EC0BBA1A9",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/24": [
+    {
+      "host": "T21P-E2805EC0BBA1DA",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/27": [
+    {
+      "host": "T21P-E2805EC0BBA06D",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/28": [
+    {
+      "host": "T21P-E2805EC0BB4BFD",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/30": [
+    {
+      "host": "T21P-E2805EC0BBA29E",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/38": [
+    {
+      "host": "T21P-E2805EC0BBA020",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/4": [
+    {
+      "host": "T21P-E2805EC0BBA198",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/43": [
+    {
+      "host": "T21P-E2805EC0BBA20A",
+      "port": "WAN PORT"
+    }
+  ]
+}
+"cmp-sw-wola"
+{
+  "FastEthernet0/23": [
+    {
+      "host": "CMP Wola",
+      "port": "bridgeLocal/ether1"
+    }
+  ]
+}
+"cmp-sw-zoliborz"
+{
+  "GigabitEthernet0/10": [
+    {
+      "host": "T21P-E2805EC0BBA09A",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/11": [
+    {
+      "host": "T21P-E2805EC0BBA0AD",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/17": [
+    {
+      "host": "T21P-E2805EC0BB4753",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/19": [
+    {
+      "host": "T21P-E2805EC0BB4D84",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/33": [
+    {
+      "host": "T21P-E2805EC0BBA0AB",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/37": [
+    {
+      "host": "T21P-E2805EC0BBA181",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/38": [
+    {
+      "host": "T21P-E2805EC0BBA0A9",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/40": [
+    {
+      "host": "T21P-E2805EC0BBA0AE",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/43": [
+    {
+      "host": "T21P-E2805EC0BBA184",
+      "port": "WAN PORT"
+    }
+  ],
+  "GigabitEthernet0/47": [
+    {
+      "host": "CMP Zoliborz",
+      "port": "bridge/ether1"
+    }
+  ],
+  "GigabitEthernet0/48": [
+    {
+      "host": "cmp-sw-bialoleka.pagi",
+      "port": "GigabitEthernet0/47"
+    },
+    {
+      "host": "cmp-sw-marianska-c3560G.pagi",
+      "port": "GigabitEthernet0/47"
+    },
+    {
+      "host": "cmp-sw-wilanow.pagi",
+      "port": "GigabitEthernet0/52"
+    },
+    {
+      "host": "cmp-rt3-cASR1002.pagi",
+      "port": "GigabitEthernet0/0/0"
+    }
+  ],
+  "GigabitEthernet0/7": [
+    {
+      "host": "T21P-E2805EC0BB4751",
+      "port": "WAN PORT"
+    }
+  ]
+}

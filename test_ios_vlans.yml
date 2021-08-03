@@ -1,0 +1,13 @@
+- name: analyze output of ios_vlans read from file
+  hosts: localhost
+  gather_facts: False
+  vars:
+    vlans: "{{lookup('file', 'output_ios_vlans.json' ) | from_json }}"
+  tasks:
+    - debug:
+        msg: "{{vlans}}"
+
+    - name: enumerate vlans
+      debug:
+        msg: "{{item}}"
+      loop: "{{vlans | json_query('gathered[*].vlan_id') }}"

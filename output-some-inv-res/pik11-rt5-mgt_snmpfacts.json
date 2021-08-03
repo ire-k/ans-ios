@@ -1,0 +1,244 @@
+{
+    "ansible_facts": {
+        "ansible_net_all_ipv4_addresses": [
+            "10.123.123.169",
+            "10.123.9.1",
+            "10.111.176.145",
+            "212.69.81.116",
+            "10.111.232.18",
+            "10.111.1.5",
+            "10.111.232.5"
+        ],
+        "ansible_net_all_ipv6_addresses": [],
+        "ansible_net_api": "cliconf",
+        "ansible_net_filesystems": [
+            "disk0:"
+        ],
+        "ansible_net_filesystems_info": {
+            "disk0:": {
+                "spacefree_kb": 21040.0,
+                "spacetotal_kb": 46808.0
+            }
+        },
+        "ansible_net_gather_network_resources": [],
+        "ansible_net_gather_subset": [
+            "hardware",
+            "default",
+            "interfaces"
+        ],
+        "ansible_net_hostname": "PIK11-RT5-c7200_MGT",
+        "ansible_net_image": "disk0:c7200-advipservicesk9-mz.124-2.T.bin",
+        "ansible_net_interfaces": {
+            "FastEthernet0/0": {
+                "bandwidth": 100000,
+                "description": "**do PIK11-RT1_Gi0/0/6***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "000d.66a2.ec08",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "i82543 (Livengood)"
+            },
+            "FastEthernet0/0.3998": {
+                "bandwidth": 100000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.111.232.18",
+                        "subnet": "28"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "000d.66a2.ec08",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "i82543 (Livengood)"
+            },
+            "FastEthernet0/0.4000": {
+                "bandwidth": 100000,
+                "description": "**MGT ****",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.111.232.5",
+                        "subnet": "28"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "000d.66a2.ec08",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "i82543 (Livengood)"
+            },
+            "FastEthernet0/0.915130005": {
+                "bandwidth": 100000,
+                "description": "**** MGMT Ubiquiti Wolomin ****",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.123.123.169",
+                        "subnet": "29"
+                    },
+                    {
+                        "address": "10.123.9.1",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "000d.66a2.ec08",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "i82543 (Livengood)"
+            },
+            "FastEthernet0/0.915134000": {
+                "bandwidth": 100000,
+                "description": "**mgt sw wolomin**",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.111.176.145",
+                        "subnet": "28"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "000d.66a2.ec08",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "i82543 (Livengood)"
+            },
+            "FastEthernet0/1": {
+                "bandwidth": 100000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "000d.66a2.ec06",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "i82543 (Livengood)"
+            },
+            "FastEthernet3/0": {
+                "bandwidth": 100000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "000d.66a2.ec54",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "i82543 (Livengood)"
+            },
+            "FastEthernet3/1": {
+                "bandwidth": 100000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "000d.66a2.ec55",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "i82543 (Livengood)"
+            },
+            "Loopback0": {
+                "bandwidth": 8000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.81.116",
+                        "subnet": "32"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "up",
+                "type": null
+            },
+            "Loopback100": {
+                "bandwidth": 8000000,
+                "description": "**test**",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "administratively down",
+                "type": null
+            },
+            "Loopback2000": {
+                "bandwidth": 8000000,
+                "description": "**mgt***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.111.1.5",
+                        "subnet": "32"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "up",
+                "type": null
+            },
+            "Tunnel20808": {
+                "bandwidth": 1000,
+                "description": "pik11-rt5 cmp-rt-plock via petrotel pppoe bk",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "up",
+                "type": null
+            }
+        },
+        "ansible_net_iostype": "IOS",
+        "ansible_net_memfree_mb": 293246.375,
+        "ansible_net_memtotal_mb": 409630.73828125,
+        "ansible_net_model": "7204VXR",
+        "ansible_net_neighbors": {
+            "FastEthernet0/0": [
+                {
+                    "host": "PIK11-RT1-cASR920-24SZIM.pagi",
+                    "port": "GigabitEthernet0/0/6"
+                }
+            ],
+            "FastEthernet0/1": [
+                {
+                    "host": "PIK11-SW1-cME3600X",
+                    "port": "GigabitEthernet0/6"
+                }
+            ]
+        },
+        "ansible_net_python_version": "2.7.17",
+        "ansible_net_serialnum": "29354407",
+        "ansible_net_system": "ios",
+        "ansible_net_version": "12.4(2)T",
+        "ansible_network_resources": {},
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "deprecations": [
+        {
+            "msg": "Distribution Ubuntu 18.04 on host pik11-rt5-mgt should use /usr/bin/python3, but is using /usr/bin/python for backward compatibility with prior Ansible releases. A future Ansible release will default to using the discovered platform python for this host. See https://docs.ansible.com/ansible/2.10/reference_appendices/interpreter_discovery.html for more information",
+            "version": "2.12"
+        }
+    ],
+    "failed": false
+}

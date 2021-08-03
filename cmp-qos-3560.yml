@@ -1,0 +1,36 @@
+---
+# set qos PQ srr-queue on 3560G switches; cust cmp
+#
+- hosts: cmp
+  gather_facts: false
+  connection: network_cli
+  tasks:
+
+    # gather ios_facts network_res problems:
+    # WS-C3560-24PS      12.2(55)SE12          C3560-IPSERVICESK9-M
+    # ME-3400-24TS-A     12.2(55)SE3           ME340x-METROIPACCESSK9-M
+    #
+  - name: get ios facts minimal
+    ios_facts:
+      gather_subset: min
+      #gather_network_resources: l2_interfaces
+      #
+      #regex to be corrected !
+  - fail:
+      msg: platform not suitable
+    when: ansible_net_version is regex("12.2(55)")
+
+  - name: get ios facts network
+    ios_facts:
+      gather_network_resources: l2_interfaces
+ 
+  - debug: 
+      msg:
+        - "{{ansible_net_model}}"
+        - "{{ansible_net_interfaces}}"
+
+
+  - name: save config
+    ios_config:
+      save_when: never
+

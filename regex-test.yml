@@ -1,0 +1,35 @@
+
+## testing regex
+- hosts: localhost
+  gather_facts: false
+  vars:
+    switch_type:
+      - "WS-C3560-24PS"
+      - "WS-C3560G-48TS"
+      - "ME-3400-24TS-A"
+      - "some other crap ..."
+
+  tasks:  
+  - name: displ var
+    debug: var=switch_type 
+        
+  - name: iterate
+    debug: var=item
+    loop: "{{switch_type}}"
+    when: ( item is regex("ME-3400") or  item is regex("3560") )
+
+#        TASK [iterate var=item] *********************************************************************
+#        ok: [localhost] => (item=WS-C3560-24PS) => {
+#            "ansible_loop_var": "item",
+#            "item": "WS-C3560-24PS"
+#        }
+#        ok: [localhost] => (item=WS-C3560G-48TS) => {
+#            "ansible_loop_var": "item",
+#            "item": "WS-C3560G-48TS"
+#        }
+#        ok: [localhost] => (item=ME-3400-24TS-A) => {
+#            "ansible_loop_var": "item",
+#            "item": "ME-3400-24TS-A"
+#        }
+#        skipping: [localhost] => (item=some other crap ...) 
+#

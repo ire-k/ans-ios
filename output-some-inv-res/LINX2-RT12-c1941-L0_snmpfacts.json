@@ -1,0 +1,351 @@
+{
+    "ansible_facts": {
+        "ansible_net_all_ipv4_addresses": [
+            "212.69.75.109",
+            "10.104.104.1",
+            "172.16.255.225",
+            "212.69.81.245",
+            "10.99.99.1",
+            "10.100.100.1",
+            "10.2.2.1",
+            "212.69.65.133",
+            "10.4.4.1",
+            "212.69.71.217",
+            "10.102.102.1",
+            "10.97.97.1",
+            "10.254.1.205"
+        ],
+        "ansible_net_all_ipv6_addresses": [],
+        "ansible_net_api": "cliconf",
+        "ansible_net_filesystems": [
+            "flash0:"
+        ],
+        "ansible_net_filesystems_info": {
+            "flash0:": {
+                "spacefree_kb": 98000.0,
+                "spacetotal_kb": 250476.0
+            }
+        },
+        "ansible_net_gather_network_resources": [],
+        "ansible_net_gather_subset": [
+            "hardware",
+            "default",
+            "interfaces"
+        ],
+        "ansible_net_hostname": "LINX2-RT12-c1941_serwery",
+        "ansible_net_image": "flash:c1900-universalk9-mz.SPA.157-3.M5.bin",
+        "ansible_net_interfaces": {
+            "Embedded-Service-Engine0/0": {
+                "bandwidth": 10000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "0000.0000.0000",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "Embedded Service Engine"
+            },
+            "GigabitEthernet0/0": {
+                "bandwidth": 1000000,
+                "description": "** uplink ***",
+                "duplex": "Full",
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "885a.92a8.cd20",
+                "mediatype": "RJ45",
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/0.30": {
+                "bandwidth": 1000000,
+                "description": "*** Serwery BACKUP ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "885a.92a8.cd20",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/0.38": {
+                "bandwidth": 1000000,
+                "description": "*** Serwery PAGI LAN ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.100.100.1",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "885a.92a8.cd20",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/0.45": {
+                "bandwidth": 1000000,
+                "description": "***uplink Inet ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.65.133",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "885a.92a8.cd20",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/0.47": {
+                "bandwidth": 1000000,
+                "description": "*** Serwery port iLO ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.102.102.1",
+                        "subnet": "24"
+                    },
+                    {
+                        "address": "10.97.97.1",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "885a.92a8.cd20",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/0.48": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "885a.92a8.cd20",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "deleted",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/0.57": {
+                "bandwidth": 1000000,
+                "description": "*** Serwer RAKS test ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.75.109",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "885a.92a8.cd20",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/0.58": {
+                "bandwidth": 1000000,
+                "description": "*** Serwer RAKS ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.104.104.1",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "885a.92a8.cd20",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/0.59": {
+                "bandwidth": 1000000,
+                "description": "*** Mikrotik VPN Itkreator ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.4.4.1",
+                        "subnet": "30"
+                    },
+                    {
+                        "address": "212.69.71.217",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "885a.92a8.cd20",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/0.61": {
+                "bandwidth": 1000000,
+                "description": "**raks do pagi biuro***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.255.225",
+                        "subnet": "29"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "885a.92a8.cd20",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/0.62": {
+                "bandwidth": 1000000,
+                "description": "**srv ilo + itkreator + helpdesk **",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "885a.92a8.cd20",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/0.9": {
+                "bandwidth": 1000000,
+                "description": "***MGT ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.254.1.205",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "885a.92a8.cd20",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": "Full",
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "885a.92a8.cd21",
+                "mediatype": "RJ45",
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1.48": {
+                "bandwidth": 1000000,
+                "description": "** interface do backupow ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.99.99.1",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "885a.92a8.cd21",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "Loopback0": {
+                "bandwidth": 8000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.81.245",
+                        "subnet": "32"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "up",
+                "type": null
+            },
+            "Loopback1": {
+                "bandwidth": 8000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.2.2.1",
+                        "subnet": "32"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "up",
+                "type": null
+            },
+            "NVI0": {
+                "bandwidth": 56,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "up",
+                "type": null
+            }
+        },
+        "ansible_net_iostype": "IOS",
+        "ansible_net_memfree_mb": 33794.42578125,
+        "ansible_net_memtotal_mb": 316222.4453125,
+        "ansible_net_model": "CISCO1941/K9",
+        "ansible_net_neighbors": {
+            "GigabitEthernet0/0": [
+                {
+                    "host": "LINX2-SW1-cN3048TP.pagi(FOC1722R0EB)",
+                    "port": "Ethernet1/48"
+                }
+            ],
+            "GigabitEthernet0/1": [
+                {
+                    "host": "LINX2-SW1-cN3048TP.pagi(FOC1722R0EB)",
+                    "port": "Ethernet1/47"
+                }
+            ]
+        },
+        "ansible_net_python_version": "2.7.17",
+        "ansible_net_serialnum": "FCZ1752601B",
+        "ansible_net_system": "ios",
+        "ansible_net_version": "15.7(3)M5",
+        "ansible_network_resources": {},
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "deprecations": [
+        {
+            "msg": "Distribution Ubuntu 18.04 on host LINX2-RT12-c1941-L0 should use /usr/bin/python3, but is using /usr/bin/python for backward compatibility with prior Ansible releases. A future Ansible release will default to using the discovered platform python for this host. See https://docs.ansible.com/ansible/2.10/reference_appendices/interpreter_discovery.html for more information",
+            "version": "2.12"
+        }
+    ],
+    "failed": false
+}

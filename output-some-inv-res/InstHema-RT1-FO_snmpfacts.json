@@ -1,0 +1,125 @@
+{
+    "ansible_facts": {
+        "ansible_net_all_ipv4_addresses": [
+            "212.69.68.161",
+            "212.69.68.230",
+            "212.69.68.155",
+            "212.69.68.49"
+        ],
+        "ansible_net_all_ipv6_addresses": [],
+        "ansible_net_api": "cliconf",
+        "ansible_net_filesystems": [
+            "flash:"
+        ],
+        "ansible_net_filesystems_info": {
+            "flash:": {
+                "spacefree_kb": 22852.0,
+                "spacetotal_kb": 62512.0
+            }
+        },
+        "ansible_net_gather_network_resources": [],
+        "ansible_net_gather_subset": [
+            "hardware",
+            "default",
+            "interfaces"
+        ],
+        "ansible_net_hostname": "InstHema-RT1-c3845",
+        "ansible_net_image": "flash:c3845-adventerprisek9-mz.124-21a.bin",
+        "ansible_net_interfaces": {
+            "FastEthernet4/0": {
+                "bandwidth": 100000,
+                "description": "*** bk do Forum/Nov ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.68.49",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "0016.c8e6.4689",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "AmdFE"
+            },
+            "FastEthernet4/1": {
+                "bandwidth": 100000,
+                "description": "***uplink do KAW ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.68.155",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0016.c8e6.468a",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "AmdFE"
+            },
+            "GigabitEthernet0/0": {
+                "bandwidth": 1000000,
+                "description": "***Uplink FO do LAND; Tx1310nm Rx1550nm 20km SC<->SC***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.68.230",
+                        "subnet": "29"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0016.c8e6.4660",
+                "mediatype": "RJ45",
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "BCM1125 Internal MAC"
+            },
+            "GigabitEthernet0/1": {
+                "bandwidth": 1000000,
+                "description": "***do klienta ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.68.161",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0016.c8e6.4661",
+                "mediatype": "RJ45",
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "BCM1125 Internal MAC"
+            }
+        },
+        "ansible_net_iostype": "IOS",
+        "ansible_net_memfree_mb": 375509.61328125,
+        "ansible_net_memtotal_mb": 399912.83984375,
+        "ansible_net_model": "3845",
+        "ansible_net_neighbors": {
+            "GigabitEthernet0/1": [
+                {
+                    "host": "routera.ihit.waw.pl",
+                    "port": "2"
+                }
+            ]
+        },
+        "ansible_net_python_version": "2.7.17",
+        "ansible_net_serialnum": "FCZ123773W9",
+        "ansible_net_system": "ios",
+        "ansible_net_version": "12.4(21a)",
+        "ansible_network_resources": {},
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "deprecations": [
+        {
+            "msg": "Distribution Ubuntu 18.04 on host InstHema-RT1-FO should use /usr/bin/python3, but is using /usr/bin/python for backward compatibility with prior Ansible releases. A future Ansible release will default to using the discovered platform python for this host. See https://docs.ansible.com/ansible/2.10/reference_appendices/interpreter_discovery.html for more information",
+            "version": "2.12"
+        }
+    ],
+    "failed": false
+}

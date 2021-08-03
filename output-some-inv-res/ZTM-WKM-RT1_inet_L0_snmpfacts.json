@@ -1,0 +1,486 @@
+{
+    "ansible_facts": {
+        "ansible_net_all_ipv4_addresses": [
+            "172.18.0.125",
+            "212.69.70.227",
+            "172.18.1.125",
+            "212.69.70.238",
+            "172.18.2.110",
+            "172.18.2.118",
+            "212.69.70.238",
+            "10.1.225.254",
+            "172.18.3.125",
+            "10.1.133.254",
+            "10.1.125.254",
+            "212.69.70.240",
+            "172.18.4.125",
+            "172.18.3.134",
+            "172.18.3.134",
+            "172.18.3.110"
+        ],
+        "ansible_net_all_ipv6_addresses": [],
+        "ansible_net_api": "cliconf",
+        "ansible_net_filesystems": [
+            "disk2:"
+        ],
+        "ansible_net_filesystems_info": {
+            "disk2:": {
+                "spacefree_kb": 9964.0,
+                "spacetotal_kb": 124774.0
+            }
+        },
+        "ansible_net_gather_network_resources": [],
+        "ansible_net_gather_subset": [
+            "hardware",
+            "default",
+            "interfaces"
+        ],
+        "ansible_net_hostname": "ztm-rt1-c7204",
+        "ansible_net_image": "disk2:c7200-adventerprisek9-mz.150-1.M5.bin",
+        "ansible_net_interfaces": {
+            "GigabitEthernet0/1": {
+                "bandwidth": 1000000,
+                "description": "*** do JMDI ****",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "0015.faed.971b",
+                "mediatype": "ZX",
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/1.101": {
+                "bandwidth": 1000000,
+                "description": "***MGT ****",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.18.0.125",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0015.faed.971b",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/1.102": {
+                "bandwidth": 1000000,
+                "description": "**Transmisja do parkingow via JMDI ****",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.18.1.125",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0015.faed.971b",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/1.103": {
+                "bandwidth": 1000000,
+                "description": "**Inet via JMDI***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.70.227",
+                        "subnet": "29"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0015.faed.971b",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/1.292": {
+                "bandwidth": 1000000,
+                "description": "*** Wew. vlan 0 ZTM ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "0015.faed.971b",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/1.294": {
+                "bandwidth": 1000000,
+                "description": "*** Wew. vlan 1 ZTM ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "0015.faed.971b",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/1.296": {
+                "bandwidth": 1000000,
+                "description": "*** Wew. vlan 2 ZTM ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "0015.faed.971b",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/2": {
+                "bandwidth": 1000000,
+                "description": "**bk do PAGI ******",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "0015.faed.971a",
+                "mediatype": "CWDM-1470",
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/2.1829": {
+                "bandwidth": 1000000,
+                "description": "**Inet bk via VirtuaOp do LINX-SW3_eth1/0/3 ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.70.238",
+                        "subnet": "29"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0015.faed.971a",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/2.1830": {
+                "bandwidth": 1000000,
+                "description": "***Transmisja bk via VirtuaOp do LINX-SW3_Eth1/0/3 ****",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.18.2.118",
+                        "subnet": "29"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0015.faed.971a",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/2.298": {
+                "bandwidth": 1000000,
+                "description": "**Inet bk do PAGI ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.70.238",
+                        "subnet": "29"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "0015.faed.971a",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/2.299": {
+                "bandwidth": 1000000,
+                "description": "***Transmisja bk do PAGI ****",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.18.2.110",
+                        "subnet": "29"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "0015.faed.971a",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/2.599": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.18.3.110",
+                        "subnet": "29"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "0015.faed.971a",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/2.918294000": {
+                "bandwidth": 1000000,
+                "description": "**mgt do linx-rt15***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.18.3.134",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "0015.faed.971a",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/3": {
+                "bandwidth": 1000000,
+                "description": "** LAN Mlociny ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "0015.faed.9719",
+                "mediatype": "LX",
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/3.100": {
+                "bandwidth": 1000000,
+                "description": "*** LAN Mlociny ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.1.133.254",
+                        "subnet": "24"
+                    },
+                    {
+                        "address": "10.1.125.254",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0015.faed.9719",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/3.101": {
+                "bandwidth": 1000000,
+                "description": "***MGT switche Mlociny/WKM ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.18.3.125",
+                        "subnet": "28"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0015.faed.9719",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/3.102": {
+                "bandwidth": 1000000,
+                "description": "**LAN2 (nowy 2019.12)***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.1.225.254",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0015.faed.9719",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/3.292": {
+                "bandwidth": 1000000,
+                "description": "*** Wew. vlan 0 ZTM ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "0015.faed.9719",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/3.294": {
+                "bandwidth": 1000000,
+                "description": "*** Wew. vlan 1 ZTM ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "0015.faed.9719",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/3.296": {
+                "bandwidth": 1000000,
+                "description": "*** Wew. vlan 2 ZTM ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "0015.faed.9719",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "Loopback0": {
+                "bandwidth": 8000000,
+                "description": "***router id ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.70.240",
+                        "subnet": "32"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "up",
+                "type": null
+            },
+            "Loopback1": {
+                "bandwidth": 8000000,
+                "description": "***dla statystyk ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.18.4.125",
+                        "subnet": "32"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "up",
+                "type": null
+            },
+            "NVI0": {
+                "bandwidth": 56,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "up",
+                "type": null
+            },
+            "Tunnel51": {
+                "bandwidth": 100,
+                "description": "**mgt do linx-rt15 ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.18.3.134",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 17916,
+                "operstatus": "up",
+                "type": null
+            }
+        },
+        "ansible_net_iostype": "IOS",
+        "ansible_net_memfree_mb": 313743.65234375,
+        "ansible_net_memtotal_mb": 368498.11328125,
+        "ansible_net_model": "7204VXR",
+        "ansible_net_neighbors": {
+            "GigabitEthernet0/1": [
+                {
+                    "host": "ztm-sw-wawer.pagi",
+                    "port": "GigabitEthernet0/1"
+                },
+                {
+                    "host": "ztm-sw-ursus.pagi",
+                    "port": "GigabitEthernet0/1"
+                },
+                {
+                    "host": "ztm-sw-krakowska.pagi",
+                    "port": "GigabitEthernet0/1"
+                },
+                {
+                    "host": "ztm-sw-ursynow.pagi",
+                    "port": "GigabitEthernet0/1"
+                },
+                {
+                    "host": "ztm-sw-marymont.pagi",
+                    "port": "GigabitEthernet0/1"
+                },
+                {
+                    "host": "ztm-sw-wilanowska.pagi",
+                    "port": "GigabitEthernet0/1"
+                },
+                {
+                    "host": "ztm-sw-polczynska.pagi",
+                    "port": "GigabitEthernet0/1"
+                },
+                {
+                    "host": "ztm-sw-anin.pagi",
+                    "port": "GigabitEthernet0/1"
+                },
+                {
+                    "host": "ztm-sw-dw-wschodni.pagi",
+                    "port": "GigabitEthernet0/1"
+                }
+            ],
+            "GigabitEthernet0/3": [
+                {
+                    "host": "ztm-wkm-sw1-c2950.pagi",
+                    "port": "GigabitEthernet0/1"
+                }
+            ]
+        },
+        "ansible_net_python_version": "2.7.17",
+        "ansible_net_serialnum": "33854474",
+        "ansible_net_system": "ios",
+        "ansible_net_version": "15.0(1)M5",
+        "ansible_network_resources": {},
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "deprecations": [
+        {
+            "msg": "Distribution Ubuntu 18.04 on host ZTM-WKM-RT1_inet_L0 should use /usr/bin/python3, but is using /usr/bin/python for backward compatibility with prior Ansible releases. A future Ansible release will default to using the discovered platform python for this host. See https://docs.ansible.com/ansible/2.10/reference_appendices/interpreter_discovery.html for more information",
+            "version": "2.12"
+        }
+    ],
+    "failed": false
+}

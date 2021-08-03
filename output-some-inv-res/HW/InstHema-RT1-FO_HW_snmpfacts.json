@@ -1,0 +1,39 @@
+{
+    "ansible_facts": {
+        "ansible_net_api": "cliconf",
+        "ansible_net_filesystems": [
+            "flash:"
+        ],
+        "ansible_net_filesystems_info": {
+            "flash:": {
+                "spacefree_kb": 22852.0,
+                "spacetotal_kb": 62512.0
+            }
+        },
+        "ansible_net_gather_network_resources": [],
+        "ansible_net_gather_subset": [
+            "hardware",
+            "default"
+        ],
+        "ansible_net_hostname": "InstHema-RT1-c3845",
+        "ansible_net_image": "flash:c3845-adventerprisek9-mz.124-21a.bin",
+        "ansible_net_iostype": "IOS",
+        "ansible_net_memfree_mb": 375509.61328125,
+        "ansible_net_memtotal_mb": 399912.83984375,
+        "ansible_net_model": "3845",
+        "ansible_net_python_version": "2.7.17",
+        "ansible_net_serialnum": "FCZ123773W9",
+        "ansible_net_system": "ios",
+        "ansible_net_version": "12.4(21a)",
+        "ansible_network_resources": {},
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "deprecations": [
+        {
+            "msg": "Distribution Ubuntu 18.04 on host InstHema-RT1-FO should use /usr/bin/python3, but is using /usr/bin/python for backward compatibility with prior Ansible releases. A future Ansible release will default to using the discovered platform python for this host. See https://docs.ansible.com/ansible/2.10/reference_appendices/interpreter_discovery.html for more information",
+            "version": "2.12"
+        }
+    ],
+    "failed": false
+}

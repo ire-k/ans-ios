@@ -1,0 +1,37 @@
+{
+    "ansible_facts": {
+        "ansible_net_api": "cliconf",
+        "ansible_net_filesystems": [
+            "flash:"
+        ],
+        "ansible_net_filesystems_info": {
+            "flash:": {
+                "spacefree_kb": 3915.0,
+                "spacetotal_kb": 7560.0
+            }
+        },
+        "ansible_net_gather_network_resources": [],
+        "ansible_net_gather_subset": [
+            "hardware",
+            "default"
+        ],
+        "ansible_net_hostname": "ztm-wkm-sw1-c2950",
+        "ansible_net_image": "flash:/c2950-i6k2l2q4-mz.121-22.EA10a.bin",
+        "ansible_net_iostype": "IOS",
+        "ansible_net_model": "WS-C2950G-24-EI",
+        "ansible_net_python_version": "2.7.17",
+        "ansible_net_serialnum": "FCZ0930Y1KY",
+        "ansible_net_system": "ios",
+        "ansible_net_version": "12.1(22)EA10a",
+        "ansible_network_resources": {},
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "deprecations": [
+        {
+            "msg": "Distribution Ubuntu 18.04 on host ztm-wkm-sw1 should use /usr/bin/python3, but is using /usr/bin/python for backward compatibility with prior Ansible releases. A future Ansible release will default to using the discovered platform python for this host. See https://docs.ansible.com/ansible/2.10/reference_appendices/interpreter_discovery.html for more information",
+            "version": "2.12"
+        }
+    ],
+    "failed": false
+}

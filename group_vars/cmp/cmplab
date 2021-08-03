@@ -1,0 +1,4 @@
+dhcp_required: True
+ansible_become_password: "{{cmp_enable}}"
+ #ansible_user: irekk
+ #ansible_password: "{{irekk_pass}}"

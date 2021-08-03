@@ -1,0 +1,276 @@
+{
+    "ansible_facts": {
+        "ansible_net_all_ipv4_addresses": [
+            "212.69.65.98",
+            "10.0.0.2",
+            "10.254.253.205",
+            "212.69.65.125",
+            "212.69.65.100"
+        ],
+        "ansible_net_all_ipv6_addresses": [],
+        "ansible_net_api": "cliconf",
+        "ansible_net_filesystems": [
+            "bootflash:"
+        ],
+        "ansible_net_filesystems_info": {
+            "bootflash:": {
+                "spacefree_kb": 857108.0,
+                "spacetotal_kb": 1308020.0
+            }
+        },
+        "ansible_net_gather_network_resources": [],
+        "ansible_net_gather_subset": [
+            "hardware",
+            "default",
+            "interfaces"
+        ],
+        "ansible_net_hostname": "FINA-RT1-cASR920-4SZ",
+        "ansible_net_image": "bootflash:/asr920-universalk9_npe.16.07.01.SPA.bin",
+        "ansible_net_interfaces": {
+            "BDI1102": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.65.98",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "780c.f032.153f",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "BDI"
+            },
+            "BDI8": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.254.253.205",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "780c.f032.153f",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "BDI"
+            },
+            "GigabitEthernet0": {
+                "bandwidth": 10000,
+                "description": null,
+                "duplex": "Half",
+                "ipv4": [
+                    {
+                        "address": "10.0.0.2",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "780c.f032.1538",
+                "mediatype": "RJ45",
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "RP management port"
+            },
+            "GigabitEthernet0/0/0": {
+                "bandwidth": 1000000,
+                "description": "***do klienta - transmisja L2 1Gbps, 1G 2j 1310 LC-PC <-> SC/PC **",
+                "duplex": "Full",
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "780c.f032.1500",
+                "mediatype": "RJ45",
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "2xGE-4x10GE-FIXED"
+            },
+            "GigabitEthernet0/0/1": {
+                "bandwidth": 1000000,
+                "description": "**do klienta inet 1.001Gbps, 1G, 2j, LC/PC <-> SC-PC ***",
+                "duplex": "Full",
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "780c.f032.1501",
+                "mediatype": "RJ45",
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "2xGE-4x10GE-FIXED"
+            },
+            "Loopback0": {
+                "bandwidth": 8000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.65.125",
+                        "subnet": "32"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "up",
+                "type": null
+            },
+            "TenGigabitEthernet0/0/2": {
+                "bandwidth": 10000000,
+                "description": "**uplink_1 do LINX; SP-SM27WD020D-GP (GBC) Tx1270 Rx1330  10G 1j LC/PC<->SC/PC ***",
+                "duplex": "Full",
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "780c.f032.1502",
+                "mediatype": "SFP-LR",
+                "mtu": 9216,
+                "operstatus": "up",
+                "type": "2xGE-4x10GE-FIXED"
+            },
+            "TenGigabitEthernet0/0/3": {
+                "bandwidth": 1000000,
+                "description": "*** Uplink do LAND (backup) ***",
+                "duplex": "Full",
+                "ipv4": [
+                    {
+                        "address": "212.69.65.100",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "780c.f032.1503",
+                "mediatype": "ZX",
+                "mtu": 9216,
+                "operstatus": "up",
+                "type": "2xGE-4x10GE-FIXED"
+            },
+            "TenGigabitEthernet0/0/4": {
+                "bandwidth": 1000000,
+                "description": "***do klienta - transmisja L2 1Gbps, 1G 2j 1310 LC-PC <-> SC/PC **",
+                "duplex": "Full",
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "780c.f032.1504",
+                "mediatype": "LX",
+                "mtu": 9216,
+                "operstatus": "administratively down",
+                "type": "2xGE-4x10GE-FIXED"
+            },
+            "TenGigabitEthernet0/0/5": {
+                "bandwidth": 1000000,
+                "description": "**do klienta inet 1.001Gbps, 1G, 2j, LC/PC <-> SC-PC ***",
+                "duplex": "Full",
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "780c.f032.1505",
+                "mediatype": "LX",
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "2xGE-4x10GE-FIXED"
+            },
+            "Virtual-PPP4001": {
+                "bandwidth": 10000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "down",
+                "type": null
+            },
+            "pseudowire100001": {
+                "bandwidth": null,
+                "description": null,
+                "duplex": null,
+                "lineprotocol": null,
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": null,
+                "type": null
+            },
+            "pseudowire100002": {
+                "bandwidth": null,
+                "description": null,
+                "duplex": null,
+                "lineprotocol": null,
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": null,
+                "type": null
+            },
+            "pseudowire100003": {
+                "bandwidth": null,
+                "description": null,
+                "duplex": null,
+                "lineprotocol": null,
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": null,
+                "type": null
+            },
+            "pseudowire100004": {
+                "bandwidth": null,
+                "description": null,
+                "duplex": null,
+                "lineprotocol": null,
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": null,
+                "type": null
+            },
+            "pseudowire100005": {
+                "bandwidth": null,
+                "description": null,
+                "duplex": null,
+                "lineprotocol": null,
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": null,
+                "type": null
+            }
+        },
+        "ansible_net_iostype": "IOS-XE",
+        "ansible_net_memfree_mb": 642484.5390625,
+        "ansible_net_memtotal_mb": 902294.890625,
+        "ansible_net_model": "ASR-920-4SZ-A",
+        "ansible_net_neighbors": {
+            "TenGigabitEthernet0/0/2": [
+                {
+                    "host": "LINX-RT13_cASR920-24SZIM.pagi",
+                    "port": "TenGigabitEthernet0/0/26"
+                }
+            ],
+            "TenGigabitEthernet0/0/3": [
+                {
+                    "host": "LAND-SW1-cMe3400-12CS-A.pagi",
+                    "port": "GigabitEthernet0/15"
+                }
+            ]
+        },
+        "ansible_net_python_version": "2.7.17",
+        "ansible_net_serialnum": "CAT2214U8Z6",
+        "ansible_net_system": "ios",
+        "ansible_net_version": "16.07.01",
+        "ansible_network_resources": {},
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "deprecations": [
+        {
+            "msg": "Distribution Ubuntu 18.04 on host FINA-RT1-cASR920-Loop0 should use /usr/bin/python3, but is using /usr/bin/python for backward compatibility with prior Ansible releases. A future Ansible release will default to using the discovered platform python for this host. See https://docs.ansible.com/ansible/2.10/reference_appendices/interpreter_discovery.html for more information",
+            "version": "2.12"
+        }
+    ],
+    "failed": false
+}

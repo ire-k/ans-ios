@@ -1,0 +1,45 @@
+{
+    "ansible_facts": {
+        "ansible_net_api": "cliconf",
+        "ansible_net_filesystems": [
+            "flash:"
+        ],
+        "ansible_net_filesystems_info": {
+            "flash:": {
+                "spacefree_kb": 4851.5,
+                "spacetotal_kb": 56574.0
+            }
+        },
+        "ansible_net_gather_network_resources": [],
+        "ansible_net_gather_subset": [
+            "hardware",
+            "default"
+        ],
+        "ansible_net_hostname": "PIK11-SW1-cME3600X",
+        "ansible_net_image": "flash:me360x-universalk9-mz.156-2.SP4/me360x-universalk9-mz.156-2.SP4.bin",
+        "ansible_net_iostype": "IOS",
+        "ansible_net_memfree_mb": 616380.2578125,
+        "ansible_net_memtotal_mb": 796786.71484375,
+        "ansible_net_model": "ME-3600X-24FS-M",
+        "ansible_net_python_version": "2.7.17",
+        "ansible_net_serialnum": "FOC1537X1G8",
+        "ansible_net_stacked_models": [
+            "ME-3600X-24FS-M"
+        ],
+        "ansible_net_stacked_serialnums": [
+            "FOC1537X1G8"
+        ],
+        "ansible_net_system": "ios",
+        "ansible_net_version": "15.6(2)SP4",
+        "ansible_network_resources": {},
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "deprecations": [
+        {
+            "msg": "Distribution Ubuntu 18.04 on host pik11-sw1-cme3600 should use /usr/bin/python3, but is using /usr/bin/python for backward compatibility with prior Ansible releases. A future Ansible release will default to using the discovered platform python for this host. See https://docs.ansible.com/ansible/2.10/reference_appendices/interpreter_discovery.html for more information",
+            "version": "2.12"
+        }
+    ],
+    "failed": false
+}

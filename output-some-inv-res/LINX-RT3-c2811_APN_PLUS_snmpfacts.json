@@ -1,0 +1,464 @@
+{
+    "ansible_facts": {
+        "ansible_net_all_ipv4_addresses": [
+            "192.168.10.145",
+            "212.69.81.11",
+            "10.254.1.197",
+            "10.254.1.197",
+            "192.168.133.158",
+            "212.69.81.6",
+            "192.168.191.10",
+            "192.168.12.145"
+        ],
+        "ansible_net_all_ipv6_addresses": [],
+        "ansible_net_api": "cliconf",
+        "ansible_net_filesystems": [
+            "flash:"
+        ],
+        "ansible_net_filesystems_info": {
+            "flash:": {
+                "spacefree_kb": 9448.0,
+                "spacetotal_kb": 62516.0
+            }
+        },
+        "ansible_net_gather_network_resources": [],
+        "ansible_net_gather_subset": [
+            "hardware",
+            "default",
+            "interfaces"
+        ],
+        "ansible_net_hostname": "LINX-RT3-c2811_APN_PLUS",
+        "ansible_net_image": "flash:c2800nm-advsecurityk9-mz.124-12c.bin",
+        "ansible_net_interfaces": {
+            "%": {
+                "ipv6": []
+            },
+            "FastEthernet0/0": {
+                "bandwidth": 100000,
+                "description": "***do LINX-SW2-fa0/21 ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "0018.b921.db20",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "MV96340 Ethernet"
+            },
+            "FastEthernet0/0.17": {
+                "bandwidth": 100000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "0018.b921.db20",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "deleted",
+                "type": "MV96340 Ethernet"
+            },
+            "FastEthernet0/0.18": {
+                "bandwidth": 100000,
+                "description": "***PKOBP LAN2**",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "192.168.12.145",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0018.b921.db20",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "MV96340 Ethernet"
+            },
+            "FastEthernet0/0.19": {
+                "bandwidth": 100000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "0018.b921.db20",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "MV96340 Ethernet"
+            },
+            "FastEthernet0/0.20": {
+                "bandwidth": 100000,
+                "description": "*** uplink do LINX-RT1 ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.81.11",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0018.b921.db20",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "MV96340 Ethernet"
+            },
+            "FastEthernet0/0.22": {
+                "bandwidth": 100000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "0018.b921.db20",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "deleted",
+                "type": "MV96340 Ethernet"
+            },
+            "FastEthernet0/0.32": {
+                "bandwidth": 100000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "0018.b921.db20",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "deleted",
+                "type": "MV96340 Ethernet"
+            },
+            "FastEthernet0/0.35": {
+                "bandwidth": 100000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "0018.b921.db20",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "deleted",
+                "type": "MV96340 Ethernet"
+            },
+            "FastEthernet0/0.3503": {
+                "bandwidth": 100000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "0018.b921.db20",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "deleted",
+                "type": "MV96340 Ethernet"
+            },
+            "FastEthernet0/0.512": {
+                "bandwidth": 100000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "0018.b921.db20",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "deleted",
+                "type": "MV96340 Ethernet"
+            },
+            "FastEthernet0/0.9": {
+                "bandwidth": 100000,
+                "description": "***MGT***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.254.1.197",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "0018.b921.db20",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "MV96340 Ethernet"
+            },
+            "FastEthernet0/0.91": {
+                "bandwidth": 100000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "0018.b921.db20",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "deleted",
+                "type": "MV96340 Ethernet"
+            },
+            "FastEthernet0/1": {
+                "bandwidth": 100000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "0018.b921.db21",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "MV96340 Ethernet"
+            },
+            "FastEthernet0/1.17": {
+                "bandwidth": 100000,
+                "description": "*** do gsm_cisco i pko_bp ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "192.168.10.145",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0018.b921.db21",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "MV96340 Ethernet"
+            },
+            "FastEthernet0/1.22": {
+                "bandwidth": 100000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "0018.b921.db21",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "deleted",
+                "type": "MV96340 Ethernet"
+            },
+            "FastEthernet0/1.3506": {
+                "bandwidth": 100000,
+                "description": "**Exatel->APN Plus dzierzawione 2Mbps ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "192.168.191.10",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0018.b921.db21",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "MV96340 Ethernet"
+            },
+            "FastEthernet0/1.9": {
+                "bandwidth": 100000,
+                "description": "***MGT***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.254.1.197",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0018.b921.db21",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "MV96340 Ethernet"
+            },
+            "LINX-RT3-c2811_APN_PLUS#": {
+                "ipv6": []
+            },
+            "Loopback0": {
+                "bandwidth": 8000000,
+                "description": "** SRC dla Tun0 duze GRE do APN PLUS ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "192.168.133.158",
+                        "subnet": "32"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "up",
+                "type": null
+            },
+            "Loopback1": {
+                "bandwidth": 8000000,
+                "description": "*** src dla crypto map CM-Polkomtel",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.81.6",
+                        "subnet": "32"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "up",
+                "type": null
+            },
+            "Loopback100": {
+                "bandwidth": 8000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "up",
+                "type": null
+            },
+            "Serial0/0/0": {
+                "bandwidth": 1544,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": null
+            },
+            "Serial0/0/0.101": {
+                "bandwidth": 1544,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "deleted",
+                "type": null
+            },
+            "Serial0/0/0.102": {
+                "bandwidth": 1544,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "deleted",
+                "type": null
+            },
+            "Serial0/0/0.105": {
+                "bandwidth": 1544,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "deleted",
+                "type": null
+            },
+            "Serial0/0/0.106": {
+                "bandwidth": 1544,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "deleted",
+                "type": null
+            },
+            "Serial0/0/0.109": {
+                "bandwidth": 1544,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "deleted",
+                "type": null
+            },
+            "Serial0/0/0.113": {
+                "bandwidth": 1544,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "deleted",
+                "type": null
+            },
+            "Serial0/0/1": {
+                "bandwidth": 1544,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": null
+            },
+            "Tunnel0": {
+                "bandwidth": 9,
+                "description": "***duze GRE do APN Polkomtel***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "up",
+                "type": null
+            },
+            "show": {
+                "ipv6": []
+            }
+        },
+        "ansible_net_iostype": "IOS",
+        "ansible_net_memfree_mb": 437127.1875,
+        "ansible_net_memtotal_mb": 464060.359375,
+        "ansible_net_model": "2811",
+        "ansible_net_neighbors": {
+            "FastEthernet0/0": [
+                {
+                    "host": "LINX-SW2-cME3400.pagi",
+                    "port": "FastEthernet0/22"
+                }
+            ],
+            "FastEthernet0/1": [
+                {
+                    "host": "LINX-SW6-cME3600X.pagi",
+                    "port": "GigabitEthernet0/7"
+                }
+            ]
+        },
+        "ansible_net_python_version": "2.7.17",
+        "ansible_net_serialnum": "FCZ103271YU",
+        "ansible_net_system": "ios",
+        "ansible_net_version": "12.4(12c)",
+        "ansible_network_resources": {},
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "deprecations": [
+        {
+            "msg": "Distribution Ubuntu 18.04 on host LINX-RT3-c2811_APN_PLUS should use /usr/bin/python3, but is using /usr/bin/python for backward compatibility with prior Ansible releases. A future Ansible release will default to using the discovered platform python for this host. See https://docs.ansible.com/ansible/2.10/reference_appendices/interpreter_discovery.html for more information",
+            "version": "2.12"
+        }
+    ],
+    "failed": false
+}

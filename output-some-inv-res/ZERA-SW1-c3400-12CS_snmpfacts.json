@@ -1,0 +1,419 @@
+{
+    "ansible_facts": {
+        "ansible_net_all_ipv4_addresses": [
+            "10.1.1.42",
+            "10.11.50.2",
+            "10.254.1.192",
+            "10.10.10.2",
+            "10.34.9.2",
+            "10.19.26.2",
+            "10.254.4.2"
+        ],
+        "ansible_net_all_ipv6_addresses": [],
+        "ansible_net_api": "cliconf",
+        "ansible_net_filesystems": [
+            "flash:"
+        ],
+        "ansible_net_filesystems_info": {
+            "flash:": {
+                "spacefree_kb": 7487.5,
+                "spacetotal_kb": 31752.0
+            }
+        },
+        "ansible_net_gather_network_resources": [],
+        "ansible_net_gather_subset": [
+            "hardware",
+            "default",
+            "interfaces"
+        ],
+        "ansible_net_hostname": "ZERA-SW1-cMe3400-12CS",
+        "ansible_net_image": "flash:me340x-metroipaccessk9-mz.122-60.EZ10.bin",
+        "ansible_net_interfaces": {
+            "GigabitEthernet0/1": {
+                "bandwidth": 1000000,
+                "description": "***uplink ODR***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0025.46f7.eb01",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9030,
+                "operstatus": "up",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/10": {
+                "bandwidth": 10000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0025.46f7.eb0a",
+                "mediatype": "Not Present",
+                "mtu": 9030,
+                "operstatus": "administratively down",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/11": {
+                "bandwidth": 1000000,
+                "description": "***** AGP Metro Jagielonska  ******",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0025.46f7.eb0b",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9030,
+                "operstatus": "up",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/12": {
+                "bandwidth": 100000,
+                "description": "*** test itsa goldap ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0025.46f7.eb0c",
+                "mediatype": "Not Present",
+                "mtu": 9030,
+                "operstatus": "down",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/13": {
+                "bandwidth": 10000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0025.46f7.eb0d",
+                "mediatype": "Not Present",
+                "mtu": 9030,
+                "operstatus": "down",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/14": {
+                "bandwidth": 10000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0025.46f7.eb0e",
+                "mediatype": "Not Present",
+                "mtu": 9030,
+                "operstatus": "administratively down",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/15": {
+                "bandwidth": 1000000,
+                "description": "*** Ubiquiti S1 ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0025.46f7.eb0f",
+                "mediatype": "1000BaseBX10-U SFP",
+                "mtu": 9030,
+                "operstatus": "up",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/16": {
+                "bandwidth": 10000,
+                "description": "*** Ubiquiti S2 ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0025.46f7.eb10",
+                "mediatype": "Not Present",
+                "mtu": 9030,
+                "operstatus": "down",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/2": {
+                "bandwidth": 1000000,
+                "description": "***do ZERA-SW2-Me3400_Gi0/1****",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0025.46f7.eb02",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9030,
+                "operstatus": "up",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/3": {
+                "bandwidth": 1000000,
+                "description": "**** APS_Energia  *****",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0025.46f7.eb03",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9030,
+                "operstatus": "up",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/4": {
+                "bandwidth": 1000000,
+                "description": "****  Inter-Team_Bial ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0025.46f7.eb04",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9030,
+                "operstatus": "down",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/5": {
+                "bandwidth": 1000000,
+                "description": "*** Transmisja do Slawex/KGL ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0025.46f7.eb05",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9030,
+                "operstatus": "up",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/6": {
+                "bandwidth": 1000000,
+                "description": "***RL MPWiK JAG65/67 Transm. ****",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0025.46f7.eb06",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9030,
+                "operstatus": "up",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/7": {
+                "bandwidth": 1000000,
+                "description": "*** Trans RL ITSA Goldapska ****",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0025.46f7.eb07",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9030,
+                "operstatus": "up",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/8": {
+                "bandwidth": 1000000,
+                "description": "** podejrzany/niesprawny ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0025.46f7.eb08",
+                "mediatype": "Not Present",
+                "mtu": 9030,
+                "operstatus": "administratively down",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/9": {
+                "bandwidth": 1000000,
+                "description": "**ZTM Mlociny bk ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0025.46f7.eb09",
+                "mediatype": "Not Present",
+                "mtu": 9030,
+                "operstatus": "down",
+                "type": "Gigabit Ethernet"
+            },
+            "Vlan1": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "0025.46f7.eb40",
+                "mediatype": null,
+                "mtu": 1998,
+                "operstatus": "administratively down",
+                "type": "EtherSVI"
+            },
+            "Vlan11": {
+                "bandwidth": 1000000,
+                "description": "***MGT Zeran ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.254.4.2",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0025.46f7.eb42",
+                "mediatype": null,
+                "mtu": 1998,
+                "operstatus": "up",
+                "type": "EtherSVI"
+            },
+            "Vlan1150": {
+                "bandwidth": 1000000,
+                "description": "**landt test mtu**",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.11.50.2",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0025.46f7.eb44",
+                "mediatype": null,
+                "mtu": 1998,
+                "operstatus": "up",
+                "type": "EtherSVI"
+            },
+            "Vlan1926": {
+                "bandwidth": 1000000,
+                "description": "**landt test mtu**",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.19.26.2",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0025.46f7.eb45",
+                "mediatype": null,
+                "mtu": 1998,
+                "operstatus": "up",
+                "type": "EtherSVI"
+            },
+            "Vlan3409": {
+                "bandwidth": 1000000,
+                "description": "**landt test mtu**",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.34.9.2",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0025.46f7.eb46",
+                "mediatype": null,
+                "mtu": 1998,
+                "operstatus": "up",
+                "type": "EtherSVI"
+            },
+            "Vlan3912": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.1.1.42",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0025.46f7.eb43",
+                "mediatype": null,
+                "mtu": 1998,
+                "operstatus": "up",
+                "type": "EtherSVI"
+            },
+            "Vlan9": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.254.1.192",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0025.46f7.eb41",
+                "mediatype": null,
+                "mtu": 1998,
+                "operstatus": "up",
+                "type": "EtherSVI"
+            },
+            "Vlan974": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.10.10.2",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0025.46f7.eb47",
+                "mediatype": null,
+                "mtu": 1998,
+                "operstatus": "up",
+                "type": "EtherSVI"
+            }
+        },
+        "ansible_net_iostype": "IOS",
+        "ansible_net_memfree_mb": 25796.5703125,
+        "ansible_net_memtotal_mb": 57920.43359375,
+        "ansible_net_model": "ME-3400G-12CS-D",
+        "ansible_net_neighbors": {
+            "GigabitEthernet0/1": [
+                {
+                    "host": "ODR--SW1-c2970_k.windy.pagi",
+                    "port": "GigabitEthernet0/21"
+                }
+            ],
+            "GigabitEthernet0/11": [
+                {
+                    "host": "sw-AGP-Jagiellonska.pagi",
+                    "port": "GigabitEthernet0/2"
+                }
+            ],
+            "GigabitEthernet0/2": [
+                {
+                    "host": "ZERA-SW2-cMe3400",
+                    "port": "GigabitEthernet0/1"
+                }
+            ],
+            "GigabitEthernet0/3": [
+                {
+                    "host": "switch_APS",
+                    "port": "GigabitEthernet0/1"
+                }
+            ],
+            "GigabitEthernet0/5": [
+                {
+                    "host": "sw-slawex",
+                    "port": "FastEthernet0/1"
+                }
+            ],
+            "GigabitEthernet0/6": [
+                {
+                    "host": "mpwik-rt-jag65",
+                    "port": "FastEthernet0/0"
+                }
+            ]
+        },
+        "ansible_net_python_version": "2.7.17",
+        "ansible_net_serialnum": "FOC1320X3SP",
+        "ansible_net_stacked_models": [
+            "ME-3400G-12CS-D"
+        ],
+        "ansible_net_stacked_serialnums": [
+            "FOC1320X3SP"
+        ],
+        "ansible_net_system": "ios",
+        "ansible_net_version": "12.2(60)EZ10",
+        "ansible_network_resources": {},
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "deprecations": [
+        {
+            "msg": "Distribution Ubuntu 18.04 on host ZERA-SW1-c3400-12CS should use /usr/bin/python3, but is using /usr/bin/python for backward compatibility with prior Ansible releases. A future Ansible release will default to using the discovered platform python for this host. See https://docs.ansible.com/ansible/2.10/reference_appendices/interpreter_discovery.html for more information",
+            "version": "2.12"
+        }
+    ],
+    "failed": false
+}

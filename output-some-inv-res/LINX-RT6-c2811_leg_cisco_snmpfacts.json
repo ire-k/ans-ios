@@ -1,0 +1,375 @@
+{
+    "ansible_facts": {
+        "ansible_net_all_ipv4_addresses": [
+            "192.168.111.5",
+            "192.168.111.14",
+            "172.16.2.18",
+            "10.254.1.83",
+            "172.16.3.22",
+            "192.168.111.18",
+            "192.168.10.122",
+            "192.168.111.45",
+            "10.2.4.6",
+            "172.16.255.26",
+            "10.2.4.5",
+            "192.168.111.38",
+            "192.168.111.10",
+            "172.16.255.30",
+            "172.16.255.21",
+            "192.168.111.53",
+            "172.16.2.22"
+        ],
+        "ansible_net_all_ipv6_addresses": [],
+        "ansible_net_api": "cliconf",
+        "ansible_net_filesystems": [
+            "flash:"
+        ],
+        "ansible_net_filesystems_info": {
+            "flash:": {
+                "spacefree_kb": 12489.4609375,
+                "spacetotal_kb": 62719.99609375
+            }
+        },
+        "ansible_net_gather_network_resources": [],
+        "ansible_net_gather_subset": [
+            "hardware",
+            "default",
+            "interfaces"
+        ],
+        "ansible_net_hostname": "LINX-RT6-c2811-legcisco",
+        "ansible_net_image": "flash:c2800nm-advipservicesk9-mz.124-15.T17.bin",
+        "ansible_net_interfaces": {
+            "FastEthernet0/0": {
+                "bandwidth": 100000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "0024.14d5.5438",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "MV96340 Ethernet"
+            },
+            "FastEthernet0/0.1508": {
+                "bandwidth": 100000,
+                "description": "***BPS Wawa Grzybowska 81 via Netia ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.255.26",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0024.14d5.5438",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "MV96340 Ethernet"
+            },
+            "FastEthernet0/0.1510": {
+                "bandwidth": 100000,
+                "description": "**plan. do SGB Poznan Karpia30 via Netia -> uruch. na LINX-RT18 **",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.2.22",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "0024.14d5.5438",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "MV96340 Ethernet"
+            },
+            "FastEthernet0/0.17": {
+                "bandwidth": 100000,
+                "description": "**do Telenor(LINX-RT4)***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "192.168.111.10",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "0024.14d5.5438",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "MV96340 Ethernet"
+            },
+            "FastEthernet0/0.28": {
+                "bandwidth": 100000,
+                "description": "**do LINX-RT18 (ipsec+bgp do Pozn Karpia30)**",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "192.168.111.53",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0024.14d5.5438",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "MV96340 Ethernet"
+            },
+            "FastEthernet0/0.33": {
+                "bandwidth": 100000,
+                "description": "***do LINX-RT8 Talia ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "192.168.111.38",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "0024.14d5.5438",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "MV96340 Ethernet"
+            },
+            "FastEthernet0/0.3503": {
+                "bandwidth": 100000,
+                "description": "***SGB Pozn via Exatel ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.2.18",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0024.14d5.5438",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "MV96340 Ethernet"
+            },
+            "FastEthernet0/0.42": {
+                "bandwidth": 100000,
+                "description": "***do LIM--RT2_DMVPN (tooway dla BS) *** ",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "192.168.111.45",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "0024.14d5.5438",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "MV96340 Ethernet"
+            },
+            "FastEthernet0/0.9": {
+                "bandwidth": 100000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.254.1.83",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0024.14d5.5438",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "MV96340 Ethernet"
+            },
+            "FastEthernet0/1": {
+                "bandwidth": 100000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "0024.14d5.5439",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "MV96340 Ethernet"
+            },
+            "FastEthernet0/1.17": {
+                "bandwidth": 100000,
+                "description": "**do PKOBP i APN-PLUS/Polkomtel **",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "192.168.111.18",
+                        "subnet": "30"
+                    },
+                    {
+                        "address": "192.168.10.122",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0024.14d5.5439",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "MV96340 Ethernet"
+            },
+            "FastEthernet0/1.512": {
+                "bandwidth": 100000,
+                "description": "**do Polpak(LINX-RT3)***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "192.168.111.5",
+                        "subnet": "30"
+                    },
+                    {
+                        "address": "192.168.111.14",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "0024.14d5.5439",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "MV96340 Ethernet"
+            },
+            "Loopback1": {
+                "bandwidth": 8000000,
+                "description": "***BPS via Exatel ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.2.4.5",
+                        "subnet": "32"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "administratively down",
+                "type": null
+            },
+            "Loopback10": {
+                "bandwidth": 8000000,
+                "description": "**BGP-SGB Peer**",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.3.22",
+                        "subnet": "32"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "administratively down",
+                "type": null
+            },
+            "Loopback100": {
+                "bandwidth": 8000000,
+                "description": "***nagios trap test**",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "administratively down",
+                "type": null
+            },
+            "Loopback2": {
+                "bandwidth": 8000000,
+                "description": "***BPS via Netia ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.2.4.6",
+                        "subnet": "32"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "up",
+                "type": null
+            },
+            "Tunnel1": {
+                "bandwidth": 9,
+                "description": "***BPS Wawa Grzybowska 81 via Exatel ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.255.21",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "administratively down",
+                "type": null
+            },
+            "Tunnel2": {
+                "bandwidth": 9,
+                "description": "***BPS Wawa Grzybowska 81 via Netia ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.255.30",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "up",
+                "type": null
+            }
+        },
+        "ansible_net_iostype": "IOS",
+        "ansible_net_memfree_mb": 381377.359375,
+        "ansible_net_memtotal_mb": 404598.21875,
+        "ansible_net_model": "2811",
+        "ansible_net_neighbors": {
+            "FastEthernet0/0": [
+                {
+                    "host": "LINX-SW2-cME3400.pagi",
+                    "port": "FastEthernet0/15"
+                }
+            ],
+            "FastEthernet0/1": [
+                {
+                    "host": "LINX-SW2-cME3400.pagi",
+                    "port": "FastEthernet0/16"
+                }
+            ]
+        },
+        "ansible_net_python_version": "2.7.17",
+        "ansible_net_serialnum": "FTX1306A0U4",
+        "ansible_net_system": "ios",
+        "ansible_net_version": "12.4(15)T17",
+        "ansible_network_resources": {},
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "deprecations": [
+        {
+            "msg": "Distribution Ubuntu 18.04 on host LINX-RT6-c2811_leg_cisco should use /usr/bin/python3, but is using /usr/bin/python for backward compatibility with prior Ansible releases. A future Ansible release will default to using the discovered platform python for this host. See https://docs.ansible.com/ansible/2.10/reference_appendices/interpreter_discovery.html for more information",
+            "version": "2.12"
+        }
+    ],
+    "failed": false
+}

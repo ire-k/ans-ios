@@ -1,0 +1,1 @@
+jq '.ansible_facts.ansible_net_hostname,.ansible_facts.ansible_net_neighbors' cmp-sw3-l2k_snmpfacts.json

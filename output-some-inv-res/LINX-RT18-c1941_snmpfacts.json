@@ -1,0 +1,239 @@
+{
+    "ansible_facts": {
+        "ansible_net_all_ipv4_addresses": [
+            "10.111.230.0",
+            "172.16.2.22",
+            "192.168.111.54",
+            "172.16.3.22",
+            "10.111.0.207",
+            "10.254.1.207"
+        ],
+        "ansible_net_all_ipv6_addresses": [],
+        "ansible_net_api": "cliconf",
+        "ansible_net_filesystems": [
+            "flash0:"
+        ],
+        "ansible_net_filesystems_info": {
+            "flash0:": {
+                "spacefree_kb": 91364.0,
+                "spacetotal_kb": 250476.0
+            }
+        },
+        "ansible_net_gather_network_resources": [],
+        "ansible_net_gather_subset": [
+            "hardware",
+            "default",
+            "interfaces"
+        ],
+        "ansible_net_hostname": "LINX-RT18-1941_SGB",
+        "ansible_net_image": "flash:c1900-universalk9-mz.SPA.154-3.M3.bin",
+        "ansible_net_interfaces": {
+            "Embedded-Service-Engine0/0": {
+                "bandwidth": 10000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "0000.0000.0000",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "Embedded Service Engine"
+            },
+            "GigabitEthernet0/0": {
+                "bandwidth": 100000,
+                "description": null,
+                "duplex": "Full",
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "c067.af19.3e60",
+                "mediatype": "RJ45",
+                "mtu": 1998,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/0.1121": {
+                "bandwidth": 100000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "c067.af19.3e60",
+                "mediatype": null,
+                "mtu": 1998,
+                "operstatus": "deleted",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/0.28": {
+                "bandwidth": 100000,
+                "description": "**do linx-rt6_leg-cisco**",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "192.168.111.54",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "c067.af19.3e60",
+                "mediatype": null,
+                "mtu": 1998,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/0.9": {
+                "bandwidth": 100000,
+                "description": "**mgt ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.254.1.207",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "c067.af19.3e60",
+                "mediatype": null,
+                "mtu": 1998,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": "Full",
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "c067.af19.3e61",
+                "mediatype": "RJ45",
+                "mtu": 1998,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1.1122": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "c067.af19.3e61",
+                "mediatype": null,
+                "mtu": 1998,
+                "operstatus": "deleted",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1.1510": {
+                "bandwidth": 1000000,
+                "description": "**do SGB Poznan Karpia30 via Netia**",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.2.22",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "c067.af19.3e61",
+                "mediatype": null,
+                "mtu": 1998,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1.4050": {
+                "bandwidth": 1000000,
+                "description": "**MGT do LINX-RT13***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.111.230.0",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "c067.af19.3e61",
+                "mediatype": null,
+                "mtu": 1998,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "Loopback0": {
+                "bandwidth": 8000000,
+                "description": "**mpls router-id***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "administratively down",
+                "type": null
+            },
+            "Loopback10": {
+                "bandwidth": 8000000,
+                "description": "**BGP-SGB Peer**",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.3.22",
+                        "subnet": "32"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "up",
+                "type": null
+            },
+            "Loopback2000": {
+                "bandwidth": 8000000,
+                "description": "**MGT***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.111.0.207",
+                        "subnet": "32"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "up",
+                "type": null
+            }
+        },
+        "ansible_net_iostype": "IOS",
+        "ansible_net_memfree_mb": 47339.1640625,
+        "ansible_net_memtotal_mb": 325602.13671875,
+        "ansible_net_model": "CISCO1941/K9",
+        "ansible_net_neighbors": {
+            "GigabitEthernet0/0": [
+                {
+                    "host": "LINX-SW2-cME3400.pagi",
+                    "port": "FastEthernet0/7"
+                }
+            ],
+            "GigabitEthernet0/1": [
+                {
+                    "host": "LINX-RT13_cASR920-24SZIM.pagi",
+                    "port": "GigabitEthernet0/0/9"
+                }
+            ]
+        },
+        "ansible_net_python_version": "2.7.17",
+        "ansible_net_serialnum": "FCZ1741C4EK",
+        "ansible_net_system": "ios",
+        "ansible_net_version": "15.4(3)M3",
+        "ansible_network_resources": {},
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "deprecations": [
+        {
+            "msg": "Distribution Ubuntu 18.04 on host LINX-RT18-c1941 should use /usr/bin/python3, but is using /usr/bin/python for backward compatibility with prior Ansible releases. A future Ansible release will default to using the discovered platform python for this host. See https://docs.ansible.com/ansible/2.10/reference_appendices/interpreter_discovery.html for more information",
+            "version": "2.12"
+        }
+    ],
+    "failed": false
+}

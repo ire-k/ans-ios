@@ -1,0 +1,44 @@
+---
+## change ip dhcp helper addr on SVI's or subinterface's 
+# doesn't work on ME3400 12.2(55) and propably won't work on older L2 switches
+# does work on ME3400 12.2(60)EZ
+# older ios's don't support: sh run | sec interface
+#
+- hosts: cmp_routers_restore
+  gather_facts: false
+  connection: network_cli
+  tasks:
+
+
+  - name: get ios facts L3 int
+    ios_facts:
+      gather_network_resources: l3_interfaces
+
+  - name: change helper address
+    ios_config:
+      lines:
+        - no ip helper-address
+        - ip helper-address 192.168.10.1
+      parents: "interface {{item.key}}"
+    loop: "{{ansible_net_interfaces | dict2items}}"
+    when: ((item.value.ipv4.0.address is defined) and (item.value.ipv4.0.address is regex("192.168.") ) and (item.key is not regex("Loopback") ))
+
+
+  - name: save config
+    ios_config:
+      save_when: always
+#
+#notes:
+#still doesn't work on SVI with a secondary ip address, e.g.
+#skipping: [cmp-sw-chmielna] => (item={'key': 'Vlan100', 'value': {'macaddress': '9caf.caa4.4041', 'lineprotocol': 'up', 'description': '**LAN CMP ****', 'duplex': None, 'mediatype': None, 'mtu': 1998, 'operstatus': 'up', 'bandwidth': 1000000, 'ipv4': [{'subnet': '24', 'address': '10.1.1.254'}, {'subnet': '24', 'address': '192.168.25.1'}], 'type': 'EtherSVI'}})
+#
+#
+#
+#  - name: enum l3 int
+#    debug:
+#      msg:
+#        - "{{item.key}}"
+#        - "{{item.value.ipv4.0.address}}"
+#    loop: "{{ansible_net_interfaces | dict2items}}"
+#    when: ((item.value.ipv4.0.address is defined) and (item.value.ipv4.0.address is regex("192.168.") ) and (item.key is not regex("Loopback") ))
+

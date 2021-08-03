@@ -1,0 +1,295 @@
+---
+- hosts: cmp-sw-wola2
+  gather_facts: false
+  connection: network_cli
+  tasks:
+
+
+  - name: turn off ip cef optimize adj
+    ignore_errors: True
+    ios_config:
+      save_when: changed
+      lines:
+        - no ip cef optimize neighbor resolution
+    register: ipcef
+    #- debug:
+    # msg:
+    #   - '{{ipcef}}'
+
+  - name: set aliases
+    ios_config:
+      lines:
+        - alias interface addvlan switchport trunk allowed vlan add
+        - alias interface remvlan switchport trunk allowed vlan remove
+        - alias interface vlanadd switchport trunk allowed vlan add
+        - alias interface vlanrem switchport trunk allowed vlan remove 
+ 
+  - name : set archive
+    ios_config:
+      parents: archive
+      lines:
+        - path tftp://212.69.68.123/$h-@-$t
+        - write-memory
+
+  - name: security
+    ios_config:
+      lines:
+        - vtp mode transparent
+        - no service config
+        - no service tcp-small-servers
+        - no service udp-small-servers
+        - service tcp-keepalives-in
+        - service tcp-keepalives-out
+        - no service call-home
+
+  - name: set timestamps
+    ios_config:
+      lines:
+        - service timestamps debug datetime msec localtime show-timezone year
+        - service timestamps log datetime msec localtime show-timezone year
+
+  - name: set radius
+    ios_config:
+      parents: aaa group server radius grp-radius
+      lines:
+        - server 212.69.71.194 auth-port 1812 acct-port 1813
+        - ip radius source-interface Loopback2
+
+  - name: set authentication
+    ios_config:
+      lines:
+        - aaa new-model
+        - username irekk privilege 15 secret 5 $1$NOHk$/465WGpRY3ceCWrPXEv.l.
+        - username pagi privilege 15 secret 5 $1$RuFl$JgDX4ygd075CT5TYDvoA50
+        - aaa authentication login default group radius local
+        - aaa authorization exec default group radius local 
+
+  - name: set timezone
+    ios_config:
+      lines:
+        - clock timezone CET 1 0
+        - clock summer-time CEST recurring last Sun Mar 2:00 last Sun Oct 3:00
+
+  - name: set dhcp snoop
+    ios_config:
+      lines:
+        - ip dhcp snooping vlan 100
+        - ip dhcp snooping
+
+  - name: set dhcp trust
+    #ignore_errors: True
+    ios_config:
+      parents: interface range gigabitEthernet 0/47 - 52
+      lines:
+        - ip dhcp snooping trust
+    register: dhcptrust
+    #- debug:
+    # msg: '{{dhcptrust}}'
+
+  - name: set tftp source
+    ios_config:
+      lines:
+        - ip tftp source-interface Loopback2
+
+  - name: set policer
+    ios_config:
+      parents:
+        - policy-map c_100M
+        - class class-default
+      lines:
+        - police 100000000 1000000 exceed-action drop
+
+# in lab int gi0/25 out
+  - name: set LAN int
+    ios_config:
+      parents: interface range gigabitEthernet 0/1 - 24
+      lines:
+        - description **LAN ***
+        - switchport access vlan 100
+        - switchport mode access
+        - switchport nonegotiate
+        - service-policy input c_100M
+
+  - name: set LAN int 2
+    ios_config:
+      parents: interface range gigabitEthernet 0/26 - 46
+      lines:
+        - description **LAN ***
+        - switchport access vlan 100
+        - switchport mode access
+        - switchport nonegotiate
+        - service-policy input c_100M
+
+  - name: remove old logging
+    ignore_errors: True
+    ios_config:
+      lines:
+        - no logging source-interface Loopback2
+        - no logging host 212.69.68.123
+
+  - name: set logging
+    ios_config:
+      lines:
+        - logging source-interface Loopback2002 vrf mgt
+        - logging host 212.69.68.123 vrf mgt session-id hostname
+
+  - name: set ntp1
+    ios_ntp:
+      source_int: Loopback2
+      server: 212.69.81.115
+      logging: false
+      state: present
+  #  register: ntpserv
+  #- debug: var=ntpserv
+
+  - name: set ntp2
+    ios_ntp:
+      server: 212.69.68.123
+      source_int: Loopback2
+      logging: false
+      state: present
+  #  register: ntpserv2
+  #- debug: var=ntpserv2
+
+  - name: set acls
+    ios_config:
+      lines:
+        - access-list 5 permit 192.168.0.0 0.0.255.255
+        - access-list 10 permit 212.69.66.0 0.0.0.31
+        - access-list 1 permit 212.69.66.0 0.0.0.31
+        - access-list 1 permit 212.69.68.123
+
+  - name: set route-map RM_CMP_NET
+    ios_config:
+      parents: route-map RM_CMP_NET
+      lines:
+        - match ip address 5
+
+  - name: set ospf 2 redistrib
+    ios_config:
+      parents: router ospf 2
+      lines:
+        - redistribute connected subnets route-map RM_CMP_NET
+        - redistribute static subnets route-map RM_CMP_NET
+        - passive-interface Vlan100
+        - auto-cost reference-bandwidth 20000
+
+  - name: set main link FO vl4011
+    when: 
+      - isL3
+      - hasJMDI
+    ios_config:
+      parents: interface vlan4011
+      lines:
+        - bandwidth 100000
+        - no ip ospf cost
+        - no ip proxy-arp
+        - ip address 172.16.11.{{LAN}} 255.255.255.0
+        - ip ospf hello-interval 3
+        - no ip ospf dead-interval
+        - ip ospf 2 area 0
+
+  - name: set mgt via main link FO vl4000
+    when: 
+      - isL3
+      - hasJMDI
+    ios_config:
+      parents: interface vlan4000
+      lines:
+        - bandwidth 100000
+        - no ip ospf cost
+        - no ip proxy-arp
+        - ip vrf forwarding mgt
+        #- ip address 10.111.204."{LAN}" 255.255.255.0
+        #- ip ospf hello-interval 1
+        - no ip ospf dead-interval
+        - ip ospf 2 area 0
+
+
+  - name: set link bk/protect via Radio vl3401
+    when: 
+      - isL3
+      - hasRadio
+    ios_config:
+      parents: interface vlan3401
+      lines:
+        - bandwidth 10000
+        - no ip ospf cost
+        - no ip proxy-arp
+        #- ip address 172.16.15."{LAN}" 255.255.255.0
+        - no ip ospf dead-interval
+        - ip ospf hello-interval 3
+        - ip ospf 2 area 0
+
+  - name: set mgt via Radio link vl3401
+    when: 
+      - isL3
+      - hasRadio
+    ios_config:
+      parents: interface vlan3401
+      lines:
+        - bandwidth 10000
+        - no ip ospf cost
+        - no ip proxy-arp
+        - ip vrf forwarding mgt
+        #- ip address 172.16.15."{LAN}" 255.255.255.0
+        - no ip ospf dead-interval
+        - ip ospf hello-interval 3
+        - ip ospf 2002 area 0
+
+  - name: set main link FO PAGI vl3410
+    when: 
+      - hasFOPAGI
+      - isL3
+    ios_config:
+      parents: interface vlan3410
+      lines:
+        - bandwidth 100000
+        - no ip ospf cost
+        - no ip proxy-arp
+        #- ip address 172.16.12."{LAN}" 255.255.255.0
+        - no ip ospf dead-interval
+        - ip ospf hello-interval 1
+        - ip ospf 2 area 0
+
+  - name: set int vlan100
+    when: isL3
+    ios_config:
+      parents: interface vlan100
+      lines:
+        - ip helper-address 192.168.10.1
+        - ip helper-address 192.168.10.5
+        - ip helper-address 192.168.10.6
+        - no ip proxy-arp
+        #- ip address 192.168."{LAN}".1 255.255.255.0
+
+  - name: Merge/create vlans
+    when: isL3
+    ios_vlans:
+      state: merged
+      config:
+        - name: LAN
+          vlan_id: 100
+          state: active
+        - name: FOJMDI-Transm
+          vlan_id: 4011
+          state: active
+        - name: FO-MGT
+          vlan_id: 4000
+          state: active
+        - name: Radio-Transm
+          vlan_id: 3401
+          state: active
+        - name: Radio-MGT
+          vlan_id: 3400
+          state: active
+        - name: PAGI-FO
+          vlan_id: 3410
+          state: active
+        - name: PAGI-FO-MGT
+          vlan_id: 3411
+          state: active
+
+  - name: save config
+    ios_config:
+      save_when: always

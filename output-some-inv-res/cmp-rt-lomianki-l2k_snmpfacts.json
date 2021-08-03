@@ -1,0 +1,376 @@
+{
+    "ansible_facts": {
+        "ansible_net_all_ipv4_addresses": [
+            "10.111.207.65",
+            "172.16.15.65",
+            "10.111.11.65",
+            "172.16.18.49",
+            "172.16.18.249",
+            "192.168.65.1",
+            "10.111.202.65",
+            "172.16.18.17",
+            "194.15.121.64",
+            "194.15.122.214"
+        ],
+        "ansible_net_all_ipv6_addresses": [],
+        "ansible_net_api": "cliconf",
+        "ansible_net_filesystems": [
+            "flash0:"
+        ],
+        "ansible_net_filesystems_info": {
+            "flash0:": {
+                "spacefree_kb": 98548.0,
+                "spacetotal_kb": 255336.0
+            }
+        },
+        "ansible_net_gather_network_resources": [],
+        "ansible_net_gather_subset": [
+            "hardware",
+            "default",
+            "interfaces"
+        ],
+        "ansible_net_hostname": "cmp-rt-lomianki",
+        "ansible_net_image": "flash:c1900-universalk9-mz.SPA.155-3.M4.bin",
+        "ansible_net_interfaces": {
+            "Bound": {
+                "bandwidth": null,
+                "description": null,
+                "duplex": null,
+                "lineprotocol": null,
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": null,
+                "operstatus": null,
+                "type": null
+            },
+            "Dialer1": {
+                "bandwidth": 56,
+                "description": null,
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "194.15.121.64",
+                        "subnet": "32"
+                    }
+                ],
+                "lineprotocol": null,
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1492,
+                "operstatus": "up",
+                "type": null
+            },
+            "Embedded-Service-Engine0/0": {
+                "bandwidth": 10000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "0000.0000.0000",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "Embedded Service Engine"
+            },
+            "GigabitEthernet0/0": {
+                "bandwidth": 1000000,
+                "description": "***uplink do ISB Lomianki ***",
+                "duplex": "Full",
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "30e4.db57.9420",
+                "mediatype": "RJ45",
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1": {
+                "bandwidth": 1000000,
+                "description": "**do cmp-sw-lomianki**",
+                "duplex": "Full",
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "30e4.db57.9421",
+                "mediatype": "RJ45",
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1.2": {
+                "bandwidth": 1000000,
+                "description": "**MGT switcha **",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.18.249",
+                        "subnet": "29"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "30e4.db57.9421",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1.2002": {
+                "bandwidth": 1000000,
+                "description": "**mgt dla cmp-sw-lomi_gi0/48***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.111.202.65",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "30e4.db57.9421",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1.3": {
+                "bandwidth": 1000000,
+                "description": "**LAN Lomianki **",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "192.168.65.1",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "30e4.db57.9421",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1.3400": {
+                "bandwidth": 10000,
+                "description": "**MGT do PAGI via radio ubnt Zeran***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.111.207.65",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "30e4.db57.9421",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1.3401": {
+                "bandwidth": 1000000,
+                "description": "**transm radio pagi ubnt do Zera***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.15.65",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "30e4.db57.9421",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1.4": {
+                "bandwidth": 1000000,
+                "description": "**uplink do IBS Radio via cmp-sw-lom_gi0/47***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "194.15.122.214",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "30e4.db57.9421",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "Loopback2002": {
+                "bandwidth": 8000000,
+                "description": "**mgt***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.111.11.65",
+                        "subnet": "32"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "up",
+                "type": null
+            },
+            "NVI0": {
+                "bandwidth": 56,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "up",
+                "type": null
+            },
+            "Serial0/1/0": {
+                "bandwidth": 512,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": null
+            },
+            "Tunnel20651": {
+                "bandwidth": 100,
+                "description": "**do cmp-rt3 via FO/pppoe ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.18.49",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 17916,
+                "operstatus": "up",
+                "type": null
+            },
+            "Tunnel20652": {
+                "bandwidth": 5000,
+                "description": "**via IBS Radio do cmp-rt4 **",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.18.17",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 17916,
+                "operstatus": "up",
+                "type": null
+            },
+            "Tunnel20653": {
+                "bandwidth": 100,
+                "description": "**tun bk via Radio ISB do cmp-rt4 **",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 17940,
+                "operstatus": "administratively down",
+                "type": null
+            },
+            "Tunnel20655": {
+                "bandwidth": 100000,
+                "description": "**MGT do LINX-RT15**",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 17916,
+                "operstatus": "up",
+                "type": null
+            },
+            "Tunnel20656": {
+                "bandwidth": 20000,
+                "description": "**MGT do linx-rt11 via ibs radio**",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 17916,
+                "operstatus": "up",
+                "type": null
+            },
+            "Tunnel29652": {
+                "bandwidth": 100,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 17940,
+                "operstatus": "administratively down",
+                "type": null
+            },
+            "Virtual-Access1": {
+                "bandwidth": 100000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1492,
+                "operstatus": "up",
+                "type": null
+            },
+            "Virtual-Access2": {
+                "bandwidth": 56,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1492,
+                "operstatus": "up",
+                "type": null
+            }
+        },
+        "ansible_net_iostype": "IOS",
+        "ansible_net_memfree_mb": 36509.37890625,
+        "ansible_net_memtotal_mb": 314690.6953125,
+        "ansible_net_model": "CISCO1941/K9",
+        "ansible_net_neighbors": {
+            "GigabitEthernet0/1": [
+                {
+                    "host": "cmp-sw-lomianki.pagi",
+                    "port": "GigabitEthernet0/48"
+                }
+            ]
+        },
+        "ansible_net_python_version": "2.7.17",
+        "ansible_net_serialnum": "FCZ152792MZ",
+        "ansible_net_system": "ios",
+        "ansible_net_version": "15.5(3)M4",
+        "ansible_network_resources": {},
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "deprecations": [
+        {
+            "msg": "Distribution Ubuntu 18.04 on host cmp-rt-lomianki-l2k should use /usr/bin/python3, but is using /usr/bin/python for backward compatibility with prior Ansible releases. A future Ansible release will default to using the discovered platform python for this host. See https://docs.ansible.com/ansible/2.10/reference_appendices/interpreter_discovery.html for more information",
+            "version": "2.12"
+        }
+    ],
+    "failed": false
+}

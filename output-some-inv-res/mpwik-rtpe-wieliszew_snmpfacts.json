@@ -1,0 +1,185 @@
+{
+    "ansible_facts": {
+        "ansible_net_all_ipv4_addresses": [
+            "172.16.100.8",
+            "172.16.0.34",
+            "172.16.100.16"
+        ],
+        "ansible_net_all_ipv6_addresses": [],
+        "ansible_net_api": "cliconf",
+        "ansible_net_filesystems": [
+            "flash0:"
+        ],
+        "ansible_net_filesystems_info": {
+            "flash0:": {
+                "spacefree_kb": 172236.0,
+                "spacetotal_kb": 255336.0
+            }
+        },
+        "ansible_net_gather_network_resources": [],
+        "ansible_net_gather_subset": [
+            "hardware",
+            "default",
+            "interfaces"
+        ],
+        "ansible_net_hostname": "mpwik-rtpe-wieliszew",
+        "ansible_net_image": "flash:c1900-universalk9-mz.SPA.155-3.M4.bin",
+        "ansible_net_interfaces": {
+            "Embedded-Service-Engine0/0": {
+                "bandwidth": 10000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "0000.0000.0000",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "Embedded Service Engine"
+            },
+            "GigabitEthernet0/0": {
+                "bandwidth": 100000,
+                "description": "**do mpwik-sw-wieliszew_fa0/23 ***",
+                "duplex": "Full",
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "30e4.db57.91e0",
+                "mediatype": "RJ45",
+                "mtu": 1998,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/0.689": {
+                "bandwidth": 20000,
+                "description": "**mpls uplink do LIM via Emitel***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.100.8",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "30e4.db57.91e0",
+                "mediatype": null,
+                "mtu": 1998,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/0.692": {
+                "bandwidth": 50000,
+                "description": "**mpls uplink via JMDI do LINX-RT17 via LINX-SW7_Te1/5 ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.100.16",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "30e4.db57.91e0",
+                "mediatype": null,
+                "mtu": 1998,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1": {
+                "bandwidth": 100000,
+                "description": "**do mpwik-sw-wiel_fa0/24 ***",
+                "duplex": "Full",
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "30e4.db57.91e1",
+                "mediatype": "RJ45",
+                "mtu": 1948,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1.340": {
+                "bandwidth": 100000,
+                "description": "**L2 technologia xconn do mpwik-rtpe-czerniakowska **",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "30e4.db57.91e1",
+                "mediatype": null,
+                "mtu": 1948,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1.3901": {
+                "bandwidth": 100000,
+                "description": "**L2/mpls-pagi trunking-transm do linx-rt16_gi0/1.3341 **8",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "30e4.db57.91e1",
+                "mediatype": null,
+                "mtu": 1948,
+                "operstatus": "administratively down",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1.3909": {
+                "bandwidth": 100000,
+                "description": "**L2/mpls-pagi trunking-mgt do linx-rt16_gi0/1.3341 **8",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "30e4.db57.91e1",
+                "mediatype": null,
+                "mtu": 1948,
+                "operstatus": "administratively down",
+                "type": "CN Gigabit Ethernet"
+            },
+            "Loopback0": {
+                "bandwidth": 8000000,
+                "description": "**mpls router-id**",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.0.34",
+                        "subnet": "32"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "up",
+                "type": null
+            }
+        },
+        "ansible_net_iostype": "IOS",
+        "ansible_net_memfree_mb": 40586.46484375,
+        "ansible_net_memtotal_mb": 318810.8203125,
+        "ansible_net_model": "CISCO1941/K9",
+        "ansible_net_neighbors": {
+            "GigabitEthernet0/0": [
+                {
+                    "host": "mpwik-sw-wieliszew.pagi",
+                    "port": "FastEthernet0/23"
+                }
+            ],
+            "GigabitEthernet0/1": [
+                {
+                    "host": "mpwik-sw-wieliszew.pagi",
+                    "port": "FastEthernet0/24"
+                }
+            ]
+        },
+        "ansible_net_python_version": "2.7.17",
+        "ansible_net_serialnum": "FCZ152792MV",
+        "ansible_net_system": "ios",
+        "ansible_net_version": "15.5(3)M4",
+        "ansible_network_resources": {},
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "deprecations": [
+        {
+            "msg": "Distribution Ubuntu 18.04 on host mpwik-rtpe-wieliszew should use /usr/bin/python3, but is using /usr/bin/python for backward compatibility with prior Ansible releases. A future Ansible release will default to using the discovered platform python for this host. See https://docs.ansible.com/ansible/2.10/reference_appendices/interpreter_discovery.html for more information",
+            "version": "2.12"
+        }
+    ],
+    "failed": false
+}

@@ -3,12 +3,20 @@ inventory = inv.ini
 host_key_checking = False
 deprecation_warnings=False
 nocolor = True
-log_path = /home/irek/ans/pagi/pagi.log
+log_path = /home/irek/ans/ans.log
 display_args_to_stdout = True
+vault_password_file = ~/ans/ans.pass
 
 ## facts caching in memory: https://docs.ansible.com/ansible/latest/plugins/cache.html#cache-plugins
+fact_caching = ansible.builtin.jsonfile
+fact_caching_connection = /tmp/ansible_facts
+cache_timeout = 3600
+
+## ansible_python_interpreter=/usr/bin/python3
+
 [inventory]
-cache=True
+cache = yes
+cache_connection = /tmp/ansible_inventory
 
 ## I prefer no more than virtual cores of the processor
 forks = 2
@@ -46,5 +54,5 @@ command_timeout = 80
 
 connect_retry_timeout = 30
 
-#log interaction with a device
-log_messages = True
+#log interaction with a device, defalt false
+#log_messages = True

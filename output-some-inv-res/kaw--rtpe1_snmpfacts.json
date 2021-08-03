@@ -1,0 +1,963 @@
+{
+    "ansible_facts": {
+        "ansible_net_all_ipv4_addresses": [
+            "10.254.253.1",
+            "10.254.1.1",
+            "10.123.3.1",
+            "10.111.176.142",
+            "212.69.68.154",
+            "212.69.73.157",
+            "212.69.73.161",
+            "212.69.73.169",
+            "212.69.71.17",
+            "212.69.73.189",
+            "212.69.79.209",
+            "212.69.65.96",
+            "212.69.65.94",
+            "172.16.100.7",
+            "10.123.123.65",
+            "212.69.72.217",
+            "212.69.73.225",
+            "212.69.72.181",
+            "212.69.79.73",
+            "212.69.72.221",
+            "212.69.74.225",
+            "10.123.123.17",
+            "212.69.70.89",
+            "212.69.73.165",
+            "212.69.71.249",
+            "212.69.71.21",
+            "212.69.73.41",
+            "212.69.79.105",
+            "212.69.76.201",
+            "212.69.74.193",
+            "212.69.76.81",
+            "212.69.75.57",
+            "10.123.229.1",
+            "212.69.79.33",
+            "212.69.75.113",
+            "212.69.76.141",
+            "212.69.74.149",
+            "212.69.74.105",
+            "212.69.71.105",
+            "212.69.78.77",
+            "212.69.73.97",
+            "212.69.73.37",
+            "212.69.65.138"
+        ],
+        "ansible_net_all_ipv6_addresses": [],
+        "ansible_net_api": "cliconf",
+        "ansible_net_filesystems": [
+            "disk2:"
+        ],
+        "ansible_net_filesystems_info": {
+            "disk2:": {
+                "spacefree_kb": 74572.0,
+                "spacetotal_kb": 124774.0
+            }
+        },
+        "ansible_net_gather_network_resources": [],
+        "ansible_net_gather_subset": [
+            "hardware",
+            "default",
+            "interfaces"
+        ],
+        "ansible_net_hostname": "KAW--RTPE1-c7200",
+        "ansible_net_image": "disk2:c7200-adventerprisek9-mz.151-4.M.bin",
+        "ansible_net_interfaces": {
+            "GigabitEthernet0/1": {
+                "bandwidth": 100000,
+                "description": "**do KAW--SW1-c3400_fa0/23**",
+                "duplex": "Full",
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "0023.3489.6c1b",
+                "mediatype": "RJ45",
+                "mtu": 1998,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/1.1118": {
+                "bandwidth": 100000,
+                "description": "**uplink mpls do LIM--SW1 via Tmobile ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.65.96",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "0023.3489.6c1b",
+                "mediatype": null,
+                "mtu": 1998,
+                "operstatus": "administratively down",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/1.1119": {
+                "bandwidth": 100000,
+                "description": "**uplink mpls do PIK11-RT1 via Netia **",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.65.94",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0023.3489.6c1b",
+                "mediatype": null,
+                "mtu": 1998,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/1.154": {
+                "bandwidth": 100000,
+                "description": "**** MGMT Radiol. AGP Metro Warszawskie ****",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.123.123.17",
+                        "subnet": "29"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0023.3489.6c1b",
+                "mediatype": null,
+                "mtu": 1998,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/1.4000": {
+                "bandwidth": 100000,
+                "description": "**MGT dla KAW--SW1_vlan4000***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.111.176.142",
+                        "subnet": "28"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0023.3489.6c1b",
+                "mediatype": null,
+                "mtu": 1998,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/1.470": {
+                "bandwidth": 100000,
+                "description": "**** MGMT Radiol. AGP Metro TBM Kondratowicza ****",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.123.123.65",
+                        "subnet": "29"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0023.3489.6c1b",
+                "mediatype": null,
+                "mtu": 1998,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/1.5": {
+                "bandwidth": 100000,
+                "description": "**MGT Ubiquity**",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.123.3.1",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0023.3489.6c1b",
+                "mediatype": null,
+                "mtu": 1998,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/1.691": {
+                "bandwidth": 35000,
+                "description": "**DL dla mpwik-rtpe-syta bk via KAW **",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.100.7",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0023.3489.6c1b",
+                "mediatype": null,
+                "mtu": 1998,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/1.8": {
+                "bandwidth": 100000,
+                "description": "**mgt old vl8 / no dev in vlan8-> sh ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.254.253.1",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "0023.3489.6c1b",
+                "mediatype": null,
+                "mtu": 1998,
+                "operstatus": "administratively down",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/1.9": {
+                "bandwidth": 100000,
+                "description": "**mgt odl vlan9**",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.254.1.1",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "0023.3489.6c1b",
+                "mediatype": null,
+                "mtu": 1998,
+                "operstatus": "administratively down",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/2": {
+                "bandwidth": 100000,
+                "description": "**do KAW--SW1-c3400_fa0/24**",
+                "duplex": "Full",
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "0023.3489.6c1a",
+                "mediatype": "RJ45",
+                "mtu": 9200,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/2.107": {
+                "bandwidth": 100000,
+                "description": "**** Soklow LT TESTE ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "0023.3489.6c1a",
+                "mediatype": null,
+                "mtu": 9200,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/2.1410": {
+                "bandwidth": 100000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "0023.3489.6c1a",
+                "mediatype": null,
+                "mtu": 9200,
+                "operstatus": "deleted",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/2.153": {
+                "bandwidth": 100000,
+                "description": "****** AGP Metro Kondratowicza Zapl ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.78.77",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0023.3489.6c1a",
+                "mediatype": null,
+                "mtu": 9200,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/2.154": {
+                "bandwidth": 100000,
+                "description": "**** Metro Warszawskie (AGP) ****",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.74.149",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0023.3489.6c1a",
+                "mediatype": null,
+                "mtu": 9200,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/2.159": {
+                "bandwidth": 100000,
+                "description": "*** AGP Kondr. C20  ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.76.141",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0023.3489.6c1a",
+                "mediatype": null,
+                "mtu": 9200,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/2.2813": {
+                "bandwidth": 100000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "0023.3489.6c1a",
+                "mediatype": null,
+                "mtu": 9200,
+                "operstatus": "deleted",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/2.4000": {
+                "bandwidth": 100000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "0023.3489.6c1a",
+                "mediatype": null,
+                "mtu": 9200,
+                "operstatus": "deleted",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/2.401": {
+                "bandwidth": 100000,
+                "description": "*** Wimax-Dorken_Delta ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.75.57",
+                        "subnet": "29"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0023.3489.6c1a",
+                "mediatype": null,
+                "mtu": 9200,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/2.402": {
+                "bandwidth": 100000,
+                "description": "*** Wimax-Grodno_Marsa ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.76.81",
+                        "subnet": "29"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0023.3489.6c1a",
+                "mediatype": null,
+                "mtu": 9200,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/2.403": {
+                "bandwidth": 100000,
+                "description": "**** Neantic Szafarzy ****",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.74.193",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0023.3489.6c1a",
+                "mediatype": null,
+                "mtu": 9200,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/2.404": {
+                "bandwidth": 100000,
+                "description": "***** Warcel magazyn *****",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.76.201",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0023.3489.6c1a",
+                "mediatype": null,
+                "mtu": 9200,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/2.408": {
+                "bandwidth": 100000,
+                "description": "****Rafal Szulim ******",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.73.41",
+                        "subnet": "29"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0023.3489.6c1a",
+                "mediatype": null,
+                "mtu": 9200,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/2.4094": {
+                "bandwidth": 100000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "0023.3489.6c1a",
+                "mediatype": null,
+                "mtu": 9200,
+                "operstatus": "deleted",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/2.410": {
+                "bandwidth": 100000,
+                "description": "***InstHema bk via KAW ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.68.154",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0023.3489.6c1a",
+                "mediatype": null,
+                "mtu": 9200,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/2.411": {
+                "bandwidth": 100000,
+                "description": "**** CMP Berensona VoIP ****",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.73.157",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0023.3489.6c1a",
+                "mediatype": null,
+                "mtu": 9200,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/2.412": {
+                "bandwidth": 100000,
+                "description": "****** AZ-SupportIT *****",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.73.161",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0023.3489.6c1a",
+                "mediatype": null,
+                "mtu": 9200,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/2.414": {
+                "bandwidth": 100000,
+                "description": "***** Budokrusz Ks. Anny *****",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.73.169",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0023.3489.6c1a",
+                "mediatype": null,
+                "mtu": 9200,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/2.417": {
+                "bandwidth": 100000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "0023.3489.6c1a",
+                "mediatype": null,
+                "mtu": 9200,
+                "operstatus": "deleted",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/2.418": {
+                "bandwidth": 100000,
+                "description": "**** ZUS Podskarbinska *****",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.71.17",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0023.3489.6c1a",
+                "mediatype": null,
+                "mtu": 9200,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/2.419": {
+                "bandwidth": 100000,
+                "description": "** Safety Engineering Research ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.73.189",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0023.3489.6c1a",
+                "mediatype": null,
+                "mtu": 9200,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/2.420": {
+                "bandwidth": 100000,
+                "description": "**** ZUS 11 Listopada *****",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.71.21",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0023.3489.6c1a",
+                "mediatype": null,
+                "mtu": 9200,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/2.421": {
+                "bandwidth": 100000,
+                "description": "**** Benevento ****",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.71.249",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0023.3489.6c1a",
+                "mediatype": null,
+                "mtu": 9200,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/2.422": {
+                "bandwidth": 100000,
+                "description": "**** ZUS Czerniakowska ****",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.74.225",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0023.3489.6c1a",
+                "mediatype": null,
+                "mtu": 9200,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/2.424": {
+                "bandwidth": 100000,
+                "description": "**** Neantic event ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.73.165",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0023.3489.6c1a",
+                "mediatype": null,
+                "mtu": 9200,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/2.434": {
+                "bandwidth": 100000,
+                "description": "*** Robert Perlinski AXON ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.71.105",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0023.3489.6c1a",
+                "mediatype": null,
+                "mtu": 9200,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/2.444": {
+                "bandwidth": 100000,
+                "description": "*** Czarkowski Berensona ****",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.72.181",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0023.3489.6c1a",
+                "mediatype": null,
+                "mtu": 9200,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/2.446": {
+                "bandwidth": 100000,
+                "description": "**** KM Chlopickiego ****",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.73.225",
+                        "subnet": "28"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0023.3489.6c1a",
+                "mediatype": null,
+                "mtu": 9200,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/2.449": {
+                "bandwidth": 100000,
+                "description": "***** Warcel *****",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.79.73",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0023.3489.6c1a",
+                "mediatype": null,
+                "mtu": 9200,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/2.456": {
+                "bandwidth": 100000,
+                "description": "**** Michal G ****",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.75.113",
+                        "subnet": "29"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0023.3489.6c1a",
+                "mediatype": null,
+                "mtu": 9200,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/2.458": {
+                "bandwidth": 100000,
+                "description": "***** Jaro-Filtr *****",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.74.105",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0023.3489.6c1a",
+                "mediatype": null,
+                "mtu": 9200,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/2.462": {
+                "bandwidth": 100000,
+                "description": "***** Jas-Pol ********",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.72.217",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0023.3489.6c1a",
+                "mediatype": null,
+                "mtu": 9200,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/2.464": {
+                "bandwidth": 100000,
+                "description": "**** Jas-pol dom ****",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.72.221",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0023.3489.6c1a",
+                "mediatype": null,
+                "mtu": 9200,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/2.466": {
+                "bandwidth": 100000,
+                "description": "**** Metrostav W-wa Mlodnicka *****",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.123.229.1",
+                        "subnet": "24"
+                    },
+                    {
+                        "address": "212.69.79.33",
+                        "subnet": "29"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0023.3489.6c1a",
+                "mediatype": null,
+                "mtu": 9200,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/2.467": {
+                "bandwidth": 100000,
+                "description": "**** Skynet Cieslewskich *****",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.79.105",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0023.3489.6c1a",
+                "mediatype": null,
+                "mtu": 9200,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/2.469": {
+                "bandwidth": 100000,
+                "description": "**** Rusak P&G ****",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.70.89",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0023.3489.6c1a",
+                "mediatype": null,
+                "mtu": 9200,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/2.470": {
+                "bandwidth": 100000,
+                "description": "**** AGP Metro TBM Kondratowicza ****",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.79.209",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0023.3489.6c1a",
+                "mediatype": null,
+                "mtu": 9200,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/2.490": {
+                "bandwidth": 100000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "0023.3489.6c1a",
+                "mediatype": null,
+                "mtu": 9200,
+                "operstatus": "deleted",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/2.491": {
+                "bandwidth": 100000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "0023.3489.6c1a",
+                "mediatype": null,
+                "mtu": 9200,
+                "operstatus": "deleted",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/2.492": {
+                "bandwidth": 100000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "0023.3489.6c1a",
+                "mediatype": null,
+                "mtu": 9200,
+                "operstatus": "deleted",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/2.497": {
+                "bandwidth": 100000,
+                "description": "KAW->MB_Kowalczyk_Halinow",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.73.97",
+                        "subnet": "30"
+                    },
+                    {
+                        "address": "212.69.73.37",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0023.3489.6c1a",
+                "mediatype": null,
+                "mtu": 9200,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/3": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": "Auto",
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "0023.3489.6c19",
+                "mediatype": "RJ45",
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "BCM1250 Internal MAC"
+            },
+            "Loopback0": {
+                "bandwidth": 8000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.65.138",
+                        "subnet": "32"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "up",
+                "type": null
+            },
+            "NVI0": {
+                "bandwidth": 56,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "up",
+                "type": null
+            }
+        },
+        "ansible_net_iostype": "IOS",
+        "ansible_net_memfree_mb": 287487.82421875,
+        "ansible_net_memtotal_mb": 354392.19921875,
+        "ansible_net_model": "7204VXR",
+        "ansible_net_neighbors": {
+            "GigabitEthernet0/1": [
+                {
+                    "host": "KAW--SW1-cME3400.pagi",
+                    "port": "FastEthernet0/23"
+                }
+            ],
+            "GigabitEthernet0/2": [
+                {
+                    "host": "KAW--SW1-cME3400.pagi",
+                    "port": "FastEthernet0/24"
+                }
+            ]
+        },
+        "ansible_net_python_version": "2.7.17",
+        "ansible_net_serialnum": "36576300",
+        "ansible_net_system": "ios",
+        "ansible_net_version": "15.1(4)M",
+        "ansible_network_resources": {},
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "deprecations": [
+        {
+            "msg": "Distribution Ubuntu 18.04 on host kaw--rtpe1 should use /usr/bin/python3, but is using /usr/bin/python for backward compatibility with prior Ansible releases. A future Ansible release will default to using the discovered platform python for this host. See https://docs.ansible.com/ansible/2.10/reference_appendices/interpreter_discovery.html for more information",
+            "version": "2.12"
+        }
+    ],
+    "failed": false
+}

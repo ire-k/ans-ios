@@ -1,0 +1,123 @@
+---
+# set ip dhcp snooping on 3560 switches
+- hosts: 
+    - cmp-sw-bialoleka
+    - cmp-sw-chmielna
+  gather_facts: false
+  connection: network_cli
+  tasks:
+
+    # gather ios_facts network_resources fails on:
+    # WS-C3560-24PS      12.2(55)SE12          C3560-IPSERVICESK9-M
+    # ME-3400-24TS-A     12.2(55)SE3           ME340x-METROIPACCESSK9-M
+    #
+    #ios_vlans fails on:
+    # ME-3400-24TS-A     12.2(60)EZ8           ME340x-METROIPACCESSK9-M
+    #
+  - name: get ios facts minimal
+    ios_facts:
+      gather_subset: min
+      #gather_network_resources: l2_interfaces
+      #
+      #regex to be corrected !
+      #  - debug: 
+      #var:  ansible_net_model
+
+  - name: process on catalyst 3560 platform
+    block:
+    - name: get vlans
+      ios_vlans:
+        config:
+        state: gathered
+      register: vlans 
+
+    - debug: 
+        msg: ""
+          #- "{{ansible_net_model}}"
+          #- "{{vlans}}"
+
+    - debug: 
+        msg: "{{vlans }}"
+
+    - name: verif vlans structure
+      debug:
+        msg: "{{ item }}"
+      loop: "{{vlans | json_query('gathered[*].vlan_id')}}"
+      when: False
+
+    - name: list vlans
+      debug:
+        msg: "{{item | json_query('gathered[*].vlan_id') }}"
+      with_dict: "{{vlans}}"
+
+    - name: set dhcp snooping on vlans
+      ios_command:
+        commands:
+          - "ip dhcp snooping vlan {{item.value.gathered[0].vlan_id}}"
+      loop: "vlans|dict2items"
+      when: False
+    when: ansible_net_model is regex("3560")
+
+  - name: process on ME-3400 platform
+    block:
+    - name: get vlans from ME-3400
+      ios_command:
+        commands: 
+          - show vlan
+      register: me3400vlans
+
+    - debug: 
+        msg:
+          - "{{ansible_net_model}}"
+          - "{{me3400vlans.stdout_lines[0]}}"
+
+            ## example output from "show vlan" on ME-3400:
+            #VLAN Type  SAID       MTU   Parent RingNo BridgeNo Stp  BrdgMode Trans1 Trans2
+            #---- ----- ---------- ----- ------ ------ -------- ---- -------- ------ ------
+            #1    enet  100001     1500  -      -      -        -    -        0      0 
+            # ... ommited
+            # we are interested in vlans range 1 - 200 only this time
+    - debug: var=item.split(" ")[0]
+      loop: "{{me3400vlans.stdout_lines[0]}}"
+      when: ( item is regex ("enet") and item.split(" ")[0]|int < 200 )
+
+    #        ok: [cmp-sw-bialoleka] => (item=130  enet  100130     1500  -      -      -        -    -        0      0   ) => {
+    #            "ansible_loop_var": "item",
+    #            "item": "130  enet  100130     1500  -      -      -        -    -        0      0   ",
+    #            "item.split(\" \")[0]": "130"
+    #        }
+
+    when: ansible_net_model is regex("3400") and False
+
+
+  # this sould work on every platform
+  - name: set dhcp snooping global on the box
+    ios_command:
+      commands:
+        - ip dhcp snooping 
+  ## also required interface level command: "ip dhcp snooping trust" on the uplink interfaces
+    # but it is already set manually, uplink interfaces names and numbers vary per customer location
+    #
+
+  - name: save config
+    ios_config:
+      save_when: never
+
+
+    # ios_vlans module breaks on ME-3400 platfrom with error: 
+    #   ValueError: invalid literal for int() with base 10: 'Fa0/1,'
+
+      #######################################
+      # sample output from ios_vlans gathered 
+      #         {
+      #            "changed": false,
+      #            "failed": false,
+      #            "gathered": [
+      #                {
+      #                    "mtu": 1500,
+      #                    "name": "default",
+      #                    "shutdown": "disabled",
+      #                    "state": "active",
+      #                    "vlan_id": 1
+      #                },
+      #

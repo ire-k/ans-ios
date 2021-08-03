@@ -1,0 +1,333 @@
+{
+    "ansible_facts": {
+        "ansible_net_all_ipv4_addresses": [
+            "10.254.1.211"
+        ],
+        "ansible_net_all_ipv6_addresses": [],
+        "ansible_net_api": "cliconf",
+        "ansible_net_filesystems": [
+            "flash:"
+        ],
+        "ansible_net_filesystems_info": {
+            "flash:": {
+                "spacefree_kb": 14760.5,
+                "spacetotal_kb": 31752.0
+            }
+        },
+        "ansible_net_gather_network_resources": [],
+        "ansible_net_gather_subset": [
+            "hardware",
+            "default",
+            "interfaces"
+        ],
+        "ansible_net_hostname": "LAND-SW1-cMe3400-12CS-A",
+        "ansible_net_image": "flash:/me340x-metroipaccessk9-mz.122-50.SE1.bin",
+        "ansible_net_interfaces": {
+            "GigabitEthernet0/1": {
+                "bandwidth": 1000000,
+                "description": "**uplink do LIM via Exatel, S-VLAN 3507, Tx1550/BiDi, SFP LC/PC 20km 1j **",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0024.985c.0f81",
+                "mediatype": "1000BaseBX10-D SFP",
+                "mtu": 9000,
+                "operstatus": "down",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/10": {
+                "bandwidth": 1000000,
+                "description": "** Adriela.pl ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0024.985c.0f8a",
+                "mediatype": "1000BaseBX10-U SFP",
+                "mtu": 9000,
+                "operstatus": "up",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/11": {
+                "bandwidth": 1000000,
+                "description": "**do ECI--SW1, SFP, 1j, Tx 1550nm ****",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0024.985c.0f8b",
+                "mediatype": "1000BaseLX SFP",
+                "mtu": 9000,
+                "operstatus": "up",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/12": {
+                "bandwidth": 1000000,
+                "description": "***Instytut Hematologii,Indiri Ghandi 14 l.glowne Tx1310nm LC/PC<->SC/PC *** ",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0024.985c.0f8c",
+                "mediatype": "1000BaseLX SFP",
+                "mtu": 9000,
+                "operstatus": "up",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/13": {
+                "bandwidth": 1000000,
+                "description": "**ZTM Stoklosy P+R ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0024.985c.0f8d",
+                "mediatype": "1000BaseBX10-U SFP",
+                "mtu": 9000,
+                "operstatus": "up",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/14": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0024.985c.0f8e",
+                "mediatype": "Not Present",
+                "mtu": 9000,
+                "operstatus": "administratively down",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/15": {
+                "bandwidth": 1000000,
+                "description": "** do FINA (backup) **",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0024.985c.0f8f",
+                "mediatype": "1000BaseLX SFP",
+                "mtu": 9000,
+                "operstatus": "up",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/16": {
+                "bandwidth": 1000000,
+                "description": "**UL do PIK11-RT1_Gi0/0/2 via Fo.dzierz.Netia***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0024.985c.0f90",
+                "mediatype": "1000BaseLX SFP",
+                "mtu": 9000,
+                "operstatus": "up",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/2": {
+                "bandwidth": 1000000,
+                "description": "**do LAND-SW5_Gi0/48 ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0024.985c.0f82",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9000,
+                "operstatus": "up",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/3": {
+                "bandwidth": 1000000,
+                "description": "**do LAND-RT2_Gi0/0***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0024.985c.0f83",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9000,
+                "operstatus": "up",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/4": {
+                "bandwidth": 100000,
+                "description": "**** SW-LAND IV pietro ****",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0024.985c.0f84",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9000,
+                "operstatus": "up",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/5": {
+                "bandwidth": 100000,
+                "description": "*** Zaklad Optyczny Robak ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0024.985c.0f85",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9000,
+                "operstatus": "up",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/6": {
+                "bandwidth": 100000,
+                "description": "**** MPJ Rotuska Mianowski ****",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0024.985c.0f86",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9000,
+                "operstatus": "up",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/7": {
+                "bandwidth": 10000,
+                "description": "**** PUB Rama Izabela Maslyk ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0024.985c.0f87",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9000,
+                "operstatus": "down",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/8": {
+                "bandwidth": 1000000,
+                "description": "**CMP Ursynow/Leclerc KEN15 SFP 1j 1310nm tx / 1550 RX LC/PC -> ODF port 6 dol LC/PC ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0024.985c.0f88",
+                "mediatype": "1000BaseBX10-U SFP",
+                "mtu": 9000,
+                "operstatus": "up",
+                "type": "Gigabit Ethernet"
+            },
+            "GigabitEthernet0/9": {
+                "bandwidth": 100000,
+                "description": "*** Budynek B 1 pietro ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": null,
+                "macaddress": "0024.985c.0f89",
+                "mediatype": "10/100/1000BaseTX",
+                "mtu": 9000,
+                "operstatus": "up",
+                "type": "Gigabit Ethernet"
+            },
+            "Vlan1": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "0024.985c.0fc0",
+                "mediatype": null,
+                "mtu": 1998,
+                "operstatus": "up",
+                "type": "EtherSVI"
+            },
+            "Vlan9": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.254.1.211",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0024.985c.0fc1",
+                "mediatype": null,
+                "mtu": 1998,
+                "operstatus": "up",
+                "type": "EtherSVI"
+            }
+        },
+        "ansible_net_iostype": "IOS",
+        "ansible_net_memfree_mb": 48651.3828125,
+        "ansible_net_memtotal_mb": 73306.75390625,
+        "ansible_net_model": "ME-3400G-12CS-A",
+        "ansible_net_neighbors": {
+            "GigabitEthernet0/11": [
+                {
+                    "host": "ECI-SW1-cME3400",
+                    "port": "GigabitEthernet0/1"
+                }
+            ],
+            "GigabitEthernet0/12": [
+                {
+                    "host": "X440_Xp_15",
+                    "port": "Slot:  1, Port: 48"
+                },
+                {
+                    "host": "InstHema-RT1-c3845.pagi",
+                    "port": "GigabitEthernet0/0"
+                }
+            ],
+            "GigabitEthernet0/13": [
+                {
+                    "host": "ztm-sw-stoklosy.pagi",
+                    "port": "GigabitEthernet0/1"
+                }
+            ],
+            "GigabitEthernet0/15": [
+                {
+                    "host": "FINA-RT1-cASR920-4SZ.pagi",
+                    "port": "TenGigabitEthernet0/0/3"
+                }
+            ],
+            "GigabitEthernet0/16": [
+                {
+                    "host": "PIK11-RT1-cASR920-24SZIM.pagi",
+                    "port": "GigabitEthernet0/0/2"
+                }
+            ],
+            "GigabitEthernet0/2": [
+                {
+                    "host": "LAND-SW5-c3560G.pagi",
+                    "port": "GigabitEthernet0/48"
+                }
+            ],
+            "GigabitEthernet0/3": [
+                {
+                    "host": "LAND-RT2-c1941.pagi",
+                    "port": "GigabitEthernet0/0"
+                }
+            ],
+            "GigabitEthernet0/4": [
+                {
+                    "host": "LAND-SW4-c2950-IVp",
+                    "port": "FastEthernet0/1"
+                }
+            ],
+            "GigabitEthernet0/9": [
+                {
+                    "host": "LAND-SW3-c2950-Ip",
+                    "port": "FastEthernet0/1"
+                }
+            ]
+        },
+        "ansible_net_python_version": "2.7.17",
+        "ansible_net_serialnum": "FOC1302U2X9",
+        "ansible_net_stacked_models": [
+            "ME-3400G-12CS-A"
+        ],
+        "ansible_net_stacked_serialnums": [
+            "FOC1302U2X9"
+        ],
+        "ansible_net_system": "ios",
+        "ansible_net_version": "12.2(50)SE1",
+        "ansible_network_resources": {},
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "deprecations": [
+        {
+            "msg": "Distribution Ubuntu 18.04 on host LAND-SW1-c3400-12CS should use /usr/bin/python3, but is using /usr/bin/python for backward compatibility with prior Ansible releases. A future Ansible release will default to using the discovered platform python for this host. See https://docs.ansible.com/ansible/2.10/reference_appendices/interpreter_discovery.html for more information",
+            "version": "2.12"
+        }
+    ],
+    "failed": false
+}

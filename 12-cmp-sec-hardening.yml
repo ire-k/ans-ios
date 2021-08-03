@@ -1,0 +1,458 @@
+---
+# general cisco ios security hardeining, tuned for a customer (cmp)
+# to do:
+# host_vars:
+#   - mgt_int, 
+#   - ntp_int, 
+#   - mgt vrf 
+#   - radius_int
+## cmp-sw-wola2: ip radius source-interface ! aaa group server radius grp-radius
+#
+- hosts: cmp-rt-goclaw
+  gather_facts: false
+  connection: network_cli
+  tasks:
+
+  - name: get ios facts hw
+    ios_facts:
+      gather_subset: 
+        - hardware
+          #- min
+
+  - debug:
+      msg: 
+        - "{{ansible_net_model}}"
+        - "{{inventory_hostname}}"
+
+  - debug:
+      msg: "dhcp host"
+    when:  (inventory_hostname is regex("(?i)cmp") or inventory_hostname is regex("(?i)linx-rt10") )
+
+#  - debug:
+#      var: (inventory_hostname is not regex("(?i)cmp") and inventory_hostname is not regex("(?i)linx-rt10") and ((dhcp_required is defined) or (dhcp_required|bool == True) ) )
+#
+      #  - debug:
+      #      var: hostvars[inventory_hostname]
+
+#      #- meta: end_play
+#  - name: pause
+#    pause:
+
+
+    # ios_user
+  - name: set authentication
+    ios_config:
+      lines:
+        - username irekk privilege 15 secret 5 $1$NOHk$/465WGpRY3ceCWrPXEv.l.
+        - username pagi privilege 15 secret 5 $1$RuFl$JgDX4ygd075CT5TYDvoA50
+        - aaa new-model
+        - aaa authentication login default group radius local
+        - aaa authorization exec default group radius local 
+        - aaa authorization console
+
+  - name: set aaa group radius
+    ios_config:
+      parents: aaa group server radius grp-radius
+      lines:
+        - server 212.69.71.194 auth-port 1812 acct-port 1813
+
+  - name: set aaa group radius src int
+    when: "mgt_int is defined"
+    ios_config:
+      parents: aaa group server radius grp-radius
+      lines:
+        - ip radius source-interface {{mgt_int}}
+
+
+
+
+  - name: set radius srv new-config
+    when: ( ansible_net_model is regex("ME3600X") or ansible_net_model is regex("ASR") or ansible_net_model is regex("1941") or ansible_net_model is regex("3945")  )
+    ios_config:
+      parents: radius server radius-srv1
+      lines:
+        - address ipv4 212.69.71.194 auth-port 1812 acct-port 1814
+        - key 1pSbR2Dq
+    tags: radius-new
+
+  - name: set radius old-config glob
+    when: ( ansible_net_model is regex("4900") or ansible_net_model is regex("3560") or ansible_net_model is regex("ME-3400"))
+    ios_config:
+      lines:
+        - radius-server host 212.69.71.194 auth-port 1812 acct-port 1813 key 1pSbR2Dq
+
+  - name: set aliases
+    ios_config:
+      lines:
+        - alias interface addvlan switchport trunk allowed vlan add
+        - alias interface remvlan switchport trunk allowed vlan remove
+        - alias interface vlanadd switchport trunk allowed vlan add
+        - alias interface vlanrem switchport trunk allowed vlan remove 
+ 
+  - name : set archive
+    ios_config:
+      parents: archive
+      lines:
+        - path tftp://212.69.68.123/$h-@-$t
+        - write-memory
+
+          # ! not on cmp-rt3 and linx-rt10
+  - name: security hardeinig
+    ios_config:
+      lines:
+        - no service config
+        - no service tcp-small-servers
+        - no service udp-small-servers
+        - no service pad
+        - no service finger
+        - no ip http server
+        - no ip http secure-server
+        - no service exec-callback
+          #- no mop enabled !- per interface
+        - service tcp-keepalives-in
+        - service tcp-keepalives-out
+        - no ip domain lookup
+        
+  - name: security2
+    when: ( ansible_net_model is regex("4900") or ansible_net_model is regex("3560") or ansible_net_model is regex("3750") or ansible_net_model is regex("2950") )
+    ios_config:
+      lines:
+        - vtp mode transparent
+
+  - name : security3
+    ignore_errors: True
+    when: ( ansible_net_model is regex("4900") or ansible_net_model is regex("3560") or ansible_net_model is regex("ASR") )
+    ios_config:
+      lines:
+        - no service call-home
+
+    # ansible_net_hostname would work also
+  - name : security harderning 4
+    ignore_errors: True
+    when: (inventory_hostname is not regex("(?i)cmp") and inventory_hostname is not regex("(?i)linx-rt10") )  
+    ios_config:
+      lines:
+        - no service dhcp
+    tags: serv_dhcp
+
+  - name: ntp acls ban any
+    cisco.ios.ios_config:
+      parents: ip access-list standard ban-any
+      lines:
+        - remark **ban everything**
+        - deny any
+      match: exact
+      replace: block
+
+  - name: ntp acls pagi-ntp-srv
+    cisco.ios.ios_config:
+      parents: ip access-list standard pagi-ntp-srv
+      lines:
+        - remark **valid pagi ntp servers**
+        - permit 212.69.68.123
+        - permit 212.69.81.115
+      match: exact
+      replace: block
+
+      ## todo: errors on some dev: cmp-rt4, ME3400, sw-marianska, sw-pawia, sw-wola 
+  - name: ntp acls apply
+    ignore_errors: True
+    when: inventory_hostname is not regex("(?i)linx-rt15")
+    cisco.ios.ios_config:
+      lines:
+        - ntp access-group peer pagi-ntp-srv
+        - ntp access-group serve ban-any
+        - ntp access-group serve-only ban-any
+        - ntp access-group query-only ban-any
+        - ntp server 212.69.81.115 prefer
+        - ntp server 212.69.68.123
+  
+    
+  - name: security on con line
+    ios_config:
+      parents: line con 0
+      lines:
+        - exec-timeout 60
+        - logging synchronous
+
+  - name: set timestamps1
+    ignore_errors: True
+    ios_config:
+      lines:
+        - service timestamps debug datetime msec localtime show-timezone year
+        - service timestamps log datetime msec localtime show-timezone year
+    register: timestamps1
+
+
+  - name: set timestamps when prev failed
+    when: timestamps1 is failed
+    ignore_errors: True
+    ios_config:
+      lines:
+        - service timestamps debug datetime msec localtime show-timezone
+        - service timestamps log datetime msec localtime show-timezone
+
+
+
+  - name: set timezone
+    ios_config:
+      lines:
+        - clock timezone CET 1 0
+        - clock summer-time CEST recurring last Sun Mar 2:00 last Sun Oct 3:00
+
+
+
+  # ios_logging 
+  # https://docs.ansible.com/ansible/latest/modules/ios_logging_module.html#ios-logging-module
+  - name: set logging
+    ios_config:
+      lines:
+        - logging trap informational
+        - logging buffered 100000 informational
+          # cpu save
+        - no logging console
+        - no logging monitor 
+
+  - name: set syslog newer ios
+    when: "mgt_vrf is not defined"
+    ignore_errors: True
+    ios_config:
+      lines:
+        - logging host 212.69.68.123 session-id hostname
+    register: logging1
+
+  - name: set syslog old ios
+    when: "(mgt_vrf is not defined) and (logging1 is failed)"
+    ios_config:
+      lines:
+        - logging host 212.69.68.123 
+
+  - name: set syslog newer ios with vrf
+    when: "mgt_vrf is defined"
+    ignore_errors: True
+    ios_config:
+      lines:
+        - logging host 212.69.68.123 vrf {{mgt_vrf}} session-id hostname
+    register: loggingvrf
+
+
+  - name: set ntp1 with src int
+    when: "ntp_int is defined"
+    ios_ntp:
+      source_int: "{{ntp_int}}"
+      server: 212.69.81.115
+      logging: false
+      state: present
+
+  - name: set ntp2 with src int
+    when: "ntp_int is defined"
+    ios_ntp:
+      server: 212.69.68.123
+      source_int: "{{ntp_int}}"
+      logging: false
+      state: present
+
+  - name: set ntp1
+    when: "ntp_int is not defined"
+    ios_ntp:
+      server: 212.69.81.115
+      logging: false
+      state: present
+
+  - name: set ntp2
+    when: "ntp_int is not defined"
+    ios_ntp:
+      server: 212.69.68.123
+      logging: false
+      state: present
+
+
+  - name: set ntp srv prefer
+    ios_config:
+      lines:
+        - ntp server 212.69.81.115 prefer
+        - no ntp logging
+
+  - name: change enable secret
+    when: inventory_hostname is regex("(?i)cmp")
+    cisco.ios.ios_config:
+      lines:
+        - "enable secret {{cmp_enable}}"
+ 
+
+  # order of the entries and remarks tends to be unpredictable; adding numbers before permit doesn't help - probably gets optimized by CEF
+  - name: set ACL clogin standard
+    when: inventory_hostname is regex("(?i)cmp")
+    cisco.ios.ios_config:
+      parents: ip access-list standard clogin
+      lines:
+        - remark **Helpdesk, nagiosAWS, loc mgmt-intf**
+        - permit 212.69.66.0 0.0.0.63
+        - permit host 212.69.68.123
+        - permit host 52.210.128.8
+        - permit host 192.168.10.34
+      match: exact
+      replace: block
+
+  # order of the entries and remarks tends to be unpredictable; adding numbers before permit doesn't help - probably gets optimized by CEF
+  - name: set ACL login standard
+    when: inventory_hostname is not regex("(?i)cmp")
+    cisco.ios.ios_config:
+      parents: ip access-list standard login
+      lines:
+        - remark **Helpdesk, nagiosAWS, loc mgmt-intf**
+        - permit 212.69.66.0 0.0.0.63
+        - permit host 212.69.68.123
+        - permit host 52.210.128.8
+      match: exact
+      replace: block
+
+
+
+  - name: config vty lines
+    ios_config:
+      parents: line vty 0 4
+      lines:
+        - exec-timeout 60
+        - logging synchronous
+
+
+  - name: access-class vty lines 1 on cmp dev
+    when: inventory_hostname is regex("(?i)cmp")
+    ignore_errors: True
+    ios_config:
+      parents: line vty 0 4
+      lines:
+        - access-class clogin in vrf-also
+
+  - name: access-class vty lines 1 on std dev
+    when: inventory_hostname is not regex("(?i)cmp")
+    ignore_errors: True
+    ios_config:
+      parents: line vty 0 4
+      lines:
+        - access-class login in vrf-also
+
+
+          # memory critical influences both io and processor pools 
+          #  reserves memory for critical notifications (200kB) and console access (2kB)
+          #  applied after reload
+          #  logging buffer was set at 100kB
+          #  default: 100 kilobytes of memory is reserved for the logging process
+          # cpu load generally should not exceed 75%
+  - name: res memory critical and cpu load warnings
+    ios_config:
+      lines:
+        - memory reserve critical 200
+        - process cpu threshold type total rising 80 interval 30 falling 70 interval 30
+        - process cpu statistics limit entry-percentage 40 size 300
+
+  # todo: fails on 3560G, ME3400
+  - name: res memory console
+    ignore_errors: True
+    when: (ansible_net_model is not regex("ASR")) and (ansible_net_model is not regex("(?i)ME-3400")) and (ansible_net_model is not regex("(?i)3560")) 
+    ios_config:
+      lines:
+        - memory reserve console 2
+    tags: memrescrit
+
+
+    # allows check with command: show memory overflow
+  - name: memory leak detection
+    when: ansible_net_model is regex("ASR")
+    ios_config:
+      lines:
+        - exception memory ignore overflow io
+        - exception memory ignore overflow processor
+        #Enhanced Crashinfo File Collection
+        #- exception crashinfo maximum files 1
+
+  - name: set memory warning on 4900
+    when: ansible_net_model is regex("4900")
+    ios_config:
+      lines:
+        - memory free low-watermark processor 90000
+
+  - name: set memory warning on ASR920
+    when: ansible_net_model is regex("ASR-920")
+    ios_config:
+      lines:
+        - memory free low-watermark processor 180000
+
+          # ASR1002 RP1 ESP10 4GB phy RAM
+  - name: set memory warning on ASR 1002
+    when: ansible_net_model is regex("ASR1002")
+    ios_config:
+      lines:
+        - memory free low-watermark processor 328348
+
+          # ASR1001-X / ASR1001 embedded RP, 8GB phy RAM
+  - name: set memory warning on ASR1001/ASR1001-X
+    when: ansible_net_model is regex("ASR1001")
+    ios_config:
+      lines:
+        - memory free low-watermark processor 745691
+
+  - name: set memory warning on ME3600X
+    when: ansible_net_model is regex("ME3600X")
+    ios_config:
+      lines:
+        - memory free low-watermark processor 159000
+        - memory free low-watermark io 13000
+
+  - name: set memory warning on 3560
+    when: ansible_net_model is regex("3560")
+    ios_config:
+      lines:
+        - memory free low-watermark processor 15000
+        - memory free low-watermark io 1600
+
+  - name: set memory warning on ME3400
+    when: ansible_net_model is regex("ME-3400")
+    ios_config:
+      lines:
+        - memory free low-watermark processor 200
+        - memory free low-watermark io 1200
+
+  - name: set memory warning on WS-3750
+    when: ansible_net_model is regex("3750")
+    ios_config:
+      lines:
+        - memory free low-watermark processor 200
+        - memory free low-watermark io 2457
+
+  - name: disable vstack
+    ignore_errors: True
+    when: ( ansible_net_model is regex("3560")) or (ansible_net_model is regex ("3750") )
+    ios_config:
+      lines:
+        - no vstack basic
+    tags: vstack
+
+  - name: ssh tune
+    ios_config:
+      lines:
+        - ip ssh time-out 60
+        - ip ssh authentication-retries 5
+        - ip scp server enable
+
+          # mgt_int defined and mgt_vrf undefined
+  - name: mgt src int
+    when: "(mgt_int is defined ) and (mgt_vrf is not defined)"
+    ios_config:
+      lines:
+        - logging source-interface {{mgt_int}}
+
+  - name: logg src int with vrf
+    when: "(mgt_int is defined ) and (mgt_vrf is not defined)"
+    ios_config:
+      lines:
+        - logging source-interface {{mgt_int}} vrf {{mgt_vrf}}
+
+
+
+  - name: save config
+    ios_config:
+      save_when: always
+
+

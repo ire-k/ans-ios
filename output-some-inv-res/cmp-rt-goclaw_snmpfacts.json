@@ -1,0 +1,257 @@
+{
+    "ansible_facts": {
+        "ansible_net_all_ipv4_addresses": [
+            "172.16.18.23",
+            "172.16.18.21",
+            "192.168.70.1",
+            "10.111.202.69",
+            "10.111.202.73",
+            "10.111.198.70",
+            "45.137.224.46",
+            "10.111.11.69",
+            "172.16.18.19",
+            "172.16.19.70"
+        ],
+        "ansible_net_all_ipv6_addresses": [],
+        "ansible_net_api": "cliconf",
+        "ansible_net_filesystems": [
+            "flash0:"
+        ],
+        "ansible_net_filesystems_info": {
+            "flash0:": {
+                "spacefree_kb": 103396.0,
+                "spacetotal_kb": 255076.0
+            }
+        },
+        "ansible_net_gather_network_resources": [],
+        "ansible_net_gather_subset": [
+            "hardware",
+            "default",
+            "interfaces"
+        ],
+        "ansible_net_hostname": "cmp-rt-goclaw",
+        "ansible_net_image": "flash:c1900-universalk9-mz.SPA.155-3.M4.bin",
+        "ansible_net_interfaces": {
+            "Embedded-Service-Engine0/0": {
+                "bandwidth": 10000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "0000.0000.0000",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "Embedded Service Engine"
+            },
+            "GigabitEthernet0/0": {
+                "bandwidth": 1000000,
+                "description": "**uplink do LINX-SW3 via  VirtuaOp. Vlan 1828 **",
+                "duplex": "Full",
+                "ipv4": [
+                    {
+                        "address": "45.137.224.46",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "a89d.2118.f3c0",
+                "mediatype": "RJ45",
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1": {
+                "bandwidth": 1000000,
+                "description": "**do cmp-sw-praga_gi0/45 ***",
+                "duplex": "Full",
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "a89d.2118.f3c1",
+                "mediatype": "RJ45",
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1.100": {
+                "bandwidth": 1000000,
+                "description": "**LAN CMP ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "192.168.70.1",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "a89d.2118.f3c1",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1.120": {
+                "bandwidth": 1000000,
+                "description": "**BK via MK do cmp-rt3***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.111.198.70",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "a89d.2118.f3c1",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1.4000": {
+                "bandwidth": 1000000,
+                "description": "**mgt cmp-sw-goclaw via sw global rt tab**",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.111.202.73",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "a89d.2118.f3c1",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1.4001": {
+                "bandwidth": 1000000,
+                "description": "**mgt dla cmp-sw-praga***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.111.202.69",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "a89d.2118.f3c1",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "Loopback2002": {
+                "bandwidth": 8000000,
+                "description": "**vrf mgt**",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.111.11.69",
+                        "subnet": "32"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "up",
+                "type": null
+            },
+            "Tunnel20701": {
+                "bandwidth": 100,
+                "description": "**z cmp-rt-goclaw do cmp-rt3  via VirtuaOp inet **",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.18.19",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 17916,
+                "operstatus": "up",
+                "type": null
+            },
+            "Tunnel20703": {
+                "bandwidth": 100,
+                "description": "**IPSEC do cmp-rt4 via bk LTE, MK IP 178.182.239.147**",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.19.70",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 17916,
+                "operstatus": "up",
+                "type": null
+            },
+            "Tunnel41": {
+                "bandwidth": 100,
+                "description": "**mgt do linx-rt11 via virtop inet **",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.18.21",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 17916,
+                "operstatus": "up",
+                "type": null
+            },
+            "Tunnel42": {
+                "bandwidth": 100,
+                "description": "**MGT2 do linx-rt15 via virtuaop inet **",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.18.23",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 17916,
+                "operstatus": "up",
+                "type": null
+            }
+        },
+        "ansible_net_iostype": "IOS",
+        "ansible_net_memfree_mb": 40713.47265625,
+        "ansible_net_memtotal_mb": 318812.8203125,
+        "ansible_net_model": "CISCO1941/K9",
+        "ansible_net_neighbors": {
+            "GigabitEthernet0/1": [
+                {
+                    "host": "cmp-sw-goclaw_c3650G.pagi",
+                    "port": "GigabitEthernet0/45"
+                }
+            ]
+        },
+        "ansible_net_python_version": "2.7.17",
+        "ansible_net_serialnum": "FCZ191470BS",
+        "ansible_net_system": "ios",
+        "ansible_net_version": "15.5(3)M4",
+        "ansible_network_resources": {},
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "deprecations": [
+        {
+            "msg": "Distribution Ubuntu 18.04 on host cmp-rt-goclaw should use /usr/bin/python3, but is using /usr/bin/python for backward compatibility with prior Ansible releases. A future Ansible release will default to using the discovered platform python for this host. See https://docs.ansible.com/ansible/2.10/reference_appendices/interpreter_discovery.html for more information",
+            "version": "2.12"
+        }
+    ],
+    "failed": false
+}

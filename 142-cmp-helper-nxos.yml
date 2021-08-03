@@ -1,0 +1,42 @@
+---
+## change ip dhcp helper addr on SVI's on NXOS switches
+#
+- hosts: cmp_routers_nxos
+  gather_facts: false
+  connection: network_cli
+  tasks:
+
+  - name: get nxos facts
+    cisco.nxos.nxos_facts:
+    #nxos_facts:
+    #igather_subset: interfaces
+      gather_network_resources: l3_interfaces
+
+  - debug: var=ansible_net_model
+
+  - meta: end_play
+    when: ( ansible_net_model is not regex("(?i)Nexus"))
+
+    #  - debug:
+    #  var: ansible_net_interfaces
+
+  - name: change helper address
+    nxos_config:
+      lines:
+        - no ip dhcp relay address 192.168.10.1
+        - no ip dhcp relay address 192.168.10.5
+        - no ip dhcp relay address 192.168.10.6
+        - ip dhcp relay address 192.168.10.248
+          #- ip helper-address 192.168.10.248
+      parents: "interface {{item.key}}"
+    loop: "{{ansible_net_interfaces | dict2items}}"
+    when: ((item.value.ipv4.address is defined) and (item.value.ipv4.address is regex("192.168.") ) and (item.key is not regex("Loopback") ))
+
+
+  - name: save config
+    nxos_config:
+      save_when: changed
+
+  # todo: use alias copytftp
+  #
+

@@ -1,0 +1,39 @@
+{
+    "ansible_facts": {
+        "ansible_net_api": "cliconf",
+        "ansible_net_filesystems": [
+            "bootflash:"
+        ],
+        "ansible_net_filesystems_info": {
+            "bootflash:": {
+                "spacefree_kb": 4621236.0,
+                "spacetotal_kb": 7660164.0
+            }
+        },
+        "ansible_net_gather_network_resources": [],
+        "ansible_net_gather_subset": [
+            "hardware",
+            "default"
+        ],
+        "ansible_net_hostname": "PIK11-RT2-cASR1001",
+        "ansible_net_image": "bootflash:asr1001-universalk9.03.13.02.S.154-3.S2-ext.bin",
+        "ansible_net_iostype": "IOS-XE",
+        "ansible_net_memfree_mb": 1958389.53125,
+        "ansible_net_memtotal_mb": 3751508.953125,
+        "ansible_net_model": "ASR1001",
+        "ansible_net_python_version": "2.7.17",
+        "ansible_net_serialnum": "SSI153204VL",
+        "ansible_net_system": "ios",
+        "ansible_net_version": "03.13.02.S",
+        "ansible_network_resources": {},
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "deprecations": [
+        {
+            "msg": "Distribution Ubuntu 18.04 on host PIK11-RT2-cASR1001 should use /usr/bin/python3, but is using /usr/bin/python for backward compatibility with prior Ansible releases. A future Ansible release will default to using the discovered platform python for this host. See https://docs.ansible.com/ansible/2.10/reference_appendices/interpreter_discovery.html for more information",
+            "version": "2.12"
+        }
+    ],
+    "failed": false
+}

@@ -1,0 +1,269 @@
+{
+    "ansible_facts": {
+        "ansible_net_all_ipv4_addresses": [
+            "10.111.207.240",
+            "172.16.15.240",
+            "10.111.200.242",
+            "192.168.240.1",
+            "10.111.200.240",
+            "10.111.202.240",
+            "172.16.19.240",
+            "46.170.67.214",
+            "172.16.18.15",
+            "10.111.11.240"
+        ],
+        "ansible_net_all_ipv6_addresses": [],
+        "ansible_net_api": "cliconf",
+        "ansible_net_filesystems": [
+            "flash0:"
+        ],
+        "ansible_net_filesystems_info": {
+            "flash0:": {
+                "spacefree_kb": 112612.0,
+                "spacetotal_kb": 250476.0
+            }
+        },
+        "ansible_net_gather_network_resources": [],
+        "ansible_net_gather_subset": [
+            "hardware",
+            "default",
+            "interfaces"
+        ],
+        "ansible_net_hostname": "cmp-rt-piasJP2-c1941",
+        "ansible_net_image": "flash:c1900-universalk9-mz.SPA.156-3.M.bin",
+        "ansible_net_interfaces": {
+            "Embedded-Service-Engine0/0": {
+                "bandwidth": 10000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "0000.0000.0000",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "Embedded Service Engine"
+            },
+            "GigabitEthernet0/0": {
+                "bandwidth": 1000000,
+                "description": "**uplink do orange***",
+                "duplex": "Full",
+                "ipv4": [
+                    {
+                        "address": "46.170.67.214",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "7c69.f6b6.10a0",
+                "mediatype": "RJ45",
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1": {
+                "bandwidth": 100000,
+                "description": "**do cmp-sw-piasJP2_fa0/24***",
+                "duplex": "Full",
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "7c69.f6b6.10a1",
+                "mediatype": "RJ45",
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1.100": {
+                "bandwidth": 100000,
+                "description": "**LAN JP2 ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "192.168.240.1",
+                        "subnet": "22"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "7c69.f6b6.10a1",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1.3400": {
+                "bandwidth": 100000,
+                "description": "**MGT via radio PAGI ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.111.207.240",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "7c69.f6b6.10a1",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1.3401": {
+                "bandwidth": 10000,
+                "description": "**transm via radio pagi bk ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.15.240",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "7c69.f6b6.10a1",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "GigabitEthernet0/1.4000": {
+                "bandwidth": 100000,
+                "description": "**mgt do cmp-sw-piasJP2 **",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.111.202.240",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "7c69.f6b6.10a1",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "CN Gigabit Ethernet"
+            },
+            "Loopback2002": {
+                "bandwidth": 8000000,
+                "description": "**mgt ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.111.11.240",
+                        "subnet": "32"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "up",
+                "type": null
+            },
+            "NVI0": {
+                "bandwidth": 56,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "up",
+                "type": null
+            },
+            "Tunnel22401": {
+                "bandwidth": 100000,
+                "description": "** z cmp-rt-jp2 do cmp-rt3 via Orange***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.18.15",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 17916,
+                "operstatus": "up",
+                "type": null
+            },
+            "Tunnel22402": {
+                "bandwidth": 30000,
+                "description": "**z cmp-rt-jp2 do cmp-rt4 via Orange*****",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.19.240",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 17916,
+                "operstatus": "up",
+                "type": null
+            },
+            "Tunnel45": {
+                "bandwidth": 10000,
+                "description": "**mgt cmp-rt-piasJP2 - linx-rt15**",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.111.200.240",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 17916,
+                "operstatus": "up",
+                "type": null
+            },
+            "Tunnel46": {
+                "bandwidth": 5000,
+                "description": "**mgt cmp-rt-piasJP2 - linx-rt11**",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.111.200.242",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 17916,
+                "operstatus": "up",
+                "type": null
+            }
+        },
+        "ansible_net_iostype": "IOS",
+        "ansible_net_memfree_mb": 35248.45703125,
+        "ansible_net_memtotal_mb": 316264.4375,
+        "ansible_net_model": "CISCO1941/K9",
+        "ansible_net_neighbors": {
+            "GigabitEthernet0/1": [
+                {
+                    "host": "cmp-sw-piasJP2",
+                    "port": "FastEthernet0/24"
+                }
+            ]
+        },
+        "ansible_net_python_version": "2.7.17",
+        "ansible_net_serialnum": "FCZ1739937Y",
+        "ansible_net_system": "ios",
+        "ansible_net_version": "15.6(3)M",
+        "ansible_network_resources": {},
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "deprecations": [
+        {
+            "msg": "Distribution Ubuntu 18.04 on host cmp-rt-pias-jp2-l2k should use /usr/bin/python3, but is using /usr/bin/python for backward compatibility with prior Ansible releases. A future Ansible release will default to using the discovered platform python for this host. See https://docs.ansible.com/ansible/2.10/reference_appendices/interpreter_discovery.html for more information",
+            "version": "2.12"
+        }
+    ],
+    "failed": false
+}

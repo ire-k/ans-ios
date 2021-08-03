@@ -1,0 +1,39 @@
+
+  - name: set ACL1 w/o ATM
+    #statement match:exact seems to help
+    #https://github.com/ansible/ansible/issues/29716
+    #when: atm is undefined
+    when: False
+    ios_config:
+      before: no access-list 1
+      #parents: access-list 1
+      lines:
+        - access-list 1 remark **ACL1 helpdesk **
+        - access-list 1 permit 212.69.66.0 0.0.0.63
+        - access-list 1 permit 212.69.68.123
+        - access-list 1 remark **ACL1 nagios AWS**
+        - access-list 1 permit 52.210.128.8
+        - access-list 1 remark **ACL1 loc mgmt-intf Gi0***
+        - access-list 1 permit 10.0.0.0 0.0.0.255
+        - access-list 1 remark **ACL1 end***
+          #replace: block
+      match: exact
+
+  - name: set ACL1 with ATM
+    #statement match:exact seems to help
+    #https://github.com/ansible/ansible/issues/29716
+    #when: (atm is defined) and (atm|bool == True)
+    when: False
+    ios_config:
+      before: no access-list 1
+      #parents: access-list 1
+      lines:
+        - access-list 1 remark **ACL1 helpdesk **
+        - access-list 1 permit 212.69.66.0 0.0.0.63
+        - access-list 1 permit 212.69.68.123
+        - access-list 1 remark **ACL1 packet sniffer/pakieciarka**
+        - access-list 1 permit {{atm_acl1_extra_entry}}
+        - access-list 1 remark **ACL1 end***
+          #replace: block
+      match: exact
+

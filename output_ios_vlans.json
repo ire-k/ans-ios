@@ -1,0 +1,91 @@
+     {
+        "changed": false,
+        "failed": false,
+        "gathered": [
+            {
+                "mtu": 1500,
+                "name": "default",
+                "shutdown": "disabled",
+                "state": "active",
+                "vlan_id": 1
+            },
+            {
+                "mtu": 1500,
+                "name": "LAN",
+                "shutdown": "disabled",
+                "state": "active",
+                "vlan_id": 100
+            },
+            {
+                "mtu": 1500,
+                "name": "fddi-default",
+                "shutdown": "enabled",
+                "state": "active",
+                "vlan_id": 1002
+            },
+            {
+                "mtu": 1500,
+                "name": "token-ring-default",
+                "shutdown": "enabled",
+                "state": "active",
+                "vlan_id": 1003
+            },
+            {
+                "mtu": 1500,
+                "name": "fddinet-default",
+                "shutdown": "enabled",
+                "state": "active",
+                "vlan_id": 1004
+            },
+            {
+                "mtu": 1500,
+                "name": "trnet-default",
+                "shutdown": "enabled",
+                "state": "active",
+                "vlan_id": 1005
+            },
+            {
+                "mtu": 1500,
+                "name": "mgt-radio",
+                "shutdown": "disabled",
+                "state": "active",
+                "vlan_id": 3400
+            },
+            {
+                "mtu": 1500,
+                "name": "transm-radio",
+                "shutdown": "disabled",
+                "state": "active",
+                "vlan_id": 3401
+            },
+            {
+                "mtu": 1500,
+                "name": "transm-FO-PAGI",
+                "shutdown": "disabled",
+                "state": "active",
+                "vlan_id": 3410
+            },
+            {
+                "mtu": 1500,
+                "name": "mgt-FO-PAGI",
+                "shutdown": "disabled",
+                "state": "active",
+                "vlan_id": 3411
+            },
+            {
+                "mtu": 1500,
+                "name": "MGT",
+                "shutdown": "disabled",
+                "state": "active",
+                "vlan_id": 4000
+            },
+            {
+                "mtu": 1500,
+                "name": "transm-old",
+                "shutdown": "disabled",
+                "state": "active",
+                "vlan_id": 4011
+            }
+        ]
+    }
+

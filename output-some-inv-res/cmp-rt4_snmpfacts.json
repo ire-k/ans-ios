@@ -1,0 +1,635 @@
+{
+    "ansible_facts": {
+        "ansible_net_all_ipv4_addresses": [
+            "172.16.19.62",
+            "172.16.19.50",
+            "172.16.19.44",
+            "172.16.19.30",
+            "10.111.202.5",
+            "172.16.10.30",
+            "212.69.71.214",
+            "172.16.10.54",
+            "172.16.10.128",
+            "172.16.10.80",
+            "172.16.18.16",
+            "10.111.202.10",
+            "192.168.10.5",
+            "172.16.19.74",
+            "172.16.19.22",
+            "172.16.19.241",
+            "212.69.71.207",
+            "172.16.10.50",
+            "172.16.10.46",
+            "10.111.11.5",
+            "172.16.19.54",
+            "10.111.202.12",
+            "172.16.10.38",
+            "172.16.10.42",
+            "172.16.19.34",
+            "10.111.200.231",
+            "172.16.19.71"
+        ],
+        "ansible_net_all_ipv6_addresses": [],
+        "ansible_net_api": "cliconf",
+        "ansible_net_filesystems": [
+            "disk2:"
+        ],
+        "ansible_net_filesystems_info": {
+            "disk2:": {
+                "spacefree_kb": 33308.0,
+                "spacetotal_kb": 63836.0
+            }
+        },
+        "ansible_net_gather_network_resources": [],
+        "ansible_net_gather_subset": [
+            "hardware",
+            "default",
+            "interfaces"
+        ],
+        "ansible_net_hostname": "cmp-rt4-c7204",
+        "ansible_net_image": "disk2:c7200-adventerprisek9-mz.124-9.T4.bin",
+        "ansible_net_interfaces": {
+            "GigabitEthernet0/1": {
+                "bandwidth": 1000000,
+                "description": "**do LINX-SW3_eth1/0/4.TD.BKT_Citystrada.CMP_Pias_Pul49->LINX**GBIC_1j_Tx1550nm/Rx1310nm,SC/PC**",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "0018.1952.241b",
+                "mediatype": "ZX",
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/1.30": {
+                "bandwidth": 600000,
+                "description": "**Inet RT3-RT4 via SW7***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.10.128",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0018.1952.241b",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/1.31": {
+                "bandwidth": 1000000,
+                "description": "**Transm Rt3-RT4 via SW7***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.10.80",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0018.1952.241b",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/1.32": {
+                "bandwidth": 1000000,
+                "description": "**trasnm cmp do wisniowa**",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.10.54",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0018.1952.241b",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/1.42": {
+                "bandwidth": 1000000,
+                "description": "**mgt do cmp-sw7-Pul49**",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.111.200.231",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0018.1952.241b",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/1.797": {
+                "bandwidth": 30000,
+                "description": "**inet bk via bkt/citystrada**",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.71.214",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0018.1952.241b",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/1.799": {
+                "bandwidth": 1000000,
+                "description": "**transm bk via bkt/citystrada ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.10.30",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0018.1952.241b",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/2": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "0018.1952.241a",
+                "mediatype": "LX",
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/2.30": {
+                "bandwidth": 1000000,
+                "description": "**dla OSPF 3/inet RT3-RT4 **",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.10.46",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0018.1952.241a",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/2.31": {
+                "bandwidth": 1000000,
+                "description": "**dla OSPF 2/Transm RT3-RT4 **",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.10.50",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0018.1952.241a",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/2.4000": {
+                "bandwidth": 1000000,
+                "description": "**mgt rt-rt ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.111.202.10",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0018.1952.241a",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/3": {
+                "bandwidth": 1000000,
+                "description": "***LAN PIAS**do cmp-sw4_Gi0/52**GBIC 2j 1310nm, SC/PC ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "0018.1952.2419",
+                "mediatype": "LX",
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/3.3": {
+                "bandwidth": 1000000,
+                "description": "***LAN CMP - biuro ****",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "192.168.10.5",
+                        "subnet": "22"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0018.1952.2419",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/3.30": {
+                "bandwidth": 500000,
+                "description": "*** dla OSPF3/inet, do RT3, test ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.10.38",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0018.1952.2419",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/3.31": {
+                "bandwidth": 1000000,
+                "description": "*** dla OSPF2/transm, do RT3, test ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.10.42",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0018.1952.2419",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "GigabitEthernet0/3.4000": {
+                "bandwidth": 1000000,
+                "description": "**mgt lan side **",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.111.202.5",
+                        "subnet": "29"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "0018.1952.2419",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "BCM1250 Internal MAC"
+            },
+            "Loopback0": {
+                "bandwidth": 8000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.71.207",
+                        "subnet": "32"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "up",
+                "type": null
+            },
+            "Loopback2002": {
+                "bandwidth": 8000000,
+                "description": "**MGT ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.111.11.5",
+                        "subnet": "32"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "up",
+                "type": null
+            },
+            "NVI0": {
+                "bandwidth": 10000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "up",
+                "type": null
+            },
+            "Tunnel20203": {
+                "bandwidth": 9,
+                "description": "*** bk cmp-ochota via Mikrotik ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.19.22",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "up",
+                "type": null
+            },
+            "Tunnel20303": {
+                "bandwidth": 9,
+                "description": "*** bk cmp-wola via Mikrotik *** ",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.19.30",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "up",
+                "type": null
+            },
+            "Tunnel20353": {
+                "bandwidth": 9,
+                "description": "*** bk cmp-ursyn via Mikrotik ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.19.34",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "up",
+                "type": null
+            },
+            "Tunnel20453": {
+                "bandwidth": 9,
+                "description": "**cmp-rt4 -- cmp-rt-pawia via bk LTE 188.147.181.63**",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.19.44",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "up",
+                "type": null
+            },
+            "Tunnel20503": {
+                "bandwidth": 9,
+                "description": "*** bk cmp-jozefoslaw via Mikrotik ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.19.50",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "up",
+                "type": null
+            },
+            "Tunnel20553": {
+                "bandwidth": 9,
+                "description": "*** bk cmp-zoliborz via Mikrotik ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.19.54",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "up",
+                "type": null
+            },
+            "Tunnel20603": {
+                "bandwidth": 9,
+                "description": "*** bk cmp-wilanow via Mikrotik ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.19.62",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "up",
+                "type": null
+            },
+            "Tunnel20652": {
+                "bandwidth": 5000,
+                "description": "**do CMP Lomianki ul. Warszawska via Radio IBS ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.18.16",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "up",
+                "type": null
+            },
+            "Tunnel20653": {
+                "bandwidth": 9,
+                "description": "**do CMP Lomianki via Radio ISB lan 192.168.65.0 **",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "administratively down",
+                "type": null
+            },
+            "Tunnel20703": {
+                "bandwidth": 9,
+                "description": "**IPSEC do cmp-rt-goclaw (bk) via MK LTE**",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.19.71",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "up",
+                "type": null
+            },
+            "Tunnel20753": {
+                "bandwidth": 9,
+                "description": "*** bk cmp-wola2 via Mikrotik ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.19.74",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "up",
+                "type": null
+            },
+            "Tunnel20802": {
+                "bandwidth": 1000,
+                "description": "**do cmp-rt-plock via bk**",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "up",
+                "type": null
+            },
+            "Tunnel22222": {
+                "bandwidth": 9,
+                "description": "*** bk via Mikrotik-TEST ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "administratively down",
+                "type": null
+            },
+            "Tunnel22402": {
+                "bandwidth": 9,
+                "description": "**z cmp-rt-jp2 do cmp-rt4 via Orange*****",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.19.241",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "up",
+                "type": null
+            },
+            "Tunnel55": {
+                "bandwidth": 9,
+                "description": "**MGT bk dla sw3 i sw4 do LINX-RT15***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.111.202.12",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "up",
+                "type": null
+            }
+        },
+        "ansible_net_iostype": "IOS",
+        "ansible_net_memfree_mb": 356207.41796875,
+        "ansible_net_memtotal_mb": 402272.32421875,
+        "ansible_net_model": "7204VXR",
+        "ansible_net_neighbors": {
+            "GigabitEthernet0/1": [
+                {
+                    "host": "cmp-sw7-nx3k_Pul49.pagi(FOC1711R1HG)",
+                    "port": "Ethernet1/50"
+                }
+            ],
+            "GigabitEthernet0/2": [
+                {
+                    "host": "cmp-rt3-cASR1002.pagi",
+                    "port": "GigabitEthernet0/0/2"
+                }
+            ],
+            "GigabitEthernet0/3": [
+                {
+                    "host": "cmp-sw4-pias_c3560G.pagi",
+                    "port": "GigabitEthernet0/52"
+                }
+            ]
+        },
+        "ansible_net_python_version": "2.7.17",
+        "ansible_net_serialnum": "34820293",
+        "ansible_net_system": "ios",
+        "ansible_net_version": "12.4(9)T4",
+        "ansible_network_resources": {},
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "deprecations": [
+        {
+            "msg": "Distribution Ubuntu 18.04 on host cmp-rt4 should use /usr/bin/python3, but is using /usr/bin/python for backward compatibility with prior Ansible releases. A future Ansible release will default to using the discovered platform python for this host. See https://docs.ansible.com/ansible/2.10/reference_appendices/interpreter_discovery.html for more information",
+            "version": "2.12"
+        }
+    ],
+    "failed": false
+}

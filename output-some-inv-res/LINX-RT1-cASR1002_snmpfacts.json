@@ -1,0 +1,2102 @@
+{
+    "ansible_facts": {
+        "ansible_net_all_ipv4_addresses": [
+            "172.31.0.41",
+            "212.69.76.130",
+            "172.31.0.73",
+            "212.69.71.213",
+            "172.31.0.33",
+            "10.254.251.1",
+            "192.168.111.45",
+            "192.168.111.41",
+            "172.31.0.105",
+            "193.42.154.234",
+            "212.69.81.20",
+            "212.69.81.254",
+            "212.69.81.18",
+            "212.69.75.37",
+            "212.69.80.225",
+            "172.31.0.113",
+            "212.69.65.113",
+            "172.31.0.113",
+            "212.69.65.17",
+            "172.31.0.249",
+            "193.111.37.22",
+            "212.69.68.225",
+            "212.69.81.14",
+            "212.69.81.16",
+            "212.69.81.10",
+            "212.69.81.8",
+            "212.69.65.13",
+            "217.79.144.25",
+            "212.69.64.164",
+            "172.16.255.252",
+            "212.69.76.128",
+            "172.18.0.2",
+            "172.18.1.2",
+            "212.69.70.229",
+            "172.16.255.250",
+            "212.69.76.128",
+            "212.69.65.2",
+            "212.69.81.26",
+            "212.69.79.41",
+            "172.31.0.29",
+            "172.31.0.89",
+            "172.31.0.93",
+            "172.18.2.1",
+            "212.69.81.0",
+            "172.18.2.129",
+            "212.69.65.29",
+            "172.31.0.13",
+            "172.31.0.9",
+            "212.69.74.141",
+            "212.69.68.29",
+            "212.69.79.153",
+            "212.69.70.49",
+            "212.69.79.93",
+            "212.69.71.117",
+            "212.69.67.41",
+            "212.69.68.49",
+            "80.50.55.170",
+            "172.31.0.105",
+            "172.31.0.45",
+            "172.31.0.73",
+            "172.31.0.33",
+            "212.91.0.193",
+            "212.69.81.2",
+            "80.50.55.170",
+            "172.31.0.109",
+            "192.168.111.53",
+            "194.153.134.38",
+            "172.31.2.1",
+            "172.31.2.21",
+            "172.31.0.65",
+            "172.31.0.117",
+            "172.31.0.69",
+            "172.31.0.101",
+            "172.31.2.29",
+            "172.16.17.66",
+            "172.31.2.41",
+            "212.69.75.101",
+            "212.69.65.17",
+            "193.111.37.22",
+            "212.69.65.41",
+            "10.254.252.1",
+            "10.1.1.25",
+            "172.31.0.249",
+            "217.79.144.25",
+            "212.69.64.164",
+            "212.69.65.116",
+            "212.69.79.193",
+            "172.31.0.41",
+            "212.69.65.66",
+            "212.69.65.107",
+            "212.69.74.101",
+            "172.18.2.113"
+        ],
+        "ansible_net_all_ipv6_addresses": [],
+        "ansible_net_api": "cliconf",
+        "ansible_net_filesystems": [
+            "bootflash:"
+        ],
+        "ansible_net_filesystems_info": {
+            "bootflash:": {
+                "spacefree_kb": 5216500.0,
+                "spacetotal_kb": 7676308.0
+            }
+        },
+        "ansible_net_gather_network_resources": [],
+        "ansible_net_gather_subset": [
+            "hardware",
+            "default",
+            "interfaces"
+        ],
+        "ansible_net_hostname": "LINX-RT1-cASR1002",
+        "ansible_net_image": "bootflash:asr1000rp1-advipservicesk9.03.16.08.S.155-3.S8-ext.bi",
+        "ansible_net_interfaces": {
+            "GigabitEthernet0": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": "Full",
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce40",
+                "mediatype": "RJ45",
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "RP management port"
+            },
+            "GigabitEthernet0/0/0": {
+                "bandwidth": 1000000,
+                "description": "**do LINX-SW1-cME3600X_Gi0/1 linki BGP ***",
+                "duplex": "Full",
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "8843.e1eb.ce00",
+                "mediatype": "T",
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/0.1330": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.254.251.1",
+                        "subnet": "29"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce00",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/0.1482": {
+                "bandwidth": 1000000,
+                "description": "*** TPNET via ATM ****",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "80.50.55.170",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "8843.e1eb.ce00",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/0.15": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce00",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "deleted",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/0.1501": {
+                "bandwidth": 1000000,
+                "description": "MPWiK_Wawa_Rudzka6",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.31.0.109",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "8843.e1eb.ce00",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/0.1544": {
+                "bandwidth": 1000000,
+                "description": "*** BGP peering do Virtua Operator (FUZ-Wyszkow)***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "193.42.154.234",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "8843.e1eb.ce00",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/0.181": {
+                "bandwidth": 1000000,
+                "description": "*** mpwik Starynkiewcza ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.31.0.117",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "8843.e1eb.ce00",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/0.188": {
+                "bandwidth": 1000000,
+                "description": "MPWiK_Dabrowszczakow_Wawa",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.31.0.65",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "8843.e1eb.ce00",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/0.190": {
+                "bandwidth": 1000000,
+                "description": "**MPWiK_Jagiellonska79****",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.31.0.13",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "8843.e1eb.ce00",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/0.191": {
+                "bandwidth": 1000000,
+                "description": "MPWIK_Wawa_Jagiellonska65",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.31.0.9",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce00",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/0.198": {
+                "bandwidth": 1000000,
+                "description": "**BGP Wavenet*** ",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.65.29",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce00",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/0.231": {
+                "bandwidth": 1000000,
+                "description": "**ATM Transit Global ****",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "193.111.37.22",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce00",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/0.392": {
+                "bandwidth": 1000000,
+                "description": "MPWIK_Pruszkow_Domaniewska",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.31.0.41",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce00",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/0.397": {
+                "bandwidth": 1000000,
+                "description": "**MAGO-BGP***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce00",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/0.4030": {
+                "bandwidth": 1000000,
+                "description": "***Tr-JMDI-MPWiK_Czern-WAN***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.31.0.249",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce00",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/0.4032": {
+                "bandwidth": 1000000,
+                "description": "*** MPWiK Czerniak BGP ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.65.41",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce00",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/0.4033": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "10.254.252.1",
+                        "subnet": "24"
+                    },
+                    {
+                        "address": "10.1.1.25",
+                        "subnet": "29"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "8843.e1eb.ce00",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/0.41": {
+                "bandwidth": 1000000,
+                "description": "***MPWiK -pol. m.routerami core PAGI***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.31.2.1",
+                        "subnet": "29"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "8843.e1eb.ce00",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/0.44": {
+                "bandwidth": 1000000,
+                "description": "***vrf mpwik1, do REMB-RT1 via FO-JMDI ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.31.2.21",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce00",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/0.588": {
+                "bandwidth": 1000000,
+                "description": "MPWiK_Wawa_Mehoffera25",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.31.0.101",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce00",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/0.589": {
+                "bandwidth": 1000000,
+                "description": "MPWiK_Wawa_Modlinska19",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.31.0.69",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce00",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/0.593": {
+                "bandwidth": 1000000,
+                "description": "MPWIK_Wawa_Borecka",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.31.0.105",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce00",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/0.594": {
+                "bandwidth": 1000000,
+                "description": "MPWIK_Wawa_Czajki",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.31.0.45",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce00",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/0.595": {
+                "bandwidth": 1000000,
+                "description": "MPWIK_Serock_Debe",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.31.0.73",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce00",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/0.596": {
+                "bandwidth": 1000000,
+                "description": "MPWIK_Wieliszew_600lecia",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.31.0.33",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce00",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/0.695": {
+                "bandwidth": 1000000,
+                "description": "MPWIK_Radosc_Patriotow",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.31.0.93",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce00",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/0.696": {
+                "bandwidth": 1000000,
+                "description": "MPWIK_Falenica_Byslawska",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.31.0.89",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce00",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/0.697": {
+                "bandwidth": 1000000,
+                "description": "MPWIK_Wawa_Syta",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.31.0.29",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce00",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/0.834": {
+                "bandwidth": 1000000,
+                "description": "*** mpwik jachranka ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.31.0.113",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce00",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/0.902950096": {
+                "bandwidth": 1000000,
+                "description": "**mpwik ipvpnL3 via KAR--SW1 **",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.31.2.29",
+                        "subnet": "28"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "8843.e1eb.ce00",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/0.902950695": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce00",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "deleted",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/0.902950696": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce00",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "deleted",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/0.902950697": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce00",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "deleted",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/0.929770593": {
+                "bandwidth": 1000000,
+                "description": "***MPWiK Borecka via Emitel ****",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.31.0.105",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "8843.e1eb.ce00",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/0.929770595": {
+                "bandwidth": 1000000,
+                "description": "***mpwik Debe (Serock) via emitel ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.31.0.73",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "8843.e1eb.ce00",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/0.929770834": {
+                "bandwidth": 1000000,
+                "description": "***mpwik jachranka via emitel ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.31.0.113",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "8843.e1eb.ce00",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/0.939450596": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce00",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "deleted",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/1": {
+                "bandwidth": 1000000,
+                "description": "**do LINX-ME36-Gi0/2**",
+                "duplex": "Full",
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "8843.e1eb.ce01",
+                "mediatype": "T",
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/1.1006": {
+                "bandwidth": 1000000,
+                "description": "***do LIM--RT2_DMVPN (DMVPN Grodno Malopole) ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "192.168.111.53",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce01",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/1.143": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce01",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/1.1506": {
+                "bandwidth": 1000000,
+                "description": "*** Mekoprint/Molex via FO Netia ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.81.0",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce01",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/1.1830": {
+                "bandwidth": 1000000,
+                "description": "**Trans bk do ZTM-RT1_Gi0/2 via VirtuaOp **",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.18.2.113",
+                        "subnet": "29"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "8843.e1eb.ce01",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/1.19": {
+                "bandwidth": 1000000,
+                "description": "**do LIM--RT2_DMVPN inet ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.81.26",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "8843.e1eb.ce01",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/1.20": {
+                "bandwidth": 1000000,
+                "description": "***do LINX-RT3_fa0/0***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.81.10",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "8843.e1eb.ce01",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/1.21": {
+                "bandwidth": 1000000,
+                "description": "***do LINX-RT4_fa0/0.20***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.81.8",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce01",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/1.26": {
+                "bandwidth": 1000000,
+                "description": "**pakieciarka BS**",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.81.14",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "8843.e1eb.ce01",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/1.27": {
+                "bandwidth": 1000000,
+                "description": "**DMVPN-LINX-RT2***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.81.16",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "8843.e1eb.ce01",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/1.29": {
+                "bandwidth": 1000000,
+                "description": "**serwery PAGI 212.69.64.0 + wtyczka DDoS***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "217.79.144.25",
+                        "subnet": "30"
+                    },
+                    {
+                        "address": "212.69.64.164",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce01",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/1.31": {
+                "bandwidth": 1000000,
+                "description": "*** LINX-RT8 inet uplink ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.81.18",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce01",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/1.32": {
+                "bandwidth": 1000000,
+                "description": "**linx-rt8 do linx-rt3 pekao **",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce01",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/1.33": {
+                "bandwidth": 1000000,
+                "description": "*** linx-rt8 do linx-rt6 BS ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce01",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/1.34": {
+                "bandwidth": 1000000,
+                "description": "*** test linx-rt8 do pekao ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.81.254",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce01",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/1.3407": {
+                "bandwidth": 1000000,
+                "description": "*****    InterTeam GrodziskMaz 1Gb   *****",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.75.37",
+                        "subnet": "30"
+                    },
+                    {
+                        "address": "212.69.80.225",
+                        "subnet": "28"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "8843.e1eb.ce01",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/1.36": {
+                "bandwidth": 1000000,
+                "description": "**LINX-RT-MGT-c1841***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.81.20",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "8843.e1eb.ce01",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/1.418": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce01",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "deleted",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/1.42": {
+                "bandwidth": 1000000,
+                "description": "***do LIM--RT2_DMVPN (tooway dla BS) *** ",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "192.168.111.45",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce01",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/1.44": {
+                "bandwidth": 1000000,
+                "description": "***do LIM--RT2_DMVPN (DMVPN LTE po T-Mobile) ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "192.168.111.41",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce01",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/1.48": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce01",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/1.515071300": {
+                "bandwidth": 1000000,
+                "description": "*** Cagen Pru2 Traktowa6 ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.71.117",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce01",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/1.515071301": {
+                "bandwidth": 1000000,
+                "description": "*** nLine Jan Sliwinski Pru2 Traktowa6 ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.79.93",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce01",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/1.515071302": {
+                "bandwidth": 1000000,
+                "description": "*** MMK Solution Pru2 Traktowa6 ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.68.49",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce01",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/1.515071303": {
+                "bandwidth": 1000000,
+                "description": "*** Maciej Dobrowolski ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.67.41",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce01",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/1.515071304": {
+                "bandwidth": 1000000,
+                "description": "*** Pigmalion Pru2 Traktowa6 ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.68.29",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce01",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/1.515071305": {
+                "bandwidth": 1000000,
+                "description": "*** Colian Logistic ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.74.141",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce01",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/1.515071306": {
+                "bandwidth": 1000000,
+                "description": "*** ROLV GROUP  ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.70.49",
+                        "subnet": "28"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce01",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/1.515071307": {
+                "bandwidth": 1000000,
+                "description": "*** Folpolter II Sp. z o. o.  ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.79.153",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce01",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/1.515071324": {
+                "bandwidth": 1000000,
+                "description": "*** Terramar Pru2 Traktowa6 ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.75.101",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce01",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/1.515071351": {
+                "bandwidth": 1000000,
+                "description": "*** Alta/TUP Pru2 Traktowa6 ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.79.193",
+                        "subnet": "28"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce01",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/1.640554006": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce01",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "deleted",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/1.640554008": {
+                "bandwidth": 1000000,
+                "description": "*** CMP Piaseczno Inet v.4 FO glowne JMDI ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.79.41",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce01",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/1.797": {
+                "bandwidth": 1000000,
+                "description": "*** CMP Pias Inet-bk via BKT Telecom **",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.71.213",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce01",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/1.804180010": {
+                "bandwidth": 1000000,
+                "description": "**OSPF 8 dla Odr15***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.76.130",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "8843.e1eb.ce01",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/1.804184051": {
+                "bandwidth": 1000000,
+                "description": "**Helpdesk do LINX-RT11 OSPF12 ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.255.250",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce01",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/1.804184052": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce01",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "deleted",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/1.809": {
+                "bandwidth": 1000000,
+                "description": "*** Mekoprint/Molex via RL PAGI **",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.81.2",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce01",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/1.815090097": {
+                "bandwidth": 1000000,
+                "description": "****** Mazowia.eu ********",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.65.17",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce01",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/1.839904051": {
+                "bandwidth": 1000000,
+                "description": "**Helpdesk ODR via ATM OSPF12 ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.255.252",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce01",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/1.839904052": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce01",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "deleted",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/1.839904053": {
+                "bandwidth": 1000000,
+                "description": "**OSPF8 Inet Centr.Biur.Odr via ATM **",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.76.128",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce01",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/1.839904055": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce01",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "deleted",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/1.881": {
+                "bandwidth": 1000000,
+                "description": "***DNS Wavenet-> Sunik/NS1***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "217.79.144.25",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce01",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/1.902950695": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce01",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "deleted",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/1.915070392": {
+                "bandwidth": 1000000,
+                "description": "***MPWiK Pruszkow Domaniewska ->mpwik-rtpe-pruszkow***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.31.0.41",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce01",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/1.915070397": {
+                "bandwidth": 1000000,
+                "description": "**MAGO-BGP***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.65.13",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce01",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/1.915090299": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce01",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "deleted",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/1.918280120": {
+                "bandwidth": 1000000,
+                "description": "**Transm via VirtuaOp do cmp-sw-praga_gi0/46 **",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.16.17.66",
+                        "subnet": "29"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce01",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/1.935070245": {
+                "bandwidth": 1000000,
+                "description": "***InstHematologii Ghandi14 l.glowne via LAND --> PIK11-Rt2**",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.68.225",
+                        "subnet": "29"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce01",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/1.935070299": {
+                "bandwidth": 1000000,
+                "description": "**ZTM Stoklosy P+R Transmisja --> PIK11-Rt1**",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.18.2.129",
+                        "subnet": "29"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce01",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/1.939900299": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce01",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "deleted",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/1.940010101": {
+                "bandwidth": 1000000,
+                "description": "**ZTM P+R MGT ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.18.0.2",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "8843.e1eb.ce01",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/1.940010102": {
+                "bandwidth": 1000000,
+                "description": "*** ZTM P+R Transmisja via JMDI ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.18.1.2",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "8843.e1eb.ce01",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/1.940010103": {
+                "bandwidth": 1000000,
+                "description": "**ZTM P+R Inet glowne ****",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.70.229",
+                        "subnet": "29"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "8843.e1eb.ce01",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/1.971": {
+                "bandwidth": 1000000,
+                "description": "**info:transm.mpwik borecka-wieliszew**",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce01",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/2": {
+                "bandwidth": 1000000,
+                "description": "**ATM PEERING 1Gbps ****",
+                "duplex": "Full",
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce02",
+                "mediatype": "ZX",
+                "mtu": 1500,
+                "operstatus": "down",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/2.48": {
+                "bandwidth": 1000000,
+                "description": "**** ATM-Peering ****",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.91.0.193",
+                        "subnet": "22"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce02",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "down",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/3": {
+                "bandwidth": 1000000,
+                "description": "**ATM Transit ******",
+                "duplex": "Full",
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce03",
+                "mediatype": "LX",
+                "mtu": 1500,
+                "operstatus": "down",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/3.1482": {
+                "bandwidth": 1000000,
+                "description": "*** TPNET via ATM ****",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "80.50.55.170",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce03",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/3.231": {
+                "bandwidth": 1000000,
+                "description": "**ATM Transit Global ****",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "193.111.37.22",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce03",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "down",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/3.3990": {
+                "bandwidth": 1000000,
+                "description": "*** ATM -> Odr15 S-VLAN ***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce03",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/3.482": {
+                "bandwidth": 1000000,
+                "description": "***ATM Transit TPNET ****",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "194.153.134.38",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce03",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/3.839904051": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce03",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "deleted",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/3.839904052": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce03",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "deleted",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/3.839904053": {
+                "bandwidth": 1000000,
+                "description": "**OSPF8 Inet Centr.Biur.Odr via ATM **",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.76.128",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce03",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/3.902950000": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce03",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "deleted",
+                "type": "4XGE-BUILT-IN"
+            },
+            "GigabitEthernet0/0/3.902950009": {
+                "bandwidth": 1000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce03",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "deleted",
+                "type": "4XGE-BUILT-IN"
+            },
+            "Loopback0": {
+                "bandwidth": 8000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.65.2",
+                        "subnet": "32"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "up",
+                "type": null
+            },
+            "Loopback100": {
+                "bandwidth": 8000000,
+                "description": "***test snmp trap***",
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": null,
+                "mediatype": null,
+                "mtu": 1514,
+                "operstatus": "administratively down",
+                "type": null
+            },
+            "TenGigabitEthernet0/1/0": {
+                "bandwidth": 10000000,
+                "description": "**do LINX-RT17_Te0/0/2 2j***",
+                "duplex": "Full",
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "8843.e1eb.ce10",
+                "mediatype": "10GBase-LR",
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "SPA-1X10GE-L-V2"
+            },
+            "TenGigabitEthernet0/1/0.1107": {
+                "bandwidth": 1000000,
+                "description": "**mpls do LINX-RT17_Te0/0/2 2j***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.65.107",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "8843.e1eb.ce10",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "SPA-1X10GE-L-V2"
+            },
+            "TenGigabitEthernet0/1/0.15": {
+                "bandwidth": 8000000,
+                "description": "***iBGP***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.65.66",
+                        "subnet": "28"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "8843.e1eb.ce10",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "SPA-1X10GE-L-V2"
+            },
+            "TenGigabitEthernet0/1/0.3011": {
+                "bandwidth": 10000000,
+                "description": "**ztm P+R transm do mpls vpn pagi (linx-rt17_gi0/0/2)**",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.18.2.1",
+                        "subnet": "29"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "8843.e1eb.ce10",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "SPA-1X10GE-L-V2"
+            },
+            "TenGigabitEthernet0/1/0.4011": {
+                "bandwidth": 10000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce10",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "deleted",
+                "type": "SPA-1X10GE-L-V2"
+            },
+            "TenGigabitEthernet0/1/0.97": {
+                "bandwidth": 10000000,
+                "description": "****** Mazowia.eu ********",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.65.17",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce10",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "administratively down",
+                "type": "SPA-1X10GE-L-V2"
+            },
+            "TenGigabitEthernet0/2/0": {
+                "bandwidth": 10000000,
+                "description": "**do LINX-SW7_Te1/1***",
+                "duplex": "Full",
+                "ipv4": [],
+                "lineprotocol": "up",
+                "macaddress": "8843.e1eb.ce20",
+                "mediatype": "10GBase-LR",
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "SPA-1X10GE-L-V2"
+            },
+            "TenGigabitEthernet0/2/0.1111": {
+                "bandwidth": 1000000,
+                "description": "**mpls do LINX-RT13 via LINX-SW7 ***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.65.116",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "8843.e1eb.ce20",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "SPA-1X10GE-L-V2"
+            },
+            "TenGigabitEthernet0/2/0.29": {
+                "bandwidth": 10000000,
+                "description": "**serwery PAGI 212.69.64.0 + wtyczka DDoS***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.64.164",
+                        "subnet": "24"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "8843.e1eb.ce20",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "SPA-1X10GE-L-V2"
+            },
+            "TenGigabitEthernet0/2/0.3990": {
+                "bandwidth": 10000000,
+                "description": "**vrf mpwik1 mpls vpn z linx-rt13 via linx-sw7 **",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.31.2.41",
+                        "subnet": "29"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "8843.e1eb.ce20",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "SPA-1X10GE-L-V2"
+            },
+            "TenGigabitEthernet0/2/0.4030": {
+                "bandwidth": 10000000,
+                "description": "***Tr-JMDI-MPWiK_Czern-WAN***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.31.0.249",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "8843.e1eb.ce20",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "SPA-1X10GE-L-V2"
+            },
+            "TenGigabitEthernet0/2/0.640554006": {
+                "bandwidth": 10000000,
+                "description": null,
+                "duplex": null,
+                "ipv4": [],
+                "lineprotocol": "down",
+                "macaddress": "8843.e1eb.ce20",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "deleted",
+                "type": "SPA-1X10GE-L-V2"
+            },
+            "TenGigabitEthernet0/2/0.939450596": {
+                "bandwidth": 10000000,
+                "description": "*** MPWiK Wieliszew via JMDI ****",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "172.31.0.33",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "8843.e1eb.ce20",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "SPA-1X10GE-L-V2"
+            },
+            "TenGigabitEthernet0/2/0.940554006": {
+                "bandwidth": 10000000,
+                "description": "*** CMP Pias,Pulawska49, Inet, glowne***",
+                "duplex": null,
+                "ipv4": [
+                    {
+                        "address": "212.69.74.101",
+                        "subnet": "30"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "8843.e1eb.ce20",
+                "mediatype": null,
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "SPA-1X10GE-L-V2"
+            },
+            "TenGigabitEthernet0/3/0": {
+                "bandwidth": 10000000,
+                "description": "**do LINX-RT10_Ten0/3/0 mpls OSPF1000***",
+                "duplex": "Full",
+                "ipv4": [
+                    {
+                        "address": "212.69.65.113",
+                        "subnet": "31"
+                    }
+                ],
+                "lineprotocol": "up",
+                "macaddress": "8843.e1eb.ce30",
+                "mediatype": "10GBase-LR",
+                "mtu": 1500,
+                "operstatus": "up",
+                "type": "SPA-1X10GE-L-V2"
+            }
+        },
+        "ansible_net_iostype": "IOS-XE",
+        "ansible_net_memfree_mb": 285792.34375,
+        "ansible_net_memtotal_mb": 1641686.24609375,
+        "ansible_net_model": "ASR1002",
+        "ansible_net_neighbors": {
+            "GigabitEthernet0/0/0": [
+                {
+                    "host": "LINX-SW1-cME3600X.pagi",
+                    "port": "GigabitEthernet0/1"
+                }
+            ],
+            "GigabitEthernet0/0/1": [
+                {
+                    "host": "LINX-SW1-cME3600X.pagi",
+                    "port": "GigabitEthernet0/2"
+                }
+            ],
+            "TenGigabitEthernet0/1/0": [
+                {
+                    "host": "LINX-RT17-cASR920-12SZ.pagi",
+                    "port": "TenGigabitEthernet0/0/2"
+                }
+            ],
+            "TenGigabitEthernet0/2/0": [
+                {
+                    "host": "LINX-SW7-C4900.pagi",
+                    "port": "TenGigabitEthernet1/1"
+                }
+            ],
+            "TenGigabitEthernet0/3/0": [
+                {
+                    "host": "LINX-RT10-cASR1002_2.pagi",
+                    "port": "TenGigabitEthernet0/3/0"
+                }
+            ]
+        },
+        "ansible_net_python_version": "2.7.17",
+        "ansible_net_serialnum": "FOX1349GTHT",
+        "ansible_net_system": "ios",
+        "ansible_net_version": "03.16.08.S",
+        "ansible_network_resources": {},
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "deprecations": [
+        {
+            "msg": "Distribution Ubuntu 18.04 on host LINX-RT1-cASR1002 should use /usr/bin/python3, but is using /usr/bin/python for backward compatibility with prior Ansible releases. A future Ansible release will default to using the discovered platform python for this host. See https://docs.ansible.com/ansible/2.10/reference_appendices/interpreter_discovery.html for more information",
+            "version": "2.12"
+        }
+    ],
+    "failed": false
+}
