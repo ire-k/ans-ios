@@ -1,0 +1,64 @@
+---
+  # customer name : cmp
+  # set ACL on vty lines, secure dev access
+  #
+- hosts: cmp
+  gather_facts: false
+  connection: network_cli
+  tasks:
+
+  - name: get ios facts
+    ios_facts:
+      gather_subset: 
+          - min
+
+  - debug:
+      msg: 
+        - "{{ansible_net_model}}"
+        - "{{inventory_hostname}}"
+   
+  - name: change enable secret
+    when: inventory_hostname is regex("(?i)cmp")
+    cisco.ios.ios_config:
+      lines:
+        - "enable secret {{cmp_enable}}"
+ 
+
+  # order of the entries and remarks tends to be unpredictable; adding numbers before permit doesn't help - probably gets optimized by CEF
+  - name: set ACL clogin standard
+    when: inventory_hostname is regex("(?i)cmp")
+    cisco.ios.ios_config:
+      parents: ip access-list standard clogin
+      lines:
+        - remark **Helpdesk, nagiosAWS, loc mgmt**
+        - permit 212.69.66.0 0.0.0.63
+        - permit host 212.69.68.123
+        - permit host 52.210.128.8
+        - permit host 192.168.10.34
+        - permit host 192.168.10.235
+      match: exact
+      replace: block
+
+
+  - name: config vty lines
+    ios_config:
+      parents: line vty 0 4
+      lines:
+        - exec-timeout 60
+        - logging synchronous
+
+
+  - name: access-class vty lines 1 on cmp dev
+    when: inventory_hostname is regex("(?i)cmp")
+    ignore_errors: True
+    ios_config:
+      parents: line vty 0 4
+      lines:
+        - access-class clogin in vrf-also
+
+
+  - name: save config
+    ios_config:
+      save_when: always
+
+
