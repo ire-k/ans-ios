@@ -1,0 +1,9 @@
+- hosts: localhost
+  gather_facts: False
+  tasks:
+  - name: set vlans
+    set_fact: 
+      vlans: ['1,2,3,100']
+
+  - debug:
+      msg: "vlans:  {{vlans[0]}}"
