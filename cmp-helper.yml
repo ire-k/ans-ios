@@ -7,7 +7,7 @@
 - name: change ip helper addr
   gather_facts: false
   connection: network_cli
-  hosts: cmp_routers2
+  hosts: cmp_routers_restore
   tasks:
 
 
@@ -40,12 +40,54 @@
   - debug: 
       var: helper_int
 
-      # this task's status is always changed
-      # ansible_net_interfaces does not contain info about a current helper
-  - name: change helper address
+      # ansible_net_interfaces does not contain info about a current helper, it cannot be verified this way
+      # beware: 
+      #   https://github.com/ansible/ansible/issues/18966
+      #   https://github.com/ansible/ansible/issues/29464
+#  - name: check current helper
+#    ios_command:
+#      commands:
+#        "show run interface {{item}} | include ^ ip helper-address"
+#    loop: "{{helper_int}}"
+#    register: curr_helpers
+#
+#    # output is quite complicated json dictionary
+#  - debug:
+#      var: curr_helpers.results | type_debug
+#
+#  - debug:
+#      var: curr_helpers.results[0].stdout
+#  - debug:
+#      var: curr_helpers.results[0].item | type_debug
+#
+#
+#  ## it doesn't work, too complicated
+#  #todo: json_query / query to help
+#  # "curr_helpers.results[0].item | type_debug": "AnsibleUnsafeText"
+#  - name: remove any old helpers
+#    ios_config:
+#      lines:
+#        - no ip helper-address
+#      parents: "{{interface item }}"
+#    loop: "{{query('list' , curr_helpers).results[0].item  }}"
+#      #loop: "{{ curr_helpers | json_query('results[0].item' , wantlist=True ) }}"
+#      #loop: "{{ [ curr_helpers.results[0].item ] }}"
+#    when: ( curr_helpers.results[0].stdout is regex("192.168.10.1") or curr_helpers.results[0].stdout is regex("192.168.10.5") or curr_helpers.results[0].stdout is regex("192.168.10.6")   )
+#      
+
+  - name: remove all helpers
     ios_config:
       lines:
-        # - no ip helper-address
+        - no ip helper-address
+      parents: "interface {{item}}"
+    loop: "{{helper_int }}" 
+
+
+
+
+  - name: change helper address to current one
+    ios_config:
+      lines:
         - ip helper-address 192.168.10.248
       parents: "interface {{item}}"
     loop: "{{helper_int }}" 
@@ -56,4 +98,38 @@
       save_when: always
 
       
-
+      ### example outputs:
+            #"curr_helpers": {
+            #      "changed": false,
+            #      "msg": "All items completed",
+            #      "results": [
+            #          {
+            #              "ansible_loop_var": "item",
+            #              "changed": false,
+            #              "failed": false,
+            #              "invocation": {
+            #                  "module_args": {
+            #                      "commands": [
+            #                          "show run interface Vlan100 | include ^ ip helper-address"
+            #                      ],
+            #                      "interval": 1,
+            #                      "match": "all",
+            #                      "provider": null,
+            #                      "retries": 10,
+            #                      "wait_for": null
+            #                  }
+            #              },
+            #              "item": "Vlan100",
+            #              "stdout": [
+            #                  "ip helper-address 192.168.10.248"
+            #              ],
+            #              "stdout_lines": [
+            #                  [
+            #                      "ip helper-address 192.168.10.248"
+            #                  ]
+            #              ]
+            #          }
+            #      ]
+            #  }
+            #}
+            #
