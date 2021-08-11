@@ -1,0 +1,59 @@
+---
+## change ip dhcp helper addr on SVI's and subinterface's 
+# doesn't work on ME3400 and won't work on older L2 switches IOS < 12.2(60)
+# they don't support commad: sh run | sec interface for gathering facts
+#
+#
+- name: change ip helper addr
+  gather_facts: false
+  connection: network_cli
+  hosts: cmp_routers2
+  tasks:
+
+
+  - name: get ios facts min
+    ios_facts:
+      gather_subset: min
+
+      # - debug: var=ansible_net_version
+  - debug: 
+      msg:
+        - "{{ansible_net_model}}"
+        - "{{ansible_net_version}}"
+
+  - fail: 
+      msg: "platform not suitable"
+    when:  ansible_net_model is regex("(?i)Nexus")
+   
+
+  - name: get ios facts L3 int
+    ios_facts:
+      gather_network_resources: l3_interfaces
+
+  - name: find interfaces suitable for change of the helper
+    set_fact:
+      helper_int: "{{ helper_int|default([]) + [ item.key ] }}"
+    loop: "{{ansible_net_interfaces | dict2items}}"
+    when: ((item.value.ipv4.0.address is defined) and (item.value.ipv4.0.address is regex("192.168.") ) and (item.key is not regex("Loopback") ))
+
+
+  - debug: 
+      var: helper_int
+
+      # this task's status is always changed
+      # ansible_net_interfaces does not contain info about a current helper
+  - name: change helper address
+    ios_config:
+      lines:
+        # - no ip helper-address
+        - ip helper-address 192.168.10.248
+      parents: "interface {{item}}"
+    loop: "{{helper_int }}" 
+
+
+  - name: save config
+    ios_config:
+      save_when: always
+
+      
+
