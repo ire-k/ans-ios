@@ -1,0 +1,1400 @@
+acls:
+-   acls:
+    -   aces:
+        -   grant: permit
+            sequence: 10
+            source:
+                address: 192.168.10.34
+        -   grant: permit
+            sequence: 20
+            source:
+                address: 172.16.10.46
+        -   grant: permit
+            sequence: 30
+            source:
+                address: 212.69.68.123
+        -   grant: permit
+            sequence: 40
+            source:
+                address: 172.16.10.5
+        -   grant: permit
+            sequence: 50
+            source:
+                address: 212.69.66.0
+                wildcard_bits: 0.0.0.31
+        acl_type: standard
+        name: '1'
+    -   aces:
+        -   grant: permit
+            sequence: 10
+            source:
+                address: 212.69.68.123
+        -   grant: permit
+            sequence: 20
+            source:
+                address: 212.69.66.0
+                wildcard_bits: 0.0.0.63
+        acl_type: standard
+        name: '10'
+    -   aces:
+        -   destination:
+                host: 212.69.71.205
+            grant: permit
+            protocol: ip
+            sequence: 10
+            source:
+                host: 91.236.57.54
+        -   destination:
+                host: 212.69.71.205
+            grant: deny
+            protocol: ip
+            sequence: 20
+            source:
+                any: true
+        -   destination:
+                any: true
+            grant: permit
+            protocol: ip
+            sequence: 30
+            source:
+                any: true
+        acl_type: extended
+        name: '100'
+    -   aces:
+        -   grant: permit
+            sequence: 10
+            source:
+                address: 195.150.8.146
+        acl_type: standard
+        name: '11'
+    -   aces:
+        -   destination:
+                host: 0.0.0.0
+            grant: permit
+            protocol: ip
+            sequence: 10
+            source:
+                host: 0.0.0.0
+        acl_type: extended
+        name: '115'
+    -   aces:
+        -   grant: permit
+            sequence: 10
+            source:
+                address: 8.8.8.8
+        -   grant: permit
+            sequence: 20
+            source:
+                address: 8.8.4.4
+        -   grant: permit
+            sequence: 30
+            source:
+                address: 212.69.64.193
+        -   grant: permit
+            sequence: 40
+            source:
+                address: 212.69.64.194
+        -   grant: permit
+            sequence: 50
+            source:
+                address: 212.69.71.205
+        -   grant: permit
+            sequence: 60
+            source:
+                address: 91.236.57.202
+        -   grant: permit
+            sequence: 70
+            source:
+                address: 212.69.68.123
+        -   grant: permit
+            sequence: 80
+            source:
+                address: 91.236.57.54
+        -   grant: permit
+            sequence: 90
+            source:
+                address: 192.168.0.0
+                wildcard_bits: 0.0.255.255
+        acl_type: standard
+        name: '12'
+    -   aces:
+        -   grant: permit
+            sequence: 10
+            source:
+                address: 192.168.10.0
+                wildcard_bits: 0.0.0.255
+        acl_type: standard
+        name: '20'
+    -   aces:
+        -   grant: permit
+            sequence: 10
+            source:
+                address: 192.168.45.0
+                wildcard_bits: 0.0.0.255
+        acl_type: standard
+        name: '25'
+    -   aces:
+        -   grant: permit
+            sequence: 10
+            source:
+                address: 212.69.64.0
+                wildcard_bits: 0.0.31.255
+        acl_type: standard
+        name: '50'
+    -   aces:
+        -   grant: permit
+            sequence: 10
+            source:
+                any: true
+        acl_type: standard
+        name: '69'
+    -   aces:
+        -   grant: permit
+            sequence: 10
+            source:
+                address: 192.168.0.0
+                wildcard_bits: 0.0.255.255
+        acl_type: standard
+        name: '7'
+    -   aces:
+        -   grant: permit
+            sequence: 10
+            source:
+                address: 192.168.0.0
+                wildcard_bits: 0.0.255.255
+        acl_type: standard
+        name: '8'
+    -   aces:
+        -   grant: permit
+            sequence: 10
+            source:
+                address: 192.168.10.85
+        acl_type: standard
+        name: '9'
+    -   aces:
+        -   destination:
+                host: 192.168.10.71
+            grant: permit
+            protocol: ip
+            sequence: 10
+            source:
+                any: true
+        -   destination:
+                any: true
+            grant: permit
+            protocol: ip
+            sequence: 20
+            source:
+                host: 192.168.10.71
+        acl_type: extended
+        name: IC
+    -   aces:
+        -   destination:
+                host: 45.137.224.46
+            grant: permit
+            protocol: gre
+            sequence: 10
+            source:
+                host: 212.69.71.204
+        acl_type: extended
+        name: acl-goclaw-FO
+    -   aces:
+        -   destination:
+                host: 46.170.67.214
+            grant: permit
+            protocol: gre
+            sequence: 10
+            source:
+                host: 212.69.71.204
+        acl_type: extended
+        name: acl-ipsec-cmp-rt3--cmp-jp2-orange
+    -   aces:
+        -   destination:
+                host: 194.15.121.64
+            grant: permit
+            protocol: gre
+            sequence: 10
+            source:
+                host: 212.69.71.204
+        acl_type: extended
+        name: acl-lomi-fo-ibs
+    -   aces:
+        -   destination:
+                host: 194.15.122.214
+            grant: permit
+            protocol: gre
+            sequence: 10
+            source:
+                host: 212.69.71.204
+        acl_type: extended
+        name: acl-lomi-radio-ibs
+    -   aces:
+        -   destination:
+                address: 10.25.1.0
+                wildcard_bits: 0.0.0.255
+            grant: deny
+            protocol: ip
+            sequence: 10
+            source:
+                host: 192.168.10.79
+        -   destination:
+                address: 10.25.1.0
+                wildcard_bits: 0.0.0.255
+            grant: deny
+            protocol: ip
+            sequence: 20
+            source:
+                host: 192.168.10.6
+        -   destination:
+                host: 10.1.1.106
+            grant: deny
+            protocol: ip
+            sequence: 30
+            source:
+                host: 192.168.10.79
+        -   destination:
+                any: true
+            grant: deny
+            protocol: ip
+            sequence: 40
+            source:
+                host: 192.168.10.85
+        -   destination:
+                any: true
+            grant: deny
+            protocol: ip
+            sequence: 50
+            source:
+                host: 192.168.10.78
+        -   destination:
+                any: true
+            grant: deny
+            protocol: ip
+            sequence: 60
+            source:
+                host: 192.168.10.160
+        -   destination:
+                any: true
+            grant: deny
+            protocol: ip
+            sequence: 70
+            source:
+                host: 192.168.10.34
+        -   destination:
+                any: true
+            grant: permit
+            protocol: ip
+            sequence: 80
+            source:
+                address: 192.168.0.0
+                wildcard_bits: 0.0.255.255
+        acl_type: extended
+        name: acl-nat
+    -   aces:
+        -   destination:
+                host: 31.186.215.34
+            grant: permit
+            protocol: gre
+            sequence: 10
+            source:
+                host: 212.69.71.204
+        acl_type: extended
+        name: acl-pawia--cmp-rt3
+    -   aces:
+        -   destination:
+                host: 217.28.145.215
+            grant: permit
+            protocol: gre
+            sequence: 10
+            source:
+                host: 212.69.71.204
+        acl_type: extended
+        name: acl-plock--cmp-rt3
+    -   aces:
+        -   destination:
+                host: 10.1.1.106
+            grant: permit
+            protocol: ip
+            sequence: 10
+            source:
+                host: 192.168.10.79
+        acl_type: extended
+        name: alab-ipsec
+    -   aces:
+        -   grant: deny
+            sequence: 10
+            source:
+                any: true
+        acl_type: standard
+        name: ban-any
+    -   aces:
+        -   grant: permit
+            sequence: 10
+            source:
+                address: 192.168.10.34
+        -   grant: permit
+            sequence: 20
+            source:
+                address: 52.210.128.8
+        -   grant: permit
+            sequence: 50
+            source:
+                address: 192.168.10.235
+        -   grant: permit
+            sequence: 30
+            source:
+                address: 212.69.68.123
+        -   grant: permit
+            sequence: 40
+            source:
+                address: 212.69.66.0
+                wildcard_bits: 0.0.0.63
+        -   grant: permit
+            sequence: 60
+            source:
+                address: 10.0.0.0
+                wildcard_bits: 0.0.0.255
+        acl_type: standard
+        name: clogin
+    -   aces:
+        -   destination:
+                any: true
+            grant: permit
+            protocol: ospf
+            sequence: 10
+            source:
+                any: true
+        -   destination:
+                address: 212.69.71.200
+                wildcard_bits: 0.0.0.7
+            grant: permit
+            protocol: esp
+            sequence: 20
+            source:
+                any: true
+        -   destination:
+                any: true
+            grant: permit
+            protocol: udp
+            sequence: 30
+            source:
+                address: 212.69.64.192
+                port_protocol:
+                    eq: domain
+                wildcard_bits: 0.0.0.3
+        -   destination:
+                any: true
+            grant: permit
+            protocol: udp
+            sequence: 40
+            source:
+                host: 8.8.8.8
+                port_protocol:
+                    eq: domain
+        -   destination:
+                any: true
+            grant: permit
+            protocol: udp
+            sequence: 50
+            source:
+                host: 8.8.4.4
+                port_protocol:
+                    eq: domain
+        -   destination:
+                any: true
+            grant: permit
+            protocol: tcp
+            sequence: 60
+            source:
+                address: 212.69.64.192
+                port_protocol:
+                    eq: domain
+                wildcard_bits: 0.0.0.3
+        -   destination:
+                any: true
+            grant: permit
+            protocol: tcp
+            sequence: 70
+            source:
+                host: 8.8.8.8
+                port_protocol:
+                    eq: domain
+        -   destination:
+                any: true
+            grant: permit
+            protocol: tcp
+            sequence: 80
+            source:
+                host: 8.8.4.4
+                port_protocol:
+                    eq: domain
+        -   destination:
+                any: true
+                port_protocol:
+                    eq: ntp
+            grant: permit
+            protocol: udp
+            sequence: 90
+            source:
+                any: true
+                port_protocol:
+                    eq: ntp
+        -   destination:
+                host: 212.69.71.205
+            grant: permit
+            protocol: icmp
+            protocol_options:
+                icmp:
+                    echo: true
+            sequence: 100
+            source:
+                host: 185.2.113.120
+        -   destination:
+                host: 212.69.71.205
+            grant: permit
+            protocol: icmp
+            protocol_options:
+                icmp:
+                    echo: true
+            sequence: 110
+            source:
+                host: 5.226.95.150
+        -   destination:
+                host: 212.69.71.205
+            grant: permit
+            protocol: icmp
+            protocol_options:
+                icmp:
+                    echo: true
+            sequence: 120
+            source:
+                host: 5.226.95.81
+        -   destination:
+                host: 212.69.71.205
+            grant: permit
+            protocol: udp
+            sequence: 130
+            source:
+                host: 5.226.95.150
+        -   destination:
+                host: 212.69.71.205
+            grant: permit
+            protocol: udp
+            sequence: 140
+            source:
+                host: 5.226.95.81
+        -   destination:
+                host: 212.69.71.205
+            grant: permit
+            protocol: tcp
+            sequence: 150
+            source:
+                host: 5.226.95.150
+        -   destination:
+                host: 212.69.71.205
+            grant: permit
+            protocol: tcp
+            sequence: 160
+            source:
+                host: 5.226.95.81
+        -   destination:
+                host: 212.69.71.205
+            grant: permit
+            protocol: udp
+            sequence: 170
+            source:
+                host: 185.2.113.120
+        -   destination:
+                host: 212.69.71.205
+            grant: permit
+            protocol: tcp
+            sequence: 180
+            source:
+                host: 185.2.113.120
+        -   grant: permit
+            protocol: udp
+            sequence: 190
+            source:
+                host: 185.2.113.120
+        -   grant: permit
+            protocol: udp
+            sequence: 200
+            source:
+                host: 5.226.95.150
+        -   grant: permit
+            protocol: udp
+            sequence: 210
+            source:
+                host: 5.226.95.81
+        -   grant: permit
+            protocol: udp
+            sequence: 220
+            source:
+                host: 185.2.113.120
+        -   grant: permit
+            protocol: udp
+            sequence: 230
+            source:
+                host: 5.226.95.150
+        -   grant: permit
+            protocol: tcp
+            sequence: 240
+            source:
+                host: 5.226.95.150
+        -   destination:
+                host: 212.69.71.205
+            grant: deny
+            protocol: ip
+            sequence: 250
+            source:
+                any: true
+        -   destination:
+                any: true
+            grant: permit
+            protocol: ip
+            sequence: 260
+            source:
+                any: true
+        acl_type: extended
+        name: cmp-in
+    -   aces:
+        -   grant: permit
+            protocol: udp
+            sequence: 10
+            source:
+                host: 192.168.10.160
+        -   grant: permit
+            protocol: udp
+            sequence: 20
+            source:
+                host: 192.168.10.160
+        -   grant: permit
+            protocol: udp
+            sequence: 30
+            source:
+                host: 192.168.10.160
+        -   grant: permit
+            protocol: udp
+            sequence: 40
+            source:
+                host: 192.168.10.160
+        -   grant: permit
+            protocol: udp
+            sequence: 50
+            source:
+                host: 192.168.10.160
+        -   destination:
+                any: true
+            grant: deny
+            protocol: udp
+            sequence: 60
+            source:
+                host: 192.168.10.160
+        -   destination:
+                address: 192.168.10.0
+                wildcard_bits: 0.0.0.255
+            grant: permit
+            protocol: tcp
+            sequence: 70
+            source:
+                host: 192.168.10.160
+                port_protocol:
+                    eq: '443'
+        -   destination:
+                address: 192.168.10.0
+                wildcard_bits: 0.0.0.255
+            grant: permit
+            protocol: tcp
+            sequence: 80
+            source:
+                host: 192.168.10.160
+                port_protocol:
+                    eq: '7000'
+        -   destination:
+                any: true
+            grant: permit
+            protocol: tcp
+            sequence: 90
+            source:
+                host: 192.168.10.160
+                port_protocol:
+                    eq: '443'
+        -   destination:
+                any: true
+            grant: permit
+            protocol: tcp
+            sequence: 100
+            source:
+                host: 192.168.10.160
+                port_protocol:
+                    eq: '7000'
+        -   destination:
+                any: true
+            grant: deny
+            protocol: tcp
+            sequence: 110
+            source:
+                host: 192.168.10.160
+        -   destination:
+                any: true
+            grant: permit
+            protocol: ip
+            sequence: 120
+            source:
+                any: true
+        acl_type: extended
+        name: cmp-lan2inet-in
+    -   aces:
+        -   grant: permit
+            sequence: 10
+            source:
+                address: 192.168.10.34
+        acl_type: standard
+        name: cmp-linux
+    -   aces:
+        -   destination:
+                host: 192.168.10.71
+                port_protocol:
+                    eq: '5432'
+            grant: permit
+            protocol: tcp
+            sequence: 10
+            source:
+                address: 192.168.0.0
+                wildcard_bits: 0.0.255.255
+        -   destination:
+                address: 192.168.0.0
+                wildcard_bits: 0.0.255.255
+            grant: permit
+            protocol: tcp
+            sequence: 20
+            source:
+                host: 192.168.10.71
+                port_protocol:
+                    eq: '5432'
+        acl_type: extended
+        name: cmp-tr-ic
+    -   aces:
+        -   destination:
+                any: true
+            grant: deny
+            protocol: ip
+            sequence: 10
+            source:
+                host: 192.168.10.160
+        -   destination:
+                any: true
+            grant: deny
+            protocol: ip
+            sequence: 20
+            source:
+                host: 192.168.10.71
+        -   destination:
+                address: 192.168.0.0
+                wildcard_bits: 0.0.255.255
+            grant: permit
+            protocol: ip
+            sequence: 30
+            source:
+                any: true
+        -   destination:
+                any: true
+            grant: permit
+            protocol: ip
+            sequence: 40
+            source:
+                address: 192.168.0.0
+                wildcard_bits: 0.0.255.255
+        acl_type: extended
+        name: data
+    -   aces:
+        -   destination:
+                address: 192.168.0.0
+                wildcard_bits: 0.0.255.255
+            grant: deny
+            protocol: ip
+            sequence: 10
+            source:
+                any: true
+        -   destination:
+                address: 172.16.0.0
+                wildcard_bits: 0.15.255.255
+            grant: deny
+            protocol: ip
+            sequence: 20
+            source:
+                any: true
+        -   destination:
+                any: true
+            grant: permit
+            protocol: ip
+            sequence: 30
+            source:
+                host: 192.168.10.34
+        acl_type: extended
+        name: fp-testing
+    -   aces:
+        -   destination:
+                address: 10.25.1.0
+                wildcard_bits: 0.0.0.255
+            grant: permit
+            protocol: ip
+            sequence: 10
+            source:
+                host: 192.168.10.79
+        acl_type: extended
+        name: ipsec-alab-2021
+    -   aces:
+        -   destination:
+                host: 195.93.203.174
+            grant: permit
+            protocol: gre
+            sequence: 10
+            source:
+                host: 212.69.71.204
+        acl_type: extended
+        name: ipsec-rt3-rtjp2-gf
+    -   aces:
+        -   grant: permit
+            sequence: 10
+            source:
+                address: 52.210.128.8
+        -   grant: permit
+            sequence: 20
+            source:
+                address: 212.69.68.123
+        -   grant: permit
+            sequence: 30
+            source:
+                address: 212.69.66.0
+                wildcard_bits: 0.0.0.63
+        acl_type: standard
+        name: login
+    -   aces:
+        -   grant: permit
+            sequence: 10
+            source:
+                address: 192.168.0.0
+                wildcard_bits: 0.0.255.255
+        acl_type: standard
+        name: ntp-client
+    -   aces:
+        -   grant: permit
+            sequence: 10
+            source:
+                address: 212.69.68.123
+        -   grant: permit
+            sequence: 20
+            source:
+                address: 212.69.81.115
+        acl_type: standard
+        name: ntp-peer
+    -   aces:
+        -   grant: permit
+            sequence: 10
+            source:
+                address: 212.69.68.123
+        -   grant: permit
+            sequence: 20
+            source:
+                address: 212.69.81.115
+        acl_type: standard
+        name: pagi-ntp-srv
+    -   aces:
+        -   destination:
+                address: 192.168.240.0
+                wildcard_bits: 0.0.0.255
+            grant: permit
+            protocol: ip
+            sequence: 10
+            source:
+                host: 192.168.10.71
+        -   destination:
+                address: 192.168.240.0
+                wildcard_bits: 0.0.0.255
+            grant: permit
+            protocol: ip
+            sequence: 20
+            source:
+                host: 192.168.10.6
+        -   destination:
+                address: 192.168.240.0
+                wildcard_bits: 0.0.0.255
+            grant: permit
+            protocol: ip
+            sequence: 30
+            source:
+                host: 192.168.10.34
+        acl_type: extended
+        name: pbr-interclinic-jp2
+    -   aces:
+        -   destination:
+                host: 192.168.238.6
+            grant: permit
+            protocol: ip
+            sequence: 10
+            source:
+                host: 212.2.101.70
+        -   destination:
+                host: 212.2.101.70
+            grant: permit
+            protocol: ip
+            sequence: 20
+            source:
+                host: 192.168.238.6
+        acl_type: extended
+        name: plus-voip
+    -   aces:
+        -   grant: permit
+            sequence: 10
+            source:
+                address: 192.168.10.78
+        acl_type: standard
+        name: pp-staging.cmp.med.pl.lan
+    -   aces:
+        -   destination:
+                host: 10.1.1.106
+            grant: permit
+            protocol: ip
+            sequence: 10
+            source:
+                host: 192.168.10.79
+        -   destination:
+                address: 10.25.1.0
+                wildcard_bits: 0.0.0.255
+            grant: permit
+            protocol: ip
+            sequence: 20
+            source:
+                host: 192.168.10.79
+        -   destination:
+                host: 94.75.106.4
+            grant: permit
+            protocol: ip
+            sequence: 30
+            source:
+                host: 212.69.71.204
+        acl_type: extended
+        name: qos-alab
+    -   aces:
+        -   destination:
+                any: true
+            grant: permit
+            protocol: ip
+            sequence: 10
+            source:
+                host: 212.2.101.70
+        -   destination:
+                host: 212.2.101.70
+            grant: permit
+            protocol: ip
+            sequence: 20
+            source:
+                any: true
+        -   destination:
+                any: true
+            grant: permit
+            protocol: ip
+            sequence: 30
+            source:
+                host: 185.53.97.50
+        -   destination:
+                host: 185.53.97.50
+            grant: permit
+            protocol: ip
+            sequence: 40
+            source:
+                any: true
+        -   destination:
+                any: true
+            grant: permit
+            protocol: ip
+            sequence: 50
+            source:
+                host: 5.226.95.81
+        -   destination:
+                any: true
+            grant: permit
+            protocol: ip
+            sequence: 60
+            source:
+                host: 5.226.95.150
+        -   destination:
+                host: 5.226.95.81
+            grant: permit
+            protocol: ip
+            sequence: 70
+            source:
+                any: true
+        -   destination:
+                host: 5.226.95.150
+            grant: permit
+            protocol: ip
+            sequence: 80
+            source:
+                any: true
+        -   destination:
+                host: 212.69.71.205
+            grant: permit
+            protocol: ip
+            sequence: 90
+            source:
+                any: true
+        -   destination:
+                any: true
+            grant: permit
+            protocol: ip
+            sequence: 100
+            source:
+                host: 212.69.71.205
+        -   destination:
+                any: true
+            grant: permit
+            protocol: ip
+            sequence: 110
+            source:
+                host: 185.2.113.120
+        -   destination:
+                host: 185.2.113.120
+            grant: permit
+            protocol: ip
+            sequence: 120
+            source:
+                any: true
+        acl_type: extended
+        name: qos-cmp-tr-voip-out
+    -   aces:
+        -   destination:
+                host: 54.36.105.25
+            grant: permit
+            protocol: ip
+            sequence: 10
+            source:
+                any: true
+            time_range: synology-backup
+        acl_type: extended
+        name: qos-synology-backup
+    -   aces:
+        -   destination:
+                host: 212.2.101.70
+            grant: permit
+            protocol: ip
+            sequence: 10
+            source:
+                any: true
+        -   destination:
+                host: 185.53.97.50
+            grant: permit
+            protocol: ip
+            sequence: 20
+            source:
+                any: true
+        -   destination:
+                host: 5.226.95.81
+            grant: permit
+            protocol: ip
+            sequence: 30
+            source:
+                any: true
+        -   destination:
+                host: 5.226.95.150
+            grant: permit
+            protocol: ip
+            sequence: 40
+            source:
+                any: true
+        -   destination:
+                any: true
+            grant: permit
+            protocol: ip
+            sequence: 50
+            source:
+                host: 192.168.10.160
+        acl_type: extended
+        name: qos-voip-pias-lan-in
+    -   aces:
+        -   destination:
+                any: true
+            grant: permit
+            protocol: esp
+            sequence: 10
+            source:
+                any: true
+        -   destination:
+                any: true
+                port_protocol:
+                    eq: isakmp
+            grant: permit
+            protocol: udp
+            sequence: 20
+            source:
+                host: 212.69.71.204
+                port_protocol:
+                    eq: isakmp
+        -   destination:
+                any: true
+                port_protocol:
+                    eq: non500-isakmp
+            grant: permit
+            protocol: udp
+            sequence: 30
+            source:
+                host: 212.69.71.204
+                port_protocol:
+                    eq: non500-isakmp
+        acl_type: extended
+        name: qos-vpn
+    -   aces:
+        -   destination:
+                host: 185.2.113.120
+            grant: permit
+            protocol: ip
+            sequence: 10
+            source:
+                host: 192.168.10.160
+        -   destination:
+                host: 5.226.95.150
+            grant: permit
+            protocol: ip
+            sequence: 20
+            source:
+                host: 192.168.10.160
+        -   destination:
+                host: 5.226.95.81
+            grant: permit
+            protocol: ip
+            sequence: 30
+            source:
+                host: 192.168.10.160
+        -   destination:
+                any: true
+            grant: permit
+            protocol: ip
+            sequence: 40
+            source:
+                any: true
+        acl_type: extended
+        name: siem-test-lan-in
+    -   aces:
+        -   destination:
+                host: 212.2.101.70
+            grant: permit
+            protocol: ip
+            sequence: 10
+            source:
+                any: true
+        -   destination:
+                any: true
+            grant: permit
+            protocol: ip
+            sequence: 20
+            source:
+                host: 212.2.101.70
+        -   destination:
+                host: 185.53.97.50
+            grant: permit
+            protocol: ip
+            sequence: 30
+            source:
+                any: true
+        -   destination:
+                any: true
+            grant: permit
+            protocol: ip
+            sequence: 40
+            source:
+                host: 185.53.97.50
+        -   destination:
+                host: 5.226.95.81
+            grant: permit
+            protocol: ip
+            sequence: 50
+            source:
+                any: true
+        -   destination:
+                any: true
+            grant: permit
+            protocol: ip
+            sequence: 60
+            source:
+                host: 5.226.95.81
+        -   destination:
+                host: 5.226.95.150
+            grant: permit
+            protocol: ip
+            sequence: 70
+            source:
+                any: true
+        -   destination:
+                any: true
+            grant: permit
+            protocol: ip
+            sequence: 80
+            source:
+                host: 5.226.95.150
+        -   destination:
+                any: true
+            grant: permit
+            protocol: ip
+            sequence: 90
+            source:
+                host: 192.168.10.160
+        -   destination:
+                host: 192.168.10.160
+            grant: permit
+            protocol: ip
+            sequence: 100
+            source:
+                any: true
+        acl_type: extended
+        name: voip
+    -   aces:
+        -   destination:
+                any: true
+            grant: permit
+            protocol: udp
+            sequence: 10
+            source:
+                address: 212.69.64.192
+                port_protocol:
+                    eq: domain
+                wildcard_bits: 0.0.0.3
+        -   destination:
+                any: true
+            grant: permit
+            protocol: udp
+            sequence: 20
+            source:
+                host: 8.8.8.8
+                port_protocol:
+                    eq: domain
+        -   destination:
+                any: true
+            grant: permit
+            protocol: udp
+            sequence: 30
+            source:
+                host: 8.8.4.4
+                port_protocol:
+                    eq: domain
+        -   destination:
+                any: true
+            grant: permit
+            protocol: tcp
+            sequence: 40
+            source:
+                address: 212.69.64.192
+                port_protocol:
+                    eq: domain
+                wildcard_bits: 0.0.0.3
+        -   destination:
+                any: true
+            grant: permit
+            protocol: tcp
+            sequence: 50
+            source:
+                host: 8.8.8.8
+                port_protocol:
+                    eq: domain
+        -   destination:
+                any: true
+            grant: permit
+            protocol: tcp
+            sequence: 60
+            source:
+                host: 8.8.4.4
+                port_protocol:
+                    eq: domain
+        -   destination:
+                any: true
+                port_protocol:
+                    eq: ntp
+            grant: permit
+            protocol: udp
+            sequence: 70
+            source:
+                any: true
+                port_protocol:
+                    eq: ntp
+        -   destination:
+                host: 192.168.10.160
+            grant: permit
+            protocol: icmp
+            protocol_options:
+                icmp:
+                    echo: true
+            sequence: 80
+            source:
+                host: 185.2.113.120
+        -   destination:
+                host: 192.168.10.160
+            grant: permit
+            protocol: icmp
+            protocol_options:
+                icmp:
+                    echo: true
+            sequence: 90
+            source:
+                host: 5.226.95.150
+        -   destination:
+                host: 192.168.10.160
+            grant: permit
+            protocol: icmp
+            protocol_options:
+                icmp:
+                    echo: true
+            sequence: 100
+            source:
+                host: 5.226.95.81
+        -   destination:
+                host: 192.168.10.160
+            grant: permit
+            protocol: udp
+            sequence: 110
+            source:
+                host: 185.2.113.120
+        -   destination:
+                host: 192.168.10.160
+            grant: permit
+            protocol: udp
+            sequence: 120
+            source:
+                host: 5.226.95.150
+        -   destination:
+                host: 192.168.10.160
+            grant: permit
+            protocol: udp
+            sequence: 130
+            source:
+                host: 5.226.95.81
+        -   destination:
+                host: 192.168.10.160
+            grant: permit
+            protocol: tcp
+            sequence: 140
+            source:
+                host: 185.2.113.120
+        -   destination:
+                host: 192.168.10.160
+            grant: permit
+            protocol: tcp
+            sequence: 150
+            source:
+                host: 5.226.95.150
+        -   destination:
+                host: 192.168.10.160
+            grant: permit
+            protocol: tcp
+            sequence: 160
+            source:
+                host: 5.226.95.81
+        -   grant: permit
+            protocol: udp
+            sequence: 170
+            source:
+                host: 185.2.113.120
+        -   grant: permit
+            protocol: udp
+            sequence: 180
+            source:
+                host: 5.226.95.150
+        -   grant: permit
+            protocol: udp
+            sequence: 190
+            source:
+                host: 5.226.95.81
+        -   grant: permit
+            protocol: udp
+            sequence: 200
+            source:
+                host: 185.2.113.120
+        -   grant: permit
+            protocol: udp
+            sequence: 210
+            source:
+                host: 5.226.95.150
+        -   grant: permit
+            protocol: udp
+            sequence: 220
+            source:
+                host: 5.226.95.81
+        -   grant: permit
+            protocol: udp
+            sequence: 230
+            source:
+                host: 185.2.113.120
+        -   grant: permit
+            protocol: udp
+            sequence: 240
+            source:
+                host: 5.226.95.150
+        -   grant: permit
+            protocol: tcp
+            sequence: 250
+            source:
+                host: 185.2.113.120
+        -   grant: permit
+            protocol: tcp
+            sequence: 260
+            source:
+                host: 5.226.95.150
+        -   destination:
+                host: 192.168.10.160
+            grant: permit
+            protocol: udp
+            sequence: 270
+            source:
+                address: 192.168.0.0
+                wildcard_bits: 0.0.255.255
+        -   destination:
+                host: 192.168.10.160
+            grant: permit
+            protocol: tcp
+            sequence: 280
+            source:
+                address: 192.168.0.0
+                wildcard_bits: 0.0.255.255
+        -   destination:
+                host: 192.168.10.160
+            grant: permit
+            protocol: icmp
+            sequence: 290
+            source:
+                address: 192.168.0.0
+                wildcard_bits: 0.0.255.255
+        -   destination:
+                host: 192.168.10.160
+            grant: permit
+            protocol: ip
+            sequence: 300
+            source:
+                address: 192.168.0.0
+                wildcard_bits: 0.0.255.255
+        -   destination:
+                host: 192.168.10.160
+            grant: deny
+            log: (19
+            protocol: ip
+            sequence: 310
+            source:
+                any: true
+        -   destination:
+                any: true
+            grant: permit
+            protocol: ip
+            sequence: 320
+            source:
+                any: true
+        acl_type: extended
+        name: voipsec-out
+    -   aces:
+        -   destination:
+                host: 31.179.168.118
+            grant: permit
+            protocol: gre
+            sequence: 10
+            source:
+                host: 212.69.71.204
+        acl_type: extended
+        name: vpn-rt3--wola2-upc
+    afi: ipv4

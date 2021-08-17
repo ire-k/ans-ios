@@ -1,0 +1,228 @@
+acls:
+-   acls:
+    -   aces:
+        -   grant: permit
+            sequence: 10
+            source:
+                address: 212.69.68.123
+        -   grant: permit
+            sequence: 20
+            source:
+                address: 192.168.10.130
+        -   grant: permit
+            sequence: 30
+            source:
+                address: 212.69.66.0
+                wildcard_bits: 0.0.0.63
+        acl_type: standard
+        name: '1'
+    -   aces:
+        -   grant: permit
+            sequence: 10
+            source:
+                address: 212.69.68.123
+        -   grant: permit
+            sequence: 20
+            source:
+                address: 212.69.66.0
+                wildcard_bits: 0.0.0.63
+        acl_type: standard
+        name: '10'
+    -   aces:
+        -   grant: permit
+            sequence: 10
+            source:
+                any: true
+        acl_type: standard
+        name: '69'
+    -   aces:
+        -   destination:
+                host: 192.168.10.71
+                port_protocol:
+                    eq: '5432'
+            grant: permit
+            protocol: tcp
+            sequence: 10
+            source:
+                any: true
+        acl_type: extended
+        name: IC
+    -   aces:
+        -   destination:
+                host: 192.168.10.71
+                port_protocol:
+                    eq: '5432'
+            grant: permit
+            protocol: tcp
+            sequence: 10
+            source:
+                any: true
+        acl_type: extended
+        name: IC-mark
+    -   aces:
+        -   destination:
+                host: 212.69.71.204
+            grant: permit
+            protocol: gre
+            sequence: 10
+            source:
+                host: 217.28.145.215
+        acl_type: extended
+        name: acl-plock--cmp-rt3
+    -   aces:
+        -   destination:
+                host: 212.69.71.207
+            grant: permit
+            protocol: gre
+            sequence: 10
+            source:
+                host: 217.28.147.242
+        acl_type: extended
+        name: acl-plock--cmp-rt4
+    -   aces:
+        -   grant: deny
+            sequence: 10
+            source:
+                any: true
+        acl_type: standard
+        name: ban-any
+    -   aces:
+        -   grant: permit
+            sequence: 10
+            source:
+                address: 192.168.10.34
+        -   grant: permit
+            sequence: 20
+            source:
+                address: 52.210.128.8
+        -   grant: permit
+            sequence: 50
+            source:
+                address: 192.168.10.235
+        -   grant: permit
+            sequence: 30
+            source:
+                address: 212.69.68.123
+        -   grant: permit
+            sequence: 40
+            source:
+                address: 212.69.66.0
+                wildcard_bits: 0.0.0.63
+        -   grant: permit
+            sequence: 60
+            source:
+                address: 10.0.0.0
+                wildcard_bits: 0.0.0.255
+        acl_type: standard
+        name: clogin
+    -   aces:
+        -   grant: permit
+            sequence: 10
+            source:
+                address: 212.69.68.123
+        -   grant: permit
+            sequence: 20
+            source:
+                address: 192.168.10.130
+        -   grant: permit
+            sequence: 30
+            source:
+                address: 212.69.66.0
+                wildcard_bits: 0.0.0.63
+        acl_type: standard
+        name: login
+    -   aces:
+        -   grant: permit
+            sequence: 10
+            source:
+                address: 212.69.68.123
+        -   grant: permit
+            sequence: 20
+            source:
+                address: 212.69.81.115
+        acl_type: standard
+        name: pagi-ntp-srv
+    -   aces:
+        -   destination:
+                host: 212.2.101.70
+            grant: permit
+            protocol: ip
+            sequence: 10
+            source:
+                any: true
+        -   destination:
+                any: true
+            grant: permit
+            protocol: ip
+            sequence: 20
+            source:
+                host: 212.2.101.70
+        -   destination:
+                host: 185.53.97.50
+            grant: permit
+            protocol: ip
+            sequence: 30
+            source:
+                any: true
+        -   destination:
+                any: true
+            grant: permit
+            protocol: ip
+            sequence: 40
+            source:
+                host: 185.53.97.50
+        -   destination:
+                host: 5.226.95.81
+            grant: permit
+            protocol: ip
+            sequence: 50
+            source:
+                any: true
+        -   destination:
+                any: true
+            grant: permit
+            protocol: ip
+            sequence: 60
+            source:
+                host: 5.226.95.81
+        -   destination:
+                host: 5.226.95.150
+            grant: permit
+            protocol: ip
+            sequence: 70
+            source:
+                any: true
+        -   destination:
+                any: true
+            grant: permit
+            protocol: ip
+            sequence: 80
+            source:
+                host: 5.226.95.150
+        -   destination:
+                any: true
+            grant: permit
+            protocol: ip
+            sequence: 90
+            source:
+                host: 192.168.10.160
+        -   destination:
+                host: 192.168.10.160
+            grant: permit
+            protocol: ip
+            sequence: 100
+            source:
+                any: true
+        acl_type: extended
+        name: qos-voip
+    -   aces:
+        -   destination:
+                host: 212.69.71.207
+            grant: permit
+            protocol: gre
+            sequence: 10
+            source:
+                host: 192.168.255.80
+        acl_type: extended
+        name: vpn-bk
+    afi: ipv4

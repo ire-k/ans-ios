@@ -31,22 +31,46 @@
       lines:
         - no access-class clogin in vrf-also
 
-   
-  # ACL order of the entries and remarks tends to be unpredictable; adding numbers before permit doesn't help - probably gets optimized by CEF
-  - name: set ACL clogin standard
-    when: inventory_hostname is regex("(?i)cmp")
-    cisco.ios.ios_config:
-      parents: ip access-list standard clogin
-      lines:
-        - remark **Helpdesk, nagiosAWS, loc mgmt**
-        - permit 212.69.66.0 0.0.0.63
-        - permit host 212.69.68.123
-        - permit host 52.210.128.8
-        - permit host 192.168.10.34
-        - permit host 192.168.10.235
-        - permit 10.0.0.0 0.0.0.255
-      match: exact
-      replace: block
+
+  # first fetch the ACL from a device, then modify 
+  # https://www.ansible.com/blog/deep-dive-acl-configuration-management-using-ansible-network-automation-resource-modules
+  #
+  # state: overriden = overwrite any manual changes
+  - name: set ACL to secure vty lines
+    ios_acls:
+      state: overriden
+      afi: ipv4
+      acls:
+        - name: clogin
+          acl_type: standard
+          aces: 
+          -   grant: permit
+              sequence: 10
+              source:
+                  address: 192.168.10.34
+          -   grant: permit
+              sequence: 20
+              source:
+                  address: 52.210.128.8
+          -   grant: permit
+              sequence: 50
+              source:
+                  address: 192.168.10.235
+          -   grant: permit
+              sequence: 30
+              source:
+                  address: 212.69.68.123
+          -   grant: permit
+              sequence: 40
+              source:
+                  address: 212.69.66.0
+                  wildcard_bits: 0.0.0.63
+          -   grant: permit
+              sequence: 60
+              source:
+                  address: 10.0.0.0
+                  wildcard_bits: 0.0.0.255
+
 
 
   - name: ins access-class on vty lines 
