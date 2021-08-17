@@ -36,41 +36,47 @@
   # https://www.ansible.com/blog/deep-dive-acl-configuration-management-using-ansible-network-automation-resource-modules
   #
   # state: overriden = overwrite any manual changes
+  #
+  # ? bug with afi:
+  # FAILED! => {"changed": false, "msg": "Unsupported parameters for (ios_acls) module: acls, afi Supported parameters include: config, running_config, state"}
+  # but https://docs.ansible.com/ansible/2.10/collections/cisco/ios/ios_acls_module.html says: ipv4, ipv6
   - name: set ACL to secure vty lines
+    ignore_errors: True
     ios_acls:
-      state: overriden
-      afi: ipv4
-      acls:
-        - name: clogin
-          acl_type: standard
-          aces: 
-          -   grant: permit
-              sequence: 10
-              source:
-                  address: 192.168.10.34
-          -   grant: permit
-              sequence: 20
-              source:
-                  address: 52.210.128.8
-          -   grant: permit
-              sequence: 50
-              source:
-                  address: 192.168.10.235
-          -   grant: permit
-              sequence: 30
-              source:
-                  address: 212.69.68.123
-          -   grant: permit
-              sequence: 40
-              source:
-                  address: 212.69.66.0
-                  wildcard_bits: 0.0.0.63
-          -   grant: permit
-              sequence: 60
-              source:
-                  address: 10.0.0.0
-                  wildcard_bits: 0.0.0.255
-
+      state: overridden
+      config:
+        - afi: ipv4
+          acls:
+            - name: clogin
+              acl_type: standard
+              aces: 
+              -   grant: permit
+                  sequence: 10
+                  source:
+                      address: 192.168.10.34
+              -   grant: permit
+                  sequence: 20
+                  source:
+                      address: 52.210.128.8
+              -   grant: permit
+                  sequence: 50
+                  source:
+                      address: 192.168.10.235
+              -   grant: permit
+                  sequence: 30
+                  source:
+                      address: 212.69.68.123
+              -   grant: permit
+                  sequence: 40
+                  source:
+                      address: 212.69.66.0
+                      wildcard_bits: 0.0.0.63
+              -   grant: permit
+                  sequence: 60
+                  source:
+                      address: 10.0.0.0
+                      wildcard_bits: 0.0.0.255
+    tags: setacl
 
 
   - name: ins access-class on vty lines 
