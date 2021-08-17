@@ -12,19 +12,27 @@
       gather_subset: 
           - min
 
-  - debug:
-      msg: 
-        - "{{ansible_net_model}}"
-        - "{{inventory_hostname}}"
-   
-  - name: change enable secret
-    when: inventory_hostname is regex("(?i)cmp")
-    cisco.ios.ios_config:
-      lines:
-        - "enable secret {{cmp_enable}}"
- 
+#  - debug:
+#      msg: 
+#        - "{{ansible_net_model}}"
+#        - "{{inventory_hostname}}"
+#   
+  - fail:
+      msg: not for nexus platform
+    when: ansible_net_model is regex("(?i)Nexus")
 
-  # order of the entries and remarks tends to be unpredictable; adding numbers before permit doesn't help - probably gets optimized by CEF
+
+
+  - name: rm access-class from vty lines
+    when: inventory_hostname is regex("(?i)cmp")
+    ignore_errors: True
+    ios_config:
+      parents: line vty 0 4
+      lines:
+        - no access-class clogin in vrf-also
+
+   
+  # ACL order of the entries and remarks tends to be unpredictable; adding numbers before permit doesn't help - probably gets optimized by CEF
   - name: set ACL clogin standard
     when: inventory_hostname is regex("(?i)cmp")
     cisco.ios.ios_config:
@@ -36,20 +44,12 @@
         - permit host 52.210.128.8
         - permit host 192.168.10.34
         - permit host 192.168.10.235
+        - permit 10.0.0.0 0.0.0.255
       match: exact
       replace: block
 
 
-  - name: config vty lines
-    ios_config:
-      parents: line vty 0 4
-      lines:
-        - exec-timeout 60
-        - logging synchronous
-
-
-  - name: access-class vty lines 1 on cmp dev
-    when: inventory_hostname is regex("(?i)cmp")
+  - name: ins access-class on vty lines 
     ignore_errors: True
     ios_config:
       parents: line vty 0 4
@@ -59,6 +59,6 @@
 
   - name: save config
     ios_config:
-      save_when: always
+      save_when: changed
 
 
