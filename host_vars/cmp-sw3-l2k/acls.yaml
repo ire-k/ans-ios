@@ -9,9 +9,49 @@ acls:
             sequence: 20
             source:
                 address: 212.69.66.0
+                wildcard_bits: 0.0.0.31
+        acl_type: standard
+        name: '1'
+    -   aces:
+        -   grant: permit
+            sequence: 10
+            source:
+                address: 212.69.68.123
+        -   grant: permit
+            sequence: 20
+            source:
+                address: 212.69.66.0
                 wildcard_bits: 0.0.0.63
         acl_type: standard
         name: '10'
+    -   aces:
+        -   grant: permit
+            sequence: 10
+            source:
+                address: 192.168.10.0
+                wildcard_bits: 0.0.0.255
+        acl_type: standard
+        name: '20'
+    -   aces:
+        -   destination:
+                host: 192.168.10.188
+            grant: deny
+            protocol: ip
+            sequence: 10
+            source:
+                host: 192.168.10.71
+        -   destination:
+                address: 192.168.0.0
+                wildcard_bits: 0.0.255.255
+            grant: permit
+            protocol: tcp
+            sequence: 20
+            source:
+                host: 192.168.10.71
+                port_protocol:
+                    eq: '5432'
+        acl_type: extended
+        name: IC
     -   aces:
         -   grant: deny
             sequence: 10
@@ -49,15 +89,26 @@ acls:
         acl_type: standard
         name: clogin
     -   aces:
-        -   destination:
-                host: 212.69.71.207
-            grant: permit
-            protocol: gre
+        -   grant: permit
             sequence: 10
             source:
-                host: 31.179.168.118
-        acl_type: extended
-        name: ipsec-rt4--wola2-upc
+                address: 52.210.128.8
+        -   grant: permit
+            sequence: 20
+            source:
+                address: 212.69.68.123
+        -   grant: permit
+            sequence: 30
+            source:
+                address: 212.69.66.0
+                wildcard_bits: 0.0.0.63
+        -   grant: permit
+            sequence: 40
+            source:
+                address: 10.0.0.0
+                wildcard_bits: 0.0.0.255
+        acl_type: standard
+        name: login
     -   aces:
         -   grant: permit
             sequence: 10
@@ -71,12 +122,13 @@ acls:
         name: pagi-ntp-srv
     -   aces:
         -   destination:
-                host: 212.69.71.204
+                address: 10.25.1.0
+                wildcard_bits: 0.0.0.255
             grant: permit
-            protocol: gre
+            protocol: ip
             sequence: 10
             source:
-                host: 31.179.168.118
+                host: 192.168.10.79
         acl_type: extended
-        name: vpn-rt3--wola2-upc
+        name: qos-alab
     afi: ipv4

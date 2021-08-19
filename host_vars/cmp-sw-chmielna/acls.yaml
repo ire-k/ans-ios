@@ -51,11 +51,11 @@ acls:
         name: ban-any
     -   aces:
         -   grant: permit
-            sequence: 40
+            sequence: 10
             source:
                 address: 192.168.10.34
         -   grant: permit
-            sequence: 30
+            sequence: 20
             source:
                 address: 52.210.128.8
         -   grant: permit
@@ -63,11 +63,11 @@ acls:
             source:
                 address: 192.168.10.235
         -   grant: permit
-            sequence: 20
+            sequence: 30
             source:
                 address: 212.69.68.123
         -   grant: permit
-            sequence: 10
+            sequence: 40
             source:
                 address: 212.69.66.0
                 wildcard_bits: 0.0.0.63
@@ -80,7 +80,7 @@ acls:
         name: clogin
     -   aces:
         -   grant: permit
-            sequence: 30
+            sequence: 10
             source:
                 address: 52.210.128.8
         -   grant: permit
@@ -88,7 +88,7 @@ acls:
             source:
                 address: 212.69.68.123
         -   grant: permit
-            sequence: 10
+            sequence: 30
             source:
                 address: 212.69.66.0
                 wildcard_bits: 0.0.0.63

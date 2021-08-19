@@ -4,6 +4,27 @@ acls:
         -   grant: permit
             sequence: 10
             source:
+                address: 52.210.128.8
+        -   grant: permit
+            sequence: 20
+            source:
+                address: 212.69.68.123
+        -   grant: permit
+            sequence: 30
+            source:
+                address: 212.69.66.0
+                wildcard_bits: 0.0.0.63
+        -   grant: permit
+            sequence: 40
+            source:
+                address: 10.0.0.0
+                wildcard_bits: 0.0.0.255
+        acl_type: standard
+        name: '1'
+    -   aces:
+        -   grant: permit
+            sequence: 10
+            source:
                 address: 212.69.68.123
         -   grant: permit
             sequence: 20
@@ -49,15 +70,21 @@ acls:
         acl_type: standard
         name: clogin
     -   aces:
-        -   destination:
-                host: 212.69.71.207
-            grant: permit
-            protocol: gre
+        -   grant: permit
             sequence: 10
             source:
-                host: 31.179.168.118
-        acl_type: extended
-        name: ipsec-rt4--wola2-upc
+                address: 52.210.128.8
+        -   grant: permit
+            sequence: 20
+            source:
+                address: 212.69.68.123
+        -   grant: permit
+            sequence: 30
+            source:
+                address: 212.69.66.0
+                wildcard_bits: 0.0.0.63
+        acl_type: standard
+        name: login
     -   aces:
         -   grant: permit
             sequence: 10
@@ -71,12 +98,19 @@ acls:
         name: pagi-ntp-srv
     -   aces:
         -   destination:
-                host: 212.69.71.204
+                host: 192.168.238.6
             grant: permit
-            protocol: gre
+            protocol: ip
             sequence: 10
             source:
-                host: 31.179.168.118
+                host: 212.2.101.70
+        -   destination:
+                host: 212.2.101.70
+            grant: permit
+            protocol: ip
+            sequence: 20
+            source:
+                host: 192.168.238.6
         acl_type: extended
-        name: vpn-rt3--wola2-upc
+        name: plus-voip
     afi: ipv4

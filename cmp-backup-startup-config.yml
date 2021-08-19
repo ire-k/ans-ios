@@ -1,0 +1,53 @@
+---
+# backup startup config to flash file in order to perform
+# config replace
+# this is to restore configuration w/o device reload
+#
+- name: backup startup-config from cisco ios ios-xe dev
+  gather_facts: false
+  connection: network_cli
+  hosts: cmp-rt4
+  tasks:
+
+
+  - name: get ios facts
+    ios_facts:
+      gather_subset: hardware
+
+      # flash:, flash0:, bootflash:, disk2: -> ansible_net_filesystems
+  - debug: 
+      msg:
+        - "{{ansible_net_model}}"
+        - "{{ansible_net_version}}"
+        - "{{ansible_net_filesystems[0]}}"
+    when: False
+
+  - fail: 
+      msg: "platform not suitable"
+    when:  ansible_net_model is regex("(?i)Nexus")
+
+    ## beware any special yaml characters in any part of the command or prompt
+    # full prompt: Destination filename [startup.bk20210818]?
+    # beware answeriing 'y' or 'yes' to the question, it would create destination file flash:yes
+    # deal with existing files:
+    #   %Warning:There is a file already existing with this name
+    #   Do you want to over write? [confirm]
+
+  - name: backup startup-config on ISR/ASR 
+    cli_command:
+      command: "copy startup-config {{ansible_net_filesystems[0]}}startup.bk20210818"
+      prompt: 
+        - Destination filename
+        - Do you want to over write
+      answer: 
+        - "\r"
+        - "\r"
+      check_all: yes
+
+
+      # example debug outputs:
+      #     "msg": [
+      #      "7204VXR",
+      #      "12.4(9)T4",
+      #      "disk2:"
+      #  ]

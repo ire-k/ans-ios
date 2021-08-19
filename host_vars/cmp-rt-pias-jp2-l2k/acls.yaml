@@ -50,7 +50,7 @@ acls:
                     eq: '5432'
             grant: permit
             protocol: tcp
-            sequence: 5
+            sequence: 10
             source:
                 address: 192.168.0.0
                 wildcard_bits: 0.0.255.255
@@ -58,14 +58,14 @@ acls:
                 host: 192.168.10.71
             grant: permit
             protocol: ip
-            sequence: 10
+            sequence: 20
             source:
                 any: true
         -   destination:
                 any: true
             grant: permit
             protocol: ip
-            sequence: 20
+            sequence: 30
             source:
                 host: 192.168.10.71
         acl_type: extended

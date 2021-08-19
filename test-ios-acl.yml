@@ -1,17 +1,18 @@
 ---
 - name: convert configured ACLs to structured data
-  hosts: cmp_routers
+  hosts: cmp
   gather_facts: false
   tasks:
 
-    - fail:
-      when: inventory_dir is undefined
-
+#    - fail:
+#      when: inventory_dir is undefined
+#
 
       #- debug: var=inventory_dir
 
       # on ios 12.4 fails with: An exception occurred during task execution. To see the full traceback, use -vvv. The error was: TypeError: 'NoneType' object is not iterable
-
+    # also see: https://github.com/ansible-collections/cisco.ios/issues/274
+    #
     - name: Use the ACLs resource module to gather the current config
       cisco.ios.ios_acls:
         state: gathered

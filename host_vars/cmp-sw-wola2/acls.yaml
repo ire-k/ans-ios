@@ -28,50 +28,10 @@ acls:
         -   grant: permit
             sequence: 10
             source:
-                any: true
-        acl_type: standard
-        name: '69'
-    -   aces:
-        -   grant: permit
-            sequence: 10
-            source:
                 address: 192.168.0.0
                 wildcard_bits: 0.0.255.255
         acl_type: standard
-        name: '7'
-    -   aces:
-        -   destination:
-                host: 192.168.10.71
-                port_protocol:
-                    eq: '5432'
-            grant: permit
-            protocol: tcp
-            sequence: 10
-            source:
-                address: 192.168.0.0
-                wildcard_bits: 0.0.255.255
-        acl_type: extended
-        name: IC
-    -   aces:
-        -   destination:
-                host: 212.69.71.207
-            grant: permit
-            protocol: gre
-            sequence: 10
-            source:
-                host: 10.111.198.70
-        acl_type: extended
-        name: acl-IPSEC-goclawLTE->CMP-RT4
-    -   aces:
-        -   destination:
-                host: 212.69.71.204
-            grant: permit
-            protocol: gre
-            sequence: 10
-            source:
-                host: 45.137.224.46
-        acl_type: extended
-        name: acl-goclaw-FO
+        name: '5'
     -   aces:
         -   grant: deny
             sequence: 10
@@ -109,26 +69,24 @@ acls:
         acl_type: standard
         name: clogin
     -   aces:
-        -   grant: permit
+        -   destination:
+                address: 192.168.0.0
+                wildcard_bits: 0.0.255.255
+            grant: permit
+            protocol: ip
             sequence: 10
             source:
-                address: 52.210.128.8
-        -   grant: permit
+                any: true
+        -   destination:
+                any: true
+            grant: permit
+            protocol: ip
             sequence: 20
             source:
-                address: 212.69.68.123
-        -   grant: permit
-            sequence: 30
-            source:
-                address: 212.69.66.0
-                wildcard_bits: 0.0.0.63
-        -   grant: permit
-            sequence: 40
-            source:
-                address: 10.0.0.0
-                wildcard_bits: 0.0.0.255
-        acl_type: standard
-        name: login
+                address: 192.168.0.0
+                wildcard_bits: 0.0.255.255
+        acl_type: extended
+        name: data
     -   aces:
         -   grant: permit
             sequence: 10
@@ -149,38 +107,66 @@ acls:
             source:
                 any: true
         -   destination:
-                host: 185.53.97.50
+                any: true
             grant: permit
             protocol: ip
             sequence: 20
             source:
-                any: true
+                host: 212.2.101.70
         -   destination:
-                host: 5.226.95.81
+                host: 185.53.97.50
             grant: permit
             protocol: ip
             sequence: 30
             source:
                 any: true
         -   destination:
-                host: 5.226.95.150
+                any: true
             grant: permit
             protocol: ip
             sequence: 40
             source:
-                any: true
+                host: 185.53.97.50
         -   destination:
-                host: 192.168.10.160
+                host: 5.226.95.81
             grant: permit
             protocol: ip
             sequence: 50
             source:
                 any: true
         -   destination:
-                host: 185.2.113.120
+                any: true
             grant: permit
             protocol: ip
             sequence: 60
+            source:
+                host: 5.226.95.81
+        -   destination:
+                host: 5.226.95.150
+            grant: permit
+            protocol: ip
+            sequence: 70
+            source:
+                any: true
+        -   destination:
+                any: true
+            grant: permit
+            protocol: ip
+            sequence: 80
+            source:
+                host: 5.226.95.150
+        -   destination:
+                any: true
+            grant: permit
+            protocol: ip
+            sequence: 90
+            source:
+                host: 192.168.10.160
+        -   destination:
+                host: 192.168.10.160
+            grant: permit
+            protocol: ip
+            sequence: 100
             source:
                 any: true
         acl_type: extended

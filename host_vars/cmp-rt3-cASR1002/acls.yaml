@@ -62,6 +62,8 @@ acls:
         name: '100'
     -   aces:
         -   grant: permit
+            log:
+                set: true
             sequence: 10
             source:
                 address: 195.150.8.146
@@ -1373,7 +1375,8 @@ acls:
         -   destination:
                 host: 192.168.10.160
             grant: deny
-            log: (19
+            log:
+                set: true
             protocol: ip
             sequence: 310
             source:

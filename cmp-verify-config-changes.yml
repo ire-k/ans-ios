@@ -1,0 +1,36 @@
+---
+# verify what's changed in a dev config
+#
+- name: verify config
+  gather_facts: false
+  connection: network_cli
+  hosts: cmp
+  tasks:
+
+    # subset hardware fails on nx-os, ios < 12.2(60)
+    # first gather min subset and excl unsuitable platforms
+    #
+  - name: get ios facts
+    ios_facts:
+      gather_subset: hardware
+
+      # flash:, flash0:, bootflash:, disk2: -> ansible_net_filesystems
+  - debug: 
+      msg:
+        - "{{ansible_net_model}}"
+        - "{{ansible_net_version}}"
+        - "{{ansible_net_filesystems[0]}}"
+    when: False
+
+  - fail: 
+      msg: "platform not suitable"
+    when:  ansible_net_model is regex("(?i)Nexus")
+
+    # valid config was previously saved to flash:startup.bk20210818"
+  - name: show changes
+    ios_command:
+      commands: "show archive config diff {{ansible_net_filesystems[0]}}startup.bk20210818"
+    register: confdiff
+
+  - debug: var=confdiff.stdout_lines
+
