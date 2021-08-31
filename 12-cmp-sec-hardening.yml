@@ -7,8 +7,12 @@
 #   - mgt vrf 
 #   - radius_int
 ## cmp-sw-wola2: ip radius source-interface ! aaa group server radius grp-radius
+# spanning tree portfast default
 #
-- hosts: cmp-rt-goclaw
+- hosts: 
+    - cmp-sw-lomianki-1_parter
+    - cmp-sw-lomianki-2_pietro
+
   gather_facts: false
   connection: network_cli
   tasks:
@@ -19,10 +23,12 @@
         - hardware
           #- min
 
+          # useful ans variables
   - debug:
       msg: 
         - "{{ansible_net_model}}"
         - "{{inventory_hostname}}"
+        - "{{ansible_net_version}}"
 
   - debug:
       msg: "dhcp host"
@@ -67,7 +73,8 @@
 
 
   - name: set radius srv new-config
-    when: ( ansible_net_model is regex("ME3600X") or ansible_net_model is regex("ASR") or ansible_net_model is regex("1941") or ansible_net_model is regex("3945")  )
+    #when: (   ( ansible_net_model is regex("ME3600X") or ansible_net_model is regex("ASR") or ansible_net_model is regex("1941") or ansible_net_model is regex("3945") or ansible_net_model is regex("3750") ) and ansible_net_version is version('12.2(60)', >=) )
+    when: ansible_net_version is version('12.2(60)', '>=')
     ios_config:
       parents: radius server radius-srv1
       lines:
@@ -76,7 +83,8 @@
     tags: radius-new
 
   - name: set radius old-config glob
-    when: ( ansible_net_model is regex("4900") or ansible_net_model is regex("3560") or ansible_net_model is regex("ME-3400"))
+    #when: ( ansible_net_model is regex("4900") or ansible_net_model is regex("3560") or ansible_net_model is regex("ME-3400") or ansible_net_version is version('12.2(60)', <)  )
+    when: ansible_net_version is version('12.2(60)', '<')
     ios_config:
       lines:
         - radius-server host 212.69.71.194 auth-port 1812 acct-port 1813 key 1pSbR2Dq
@@ -121,7 +129,8 @@
 
   - name : security3
     ignore_errors: True
-    when: ( ansible_net_model is regex("4900") or ansible_net_model is regex("3560") or ansible_net_model is regex("ASR") )
+    #when: ( ansible_net_model is regex("4900") or ansible_net_model is regex("3560") or ansible_net_model is regex("ASR") or ansible_net_model is regex("3750")   )
+    when: ansible_net_version is version('12.2(60)', '>=')
     ios_config:
       lines:
         - no service call-home
@@ -157,7 +166,7 @@
       ## todo: errors on some dev: cmp-rt4, ME3400, sw-marianska, sw-pawia, sw-wola 
   - name: ntp acls apply
     ignore_errors: True
-    when: inventory_hostname is not regex("(?i)linx-rt15")
+    when: ( inventory_hostname is not regex("(?i)linx-rt15") ) and ( ansible_net_version is version('12.2(60)', '>=') )
     cisco.ios.ios_config:
       lines:
         - ntp access-group peer pagi-ntp-srv
@@ -175,7 +184,8 @@
         - exec-timeout 60
         - logging synchronous
 
-  - name: set timestamps1
+  - name: set timestamps1 newer
+    when: ansible_net_version is version('12.2(60)', '>=')
     ignore_errors: True
     ios_config:
       lines:
@@ -184,8 +194,8 @@
     register: timestamps1
 
 
-  - name: set timestamps when prev failed
-    when: timestamps1 is failed
+  - name: set timestamps2 old ver
+    when: ansible_net_version is version('12.2(60)', '<')
     ignore_errors: True
     ios_config:
       lines:
@@ -214,7 +224,7 @@
         - no logging monitor 
 
   - name: set syslog newer ios
-    when: "mgt_vrf is not defined"
+    when: " (mgt_vrf is not defined) and (ansible_net_version is version('12.2(60)', '>=')) "
     ignore_errors: True
     ios_config:
       lines:
@@ -222,7 +232,7 @@
     register: logging1
 
   - name: set syslog old ios
-    when: "(mgt_vrf is not defined) and (logging1 is failed)"
+    when: " (mgt_vrf is not defined) and (ansible_net_version is version('12.2(60)', '<')) "
     ios_config:
       lines:
         - logging host 212.69.68.123 
@@ -291,6 +301,7 @@
         - permit host 212.69.68.123
         - permit host 52.210.128.8
         - permit host 192.168.10.34
+        - permit host 192.168.10.235
       match: exact
       replace: block
 
@@ -350,7 +361,7 @@
   # todo: fails on 3560G, ME3400
   - name: res memory console
     ignore_errors: True
-    when: (ansible_net_model is not regex("ASR")) and (ansible_net_model is not regex("(?i)ME-3400")) and (ansible_net_model is not regex("(?i)3560")) 
+    when: (ansible_net_model is not regex("ASR")) and (ansible_net_model is not regex("(?i)ME-3400")) and (ansible_net_model is not regex("(?i)3560") and ansible_net_model is not regex("3750") ) 
     ios_config:
       lines:
         - memory reserve console 2
@@ -423,7 +434,7 @@
 
   - name: disable vstack
     ignore_errors: True
-    when: ( ansible_net_model is regex("3560")) or (ansible_net_model is regex ("3750") )
+    when: ( ( ansible_net_model is regex("3560")) or (ansible_net_model is regex ("3750") ) and ansible_net_version is version('12.2(60)', '>=') )
     ios_config:
       lines:
         - no vstack basic
