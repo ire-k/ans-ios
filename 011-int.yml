@@ -1,0 +1,26 @@
+---
+
+- hosts: cmp-rt-pias-jp2-l2k
+  gather_facts: false
+  connection: network_cli
+  tasks:
+
+  - name: get ios facts hw
+    ios_facts:
+      gather_subset: 
+        - hardware
+        - interfaces
+          #- min
+          #      gather_network_resources:
+          #        - l3_interfaces
+
+  - debug:
+      msg: 
+        - "{{ansible_net_model}}"
+        - "{{inventory_hostname}}"
+        - "{{ansible_net_version}}"
+          #- "{{gather_network_resources}}"
+        - "{{ansible_net_gather_subset}}"
+        - "{{ansible_net_interfaces}}"
+        
+

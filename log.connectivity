@@ -1,0 +1,837 @@
+#fatal:
+PLAY [pagi_ssh_dev] ************************************************************
+
+TASK [get ios facts hw gather_subset=['min']] **********************************
+ok: [cmp-rt3-cASR1002]
+ok: [cmp-rt4]
+ok: [cmp-rt-lomianki-l2k]
+ok: [cmp-rt-goclaw]
+ok: [cmp-rt-pawia-l2k]
+ok: [cmp-sw3-l2k]
+ok: [cmp-rt-pias-jp2-l2k]
+ok: [cmp-sw4-l2k]
+ok: [cmp-sw2-l2k]
+ok: [cmp-sw9-c3560G-wisniowa]
+ok: [cmp-sw-bialoleka3]
+ok: [cmp-sw-bialoleka2]
+ok: [cmp-sw8-nx3k-Wisniowa]
+ok: [cmp-sw7-nx3k_Pul49]
+ok: [cmp-sw-bialoleka]
+ok: [cmp-sw-chmielna]
+ok: [cmp-sw-jozefoslaw]
+ok: [cmp-sw-goclaw]
+ok: [cmp-sw-lomianki-1_parter]
+ok: [cmp-sw-lomianki-2_pietro]
+ok: [cmp-sw-marianska]
+ok: [cmp-sw-pawia]
+ok: [cmp-sw-ochota]
+ok: [cmp-sw-pias-jp2]
+ok: [cmp-sw-ursynow]
+ok: [cmp-sw-wilanow]
+ok: [cmp-sw-wola2]
+ok: [cmp-rt-wola2]
+ok: [cmp-sw-wola]
+ok: [cmp-sw-zoliborz]
+ok: [cmp-rt-plock]
+ok: [cmp-sw-plock]
+ok: [cmp-sw20-c35060-Pul49-poe]
+ok: [cmp-sw21-c3560-Pul49-poe]
+ok: [cmp-sw11-c3560-poe-wisniowa]
+ok: [cmp-sw10-c3560G-wisniowa]
+fatal: [hexaware-sw]: FAILED! => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python"}, "changed": false, "msg": "[Errno None] Unable to connect to port 22 on 10.254.123.2"}
+fatal: [FOR--SW2-cMe3400]: FAILED! => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python"}, "changed": false, "msg": "Failed to authenticate: Authentication failed."}
+ok: [grodno-sw-waflowa]
+fatal: [InstHema-RT1-FO]: FAILED! => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python"}, "changed": false, "msg": "Failed to authenticate: Authentication failed."}
+fatal: [KAR--SW1-cMe3400]: FAILED! => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python"}, "changed": false, "msg": "Failed to authenticate: Authentication failed."}
+fatal: [kaw--rtpe1]: FAILED! => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python"}, "changed": false, "msg": "Failed to authenticate: Authentication failed."}
+fatal: [LAND-RT2-c1941-L0]: FAILED! => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python"}, "changed": false, "msg": "Failed to authenticate: Authentication failed."}
+fatal: [LAND-SW1-c3400-12CS]: FAILED! => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python"}, "changed": false, "msg": "Failed to authenticate: Authentication failed."}
+fatal: [KAW--SW1-cMe3400]: FAILED! => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python"}, "changed": false, "msg": "Failed to authenticate: Authentication failed."}
+fatal: [LAND-SW5-c3560G]: FAILED! => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python"}, "changed": false, "msg": "Failed to authenticate: Authentication failed."}
+ok: [LIM--RT2-c2811_hsec]
+fatal: [LINX2-RT12-c1941-L0]: FAILED! => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python"}, "changed": false, "msg": "Failed to authenticate: Authentication failed."}
+fatal: [LINX-RT11]: FAILED! => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python"}, "changed": false, "msg": "[Errno None] Unable to connect to port 22 on 212.69.81.21"}
+ok: [LINX-RT10-cASR1002-2]
+ok: [LINX-RT13-cASR920-24SZIM-L0]
+ok: [LINX-RT14-cASR1001X]
+ok: [LINX-RT16-c7204-MPWiK-mpls]
+ok: [LINX-RT17-cASR920-12SZ-D-L0]
+ok: [LINX-RT18-c1941]
+ok: [LINX-RT1-cASR1002]
+fatal: [LINX-RT2-c2811_APN-Orange]: FAILED! => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python"}, "changed": false, "msg": "Failed to authenticate: Authentication failed."}
+fatal: [LINX-RT3-c2811_APN_PLUS]: FAILED! => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python"}, "changed": false, "msg": "Failed to authenticate: Authentication failed."}
+ok: [LINX-RT4-c2811_PKOBP]
+fatal: [LINX-RT6-c2811_leg_cisco]: FAILED! => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python"}, "changed": false, "msg": "Failed to authenticate: Authentication failed."}
+fatal: [LINX-RT7-c2811_gsm_cisco]: FAILED! => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python"}, "changed": false, "msg": "Failed to authenticate: Authentication failed."}
+ok: [LINX-SW1-cMe3600X]
+ok: [LINX-SW6-cMe3600X]
+fatal: [LINX-SW2-cME3400]: FAILED! => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python"}, "changed": false, "msg": "Failed to authenticate: Authentication failed."}
+ok: [LINX-SW7-c4900_loop2k]
+fatal: [MAN-SW2-c2650G_Wolica]: FAILED! => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python"}, "changed": false, "msg": "[Errno None] Unable to connect to port 22 on 10.254.255.1"}
+fatal: [mago-rt]: FAILED! => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python"}, "changed": false, "msg": "Failed to authenticate: Authentication failed."}
+fatal: [mgt-kaw]: FAILED! => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python"}, "changed": false, "msg": "Failed to authenticate: Authentication failed."}
+fatal: [mgt-rem]: FAILED! => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python"}, "changed": false, "msg": "Failed to authenticate: Authentication failed."}
+fatal: [mpwik-rtpe-pruszkow]: FAILED! => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python"}, "changed": false, "msg": "Failed to authenticate: Authentication failed."}
+fatal: [mpwik-rtpe-czerniakowska]: FAILED! => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python"}, "changed": false, "msg": "Failed to authenticate: Authentication failed."}
+fatal: [mpwik-rtpe-syta]: FAILED! => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python"}, "changed": false, "msg": "Failed to authenticate: Authentication failed."}
+fatal: [mpwik-rtpe-wieliszew]: FAILED! => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python"}, "changed": false, "msg": "Failed to authenticate: Authentication failed."}
+fatal: [mpwik-sw2-czerniakowska]: FAILED! => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python"}, "changed": false, "msg": "Failed to authenticate: Authentication failed."}
+fatal: [mpwik-sw-czajki]: FAILED! => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python"}, "changed": false, "msg": "Failed to authenticate: Authentication failed."}
+fatal: [mpwik-sw-falenica]: FAILED! => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python"}, "changed": false, "msg": "Failed to authenticate: Authentication failed."}
+fatal: [mpwik-sw-debe]: FAILED! => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python"}, "changed": false, "msg": "Failed to authenticate: Authentication failed."}
+fatal: [mpwik-sw-jachranka]: FAILED! => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python"}, "changed": false, "msg": "[Errno None] Unable to connect to port 22 on 10.254.253.185"}
+fatal: [mpwik-sw-pruszkow]: FAILED! => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python"}, "changed": false, "msg": "Failed to authenticate: Authentication failed."}
+fatal: [mpwik-sw-starynkiewicza]: FAILED! => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python"}, "changed": false, "msg": "Failed to authenticate: Authentication failed."}
+fatal: [mpwik-sw-radosc]: FAILED! => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python"}, "changed": false, "msg": "Failed to authenticate: Authentication failed."}
+fatal: [mpwik-sw-stara-milosna]: FAILED! => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python"}, "changed": false, "msg": "Failed to authenticate: Authentication failed."}
+fatal: [mpwik-sw-syta]: FAILED! => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python"}, "changed": false, "msg": "Failed to authenticate: Authentication failed."}
+fatal: [mpwik-sw-wieliszew]: FAILED! => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python"}, "changed": false, "msg": "Failed to authenticate: Authentication failed."}
+ok: [ODR--RT1-c1921]
+ok: [ODR--RT2-dla-nt.pagi.pl]
+fatal: [LINX-RT15-c7204_loop2k]: FAILED! => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python"}, "changed": false, "msg": "command timeout triggered, timeout value is 80 secs.\nSee the timeout setting options in the Network Debug and Troubleshooting Guide."}
+ok: [ODR--RT3-cASR920_Lo]
+fatal: [ODR--SW10-c3750G]: FAILED! => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python"}, "changed": false, "msg": "Failed to authenticate: Authentication failed."}
+fatal: [PIAS-SW1-cME3400]: FAILED! => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python"}, "changed": false, "msg": "Failed to authenticate: Authentication failed."}
+fatal: [pik11-rt5-mgt]: FAILED! => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python"}, "changed": false, "msg": "Failed to authenticate: Authentication failed."}
+fatal: [pik11-rt3-c7200-PKOBP]: FAILED! => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python"}, "changed": false, "msg": "Failed to authenticate: Authentication failed."}
+fatal: [pik11-rt4-c7200-apnOrange]: FAILED! => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python"}, "changed": false, "msg": "Failed to authenticate: Authentication failed."}
+fatal: [pru2-rtpe1]: FAILED! => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python"}, "changed": false, "msg": "Failed to authenticate: Authentication failed."}
+fatal: [PRU2-SW1-cMe3400]: FAILED! => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python"}, "changed": false, "msg": "Failed to authenticate: Authentication failed."}
+fatal: [PRU--SW1-cMe3400]: FAILED! => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python"}, "changed": false, "msg": "Failed to authenticate: Authentication failed."}
+fatal: [rt-km-soch-vlan1]: FAILED! => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python"}, "changed": false, "msg": "Failed to authenticate: Authentication failed."}
+fatal: [sw-mazowia]: FAILED! => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python"}, "changed": false, "msg": "Failed to authenticate: Authentication failed."}
+ok: [WOL--RT1-c2811-L0]
+fatal: [ZERA-SW1-c3400-12CS]: FAILED! => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python"}, "changed": false, "msg": "Failed to authenticate: Authentication failed."}
+fatal: [WOL--SW1-cME3400]: FAILED! => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python"}, "changed": false, "msg": "Failed to authenticate: Authentication failed."}
+fatal: [ZERA-SW2-c3400]: FAILED! => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python"}, "changed": false, "msg": "Failed to authenticate: Authentication failed."}
+ok: [ztm-sw-anin]
+screenlogscreenlogok: [ztm-sw-dw-wschodni]
+ok: [ztm-sw-krakowska]
+ok: [ztm-sw-polczynska]
+ok: [ztm-sw-marymont]
+ok: [ztm-sw-stoklosy]
+ok: [ztm-sw-ursus]
+ok: [ztm-sw-ursynow]
+ok: [ztm-sw-wawer]
+ok: [ztm-sw-wilanowska]
+fatal: [MSZCZ-SW1]: FAILED! => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python"}, "changed": false, "msg": "command timeout triggered, timeout value is 80 secs.\nSee the timeout setting options in the Network Debug and Troubleshooting Guide."}
+ok: [ztm-wkm-sw1]
+ok: [ztm-wkm-sw2]
+ok: [pik11-sw1-cme3600]
+ok: [ztm-wkm-sw3]
+fatal: [ODR--SW2-c2950_biuro]: FAILED! => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python"}, "changed": false, "msg": "command timeout triggered, timeout value is 80 secs.\nSee the timeout setting options in the Network Debug and Troubleshooting Guide."}
+ok: [pik11-sw2-c4900]
+fatal: [ZTM-WKM-RT1_inet_L0]: FAILED! => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python"}, "changed": false, "msg": "Failed to authenticate: Authentication failed."}
+
+TASK [debug msg=['{{ansible_net_model}}', '{{inventory_hostname}}', '{{ansible_net_version}}']] ***
+ok: [cmp-rt-lomianki-l2k] => {
+    "msg": [
+        "CISCO1941/K9",
+        "cmp-rt-lomianki-l2k",
+        "15.5(3)M4"
+    ]
+}
+ok: [cmp-rt4] => {
+    "msg": [
+        "7204VXR",
+        "cmp-rt4",
+        "12.4(9)T4"
+    ]
+}
+ok: [cmp-rt-pawia-l2k] => {
+    "msg": [
+        "CISCO1941/K9",
+        "cmp-rt-pawia-l2k",
+        "15.6(3)M"
+    ]
+}
+ok: [cmp-rt-goclaw] => {
+    "msg": [
+        "CISCO1941/K9",
+        "cmp-rt-goclaw",
+        "15.5(3)M4"
+    ]
+}
+ok: [cmp-rt3-cASR1002] => {
+    "msg": [
+        "ASR1002",
+        "cmp-rt3-cASR1002",
+        "03.16.09.S"
+    ]
+}
+ok: [cmp-sw3-l2k] => {
+    "msg": [
+        "WS-C3560G-48TS",
+        "cmp-sw3-l2k",
+        "15.0(2)SE9"
+    ]
+}
+ok: [cmp-sw2-l2k] => {
+    "msg": [
+        "WS-C3560G-48TS",
+        "cmp-sw2-l2k",
+        "15.0(2)SE9"
+    ]
+}
+ok: [cmp-rt-pias-jp2-l2k] => {
+    "msg": [
+        "CISCO3945-CHASSIS",
+        "cmp-rt-pias-jp2-l2k",
+        "15.6(3)M"
+    ]
+}
+ok: [cmp-sw4-l2k] => {
+    "msg": [
+        "WS-C3560G-48TS",
+        "cmp-sw4-l2k",
+        "15.0(2)SE9"
+    ]
+}
+ok: [cmp-sw9-c3560G-wisniowa] => {
+    "msg": [
+        "WS-C3560G-48TS",
+        "cmp-sw9-c3560G-wisniowa",
+        "15.0(2)SE7"
+    ]
+}
+ok: [cmp-sw8-nx3k-Wisniowa] => {
+    "msg": [
+        "Nexus 3048 Chassis (\"48x1GE + 4x10G Supervisor\")",
+        "cmp-sw8-nx3k-Wisniowa",
+        "6.0(2)U6(7)"
+    ]
+}
+ok: [cmp-sw-bialoleka3] => {
+    "msg": [
+        "WS-C3560-24PS",
+        "cmp-sw-bialoleka3",
+        "12.2(25)SEC2"
+    ]
+}
+ok: [cmp-sw-bialoleka2] => {
+    "msg": [
+        "ME-3400-24TS-A",
+        "cmp-sw-bialoleka2",
+        "12.2(60)EZ8"
+    ]
+}
+ok: [cmp-sw7-nx3k_Pul49] => {
+    "msg": [
+        "Nexus 3048 Chassis (\"48x1GE + 4x10G Supervisor\")",
+        "cmp-sw7-nx3k_Pul49",
+        "6.0(2)U6(7)"
+    ]
+}
+ok: [cmp-sw-bialoleka] => {
+    "msg": [
+        "ME-3400-24TS-A",
+        "cmp-sw-bialoleka",
+        "12.2(60)EZ8"
+    ]
+}
+ok: [cmp-sw-chmielna] => {
+    "msg": [
+        "WS-C3560G-48TS",
+        "cmp-sw-chmielna",
+        "15.0(2)SE9"
+    ]
+}
+ok: [cmp-sw-jozefoslaw] => {
+    "msg": [
+        "ME-3400-24TS-A",
+        "cmp-sw-jozefoslaw",
+        "12.2(60)EZ8"
+    ]
+}
+ok: [cmp-sw-goclaw] => {
+    "msg": [
+        "WS-C3560G-48TS",
+        "cmp-sw-goclaw",
+        "15.0(2)SE9"
+    ]
+}
+ok: [cmp-sw-lomianki-1_parter] => {
+    "msg": [
+        "WS-C3750G-24PS",
+        "cmp-sw-lomianki-1_parter",
+        "15.0(2)SE8"
+    ]
+}
+ok: [cmp-sw-lomianki-2_pietro] => {
+    "msg": [
+        "WS-C3750-24P",
+        "cmp-sw-lomianki-2_pietro",
+        "12.2(25)SEE2"
+    ]
+}
+ok: [cmp-sw-marianska] => {
+    "msg": [
+        "WS-C3560G-48TS",
+        "cmp-sw-marianska",
+        "15.0(2)SE7"
+    ]
+}
+ok: [cmp-sw-ochota] => {
+    "msg": [
+        "ME-3400-24TS-A",
+        "cmp-sw-ochota",
+        "12.2(60)EZ8"
+    ]
+}
+ok: [cmp-sw-pawia] => {
+    "msg": [
+        "ME-3400-24TS-A",
+        "cmp-sw-pawia",
+        "12.2(60)EZ8"
+    ]
+}
+ok: [cmp-sw-pias-jp2] => {
+    "msg": [
+        "ME-3400-24TS-A",
+        "cmp-sw-pias-jp2",
+        "12.2(60)EZ8"
+    ]
+}
+ok: [cmp-sw-ursynow] => {
+    "msg": [
+        "ME-3400-24TS-A",
+        "cmp-sw-ursynow",
+        "12.2(60)EZ8"
+    ]
+}
+ok: [cmp-sw-wola2] => {
+    "msg": [
+        "WS-C3560G-48TS",
+        "cmp-sw-wola2",
+        "15.0(2)SE9"
+    ]
+}
+ok: [cmp-sw-wilanow] => {
+    "msg": [
+        "WS-C3560G-48TS",
+        "cmp-sw-wilanow",
+        "15.0(2)SE9"
+    ]
+}
+ok: [cmp-rt-wola2] => {
+    "msg": [
+        "CISCO3945-CHASSIS",
+        "cmp-rt-wola2",
+        "15.6(3)M"
+    ]
+}
+ok: [cmp-sw-wola] => {
+    "msg": [
+        "ME-3400-24TS-A",
+        "cmp-sw-wola",
+        "12.2(60)EZ8"
+    ]
+}
+ok: [cmp-sw-zoliborz] => {
+    "msg": [
+        "WS-C3560G-48TS",
+        "cmp-sw-zoliborz",
+        "15.0(2)SE9"
+    ]
+}
+ok: [cmp-rt-plock] => {
+    "msg": [
+        "CISCO1941/K9",
+        "cmp-rt-plock",
+        "15.6(3)M"
+    ]
+}
+ok: [cmp-sw-plock] => {
+    "msg": [
+        "ME-3400-24TS-A",
+        "cmp-sw-plock",
+        "12.2(60)EZ8"
+    ]
+}
+ok: [cmp-sw20-c35060-Pul49-poe] => {
+    "msg": [
+        "WS-C3560-24PS",
+        "cmp-sw20-c35060-Pul49-poe",
+        "12.2(55)SE12"
+    ]
+}
+ok: [cmp-sw21-c3560-Pul49-poe] => {
+    "msg": [
+        "WS-C3560-24PS",
+        "cmp-sw21-c3560-Pul49-poe",
+        "12.2(55)SE12"
+    ]
+}
+ok: [cmp-sw11-c3560-poe-wisniowa] => {
+    "msg": [
+        "WS-C3560-24PS",
+        "cmp-sw11-c3560-poe-wisniowa",
+        "12.2(55)SE12"
+    ]
+}
+ok: [cmp-sw10-c3560G-wisniowa] => {
+    "msg": [
+        "WS-C3560G-48TS",
+        "cmp-sw10-c3560G-wisniowa",
+        "15.0(2)SE9"
+    ]
+}
+ok: [LINX-RT13-cASR920-24SZIM-L0] => {
+    "msg": [
+        "ASR-920-24SZ-IM",
+        "LINX-RT13-cASR920-24SZIM-L0",
+        "03.18.04.SP.156-2.SP4-ext"
+    ]
+}
+ok: [LINX-RT10-cASR1002-2] => {
+    "msg": [
+        "ASR1002",
+        "LINX-RT10-cASR1002-2",
+        "03.16.09.S"
+    ]
+}
+ok: [grodno-sw-waflowa] => {
+    "msg": [
+        "ME-3400-24TS-A",
+        "grodno-sw-waflowa",
+        "12.2(55)SE3"
+    ]
+}
+ok: [LIM--RT2-c2811_hsec] => {
+    "msg": [
+        "2811",
+        "LIM--RT2-c2811_hsec",
+        "12.4(25f)"
+    ]
+}
+ok: [LINX-RT14-cASR1001X] => {
+    "msg": [
+        "ASR1001-X",
+        "LINX-RT14-cASR1001X",
+        "16.03.07"
+    ]
+}
+ok: [LINX-RT17-cASR920-12SZ-D-L0] => {
+    "msg": [
+        "ASR-920-12SZ-D",
+        "LINX-RT17-cASR920-12SZ-D-L0",
+        "16.09.03"
+    ]
+}
+ok: [LINX-RT16-c7204-MPWiK-mpls] => {
+    "msg": [
+        "7204VXR",
+        "LINX-RT16-c7204-MPWiK-mpls",
+        "15.1(4)M"
+    ]
+}
+ok: [LINX-RT18-c1941] => {
+    "msg": [
+        "CISCO1941/K9",
+        "LINX-RT18-c1941",
+        "15.4(3)M3"
+    ]
+}
+ok: [LINX-RT1-cASR1002] => {
+    "msg": [
+        "ASR1002",
+        "LINX-RT1-cASR1002",
+        "03.16.08.S"
+    ]
+}
+ok: [LINX-RT4-c2811_PKOBP] => {
+    "msg": [
+        "2811",
+        "LINX-RT4-c2811_PKOBP",
+        "12.4(15)T17"
+    ]
+}
+ok: [LINX-SW1-cMe3600X] => {
+    "msg": [
+        "ME-3600X-24FS-M",
+        "LINX-SW1-cMe3600X",
+        "15.6(2)SP4"
+    ]
+}
+ok: [LINX-SW6-cMe3600X] => {
+    "msg": [
+        "ME-3600X-24FS-M",
+        "LINX-SW6-cMe3600X",
+        "15.6(2)SP4"
+    ]
+}
+ok: [LINX-SW7-c4900_loop2k] => {
+    "msg": [
+        "WS-C4900M",
+        "LINX-SW7-c4900_loop2k",
+        "12.2(54)SG1"
+    ]
+}
+ok: [ODR--RT1-c1921] => {
+    "msg": [
+        "CISCO1921/K9",
+        "ODR--RT1-c1921",
+        "15.5(3)M5"
+    ]
+}
+ok: [ODR--RT2-dla-nt.pagi.pl] => {
+    "msg": [
+        "1841",
+        "ODR--RT2-dla-nt.pagi.pl",
+        "15.1(4)M4"
+    ]
+}
+ok: [ODR--RT3-cASR920_Lo] => {
+    "msg": [
+        "ASR-920-12CZ-A",
+        "ODR--RT3-cASR920_Lo",
+        "16.09.04"
+    ]
+}
+ok: [WOL--RT1-c2811-L0] => {
+    "msg": [
+        "2811",
+        "WOL--RT1-c2811-L0",
+        "12.4(15)T17"
+    ]
+}
+ok: [PIK11-RT2-cASR1001] => {
+    "msg": [
+        "ASR1001",
+        "PIK11-RT2-cASR1001",
+        "03.13.02.S"
+    ]
+}
+ok: [PIK11-RT1-cASR920-L0] => {
+    "msg": [
+        "ASR-920-24SZ-IM",
+        "PIK11-RT1-cASR920-L0",
+        "03.18.04.SP.156-2.SP4-ext"
+    ]
+}
+ok: [ztm-sw-anin] => {
+    "msg": [
+        "ME-3400-24TS-A",
+        "ztm-sw-anin",
+        "12.2(55)SE5"
+    ]
+}
+ok: [ztm-sw-polczynska] => {
+    "msg": [
+        "ME-3400-24TS-A",
+        "ztm-sw-polczynska",
+        "12.2(55)SE3"
+    ]
+}
+ok: [ztm-sw-dw-wschodni] => {
+    "msg": [
+        "ME-3400-24TS-A",
+        "ztm-sw-dw-wschodni",
+        "12.2(55)SE3"
+    ]
+}
+ok: [ztm-sw-marymont] => {
+    "msg": [
+        "ME-3400-24TS-A",
+        "ztm-sw-marymont",
+        "12.2(55)SE3"
+    ]
+}
+ok: [ztm-sw-krakowska] => {
+    "msg": [
+        "ME-3400-24TS-A",
+        "ztm-sw-krakowska",
+        "12.2(52)SE"
+    ]
+}
+ok: [ztm-sw-stoklosy] => {
+    "msg": [
+        "ME-3400-24TS-A",
+        "ztm-sw-stoklosy",
+        "12.2(55)SE3"
+    ]
+}
+ok: [ztm-sw-ursus] => {
+    "msg": [
+        "ME-3400-24TS-A",
+        "ztm-sw-ursus",
+        "12.2(55)SE6"
+    ]
+}
+ok: [ztm-sw-wawer] => {
+    "msg": [
+        "ME-3400-24TS-A",
+        "ztm-sw-wawer",
+        "12.2(55)SE3"
+    ]
+}
+ok: [ztm-sw-ursynow] => {
+    "msg": [
+        "ME-3400-24TS-A",
+        "ztm-sw-ursynow",
+        "12.2(55)SE3"
+    ]
+}
+ok: [ztm-sw-wilanowska] => {
+    "msg": [
+        "ME-3400-24TS-A",
+        "ztm-sw-wilanowska",
+        "12.2(55)SE6"
+    ]
+}
+ok: [ztm-wkm-sw1] => {
+    "msg": [
+        "WS-C2950G-24-EI",
+        "ztm-wkm-sw1",
+        "12.1(22)EA10a"
+    ]
+}
+ok: [ztm-wkm-sw2] => {
+    "msg": [
+        "WS-C2950G-24-EI",
+        "ztm-wkm-sw2",
+        "12.1(22)EA10a"
+    ]
+}
+ok: [pik11-sw1-cme3600] => {
+    "msg": [
+        "ME-3600X-24FS-M",
+        "pik11-sw1-cme3600",
+        "15.6(2)SP4"
+    ]
+}
+ok: [ztm-wkm-sw3] => {
+    "msg": [
+        "WS-C2950G-24-EI",
+        "ztm-wkm-sw3",
+        "12.1(22)EA10a"
+    ]
+}
+ok: [pik11-sw2-c4900] => {
+    "msg": [
+        "WS-C4900M",
+        "pik11-sw2-c4900",
+        "12.2(54)SG1"
+    ]
+}
+
+TASK [fail msg=platform not suitable] ******************************************
+skipping: [cmp-rt4]
+skipping: [cmp-rt-lomianki-l2k]
+skipping: [cmp-rt-goclaw]
+skipping: [cmp-rt-pawia-l2k]
+skipping: [cmp-sw3-l2k]
+skipping: [cmp-rt-pias-jp2-l2k]
+skipping: [cmp-sw4-l2k]
+skipping: [cmp-sw2-l2k]
+skipping: [cmp-sw9-c3560G-wisniowa]
+skipping: [cmp-sw-bialoleka2]
+skipping: [cmp-sw-bialoleka]
+skipping: [cmp-sw-chmielna]
+skipping: [cmp-sw-goclaw]
+skipping: [cmp-sw-jozefoslaw]
+skipping: [cmp-sw-lomianki-1_parter]
+
+#########################################################
+
+fatal: [cmp-rt3-cASR1002]: FAILED! => {"changed": false, "msg": "platform not suitable"}
+skipping: [cmp-sw-marianska]
+skipping: [cmp-sw-ochota]
+skipping: [cmp-sw-pawia]
+skipping: [cmp-sw-pias-jp2]
+skipping: [cmp-sw-ursynow]
+skipping: [cmp-sw-wilanow]
+fatal: [cmp-sw7-nx3k_Pul49]: FAILED! => {"changed": false, "msg": "platform not suitable"}
+fatal: [cmp-sw8-nx3k-Wisniowa]: FAILED! => {"changed": false, "msg": "platform not suitable"}
+fatal: [cmp-sw-bialoleka3]: FAILED! => {"changed": false, "msg": "platform not suitable"}
+skipping: [cmp-sw-wola2]
+skipping: [cmp-rt-wola2]
+skipping: [cmp-sw-wola]
+skipping: [cmp-sw-zoliborz]
+skipping: [cmp-rt-plock]
+skipping: [cmp-sw-plock]
+skipping: [cmp-sw10-c3560G-wisniowa]
+fatal: [cmp-sw-lomianki-2_pietro]: FAILED! => {"changed": false, "msg": "platform not suitable"}
+skipping: [LIM--RT2-c2811_hsec]
+fatal: [grodno-sw-waflowa]: FAILED! => {"changed": false, "msg": "platform not suitable"}
+fatal: [cmp-sw11-c3560-poe-wisniowa]: FAILED! => {"changed": false, "msg": "platform not suitable"}
+fatal: [cmp-sw20-c35060-Pul49-poe]: FAILED! => {"changed": false, "msg": "platform not suitable"}
+skipping: [LINX-RT14-cASR1001X]
+fatal: [cmp-sw21-c3560-Pul49-poe]: FAILED! => {"changed": false, "msg": "platform not suitable"}
+skipping: [LINX-RT16-c7204-MPWiK-mpls]
+skipping: [LINX-RT17-cASR920-12SZ-D-L0]
+skipping: [LINX-RT18-c1941]
+skipping: [LINX-RT4-c2811_PKOBP]
+skipping: [LINX-SW1-cMe3600X]
+fatal: [LINX-RT10-cASR1002-2]: FAILED! => {"changed": false, "msg": "platform not suitable"}
+skipping: [LINX-SW6-cMe3600X]
+skipping: [ODR--RT1-c1921]
+skipping: [ODR--RT2-dla-nt.pagi.pl]
+skipping: [ODR--RT3-cASR920_Lo]
+fatal: [LINX-RT13-cASR920-24SZIM-L0]: FAILED! => {"changed": false, "msg": "platform not suitable"}
+fatal: [LINX-RT1-cASR1002]: FAILED! => {"changed": false, "msg": "platform not suitable"}
+skipping: [WOL--RT1-c2811-L0]
+fatal: [LINX-SW7-c4900_loop2k]: FAILED! => {"changed": false, "msg": "platform not suitable"}
+fatal: [PIK11-RT2-cASR1001]: FAILED! => {"changed": false, "msg": "platform not suitable"}
+fatal: [PIK11-RT1-cASR920-L0]: FAILED! => {"changed": false, "msg": "platform not suitable"}
+fatal: [ztm-sw-anin]: FAILED! => {"changed": false, "msg": "platform not suitable"}
+fatal: [ztm-sw-dw-wschodni]: FAILED! => {"changed": false, "msg": "platform not suitable"}
+fatal: [ztm-sw-marymont]: FAILED! => {"changed": false, "msg": "platform not suitable"}
+fatal: [ztm-sw-krakowska]: FAILED! => {"changed": false, "msg": "platform not suitable"}
+fatal: [ztm-sw-polczynska]: FAILED! => {"changed": false, "msg": "platform not suitable"}
+fatal: [ztm-sw-ursynow]: FAILED! => {"changed": false, "msg": "platform not suitable"}
+fatal: [ztm-sw-stoklosy]: FAILED! => {"changed": false, "msg": "platform not suitable"}
+fatal: [ztm-sw-ursus]: FAILED! => {"changed": false, "msg": "platform not suitable"}
+fatal: [ztm-sw-wawer]: FAILED! => {"changed": false, "msg": "platform not suitable"}
+skipping: [pik11-sw1-cme3600]
+fatal: [ztm-sw-wilanowska]: FAILED! => {"changed": false, "msg": "platform not suitable"}
+fatal: [ztm-wkm-sw2]: FAILED! => {"changed": false, "msg": "platform not suitable"}
+fatal: [ztm-wkm-sw1]: FAILED! => {"changed": false, "msg": "platform not suitable"}
+fatal: [ztm-wkm-sw3]: FAILED! => {"changed": false, "msg": "platform not suitable"}
+fatal: [pik11-sw2-c4900]: FAILED! => {"changed": false, "msg": "platform not suitable"}
+
+PLAY RECAP *********************************************************************
+FINA-RT1-cASR920-Loop0     : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+FOR--SW2-cMe3400           : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+InstHema-RT1-FO            : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+KAR--SW1-cMe3400           : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+KAW--SW1-cMe3400           : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+LAND-RT2-c1941-L0          : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+LAND-SW1-c3400-12CS        : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+LAND-SW5-c3560G            : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+LIM--RT2-c2811_hsec        : ok=2    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+LINX-RT1-cASR1002          : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+LINX-RT10-cASR1002-2       : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+LINX-RT11                  : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+LINX-RT13-cASR920-24SZIM-L0 : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+LINX-RT14-cASR1001X        : ok=2    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+LINX-RT15-c7204_loop2k     : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+LINX-RT16-c7204-MPWiK-mpls : ok=2    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+LINX-RT17-cASR920-12SZ-D-L0 : ok=2    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+LINX-RT18-c1941            : ok=2    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+LINX-RT2-c2811_APN-Orange  : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+LINX-RT3-c2811_APN_PLUS    : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+LINX-RT4-c2811_PKOBP       : ok=2    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+LINX-RT6-c2811_leg_cisco   : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+LINX-RT7-c2811_gsm_cisco   : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+LINX-SW1-cMe3600X          : ok=2    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+LINX-SW2-cME3400           : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+LINX-SW6-cMe3600X          : ok=2    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+LINX-SW7-c4900_loop2k      : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+LINX2-RT12-c1941-L0        : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+MAN-SW2-c2650G_Wolica      : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+MSZCZ-SW1                  : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+ODR--RT1-c1921             : ok=2    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+ODR--RT2-dla-nt.pagi.pl    : ok=2    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+ODR--RT3-cASR920_Lo        : ok=2    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+ODR--SW10-c3750G           : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+ODR--SW2-c2950_biuro       : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+PIAS-SW1-cME3400           : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+PIK11-RT1-cASR920-L0       : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+PIK11-RT2-cASR1001         : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+PRU--SW1-cMe3400           : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+PRU2-SW1-cMe3400           : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+WOL--RT1-c2811-L0          : ok=2    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+WOL--SW1-cME3400           : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+ZERA-SW1-c3400-12CS        : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+ZERA-SW2-c3400             : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+ZTM-WKM-RT1_inet_L0        : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+cmp-rt-goclaw              : ok=2    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+cmp-rt-lomianki-l2k        : ok=2    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+cmp-rt-pawia-l2k           : ok=2    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+cmp-rt-pias-jp2-l2k        : ok=2    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+cmp-rt-plock               : ok=2    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+cmp-rt-wola2               : ok=2    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+cmp-rt3-cASR1002           : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+cmp-rt4                    : ok=2    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+cmp-sw-bialoleka           : ok=2    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+cmp-sw-bialoleka2          : ok=2    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+cmp-sw-bialoleka3          : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+cmp-sw-chmielna            : ok=2    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+cmp-sw-goclaw              : ok=2    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+cmp-sw-jozefoslaw          : ok=2    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+cmp-sw-lomianki            : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+cmp-sw-lomianki-1_parter   : ok=2    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+cmp-sw-lomianki-2_pietro   : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+cmp-sw-marianska           : ok=2    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+cmp-sw-ochota              : ok=2    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+cmp-sw-pawia               : ok=2    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+cmp-sw-pias-jp2            : ok=2    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+cmp-sw-plock               : ok=2    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+cmp-sw-ursynow             : ok=2    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+cmp-sw-wilanow             : ok=2    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+cmp-sw-wola                : ok=2    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+cmp-sw-wola2               : ok=2    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+cmp-sw-zoliborz            : ok=2    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+cmp-sw10-c3560G-wisniowa   : ok=2    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+cmp-sw11-c3560-poe-wisniowa : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+cmp-sw2-l2k                : ok=2    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+cmp-sw20-c35060-Pul49-poe  : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+cmp-sw21-c3560-Pul49-poe   : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+cmp-sw3-l2k                : ok=2    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+cmp-sw4-l2k                : ok=2    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+cmp-sw7-nx3k_Pul49         : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+cmp-sw8-nx3k-Wisniowa      : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+cmp-sw9-c3560G-wisniowa    : ok=2    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+fina-sw-chelmska           : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+fina-sw-lodz               : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+fina-sw-narbutta           : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+fina-sw-pulawska           : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+fina-sw-walbrzyska6        : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+grodno-sw-waflowa          : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+hexaware-sw                : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+kaw--rtpe1                 : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+mago-rt                    : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+mgt-kaw                    : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+mgt-rem                    : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+mpwik-rtpe-czerniakowska   : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+mpwik-rtpe-pruszkow        : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+mpwik-rtpe-syta            : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+mpwik-rtpe-wieliszew       : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+mpwik-sw-czajki            : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+mpwik-sw-debe              : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+mpwik-sw-falenica          : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+mpwik-sw-jachranka         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+mpwik-sw-pruszkow          : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+mpwik-sw-radosc            : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+mpwik-sw-stara-milosna     : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+mpwik-sw-starynkiewicza    : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+mpwik-sw-syta              : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+mpwik-sw-wieliszew         : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+mpwik-sw2-czerniakowska    : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+pias-sw1-pik               : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+pik11-rt3-c7200-PKOBP      : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+pik11-rt4-c7200-apnOrange  : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+pik11-rt5-mgt              : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+pik11-sw1-cme3600          : ok=2    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+pik11-sw2-c4900            : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+pru2-rtpe1                 : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+rt-km-soch-vlan1           : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+sw-mazowia                 : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+ztm-sw-anin                : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+ztm-sw-dw-wschodni         : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+ztm-sw-krakowska           : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+ztm-sw-marymont            : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+ztm-sw-polczynska          : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+ztm-sw-stoklosy            : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+ztm-sw-ursus               : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+ztm-sw-ursynow             : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+ztm-sw-wawer               : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+ztm-sw-wilanowska          : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+ztm-wkm-sw1                : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+ztm-wkm-sw2                : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+ztm-wkm-sw3                : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+
+[01;37mirek@ip-172-31-2-225[00m:[01;34m~/efs/ans/pagi
+[00m->[Kxit
+Traceback (most recent call last):
+  File "/usr/lib/command-not-found", line 28, in <module>
+    from CommandNotFound import CommandNotFound
+  File "/usr/lib/python3/dist-packages/CommandNotFound/CommandNotFound.py", line 19, in <module>
+    from CommandNotFound.db.db import SqliteDatabase
+  File "/usr/lib/python3/dist-packages/CommandNotFound/db/db.py", line 5, in <module>
+    import apt_pkg
+ModuleNotFoundError: No module named 'apt_pkg'
+[01;37mirek@ip-172-31-2-225[00m:[01;34m~/efs/ans/pagi
+[00m->exit
+exit

@@ -1,0 +1,29 @@
+---
+# test login authentication, ios version 
+- hosts: 
+  #- pagi_ssh_dev
+    - cmp-rt3-cASR1002
+
+  gather_facts: false
+  connection: network_cli
+  tasks:
+
+  - name: get ios facts hw
+    ios_facts:
+      gather_subset: 
+      #- hardware
+        - min
+
+          # useful ans variables
+  - debug:
+      msg: 
+        - "{{ansible_net_model}}"
+        - "{{inventory_hostname}}"
+        - "{{ansible_net_version}}"
+        - "{{ansible_net_iostype}}"
+
+  - fail:
+      msg: "platform not suitable"
+    when: ( (ansible_net_model is regex("(?i)Nexus")) or ansible_net_version is version('12.2(60)', '<') )
+
+  

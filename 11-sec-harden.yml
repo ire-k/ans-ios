@@ -3,36 +3,64 @@
 # ztm-rt1 - dhcp host
 ## cmp-sw-wola2: ip radius source-interface ! aaa group server radius grp-radius
 #
-- hosts: lab-rt
+- hosts: 
+    - ztm-rt1
+    - linx2-sw2
+
   gather_facts: false
   connection: network_cli
   tasks:
 
-  - name: get ios facts hw
+  - name: get ios facts
     ios_facts:
       gather_subset: 
-        - hardware
-          #- min
+      #- hardware
+        - min
 
+          # useful ans variables
   - debug:
       msg: 
         - "{{ansible_net_model}}"
         - "{{inventory_hostname}}"
+        - "{{ansible_net_version}}"
+        - "{{ansible_net_iostype}}"
 
-          # todo: ztm-rt1
+          # so far we cannot serve IOS < 12.2(60)
+  - fail:
+      msg: "platform not suitable"
+    when: ( (ansible_net_model is regex("(?i)Nexus")) or ansible_net_version is version('12.2(60)', '<') )
+
+  - name: test if vrf mgt exists
+    ios_command:
+      commands:
+        - show ip vrf
+    register: ipvrf
+
+    #- debug: 
+    # msg: " {{ ipvrf.stdout is regex('mgt') }}"
+
+  - name: set vrf mgt var
+    set_fact: 
+      mgtvrf: "{{ ipvrf.stdout is regex('mgt') }}"
+      #- debug: var=mgtvrf
+
+#  - name: test mgt loopback int
+#    debug: 
+#      msg:  " {{ ipvrf.stdout | regex_findall('Lo[0-9]{1,4}') }}"
+#
+  - name: set vrf mgt interface
+    set_fact:
+      mgt_int: " {{ ipvrf.stdout | regex_findall('Lo[0-9]{1,4}') }}"
+
   - debug:
-      msg: "dhcp host"
-    when:  (inventory_hostname is regex("(?i)cmp") or inventory_hostname is regex("(?i)linx-rt10") )
+      mgs:
+        - "found mgt attrib:"
+        - "{{mgt_vrf}}"
+        - "{{mgt_int}}"
+      
+    ## to test above tasks only, end here:
+  - meta: end_play 
 
-#  - debug:
-#      var: hostvars[inventory_hostname]
-#
-#      #- meta: end_play
-#  - name: pause
-#    pause:
-#
-
-    # ios_user
   - name: set authentication
     ios_config:
       lines:
@@ -51,17 +79,16 @@
         server name radius-srv1
 
   - name: set aaa group radius src int
-    when: "mgt_int is defined"
+    when: False
+    #when: "mgt_int is defined"
     ios_config:
       parents: aaa group server radius grp-radius
       lines:
         - ip radius source-interface {{mgt_int}}
 
 
-
-
   - name: set radius srv new-config
-    when: ( ansible_net_model is regex("ME3600X") or ansible_net_model is regex("ASR") or ansible_net_model is regex("1941") or ansible_net_model is regex("3945") or ansible_net_model is regex("720")   )
+    #when: ( ansible_net_model is regex("ME3600X") or ansible_net_model is regex("ASR") or ansible_net_model is regex("1941") or ansible_net_model is regex("3945") or ansible_net_model is regex("720")   )
     ios_config:
       parents: radius server radius-srv1
       lines:
@@ -69,12 +96,12 @@
         - key 1pSbR2Dq
     tags: radius-new
 
-  - name: set radius old-config glob
-    when: ( ansible_net_model is regex("4900") or ansible_net_model is regex("3560") or ansible_net_model is regex("ME3400"))
-    ios_config:
-      lines:
-        - radius-server host 212.69.71.194 auth-port 1812 acct-port 1813 key 1pSbR2Dq
-
+#  - name: set radius old-config glob
+#    when: ( ansible_net_model is regex("4900") or ansible_net_model is regex("3560") or ansible_net_model is regex("ME3400"))
+#    ios_config:
+#      lines:
+#        - radius-server host 212.69.71.194 auth-port 1812 acct-port 1813 key 1pSbR2Dq
+#
   - name: set aliases
     ios_config:
       lines:
@@ -116,17 +143,17 @@
 
   - name : security3
     ignore_errors: True
-    when: ( ansible_net_model is regex("4900") or ansible_net_model is regex("3560") or ansible_net_model is regex("ASR") or  ansible_net_model is regex("720")  )
+    #when: ( ansible_net_model is regex("4900") or ansible_net_model is regex("3560") or ansible_net_model is regex("ASR") or  ansible_net_model is regex("720")  )
     ios_config:
       lines:
         - no service call-home
     tags: security3
 
-      ## ztm-rt1 - todo!!!
+    # most of the routers don't need dhcp service
     # ansible_net_hostname can be used also
   - name : security harderning 4
     ignore_errors: True
-    when: (inventory_hostname is not regex("(?i)cmp") or inventory_hostname is not regex("(?i)linx-rt10") or (dhcp_required is defined) and (dhcp_required|bool == True) )  
+    when: (inventory_hostname is not regex("(?i)cmp") or inventory_hostname is not regex("(?i)ztm-rt1") or inventory_hostname is not regex("(?i)linx-rt10") or (dhcp_required is defined) and (dhcp_required|bool == True) )  
     ios_config:
       lines:
         - no service dhcp
@@ -200,43 +227,78 @@
       lines:
         - logging host 212.69.68.123 
 
-  - name: set ntp1 with src int
-    when: "ntp_int is defined"
-    ios_ntp:
-      source_int: "{{ntp_int}}"
-      server: 212.69.81.115
-      logging: false
-      state: present
-
-  - name: set ntp2 with src int
-    when: "ntp_int is defined"
-    ios_ntp:
-      server: 212.69.68.123
-      source_int: "{{ntp_int}}"
-      logging: false
-      state: present
-
-  - name: set ntp1
-    when: "ntp_int is not defined"
-    ios_ntp:
-      server: 212.69.81.115
-      logging: false
-      state: present
-
-  - name: set ntp2
-    when: "ntp_int is not defined"
-    ios_ntp:
-      server: 212.69.68.123
-      logging: false
-      state: present
-
-
-  - name: set ntp srv prefer
-    ios_config:
+  - name: set NTP ACL allow
+    when: inventory_hostname is not regex("(?i)linx-rt15") or inventory_hostname is not regex("(?i)linx-rt16")
+    cisco.ios.ios_config:
+      before: no ip access-list standard ntp-srv
+      parents: ip access-list standard ntp-srv
       lines:
-        - ntp server 212.69.81.115 prefer
-        - no ntp logging
- 
+        - remark **ntp servers**
+        - permit 212.69.81.115
+        - permit 212.69.81.116
+        - permit 212.69.68.123
+      match: exact
+      replace: block
+
+
+  - name: set NTP ACL ban
+    when: inventory_hostname is not regex("(?i)linx-rt15") or inventory_hostname is not regex("(?i)linx-rt16")
+    cisco.ios.ios_config:
+      before: no ip access-list standard ntp-ban
+      parents: ip access-list standard ntp-ban
+      lines:
+        - remark **protect ntp **
+        - deny any
+      match: exact
+      replace: block
+
+         
+  - name: set npt srv with mgt
+    when: ( inventory_hostname is not regex("(?i)linx-rt15") or inventory_hostname is not regex("(?i)linx-rt16") ) and vrf_mgt is True
+    ios_ntp:
+      acl: ntp-srv
+      server: 212.69.81.115
+      vrf: mgt
+      source_int: mgt_int
+
+#
+#  - name: set ntp1 with src int
+#    when: "ntp_int is defined"
+#    ios_ntp:
+#      source_int: "{{ntp_int}}"
+#      server: 212.69.81.115
+#      logging: false
+#      state: present
+#
+#  - name: set ntp2 with src int
+#    when: "ntp_int is defined"
+#    ios_ntp:
+#      server: 212.69.68.123
+#      source_int: "{{ntp_int}}"
+#      logging: false
+#      state: present
+#
+#  - name: set ntp1
+#    when: "ntp_int is not defined"
+#    ios_ntp:
+#      server: 212.69.81.115
+#      logging: false
+#      state: present
+#
+#  - name: set ntp2
+#    when: "ntp_int is not defined"
+#    ios_ntp:
+#      server: 212.69.68.123
+#      logging: false
+#      state: present
+#
+#
+#  - name: set ntp srv prefer
+#    ios_config:
+#      lines:
+#        - ntp server 212.69.81.115 prefer
+#        - no ntp logging
+# 
   # order of the entries and remarks tends to be unpredictable; adding numbers before permit doesn't help - probably gets optimized by CEF
   - name: set ACL login standard
     cisco.ios.ios_config:
@@ -349,9 +411,8 @@
         - ip ssh authentication-retries 5
         - ip scp server enable
 
-          # mgt_int defined and mgt_vrf undefined
-  - name: mgt src int
-    when: "(mgt_int is defined ) and (mgt_vrf is not defined)"
+  - name: syslog
+    when: "(mgt_int is defined )"
     ios_config:
       lines:
         #- ip ssh source-interface {{mgt_int}}

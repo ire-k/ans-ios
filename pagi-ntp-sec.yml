@@ -1,0 +1,64 @@
+---
+#
+- hosts: 
+    - pagi_ssh_dev
+
+  gather_facts: false
+  connection: network_cli
+  tasks:
+
+  - name: get ios facts hw
+    ios_facts:
+      gather_subset: 
+      #- hardware
+        - min
+  - fail:
+      msg: "platform not suitable"
+    when: ( (ansible_net_model is regex("(?i)Nexus")) or ansible_net_version is version('12.2(60)', '<') )
+
+          # useful ans variables
+  - debug:
+      msg: 
+        - "{{ansible_net_model}}"
+        - "{{inventory_hostname}}"
+        - "{{ansible_net_version}}"
+
+  - name: ntp acls ban any
+    cisco.ios.ios_config:
+      parents: ip access-list standard ntp-ban-any
+      lines:
+        - deny any
+      match: exact
+      replace: block
+
+  - name: ntp acls ntp-srv
+    cisco.ios.ios_config:
+      parents: ip access-list standard ntp-srv
+      lines:
+        - remark **valid ntp servers**
+        - permit 212.69.68.123
+        - permit 212.69.81.115
+        - permit 212.69.81.116
+      match: exact
+      replace: block
+
+      ## todo: errors on some dev: cmp-rt4, ME3400, sw-marianska, sw-pawia, sw-wola 
+  - name: ntp acls apply
+    ignore_errors: True
+    when: ( inventory_hostname is not regex("(?i)linx-rt15") ) and  ( inventory_hostname is not regex("(?i)pik11-rt2") )
+    cisco.ios.ios_config:
+      lines:
+        - ntp access-group peer ntp-srv
+        - ntp access-group serve ntp-ban-any
+        - ntp access-group serve-only ntp-ban-any
+        - ntp access-group query-only ntp-ban-any
+        - ntp server 212.69.81.115 prefer
+        - ntp server 212.69.68.123
+  
+
+
+  - name: save config
+    ios_config:
+      save_when: always
+
+
