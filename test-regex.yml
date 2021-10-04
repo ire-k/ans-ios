@@ -1,0 +1,12 @@
+- hosts:
+    localhost
+  gather_facts: False
+  tasks:
+  - name: set var
+    set_fact:
+      ipvrf: "% No VRF named mgt"
+  - debug: var=ipvrf
+  - name: test regex
+    debug: 
+      msg:
+        - "{{ipvrf is not regex('^\\%\\sNo\\sVRF\\snamed\\smgt$') }}" 

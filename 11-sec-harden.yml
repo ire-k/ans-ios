@@ -25,42 +25,47 @@
         - "{{ansible_net_version}}"
         - "{{ansible_net_iostype}}"
 
-          # so far we cannot serve IOS < 12.2(60)
+          # so far we cannot serve IOS < 12.2(60) or nxos
   - fail:
       msg: "platform not suitable"
     when: ( (ansible_net_model is regex("(?i)Nexus")) or ansible_net_version is version('12.2(60)', '<') )
 
+
+    ## ex. non-existing vrf output: "% No VRF named mgt"
   - name: test if vrf mgt exists
     ios_command:
       commands:
-        - show ip vrf
+        - show ip vrf mgt
     register: ipvrf
 
-    #- debug: 
-    # msg: " {{ ipvrf.stdout is regex('mgt') }}"
+  - debug: 
+      var=ipvrf.stdout
 
-  - name: set vrf mgt var
-    set_fact: 
-      mgtvrf: "{{ ipvrf.stdout is regex('mgt') }}"
-      #- debug: var=mgtvrf
 
-#  - name: test mgt loopback int
-#    debug: 
-#      msg:  " {{ ipvrf.stdout | regex_findall('Lo[0-9]{1,4}') }}"
+#  - debug:
+#      msg:
+#        - "{{ ipvrf.stdout is not regex('\\%\\sNo\\sVRF\\snamed\\smgt') }}"
 #
-  - name: set vrf mgt interface
+  - name: set var mgt_vrf
+    set_fact: 
+      mgt_vrf: "{{ ipvrf.stdout is not regex('\\%\\sNo\\sVRF\\snamed\\smgt') }}"
+  - debug: var=mgt_vrf
+
+  # check if some loopback mgt int exists
+  - name: set var mgt_int
+    when: mgt_vrf | bool
     set_fact:
       mgt_int: " {{ ipvrf.stdout | regex_findall('Lo[0-9]{1,4}') }}"
 
-  - debug:
-      mgs:
-        - "found mgt attrib:"
-        - "{{mgt_vrf}}"
-        - "{{mgt_int}}"
+  - debug: var=mgt_int
+    when: (mgt_int is defined)
+     
       
     ## to test above tasks only, end here:
   - meta: end_play 
 
+    ## ?? include some other playbook: with vrf or without ??
+    #
   - name: set authentication
     ios_config:
       lines:
